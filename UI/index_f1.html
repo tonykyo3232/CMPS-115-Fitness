@@ -1,0 +1,194 @@
+<html>
+<head>
+	<title> Fitness Scheduler </title>
+
+	<!-- import link of Font Awesome 4 Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	<!-- import CSS -->
+	<style>
+
+	*,html,body /* '*'' means univerisal selector */
+	{
+		margin:0;
+		padding: 0;
+	}
+
+	header
+	{
+		background-color:white;
+		height: 90px;
+		line-height:100px;
+	}
+
+	header li
+	{
+		/* let the words be in one line*/
+		display:inline-block;
+
+		/*place the word to the right*/
+		float: right;
+
+		/* putting spaces between the options */
+		padding-right: 25px; 
+		
+		/* set up the word format bold */
+		font-weight: bold;
+	}
+
+	header i
+	{
+		float:right;
+		margin-top: 43px;
+		margin-right: 30px;
+	}
+	
+
+	body
+	{
+		background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(image/wallpaper5.jpg);
+		background-size: 100% 100%;
+	}
+
+	/*
+	input[type=text] {
+	  width: 130px;
+	  box-sizing: border-box;
+	  border: 2px solid #ccc;
+	  border-radius: 4px;
+	  font-size: 16px;
+	  background-color: white;
+	  background-image: url('searchicon.png');
+	  background-position: 10px 10px; 
+	  background-repeat: no-repeat;
+	  padding: 12px 20px 12px 40px;
+	  -webkit-transition: width 0.4s ease-in-out;
+	  transition: width 0.4s ease-in-out;
+	}
+
+	input[type=text]:focus {
+	  width: 20%;
+	}
+
+	*/
+
+	.info
+	{
+		color: white;
+	}
+
+	section li
+	{
+		display:inline-block;
+	}
+
+	section .style
+	{
+		padding-right: 460px;
+	}
+
+	section .goal
+	{
+		padding-right: 400px;
+	}
+
+	.op1
+	{
+		padding-right: 460px;
+	}
+
+	.op2
+	{
+		text-align: center;
+	}
+
+	.op3
+	{
+		text-align: right;
+	}
+
+	.btn-export
+	{
+		background-color: green;
+		color:white;
+	}
+	</style>
+	
+<script>
+function getIndex() {
+  document.getElementById("demo").innerHTML =
+  document.getElementById("mySelect").selectedIndex;
+}
+</script>
+
+<script>
+		function exportMag()
+		{
+			alert("Thank you for choosing our workout program. The infomation will be sent via your email:\n--------------------------------\nWorkout progeam: xxx\n--------------------------------\n");
+		}
+</script>
+
+</head>
+<body>
+<header>
+	<a href="index_home.html"> <img src="image/logo.jpg" width="300" height="90"></a>
+			<li><a href="index_login.html">Log in</a></li>
+			<li><a href="index_about.html">About Us</a></li>
+			<li><a href="index_home.html">Home</a></li>
+			<i class = "fas fa-bars"> </i>
+			<i class = "fas fa-search"> </i>
+		<!-- <input type="text" name="search" placeholder="Search.."> -->
+</header>
+	
+<section class = "info">
+	<H5> Choose your desired workout program (Pick one) </H5>
+	<Br>
+	<li class = "style"><H3>Style</H3></li>
+	<li class = "goal"><H3>Goal</H3></li>
+	<li class = "specific"><H3>Specific</H3></li>
+</section>
+
+<section class = "op1">
+	<select id="mySelect">
+	  <option>Body-Building</option>
+	  <option>Power-Lifting</option>
+	  <option>Cross-Fit</option>
+	  <option>General-Fitness</option>
+	</select>
+	<a href="javascript:exportMag();" class="btn btn-export">Export!</a>
+
+</section>
+
+<section class = "op2">
+	<select id="mySelect">
+	  <option>Lose Weight</option>
+	  <option>Build Muscle</option>
+	  <option>Build Strength</option>
+	</select>
+	<a href="javascript:exportMag();" class="btn btn-export">Export!</a>
+</section>
+
+<section class = "op3">
+	<select id="mySelect">
+	  <option>Leg Day</option>
+	  <option>Arm Day</option>
+	  <option>Back Day</option>
+	  <option>Chest Day</option>
+	</select>
+	<a href="javascript:exportMag();" class="btn btn-export">Export!</a>
+</section>
+
+</body>
+</html>
