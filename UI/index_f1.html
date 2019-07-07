@@ -2,7 +2,7 @@
 <head>
 	<title> Fitness Scheduler </title>
 
-	<!-- import link of Font Awesome 4 Icons -->
+	<!-- import link of Font Awesome 5 Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 	<!-- Latest compiled and minified CSS -->
@@ -62,83 +62,88 @@
 		background-size: 100% 100%;
 	}
 
-	/*
-	input[type=text] {
-	  width: 130px;
-	  box-sizing: border-box;
-	  border: 2px solid #ccc;
-	  border-radius: 4px;
-	  font-size: 16px;
-	  background-color: white;
-	  background-image: url('searchicon.png');
-	  background-position: 10px 10px; 
-	  background-repeat: no-repeat;
-	  padding: 12px 20px 12px 40px;
-	  -webkit-transition: width 0.4s ease-in-out;
-	  transition: width 0.4s ease-in-out;
-	}
 
-	input[type=text]:focus {
-	  width: 20%;
-	}
 
-	*/
-
-	.info
+	/* The grid: Three equal columns that floats next to each other */
+	.column
 	{
-		color: white;
+	  float: left;
+	  width: 33.33%;
+	  padding: 20px;
+	  text-align: center;
+	  font-size: 25px;
+	  cursor: pointer;
+	  color: white;
 	}
 
-	section li
+
+	.row
 	{
+		width: 100%;
+	}
+
+	.row .column
+	{
+		transition: all 0.5s ease-in; /*make it smooth*/
+	}
+
+	.containerTab {
+	  padding: 25px;
+	  color: white;
+	}
+
+	
+	/* Clear floats after the columns */
+	
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+
+
+	/* Closable button inside the image */
+	.closebtn {
+	  float: right;
+	  color: white;
+	  font-size: 35px;
+	  cursor: pointer;
+	}
+
+	.op1 li, .op2 li, .op3 li
+	{
+		/* let the words be in one line*/
 		display:inline-block;
-	}
 
-	section .style
-	{
-		padding-right: 460px;
-	}
-
-	section .goal
-	{
-		padding-right: 400px;
-	}
-
-	.op1
-	{
-		padding-right: 460px;
-	}
-
-	.op2
-	{
-		text-align: center;
-	}
-
-	.op3
-	{
-		text-align: right;
+		/* putting spaces between the options */
+		padding-right: 220px; 
 	}
 
 	.btn-export
 	{
 		background-color: green;
 		color:white;
+		position: fixed;
+		bottom: 20px;
+		right: 5px;
 	}
+
 	</style>
 	
-<script>
-function getIndex() {
-  document.getElementById("demo").innerHTML =
-  document.getElementById("mySelect").selectedIndex;
-}
-</script>
-
-<script>
-		function exportMag()
-		{
-			alert("Thank you for choosing our workout program. The infomation will be sent via your email:\n--------------------------------\nWorkout progeam: xxx\n--------------------------------\n");
+	<script type="text/javascript">
+		// Hide all elements with class="containerTab", except for the one that matches the clickable grid column
+		function openTab(tabName) {
+		  var i, x;
+		  x = document.getElementsByClassName("containerTab");
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none";
+		  }
+		  document.getElementById(tabName).style.display = "block";
 		}
-</script>
+	</script>
+
+
 
 </head>
 <body>
@@ -149,46 +154,125 @@ function getIndex() {
 			<li><a href="index_home.html">Home</a></li>
 			<i class = "fas fa-bars"> </i>
 			<i class = "fas fa-search"> </i>
-		<!-- <input type="text" name="search" placeholder="Search.."> -->
 </header>
-	
-<section class = "info">
-	<H5> Choose your desired workout program (Pick one) </H5>
-	<Br>
-	<li class = "style"><H3>Style</H3></li>
-	<li class = "goal"><H3>Goal</H3></li>
-	<li class = "specific"><H3>Specific</H3></li>
-</section>
 
-<section class = "op1">
-	<select id="mySelect">
-	  <option>Body-Building</option>
-	  <option>Power-Lifting</option>
-	  <option>Cross-Fit</option>
-	  <option>General-Fitness</option>
-	</select>
-	<a href="javascript:exportMag();" class="btn btn-export">Export!</a>
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:transparent;">Style <i class = "fas fa-angle-double-down"></i></div>
+  <div class="column" onclick="openTab('b2');" style="background:transparent;">Goal <i class = "fas fa-angle-double-down"></i></div>
+  <div class="column" onclick="openTab('b3');" style="background:transparent;">Routine <i class = "fas fa-angle-double-down"></i></div>
+</div>
 
-</section>
+<!-- The expanding grid (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:#006666">
+  <!-- If you want the ability to close the container, add a close button -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+  <h2>Style</h2>
+  <section class = "op1">
+  <li>
+  	<p>Select the style</p>
+  	 	<select>
+  	 		<option>Select the style---</option>
+    		<option>Body-Building</option>
+			<option>Power-Lifting</option>
+			<option>General-Fitness</option>
+		</select>
+  </li>
+  <li>
+	<p>Select the level</p>
+  		<select>
+  			<option>Select the level---</option>
+    		<option>Beginner</option>
+			<option>Intermediate</option>
+			<option>Advance</option>
+		</select>
+  </li>
+  <li>
+	<p>Select the length</p>
+  		<select>
+  			<option>Select the length---</option>
+    		<option>1-4 weeks</option>
+			<option>5-8 weeks</option>
+			<option>9 weeks or longer</option>
+		</select>
+  </li>
+  </section>
+ 
+</div>
 
-<section class = "op2">
-	<select id="mySelect">
-	  <option>Lose Weight</option>
-	  <option>Build Muscle</option>
-	  <option>Build Strength</option>
-	</select>
-	<a href="javascript:exportMag();" class="btn btn-export">Export!</a>
-</section>
+<div id="b2" class="containerTab" style="display:none;background:#006666">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+  <h2>Goal</h2>
+  <section class = "op2">
+  <li>
+  	<p>Select your goal</p>
+  	 	<select>
+  	 		<option>Select your goal---</option>
+    		<option>Lose Weight</option>
+			<option>Build Muscle</option>
+			<option>Build Strength</option>
+		</select>
+  </li>
+  <li>
+	<p>Select the level</p>
+  		<select>
+  			<option>Select the level---</option>
+    		<option>Beginner</option>
+			<option>Intermediate</option>
+			<option>Advance</option>
+		</select>
+  </li>
+  <li>
+	<p>Select the length</p>
+  		<select>
+    		<option>Select the length---</option>
+    		<option>1-4 weeks</option>
+			<option>5-8 weeks</option>
+			<option>9 weeks or longer</option>
+		</select>
+  </li>
+  </section>
+</div>
 
-<section class = "op3">
-	<select id="mySelect">
-	  <option>Leg Day</option>
-	  <option>Arm Day</option>
-	  <option>Back Day</option>
-	  <option>Chest Day</option>
-	</select>
-	<a href="javascript:exportMag();" class="btn btn-export">Export!</a>
-</section>
+<div id="b3" class="containerTab" style="display:none;background:#006666">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+  <h2>Routine</h2>
+  <section class = "op3">
+  <li>
+  	<p>Select the routine</p>
+  	 	<select>
+  	 		<option>Select the routine---</option>
+    		<option>Leg day</option>
+			<option>Arm day</option>
+			<option>Back day</option>
+			<option>Chest day</option>
+		</select>
+  </li>
+  <li>
+	<p>Select the level</p>
+  		<select>
+  			<option>Select the level---</option>
+    		<option>Beginner</option>
+			<option>Intermediate</option>
+			<option>Advance</option>
+		</select>
+  </li>
+  <li>
+	<p>Select the length</p>
+  		<select>
+  			<option>Select the length---</option>
+    		<option>1-4 weeks</option>
+			<option>5-8 weeks</option>
+			<option>9 weeks or longer</option>
+		</select>
+  </li>
+  </section>
+</div>
+
+
+
+<div>
+	<a href="index_export.html" class ="btn btn-export"> Export your workout program </a>
+</div>
 
 </body>
 </html>
