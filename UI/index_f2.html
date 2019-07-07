@@ -1,38 +1,87 @@
-<!doctype html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Menu - Default functionality</title>
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#menu" ).menu();
-  } );
-  </script>
-  <style>
-  .ui-menu { width: 150px; }
-  </style>
+	<title> Fitness Scheduler - Design workout Program </title>
+
+	<!-- import link of Font Awesome 4 Icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	<!-- import CSS -->
+	<style>
+
+	*,html,body /* '*'' means univerisal selector */
+	{
+		margin:0;
+		padding: 0;
+	}
+
+	header
+	{
+		background-color:white;
+		height: 90px;
+		line-height:100px;
+	}
+
+	header li
+	{
+		/* let the words be in one line*/
+		display:inline-block;
+
+		/*place the word to the right*/
+		float: right;
+
+		/* putting spaces between the options */
+		padding-right: 25px; 
+		
+		/* set up the word format bold */
+		font-weight: bold;
+	}
+
+	header i
+	{
+		float:right;
+		margin-top: 43px;
+		margin-right: 30px;
+	}
+	
+	body
+	{
+		background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(image/wallpaper4.jpg);
+		background-size: 100% 100%;
+	}
+
+	.info
+	{
+		color: white;
+	}
+	</style>
+	
 </head>
 <body>
- 
-<ul id="menu">
-  <li><div>Sort By Style of Exercise</div>
-    <ul>
-      </li>
-      <li><div>Body Building</div>
-        <ul>
-          <li><div>Arms</div></li>
-          <li><div>Legs</div></li>
-        </ul>
-      </li>
-      <li><div>Power Lifting</div></li>
-    </ul>
-  </li>
-</ul>
- 
- 
+<header>
+	<a href="index_home.html"> <img src="image/logo.jpg" width="300" height="90"></a>
+			<li><a href="index_login.html">Log in</a></li>
+			<li><a href="index_about.html">About Us</a></li>
+			<li><a href="index_home.html">Home</a></li>
+			<i class = "fas fa-bars"> </i>
+			<i class = "fas fa-search"> </i>
+</header>
+	
+<section class = "info">
+	<h1> Comming Soon !!!</h1>
+</section>
+
 </body>
 </html>
+
