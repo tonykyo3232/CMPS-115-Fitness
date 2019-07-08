@@ -1,9 +1,9 @@
 <html>
 <head>
-	<title> Fitness Scheduler </title>
+	<title> Fitness Scheduler - Select the Program </title>
 
 	<!-- import link of Font Awesome 5 Icons -->
-    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -129,9 +129,49 @@
 		right: 5px;
 	}
 
+	.container 
+	{
+		display: grid;
+		grid-template-columns: auto auto auto;
+		margin-top: 20px;
+  		overflow: hidden;
+  		padding: 20px;
+	}
+
+	.filterDiv
+	{
+		float: left;
+	  	background-color: #00994d;
+	  	color: #ffffff;
+	  	width: 90px;
+	  	line-height: 30px;
+	  	text-align: center;
+	  	margin: 2px;
+	  	/*display: none;*/
+	}
+
+	#output1, #output2, #output3, #debug1, #debug2
+	{
+		color:white;
+	}
+
 	</style>
 	
+	<!-- JavaScript implementation -->
 	<script type="text/javascript">
+
+		//----------------
+		// global variable
+		//----------------
+
+		// create a hash table
+		var program = new Object();
+		
+		// initialize with default values
+		program["BB"] = "Body-Building";
+		program["PL"] = "Power-Lifting";
+		program["GF"] = "General-Fitness";
+
 		// Hide all elements with class="containerTab", except for the one that matches the clickable grid column
 		function openTab(tabName) {
 		  var i, x;
@@ -141,6 +181,97 @@
 		  }
 		  document.getElementById(tabName).style.display = "block";
 		}
+
+		function myFilter1() {
+ 		 var x = document.getElementById("mySelect1").value;
+  		 document.getElementById("output1").innerHTML = "Workout program you selected: " + "[" + x + "]";
+		}
+
+		function myFilter2() {
+ 		 var y = document.getElementById("mySelect2").value;
+  		 document.getElementById("output2").innerHTML = "Difficultly you selected: " + "[" + y + "]";
+		}
+
+		function myFilter3() {
+ 		 var z = document.getElementById("mySelect3").value;
+  		 document.getElementById("output3").innerHTML = "length of program you selected: " + "[" + z + "]";
+		}
+		 
+		//----------------------------------------------
+
+		function myFilter4() {
+ 		 var x = document.getElementById("mySelect4").value;
+  		 document.getElementById("output1").innerHTML = "Goal you selected: " + "[" + x + "]";
+		}
+
+		function myFilter5() {
+ 		 var y = document.getElementById("mySelect5").value;
+  		 document.getElementById("output2").innerHTML = "Difficultly you selected: " + "[" + y + "]";
+		}
+
+		function myFilter6() {
+ 		 var z = document.getElementById("mySelect6").value;
+  		 document.getElementById("output3").innerHTML = "length of program you selected: " + "[" + z + "]";
+		}
+
+		//----------------------------------------------
+
+		function myFilter7() {
+ 		 var x = document.getElementById("mySelect7").value;
+  		 document.getElementById("output1").innerHTML = "Routine you selected: " + "[" + x + "]";
+		}
+
+		function myFilter8() {
+ 		 var y = document.getElementById("mySelect8").value;
+  		 document.getElementById("output2").innerHTML = "Difficultly you selected: " + "[" + y + "]";
+		}
+
+		function myFilter9() {
+ 		 var z = document.getElementById("mySelect9").value;
+  		 document.getElementById("output3").innerHTML = "length of program you selected: " + "[" + z + "]";
+		}
+
+
+		//*************************************
+		//* filter functions
+		//*************************************
+		function filterSelection(){
+		  var select, group, i, collection;
+
+		  // get the target
+		  select = document.getElementById("mySelect1").value;
+		  
+		  // get the list of the class of workout program
+		  collection = document.getElementsByClassName("filterDiv");
+		  
+		  // DEBUG
+		  document.getElementById("debug1").innerHTML ="(DEBUG)" + select + ", " + collection;
+
+		  
+		  // hard coding for now
+		  if (select == "Select the style---") 
+		  	group = "A";
+		  else if(select == "Body-Building")
+		  	group = "BB";
+		  else if(select == "Power-Lifting")
+		  	group = "PL";
+		  else
+		  	group = "";
+		
+
+		 // DEBUG
+		  document.getElementById("debug2").innerHTML ="(DEBUG) group: " + group; 
+		  
+		  for (i = 0; i < collection.length; i++) {
+   		      
+  		  }
+
+		}
+
+		function editClass() {
+		  
+		}
+
 	</script>
 
 
@@ -170,7 +301,7 @@
   <section class = "op1">
   <li>
   	<p>Select the style</p>
-  	 	<select>
+  	 	<select id = "mySelect1" onchange= "myFilter1(); filterSelection();">
   	 		<option>Select the style---</option>
     		<option>Body-Building</option>
 			<option>Power-Lifting</option>
@@ -179,7 +310,7 @@
   </li>
   <li>
 	<p>Select the level</p>
-  		<select>
+  		<select id = "mySelect2" onchange= "myFilter2()">
   			<option>Select the level---</option>
     		<option>Beginner</option>
 			<option>Intermediate</option>
@@ -188,7 +319,7 @@
   </li>
   <li>
 	<p>Select the length</p>
-  		<select>
+  		<select id = "mySelect3" onchange= "myFilter3()">
   			<option>Select the length---</option>
     		<option>1-4 weeks</option>
 			<option>5-8 weeks</option>
@@ -205,7 +336,7 @@
   <section class = "op2">
   <li>
   	<p>Select your goal</p>
-  	 	<select>
+  	 	<select id = "mySelect4" onchange= "myFilter4()">
   	 		<option>Select your goal---</option>
     		<option>Lose Weight</option>
 			<option>Build Muscle</option>
@@ -214,7 +345,7 @@
   </li>
   <li>
 	<p>Select the level</p>
-  		<select>
+  		<select id = "mySelect5" onchange= "myFilter5()">
   			<option>Select the level---</option>
     		<option>Beginner</option>
 			<option>Intermediate</option>
@@ -223,7 +354,7 @@
   </li>
   <li>
 	<p>Select the length</p>
-  		<select>
+  		<select id = "mySelect6" onchange= "myFilter6()">
     		<option>Select the length---</option>
     		<option>1-4 weeks</option>
 			<option>5-8 weeks</option>
@@ -239,7 +370,7 @@
   <section class = "op3">
   <li>
   	<p>Select the routine</p>
-  	 	<select>
+  	 	<select id = "mySelect7" onchange= "myFilter7()">
   	 		<option>Select the routine---</option>
     		<option>Leg day</option>
 			<option>Arm day</option>
@@ -249,7 +380,7 @@
   </li>
   <li>
 	<p>Select the level</p>
-  		<select>
+  		<select id = "mySelect8" onchange= "myFilter8()">
   			<option>Select the level---</option>
     		<option>Beginner</option>
 			<option>Intermediate</option>
@@ -258,7 +389,7 @@
   </li>
   <li>
 	<p>Select the length</p>
-  		<select>
+  		<select id = "mySelect9" onchange= "myFilter9()">
   			<option>Select the length---</option>
     		<option>1-4 weeks</option>
 			<option>5-8 weeks</option>
@@ -269,6 +400,27 @@
 </div>
 
 
+<div class = "container">
+	<div class = "filterDiv GF">General Fitness</div>
+	<div class = "filterDiv BB">Body Building</div>
+	<div class = "filterDiv CS">Cross Fit</div>
+	<div class = "filterDiv PL">Power Lifting</div>
+	<div class = "filterDiv leg">Leg Day</div>
+	<div class = "filterDiv arm">Arm Day</div>
+	<div class = "filterDiv chest">Chest Day</div>
+	<div class = "filterDiv back">Back Day</div>
+</div>
+
+
+<!-- Summary of choosing-->
+<p id="output1"></p>
+<p id="output2"></p>
+<p id="output3"></p>
+
+
+<!--DEBUG-->
+<p id= "debug1"></p>
+<p id= "debug2"></p>
 
 <div>
 	<a href="index_export.html" class ="btn btn-export"> Export your workout program </a>
