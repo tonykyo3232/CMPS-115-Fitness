@@ -57,7 +57,6 @@ CREATE TABLE IF NOT EXISTS `fitness`.`rExercise` (
   `routine_id` INT NULL,
   `order` INT NULL,
   PRIMARY KEY (`id`),
-  INDEX `id_idx` (`routine_id` ASC) VISIBLE,
   CONSTRAINT `id`
     FOREIGN KEY (`routine_id`)
     REFERENCES `fitness`.`routine` (`id`)
@@ -98,7 +97,6 @@ CREATE TABLE IF NOT EXISTS `fitness`.`cycle` (
   `title` VARCHAR(45) NULL,
   `program_id` INT NULL,
   PRIMARY KEY (`id`),
-  INDEX `id_idx` (`program_id` ASC) VISIBLE,
   CONSTRAINT `id`
     FOREIGN KEY (`program_id`)
     REFERENCES `fitness`.`program` (`id`)
@@ -126,7 +124,6 @@ CREATE TABLE IF NOT EXISTS `fitness`.`pExercise` (
   `cycle_id` INT NULL,
   `day` INT NULL,
   PRIMARY KEY (`id`),
-  INDEX `id_idx` (`cycle_id` ASC) VISIBLE,
   CONSTRAINT `id`
     FOREIGN KEY (`cycle_id`)
     REFERENCES `fitness`.`cycle` (`id`)
