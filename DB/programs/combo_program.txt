@@ -24,7 +24,7 @@ Dumbbell Incline Bench Press: 3x8/ RPE: 6.5-7
 Barbell Pause Deadlift: 3x5/ RPE: 7-7.5
 	Notes: User determines weight based on RPE / __ lb (Optional to record weight) / Pause below knees for 3 seconds
 Barbell Deadlift: 3x8/ lb: 70% of 1RM
-Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6.5-7, increment percentage by 2% the following week for this training cycle
+Notes: Optional to record last set's RPE: __ / If RPE of final set is 6.5-7, increment percentage by 2% the following week for this training cycle
 Full Body Ab Roller: 5x10
 	Notes: Go onto knees if unable to do full body
 
@@ -32,7 +32,7 @@ Day 2:
 Barbell Front Squats: 3x5/ RPE: 7-8	
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Barbell Back Squats: 4x8/ lb: 63% of 1RM
-Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6.5-7, increment percentage by 2% the following week for this training cycle
+Notes: Optional to record last set's RPE: __ / If RPE of final set is 6.5-7, increment percentage by 2% the following week for this training cycle
 Cable Face Pulls: 3x12/ RPE: 6-7
 Notes: Use a rope handle if possible. / User determines weight based on RPE / __ lb (Optional to record weight)
 Cable Single Arm Tricep Pushdown: 3x10/ RPE: 7-8
@@ -47,7 +47,7 @@ Barbell Pendlay Rows: 3x5/ RPE: 8-9
 Dumbbell Back Rows: 3x5/ RPE: 8-9
 	Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Pull Ups: 3x8/ lb: Bodyweight
-			Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6, add weights accordingly
+			Notes: Optional to record last set's RPE: __ / If RPE of final set is 6, add weights accordingly
 
 Day 3:
 Barbell Back Pin Squats: 3x5/ RPE: 7-7.5
@@ -61,7 +61,7 @@ Cable Single Arm Tricep Pushdown: 3x10/ RPE: 7-8
 Barbell Bench Pin Press: 3x5/RPE: 7-7.5
 	Notes: Set pins half an inch above chest / User determines weight based on RPE / __ lb (Optional to record weight)
 Barbell Close Grip Bench Press: 3x8/ lb: 55% of 1RM
-	Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6-6.5, increment percentage by 2% the following week for this training cycle
+	Notes: Optional to record last set's RPE: __ / If RPE of final set is 6-6.5, increment percentage by 2% the following week for this training cycle
 Dumbbell Bench Press: 3x8/ RPE: 7.5-8
 	Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Barbell JM Press: 3x8/ RPE: 6.5-7
@@ -109,7 +109,7 @@ Notes:	User determines weight based on RPE / __ lb (Optional to record weight)
 Cable Front Raises: 3x10/ RPE: 6-6.5
 	Notes: Use medal wide grip handle  / User determines weight based on RPE / __ lb (Optional to record weight)
 Barbell Close Grip Bench Press: 3x8/ lb: 55% of 1RM
-	Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6-6.5, increment percentage by 2% the following week for this training cycle
+	Notes: Optional to record last set's RPE: __ / If RPE of final set is 6-6.5, increment percentage by 2% the following week for this training cycle
 Dumbbell Side Raise: 3x15/ RPE: 8
 	Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Dumbbell Shrugs. 3x12/ RPE: 9-10
@@ -119,11 +119,11 @@ Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Cable Tricep Pushdown: 3x10/ RPE: 8
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Dips: 3x8/ lb: Bodyweight
-Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6-6.5, add weights accordingly
+Notes: Optional to record last set's RPE: __ / If RPE of final set is 6-6.5, add weights accordingly
 Dumbbell Incline Curls: 4x8/ RPE: 8
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Barbell Spider Curls: 3x12/ RPE: 6-6.5
-Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6, add weights accordingly
+Notes: Optional to record last set's RPE: __ / If RPE of final set is 6, add weights accordingly
 Full Body Ab Roller: 5x10
 	Notes: Go onto knees if unable to do full body
 
@@ -135,7 +135,7 @@ Day 7: Rest Day
 Cycle 2: Heavy and Accessories (12 Weeks)
 	Day 1:
 Barbell Back Squats: 3x3/ lb: 80% of 1RM
-Notes: Optional to record last set’s RPE: __ / If RPE of final set is 7, increment percentage by 2% the following week for this training cycle
+Notes: Optional to record last set's RPE: __ / If RPE of final set is 7, increment percentage by 2% the following week for this training cycle
 Barbell Back Pause Squats: 3x5/ RPE: 7.5-8
 Notes: User determines weight based on RPE / __ lb (Optional to record weight) / Pause for 3 seconds.	
 Dumbbell Bulgarian Split Squats: 3x8/ RPE: 7
@@ -147,7 +147,7 @@ Cable Single Arm Tricep Pushdown: 3x10/ RPE: 7-8
 Banded Barbell Bench Press: 5x3/ RPE: 5-5.5
 Notes: User determines weight based on RPE / __ lb (Optional to record weight) / Use 25-65lb resistance bands
 Barbell Bench Press: 3x3/ lb: 80% of 1RM
-	Notes: Optional to record last set’s RPE: __ / If RPE of final set is 7, increment percentage by 2% the following week for this training cycle
+	Notes: Optional to record last set's RPE: __ / If RPE of final set is 7, increment percentage by 2% the following week for this training cycle
 Barbell Pause Bench Press: 3x5/ RPE: 7-7.5
 Notes: User determines weight based on RPE / __ lb (Optional to record weight) / Pause for 3 seconds at the chest
 Barbell Shoulder Press: 3x5/ RPE: 7.5-8
@@ -163,7 +163,7 @@ Notes: Set pins to parallel or slightly below parallel knees / User determines w
 Banded Barbell Deadlift: 4x3/ RPE: 6-6.5
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Barbell Deadlift: 3x3/ lb: 80% of 1RM
-Notes: Optional to record last set’s RPE: __ / If RPE of final set is 7, increment percentage by 2% the following week for this training cycle
+Notes: Optional to record last set's RPE: __ / If RPE of final set is 7, increment percentage by 2% the following week for this training cycle
 Barbell Deadlift: 3x5/ RPE: 6.5-7
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 T- Bar Row: 3x6-8/ RPE: 7
@@ -217,7 +217,7 @@ Barbell Spoto Bench Press: 3x3/ RPE: 7
 Barbell Pin Bench Press: 3x5/ RPE: 7-7.5
 	Notes: Set pins half an inch above chest / User determines weight based on RPE / __ lb (Optional to record weight)
 Barbell Bench Hold: 3x10 seconds/ 100% of 1RM
-	Notes: Optional to record last set’s RPE: __ / If RPE of final set is 7-7.5, increment percentage by 5% the following week for this training cycle
+	Notes: Optional to record last set's RPE: __ / If RPE of final set is 7-7.5, increment percentage by 5% the following week for this training cycle
 Inverted Wrist Push Up Hold: 3x20 seconds/ lb: Bodyweight
 Notes: Do not do a push up, but instead hold the position at the top
 Barbell Shoulder Pin Press: 3x5/ RPE: 8-8.5
@@ -229,7 +229,7 @@ Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Dumbbell Skull Crushers: 3x8/ RPE: 7-7.5
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Dips: 3x8/ lb: Bodyweight
-Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6-6.5, add weights accordingly	 
+Notes: Optional to record last set's RPE: __ / If RPE of final set is 6-6.5, add weights accordingly	 
 
 Day 5:	
 Barbell Block Pulls: 3x3/ RPE: 8-8.5
@@ -245,11 +245,11 @@ Barbell Pendlay Rows: 3x5/ RPE: 8-9
 Dumbbell Back Rows: 3x5/ RPE: 8
 	Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Pull Ups: 3x8/ lb: Bodyweight
-			Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6, add weights accordingly
+			Notes: Optional to record last set's RPE: __ / If RPE of final set is 6, add weights accordingly
 Dumbbell Shrugs. 3x12/ RPE: 9-10
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Barbell Stiff Leg Hamstring Stretch: 3x45 Seconds/ lb: Bodyweight
-	Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6.5-7, increment percentage by 5lb the following week for this training cycle
+	Notes: Optional to record last set's RPE: __ / If RPE of final set is 6.5-7, increment percentage by 5lb the following week for this training cycle
 Machine Seated Single Leg Hamstring Curls: 3x8/ RPE: 6.5-7
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Machine Lying Hamstring Curls: 3x10/ RPE: 7
@@ -266,7 +266,7 @@ Day 7: Rest Day
 Cycle 3: Bulgarian Method (8 Weeks)
 	Day 1:
 Barbell Back Squats: 5x1/ lb: 90% of 1RM
-Notes: Optional to record last set’s RPE: __ / If RPE of final set is 8, increment percentage by 2% the following week for this training cycle
+Notes: Optional to record last set's RPE: __ / If RPE of final set is 8, increment percentage by 2% the following week for this training cycle
 Barbell Back Squats: 3x5/ RPE: 7
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Cable Face Pulls: 3x12/ RPE: 6-7
@@ -276,7 +276,7 @@ Cable Single Arm Tricep Pushdown: 3x10/ RPE: 7-8
 Banded Barbell Bench Press: 4x3/ RPE: 5.5-6
 Notes: User determines weight based on RPE / __ lb (Optional to record weight) / Use 25-65lb resistance bands
 Barbell Bench Press: 5x1/ lb: 90% of 1RM
-	Notes: Optional to record last set’s RPE: __ / If RPE of final set is 8, increment percentage by 2% the following week for this training cycle
+	Notes: Optional to record last set's RPE: __ / If RPE of final set is 8, increment percentage by 2% the following week for this training cycle
 Barbell Bench Press: 3x5/ RPE: 7
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Barbell Pause Deadlift: 5x3/ RPE: 7
@@ -302,7 +302,7 @@ Barbell Pendlay Rows: 3x5/ RPE: 8-9
 Dumbbell Back Rows: 3x5/ RPE: 8
 	Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Pull Ups: 3x8/ lb: Bodyweight
-			Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6, add weights accordingly
+			Notes: Optional to record last set's RPE: __ / If RPE of final set is 6, add weights accordingly
 T- Bar Row: 3x6-8/ RPE: 7
 	Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Cable Pull Overs: 3x12/ RPE: 6.5-7
@@ -312,7 +312,7 @@ Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Cable Tricep Pushdown: 3x10/ RPE: 8
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Planks: 4x60 seconds/ lb: Bodyweight
-	Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6, increment by 10lb the following week for this training cycle
+	Notes: Optional to record last set's RPE: __ / If RPE of final set is 6, increment by 10lb the following week for this training cycle
 
 Day 3: Rest Day
 
@@ -344,19 +344,19 @@ Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Dumbbell Skull Crushers: 3x8/ RPE: 7-7.5
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Dips: 3x8/ lb: Bodyweight
-Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6-6.5, add weights accordingly
+Notes: Optional to record last set's RPE: __ / If RPE of final set is 6-6.5, add weights accordingly
 
 Day 5: 
 Banded Barbell Deadlift: 4x3/ RPE: 6-6.5
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Barbell Deadlift: 8x1/ lb: 90% of 1RM
-Notes: Optional to record last set’s RPE: __ / If RPE of final set is 8, increment percentage by 2% the following week for this training cycle
+Notes: Optional to record last set's RPE: __ / If RPE of final set is 8, increment percentage by 2% the following week for this training cycle
 Barbell Deadlift: 3x5/ RPE: 7
 Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Reverse HyperExtensions: 3x10/ RPE: 4-5
 	Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Barbell Stiff Leg Hamstring Stretch: 3x45 Seconds/ lb: Bodyweight
-	Notes: Optional to record last set’s RPE: __ / If RPE of final set is 6.5-7, increment percentage by 5lb the following week for this training cycle
+	Notes: Optional to record last set's RPE: __ / If RPE of final set is 6.5-7, increment percentage by 5lb the following week for this training cycle
 Machine Seated Hamstring Curls: 3x12/ RPE: 7
 	Notes: User determines weight based on RPE / __ lb (Optional to record weight)
 Machine Seated Single Leg Hamstring Curls: 3x8/ RPE: 6.5-7
