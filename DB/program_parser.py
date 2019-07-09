@@ -48,6 +48,7 @@ def parse_exercises(lines):
             exercise["note"] = tokens[1]
         else:
             exercise = dict()
+            exercise["object_type"] = "exercise"
             exercise["name"] = tokens[0]
             exercise["desc"] = tokens[1]
             exercise["note"] = ""
@@ -130,13 +131,14 @@ def parse_days(lines):
     while line.strip() != "":
         print("[parse_days] parsing... %s" % line)
         day = dict()
+        day["object_type"] = "day"
 
         tokens = line.split(":")
         if len(tokens) > 2:
             tokens = [tokens[0], ':'.join(tokens[1:])]
         tokens[1] = tokens[1].strip()
 
-        assert tokens[0].lower().startswith("day ")
+        assert tokens[0].lower().strip().startswith("day ")
 
         exercises, lines = parse_exercises(lines)
         day["desc"] = tokens[1]
@@ -231,13 +233,14 @@ def parse_cycles(lines):
     while line.strip() != "":
         print("[parse_cycles] parsing... %s" % line)
         cycle = dict()
+        cycle["object_type"] = "cycle"
 
         tokens = line.split(":")
         if len(tokens) > 2:
             tokens = [tokens[0], ':'.join(tokens[1:])]
         tokens[1] = tokens[1].strip()
 
-        assert tokens[0].lower().startswith("cycle ")
+        assert tokens[0].lower().strip().startswith("cycle ")
 
         days, lines = parse_days(lines)
         cycle["desc"] = tokens[1]
@@ -301,6 +304,7 @@ def parse_prog(lines):
     assert len(lines) != 0
 
     prog_dict = dict()
+    prog_dict["object_type"] = "program"
     cursor_key = None
     line = lines.pop(0)
     while not line.startswith("------"):
@@ -326,7 +330,7 @@ def parse_prog(lines):
         
 
 
-with open("programs/my_beginner_program.txt", "r") as fp:
+with open("programs/combo_program.txt", "r") as fp:
     lines = fp.readlines()
 
 prog_dict, lines = parse_prog(lines)
@@ -336,3 +340,6 @@ print(prog_dict)
 print("----------")
 print("LEFT LINES: ", lines)
 
+with open("program_dict.pickle", "wb") as fp:
+    import pickle
+    pickle.dump(prog_dict, fp)
