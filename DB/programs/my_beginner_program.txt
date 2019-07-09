@@ -1,8 +1,8 @@
 Style: General Fitness Program 
-Difficulty Level: Beginner
+Level: Beginner
 Length: 6 Weeks
 Goal: Build Muscle
-General Info: 
+Desc: 
 This program contains a beginner guide to general fitness. User can choose workout weights accordingly.
 
 ------------------
