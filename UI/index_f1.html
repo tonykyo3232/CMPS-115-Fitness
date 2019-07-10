@@ -264,39 +264,48 @@
 </header>
 
 <div class="row">
-  <div class="column" onclick="openTab('b1');" style="background:transparent;">Style <i class = "fas fa-angle-double-down"></i></div>
-  <div class="column" onclick="openTab('b2');" style="background:transparent;">Goal <i class = "fas fa-angle-double-down"></i></div>
-  <div class="column" onclick="openTab('b3');" style="background:transparent;">Routine <i class = "fas fa-angle-double-down"></i></div>
+  <div class="column" onclick="openTab('b1');" style="background:transparent;">Programs <i class = "fas fa-angle-double-down"></i></div>
+  <!--<div class="column" onclick="openTab('b2');" style="background:transparent;">Goal <i class = "fas fa-angle-double-down"></i></div> -->
+  <div class="column" onclick="openTab('b2');" style="background:transparent;">Routine <i class = "fas fa-angle-double-down"></i></div>
 </div>
 
 <!-- The expanding grid (hidden by default) -->
 <div id="b1" class="containerTab" style="display:none;background:#006666">
   <!-- If you want the ability to close the container, add a close button -->
   <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-  <h2>Style</h2>
+  <h2>Filter Workout Programs</h2>
   <section class = "op1">
   <li>
-  	<p>Select the style</p>
+  	<p>Choose Your Program Style</p>  
   	 	<select id = "mySelect1" onchange= "myFilter1(); filterSelection();">
-  	 		<option>Select the style---</option>
+  	 		<option>Choose Your Style---</option>
     		<option>Body-Building</option>
 			<option>Power-Lifting</option>
 			<option>General-Fitness</option>
+		</select>	
+  </li>
+  <li>
+	<p>Choose Your Goal</p>
+  		<select id = "mySelect2" onchange= "myFilter2()">
+  			<option>Goal---</option>
+    		<option>Lose Weight</option>
+			<option>Build Muscle</option>
+			<option>Build Strength</option>
 		</select>
   </li>
   <li>
-	<p>Select the level</p>
-  		<select id = "mySelect2" onchange= "myFilter2()">
-  			<option>Select the level---</option>
+	<p>Choose Your Difficulty Level</p>
+  		<select id = "mySelect3" onchange= "myFilter3()">
+  			<option>Difficulty Level---</option>
     		<option>Beginner</option>
 			<option>Intermediate</option>
 			<option>Advance</option>
 		</select>
   </li>
   <li>
-	<p>Select the length</p>
-  		<select id = "mySelect3" onchange= "myFilter3()">
-  			<option>Select the length---</option>
+	<p>Choose Your Program Length</p>
+  		<select id = "mySelect4" onchange= "myFilter4()">
+  			<option>Program Length---</option>
     		<option>1-4 weeks</option>
 			<option>5-8 weeks</option>
 			<option>9 weeks or longer</option>
@@ -306,7 +315,7 @@
  
 </div>
 
-<div id="b2" class="containerTab" style="display:none;background:#006666">
+<!--<div id="b2" class="containerTab" style="display:none;background:#006666">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
   <h2>Goal</h2>
   <section class = "op2">
@@ -339,32 +348,42 @@
   </li>
   </section>
 </div>
-
-<div id="b3" class="containerTab" style="display:none;background:#006666">
+-->
+<div id="b2" class="containerTab" style="display:none;background:#006666">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-  <h2>Routine</h2>
-  <section class = "op3">
+   <h2>Filter Workout Routines</h2>
+  <section class = "op1">
   <li>
-  	<p>Select the routine</p>
-  	 	<select id = "mySelect7" onchange= "myFilter7()">
-  	 		<option>Select the routine---</option>
-    		<option>Leg day</option>
-			<option>Arm day</option>
+  	<p>Choose Your Program Style</p>  
+  	 	<select id = "mySelect4" onchange= "myFilter4(); filterSelection();">
+  	 		<option>Choose Your Style---</option>
+    		<option>Body-Building</option>
+			<option>Power-Lifting</option>
+			<option>General-Fitness</option>
+		</select>	
+  </li>
+  <li>
+	<p>Choose Your Goal</p>
+  		<select id = "mySelect5" onchange= "myFilter5()">
+  			<option>Goal---</option>
+    		<option>Lose Weight</option>
+			<option>Build Muscle</option>
+			<option>Build Strength</option>
 		</select>
   </li>
   <li>
-	<p>Select the level</p>
-  		<select id = "mySelect8" onchange= "myFilter8()">
-  			<option>Select the level---</option>
+	<p>Choose Your Difficulty Level</p>
+  		<select id = "mySelect6" onchange= "myFilter6()">
+  			<option>Difficulty Level---</option>
     		<option>Beginner</option>
 			<option>Intermediate</option>
 			<option>Advance</option>
 		</select>
   </li>
   <li>
-	<p>Select the length</p>
-  		<select id = "mySelect9" onchange= "myFilter9()">
-  			<option>Select the length---</option>
+	<p>Choose Your Program Length</p>
+  		<select id = "mySelect7" onchange= "myFilter7()">
+  			<option>Program Length---</option>
     		<option>1-4 weeks</option>
 			<option>5-8 weeks</option>
 			<option>9 weeks or longer</option>
@@ -397,10 +416,11 @@
 
 
 <!-- Summary of choosing-->
-<p id="output1"></p>
+<!--<p id="output1"></p>
 <p id="output2"></p>
 <p id="output3"></p>
-
+<p id="output4"></p>
+-->
 <div>
 	<a href="index_export.html" class ="btn btn-export"> Export your workout program </a>
 </div>
