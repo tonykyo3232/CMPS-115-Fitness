@@ -1,0 +1,112 @@
+<html>
+<head>
+	<title> Fitness Scheduler </title>
+
+	<!-- import link of Font Awesome 4 Icons -->
+    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	<!-- import CSS -->
+	<style>
+
+	*,html,body /* '*'' means univerisal selector */
+	{
+		margin:0;
+		padding: 0;
+	}
+
+	header
+	{
+		background-color:white;
+		height: 90px;
+		line-height:100px;
+	}
+
+	header li
+	{
+		/* let the words be in one line*/
+		display:inline-block;
+
+		/*place the word to the right*/
+		float: right;
+
+		/* putting spaces between the options */
+		padding-right: 25px; 
+		
+		/* set up the word format bold */
+		font-weight: bold;
+	}
+
+	
+	header i
+	{
+		float:right;
+		margin-top: 43px;
+		margin-right: 30px;
+	}
+	
+	body
+	{
+		background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(image/wallpaper1.jpg);
+		background-size: 100% 100%;
+	}
+
+	.info
+	{
+		color: white;
+	}
+
+	section h2
+	{
+		margin-top: 150px;
+		font-weight: lighter;
+
+	}
+
+	section h2, section h4, section
+	{
+		text-align: center;	
+	}
+
+	section a.btn-left
+	{
+		background-color: deepskyblue;
+		color:white;
+	}
+
+	section a.btn-right
+	{
+		background-color: orange;
+		color:white;
+	}
+	</style>
+	
+</head>
+<body>
+<header>
+	<a href="index_home.html"> <img src="image/logo.jpg" width="300" height="90"></a>
+			<li><a href="index_login.html">Log in</a></li>
+			<li><a href="index_about.html">About Us</a></li>
+			<li><a href="index_home.html">Home</a></li>
+			<i class = "fas fa-bars"> </i>
+			<i class = "fas fa-search"> </i>
+</header>
+	<section class = "info">
+		<h2> Welcome to The my Fitness Program Distributor </h2>
+		<br> <h4> Let's find your fitness program!</h4>
+		<br> <a href="/search" class="btn btn-left"> Choose you style</a>
+		<a href="index_f2.html" class="btn btn-right">Design your own</a>
+	</section>
+</body>
+</html>

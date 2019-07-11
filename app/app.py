@@ -1,11 +1,35 @@
 from flask import Flask, render_template, request, jsonify
+from utils import filter_programs
 import pickle
+
+def load_programs():
+    with open("programs.pickle", "rb") as fp:
+        programs = pickle.load(fp)
+    return programs
+
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "hello, world!"
+    return render_template("index_home.html")
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    programs = load_programs()
+    if request.method == "POST":
+        test_opt = {
+            "style": "", #"General Fitness",
+            "level": -1,
+            "len_min": 4,
+            "len_max": 8,
+            "goal": "" #"Build Muscle"
+        }
+        return render_template("search.jinja", programs=filter_programs(programs, test_opt))
+    else:
+        return render_template("search.jinja", programs=programs)
+
+
 
 @app.route("/api/programs")
 def program_api():
