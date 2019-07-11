@@ -1,0 +1,53 @@
+Name: My Beginner Program
+Styles: General Fitness
+Level: Beginner
+Length: 6 Weeks
+Goals: Build Muscle
+Desc: 
+This program contains a beginner guide to general fitness. User can choose workout weights accordingly.
+
+------------------
+Cycle 1: 6 weeks
+Day 1: Legs + Shoulders
+Machine Leg Press: 5x10
+Machine Leg Extensions: 4x12
+Machine Lying Hamstring Curls: 4x12
+Calf Raises: 4x25
+Barbell Shoulder Press: 4x6
+Dumbbell Side Raises: 4x15
+DB Front Raises: 4x15
+Lying Leg Raises: 4x20
+
+Day 2: Rest Day
+
+Day 3: Chest + Triceps
+DB Press: 4x8
+Machine Chest Press: 5x10
+Machine Chest Flies: 3x10  
+Cable Tricep Pushdown: 5x12
+		Note: Use rope grip
+Machine Tricep Extension: 4x12
+Dips: 3x10/ lb: Bodyweight
+Machine Ab Leg Curls: 4x15
+
+Day 4: Rest Day
+
+Day 5: Back + Biceps
+Cable Lat Pulldown: 5x10
+Note: Use wide grip
+Cable Row: 5x12
+Note: Use Close Grip
+Machine Row: 4x15
+Barbell Curls: 4x10
+Cable Curls: 3x8
+		Note: Use rope grip
+Seated Dumbbell Incline Curls: 3x12 
+Plank: 6x45 seconds
+
+Day 6: Rest Day
+
+Day 7: Rest Day
+
+
+
+END
