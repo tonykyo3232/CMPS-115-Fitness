@@ -3,7 +3,7 @@
 	<title> Fitness Scheduler - Select the Program </title>
 
 	<!-- import link of Font Awesome 5 Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -131,19 +131,16 @@
 	{
 		color:white;
 	}
-
 	.a:hover, .b:hover, .c:hover, .d:hover, .e:hover{
 		background-color: #ddd;
 		transition: all 0.5s ease-in;
 		text-decoration :none;
 		color:red;
 	}
-
 	</style>
 	
 	<!-- JavaScript implementation -->
 	<script type="text/javascript">
-
 		// Hide all elements with class="containerTab", except for the one that matches the clickable grid column
 		function openTab(tabName) {
 		  var i, x;
@@ -206,11 +203,11 @@
 		  // hard coding for now
 		  if (select == "Select the style---") 
 		  	group = "A";
-		  else if(select == "Body-Building")
+		  else if(select == "BodyBuilding")
 		  	group = "BB";
-		  else if(select == "Power-Lifting" && select == "Build Strength")
+		  else if(select == "PowerLifting" && select == "Build Strength")
 		  	group = "PL";
-		  else if(select == "General-Fitness" && select == "Build Muscle") 
+		  else if(select == "General Fitness" && select == "Build Muscle") 
 		  	group = "GF";
 		  else if(select == "Leg Day")
 		  	group = "leg";
@@ -218,7 +215,6 @@
 		  	group = "arm";
 		  else
 		  	group = "";
-
 		/*		    
 		  	for(i = 0; i < collection.length; i++){
 		  		if (group != collection[i]){
@@ -226,21 +222,18 @@
 		  			break;
 		  		}
 		  	}
-
 		  	for(i = 0; i < collection.length; i++){
 		  		if (group != collection[i]){
 		  			collection[i].remove();
 		  			break;
 		  		}
 		  	}
-
 		  	for(i = 0; i < collection.length; i++){
 		  		if (group != collection[i]){
 		  			collection[i].remove();
 		  			break;
 		  		}
 		  	}
-
 		  	for(i = 0; i < collection.length; i++){
 		  		if (group != collection[i]){
 		  			collection[i].remove();
@@ -279,9 +272,9 @@
   	<p>Choose Your Program Style</p>  
   	 	<select id = "mySelect1" onchange= "myFilter1(); filterSelection();">
   	 		<option>Choose Your Style---</option>
-    		<option>Body-Building</option>
-			<option>Power-Lifting</option>
-			<option>General-Fitness</option>
+    		<option>Bodybuilding</option>
+			<option>Powerlifting</option>
+			<option>General Fitness</option>
 		</select>	
   </li>
   <li>
@@ -357,9 +350,9 @@
   	<p>Choose Your Program Style</p>  
   	 	<select id = "mySelect4" onchange= "myFilter4(); filterSelection();">
   	 		<option>Choose Your Style---</option>
-    		<option>Body-Building</option>
-			<option>Power-Lifting</option>
-			<option>General-Fitness</option>
+    		<option>Bodybuilding</option>
+			<option>Powerlifting</option>
+			<option>General Fitness</option>
 		</select>	
   </li>
   <li>
@@ -380,6 +373,7 @@
 			<option>Advance</option>
 		</select>
   </li>
+  <!--
   <li>
 	<p>Choose Your Program Length</p>
   		<select id = "mySelect7" onchange= "myFilter7()">
@@ -389,6 +383,7 @@
 			<option>9 weeks or longer</option>
 		</select>
   </li>
+  -->
   </section>
 </div>
 
@@ -398,6 +393,46 @@
 		<img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
 		<div class="card-body">
 			<h5 class="card-title">My Beginner Program</h5>
+			<p class="card-text">This program contains a beginner guide to general fitness</p>
+			<a href="#" class="btn btn-primary">Go somewhere</a>
+		</div>
+	</div>
+	<div class="card" style="width: 18rem;">
+		<img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">Summer Program</h5>
+			<p class="card-text">Bilateral movements for strength training, and uses unilateral movements for high volume training to develop individual muscles effectively.</p>
+			<a href="#" class="btn btn-primary">Go somewhere</a>
+		</div>
+	</div>
+	<div class="card" style="width: 18rem;">
+		<img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">Combo Program</h5>
+			<p class="card-text">Combination of linear progression, Bulgarian, Westside Conjugate, hypertrophy, and RPE training methods</p>
+			<a href="#" class="btn btn-primary">Go somewhere</a>
+		</div>
+	</div>
+	<div class="card" style="width: 18rem;">
+		<img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">Massive Leg Routine</h5>
+			<p class="card-text">This program contains a beginner guide to building leg muscles.</p>
+			<a href="#" class="btn btn-primary">Go somewhere</a>
+		</div>
+	</div>
+	<div class="card" style="width: 18rem;">
+		<img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">Big Arm Routine</h5>
+			<p class="card-text">This routine alternate betweens tricep and bicep exercises to grow the arms</p>
+			<a href="#" class="btn btn-primary">Go somewhere</a>
+		</div>
+	</div>
+	<div class="card" style="width: 18rem;">
+		<img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">xxxxxx Program</h5>
 			<p class="card-text">Description...</p>
 			<a href="#" class="btn btn-primary">Go somewhere</a>
 		</div>
@@ -405,7 +440,7 @@
 	<div class="card" style="width: 18rem;">
 		<img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">My Beginner Program</h5>
+			<h5 class="card-title">xxxxxx Program</h5>
 			<p class="card-text">Description...</p>
 			<a href="#" class="btn btn-primary">Go somewhere</a>
 		</div>
@@ -413,11 +448,21 @@
 	<div class="card" style="width: 18rem;">
 		<img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">My Beginner Program</h5>
+			<h5 class="card-title">xxxxxx Program</h5>
 			<p class="card-text">Description...</p>
 			<a href="#" class="btn btn-primary">Go somewhere</a>
 		</div>
 	</div>
+	<div class="card" style="width: 18rem;">
+		<img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">xxxxxx Program</h5>
+			<p class="card-text">Description...</p>
+			<a href="#" class="btn btn-primary">Go somewhere</a>
+		</div>
+	</div>
+
+    <!--
 	<div class = "filterDiv GF">
 		<a class = "a" href = "https://docs.google.com/document/d/1Af0FMxRobkdCNq7V1bd4lMJhJB67zXZI1QEa0LvEa5o/edit?usp=sharing" target="_blank">My Beginner Program</a>
 	</div>
@@ -436,15 +481,9 @@
 	<div class = "filterDiv arm">
 		<a class = "e" href = "https://docs.google.com/document/d/1gyFqqohkISH4Esox_oLKZsPN-d2zyD50l4-x9o5PX7I/edit?usp=sharing" target="_blank">Big Arm Routine</a>
 	</div>
+	-->
 </div>
-
-
-<!-- Summary of choosing-->
-<!--<p id="output1"></p>
-<p id="output2"></p>
-<p id="output3"></p>
-<p id="output4"></p>
--->
+   
 <div>
 	<a href="index_export.html" class ="btn btn-export"> Export your workout program </a>
 </div>
