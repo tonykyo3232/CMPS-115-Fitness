@@ -1,12 +1,19 @@
 from flask import Flask, render_template, request, jsonify
-from utils import filter_programs
+from utils import filter_programs, filter_routines
 import pickle
 
+programs_file = "programs.pickle"
+routines_file = "routines.pickle"
+
 def load_programs():
-    with open("programs.pickle", "rb") as fp:
+    with open(programs_file, "rb") as fp:
         programs = pickle.load(fp)
     return programs
 
+def load_routines():
+    with open(routines_file, "rb") as fp:
+        routines = pickle.load(fp)
+    return routines
 
 app = Flask(__name__)
 
@@ -16,7 +23,6 @@ def index():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    programs = load_programs()
     if request.method == "POST":
         print(request.form)
 
@@ -39,13 +45,19 @@ def search():
             "len_max": len_max,
             "goal": form.get("goal", "")
         }
-        print(opt)
-        prog = filter_programs(programs, opt)
-        print(prog)
         
-    
-        return render_template("search.jinja", programs=filter_programs(programs, opt))
+        target = form.get("target", "").lower()
+        if target == "program":
+            programs = load_programs()
+            return render_template("search.jinja", programs=filter_programs(programs, opt))
+        elif target == "routine":
+            routines = load_routines()
+            return render_template("search.jinja", programs=filter_routines(routines, opt))
+        else:
+            programs = load_programs()
+            return render_template("search.jinja", programs=programs)
     else:
+        programs = load_programs()
         return render_template("search.jinja", programs=programs)
 
 

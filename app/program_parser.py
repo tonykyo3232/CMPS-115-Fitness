@@ -403,3 +403,56 @@ for filename in os.listdir(directory):
 with open("programs.pickle", "wb") as fp:
     import pickle
     pickle.dump(programs, fp)
+
+
+routines = [
+    {
+        "name": "Massive Leg Routine",
+        "styles": ["General Fitness"],
+        "level": 0,
+        "goals": ["Build Strength", "Build Muscle"],
+        "desc": "This program contains a beginner guide to building leg muscles. User can choose workout weights accordingly.",
+        "warmup": [],
+        "exercises": [
+            {
+                "name": "Barbell Back Squats",
+                "length": "5x5",
+                "notes": "1:30 min rest interval"
+            },
+            {
+                "name": "Barbell Lunges",
+                "length": "4x12",
+                "notes": "30-45 sec rest interval"
+            },
+            {
+                "name": "Machine Leg Press",
+                "length": "4x12",
+                "notes": "1 min rest interval"
+            },
+            {
+                "name": "Machine Leg Extension",
+                "length": "3x15",
+                "notes": "30-45 sec rest interval"
+            },
+            {
+                "name": "Barbell Deadlift",
+                "length": "4x8",
+                "notes": "1:30 min rest interval"
+            },
+            {
+                "name": "Machine Lying Hamstring Curls",
+                "length": "4x10",
+                "notes": "30-45 sec rest interval"
+            },
+            {
+                "name": "Dumbbell Calf Raises",
+                "length": "3x45",
+                "notes": "30 sec rest interval"
+            }
+        ]
+    }
+]
+
+with open("routines.pickle", "wb") as fp:
+    import pickle
+    pickle.dump(routines, fp)

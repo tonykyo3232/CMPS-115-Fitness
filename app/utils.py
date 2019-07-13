@@ -103,4 +103,43 @@ def filter_programs(progs, opt):
 
 assert [test_program] == filter_programs([test_program], test_opt)
         
+
+
+def filter_routine(rout, style="", goal="", level=-1):
+    return filter_styles(rout["styles"], style) \
+            and filter_goals(rout["goals"], goal) \
+            and filter_level(rout["level"], level)
+
+'''
+[SPEC] filter_routines
+
+INPUT:
+    routines set routs :=
+    [
+        // Set of routine where we want to find routines satisfying a filtering option
+    ]
+    filtering option OPT :=
+    {
+        // NOTICE: All of below attributes should be given
+        // Default: "Don't filter with this attribute"
+        style : "Bodybuilding",         // Default = "" 
+        goal  : "Build Muscle",         // Default = ""
+        level : 1  (== "Intermediate")  // Default = -1
+    }
+
+OUTPUT:
+    SAT_ROUTS :=
+    [
+        // routines that satisfy the given filtering option
+    ]
+'''
+def filter_routines(routs, opt):
+    sat_routs = []
+    
+    for rout in routs:
+        if filter_routine(rout, opt["style"], opt["goal"], opt["level"]):
+            sat_routs.append(rout)
+    return sat_routs
+
+
 # ----- [END] Helper Functions for Filtering -----
