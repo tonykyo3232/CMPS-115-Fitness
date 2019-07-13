@@ -1,0 +1,245 @@
+<html>
+<head>
+  <title>Select the Program </title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<style>
+
+  /*background image setting*/
+  body
+  {
+    background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(image/wallpaper5.jpg);
+    background-size: 100% 100%;
+  }
+
+  .container 
+  {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 20px;
+      overflow: hidden;
+      padding: 20px;
+  }
+
+  .form-inline
+  {
+    color:white;
+  }
+
+  .btn-success
+  {
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+  }
+
+</style>
+
+<!-- JavaScript implementation -->
+  <script type="text/javascript">
+    // Synchronous version using XMLHttpRequest
+    const host = "http://ec2-18-217-233-23.us-east-2.compute.amazonaws.com:8080";
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", host + "/api/programs", false);
+    xhr.send();
+    var programs = JSON.parse(xhr.responseText);
+  </script>  
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index_home.html">My Fitness Distributer</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="index_home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index_about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index_login.html">Log In</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Provide the option that user to choose & filter the grids-->
+  <form class="form-inline">
+  <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
+  
+  <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+    <option selected>Choose...</option>
+    <option value="1">All Programs</option>
+    <option value="2">Workout Programs</option>
+    <option value="3">Daily Routine</option>
+  </select>
+
+  <label class="mr-sm-2" for="inlineFormCustomSelect">Goal</label>
+  <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+    <option selected>Choose...</option>
+    <option value="1">Lose weight</option>
+    <option value="2">Build Muscle</option>
+    <option value="3">Build Strength</option>
+  </select>
+
+  <label class="mr-sm-2" for="inlineFormCustomSelect">Style</label>
+  <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+    <option selected>Choose...</option>
+    <option value="1">General Fitness</option>
+    <option value="2">Powerlifting</option>
+    <option value="3">Bodybuilding</option>
+  </select>
+
+  <label class="mr-sm-2" for="inlineFormCustomSelect">Level</label>
+  <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+    <option selected>Choose...</option>
+    <option value="1">Beginner</option>
+    <option value="2">Intermidiate</option>
+    <option value="3">Advance</option>
+  </select>
+
+  <label class="mr-sm-2" for="inlineFormCustomSelect">Length</label>
+  <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+    <option selected>Choose...</option>
+    <option value="1"> 1 day</option>
+    <option value="2">1-4 weeks</option>
+    <option value="3">5-8 weeks</option>
+    <option value="4">9 weeks above</option>
+
+  </select>
+
+  <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+    <input type="checkbox" class="custom-control-input">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Remember my preference</span>
+  </label>
+
+  <button type="submit" class="btn btn-primary">Filter</button>
+</form>
+
+
+  <!-- Create the grid -->
+<div class = "container">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">My Beginner Program</h5>
+      <p class="card-text">This program contains a beginner guide to general fitness</p>
+      <a href="#" class="btn btn-primary">View Detail</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Summer Program</h5>
+      <p class="card-text">Bilateral movements for strength training, and uses unilateral movements for high volume training to develop individual muscles effectively.</p>
+      <a href="#" class="btn btn-primary">View Detail</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Combo Program</h5>
+      <p class="card-text">Combination of linear progression, Bulgarian, Westside Conjugate, hypertrophy, and RPE training methods</p>
+      <a href="#" class="btn btn-primary">View Detail</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Massive Leg Routine</h5>
+      <p class="card-text">This program contains a beginner guide to building leg muscles.</p>
+      <a href="#" class="btn btn-primary">View Detail</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Big Arm Routine</h5>
+      <p class="card-text">This routine alternate betweens tricep and bicep exercises to grow the arms</p>
+      <a href="#" class="btn btn-primary">View Detail</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Conditioning Program</h5>
+      <p class="card-text">This program contains circuits as a training method to lose weight.</p>
+      <a href="#" class="btn btn-primary">View Detail</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">WestSide Conjugate Program</h5>
+      <p class="card-text">This program focuses on accessories that contributes to the squat, bench, and deadlift. The RPE training method will be used throughout this program.</p>
+      <a href="#" class="btn btn-primary">View Detail</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Linear Periodization Program</h5>
+      <p class="card-text">Description...</p>
+      <a href="#" class="btn btn-primary">View Detail</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Chest Killer Routine</h5>
+      <p class="card-text">Description...</p>
+      <a href="#" class="btn btn-primary">View Detail</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Exporting option -->
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+  <H5>Export</H5>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Exporting to pdf...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        We will record the selection of workout program. Please click "Proceeding to export page" to finish the progress...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary"> <a href = "index_home.html" style="color: #ffffff" >Proceeding to export page</a></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
