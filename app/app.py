@@ -18,14 +18,33 @@ def index():
 def search():
     programs = load_programs()
     if request.method == "POST":
+        print(request.form)
+
         test_opt = {
-            "style": "", #"General Fitness",
+            "style": "Bodybuilding", #"General Fitness",
             "level": -1,
-            "len_min": 4,
-            "len_max": 8,
+            "len_min": -1, #4,
+            "len_max": -1,#8,
             "goal": "" #"Build Muscle"
         }
-        return render_template("search.jinja", programs=filter_programs(programs, test_opt))
+        
+        form = request.form
+        length_opt = form.get("length", "-1,-1")
+        len_min = int(length_opt.split(",")[0])
+        len_max = int(length_opt.split(",")[1])
+        opt = {
+            "style": form.get("style", ""),
+            "level": int(form.get("level", "-1")),
+            "len_min": len_min,
+            "len_max": len_max,
+            "goal": form.get("goal", "")
+        }
+        print(opt)
+        prog = filter_programs(programs, opt)
+        print(prog)
+        
+    
+        return render_template("search.jinja", programs=filter_programs(programs, opt))
     else:
         return render_template("search.jinja", programs=programs)
 

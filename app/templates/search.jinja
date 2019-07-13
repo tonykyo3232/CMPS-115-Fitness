@@ -40,7 +40,7 @@
 		
 		body
 		{
-			background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(image/wallpaper5.jpg);
+			background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url({{ url_for('static', filename='image/wallpaper5.jpg') }});
 			background-size: 100% 100%;
 		}
 		/* The grid: Three equal columns that floats next to each other */
@@ -127,113 +127,6 @@
 			color:red;
 		}
 		</style>
-		
-		<!-- JavaScript implementation -->
-		<script type="text/javascript">
-			// Hide all elements with class="containerTab", except for the one that matches the clickable grid column
-			function openTab(tabName) {
-			var i, x;
-			x = document.getElementsByClassName("containerTab");
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";
-			}
-			document.getElementById(tabName).style.display = "block";
-			}
-			function myFilter1() {
-			var x = document.getElementById("mySelect1").value;
-			document.getElementById("output1").innerHTML = "Workout program you selected: " + "[" + x + "]";
-			}
-			function myFilter2() {
-			var y = document.getElementById("mySelect2").value;
-			document.getElementById("output2").innerHTML = "Difficultly you selected: " + "[" + y + "]";
-			}
-			function myFilter3() {
-			var z = document.getElementById("mySelect3").value;
-			document.getElementById("output3").innerHTML = "length of program you selected: " + "[" + z + "]";
-			}
-			
-			//----------------------------------------------
-			function myFilter4() {
-			var x = document.getElementById("mySelect4").value;
-			document.getElementById("output1").innerHTML = "Goal you selected: " + "[" + x + "]";
-			}
-			function myFilter5() {
-			var y = document.getElementById("mySelect5").value;
-			document.getElementById("output2").innerHTML = "Difficultly you selected: " + "[" + y + "]";
-			}
-			function myFilter6() {
-			var z = document.getElementById("mySelect6").value;
-			document.getElementById("output3").innerHTML = "length of program you selected: " + "[" + z + "]";
-			}
-			//----------------------------------------------
-			function myFilter7() {
-			var x = document.getElementById("mySelect7").value;
-			document.getElementById("output1").innerHTML = "Routine you selected: " + "[" + x + "]";
-			}
-			function myFilter8() {
-			var y = document.getElementById("mySelect8").value;
-			document.getElementById("output2").innerHTML = "Difficultly you selected: " + "[" + y + "]";
-			}
-			function myFilter9() {
-			var z = document.getElementById("mySelect9").value;
-			document.getElementById("output3").innerHTML = "length of program you selected: " + "[" + z + "]";
-			}
-			//*************************************
-			//* filter functions
-			//*************************************
-			function filterSelection(){
-			var select, group, i, collection;
-			// get the target
-			select = document.getElementById("mySelect1").value;
-			
-			// get the list of the class of workout program
-			collection = document.getElementsByClassName("filterDiv");
-			
-			// hard coding for now
-			if (select == "Select the style---") 
-				group = "A";
-			else if(select == "BodyBuilding")
-				group = "BB";
-			else if(select == "PowerLifting" && select == "Build Strength")
-				group = "PL";
-			else if(select == "General Fitness" && select == "Build Muscle") 
-				group = "GF";
-			else if(select == "Leg Day")
-				group = "leg";
-			else if(select == "Arm Day")
-				group = "arm";
-			else
-				group = "";
-			/*		    
-				for(i = 0; i < collection.length; i++){
-					if (group != collection[i]){
-						collection[i].remove();
-						break;
-					}
-				}
-				for(i = 0; i < collection.length; i++){
-					if (group != collection[i]){
-						collection[i].remove();
-						break;
-					}
-				}
-				for(i = 0; i < collection.length; i++){
-					if (group != collection[i]){
-						collection[i].remove();
-						break;
-					}
-				}
-				for(i = 0; i < collection.length; i++){
-					if (group != collection[i]){
-						collection[i].remove();
-						break;
-					}
-				}
-			*/
-			}
-			
-		</script>
-
 	</head>
 <body>
 <header>
@@ -245,97 +138,125 @@
 			<i class = "fas fa-search"> </i>
 </header>
 
-<div class="row">
+{# <div class="row">
   <div class="column" onclick="openTab('b1');" style="background:transparent;">Programs <i class = "fas fa-angle-double-down"></i></div>
   <!--<div class="column" onclick="openTab('b2');" style="background:transparent;">Goal <i class = "fas fa-angle-double-down"></i></div> -->
   <div class="column" onclick="openTab('b2');" style="background:transparent;">Routine <i class = "fas fa-angle-double-down"></i></div>
-</div>
+</div> #}
 
-<!-- The expanding grid (hidden by default) -->
-<div id="b1" class="containerTab" style="display:none;background:#006666">
-  <!-- If you want the ability to close the container, add a close button -->
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-  <h2>Filter Workout Programs</h2>
-  <section class = "op1">
-  <li>
-  	<p>Choose Your Program Style</p>  
-  	 	<select id = "mySelect1" onchange= "myFilter1(); filterSelection();">
-  	 		<option>Choose Your Style---</option>
-    		<option>Bodybuilding</option>
-			<option>Powerlifting</option>
-			<option>General Fitness</option>
-		</select>	
-  </li>
-  <li>
-	<p>Choose Your Goal</p>
-  		<select id = "mySelect2" onchange= "myFilter2()">
-  			<option>Goal---</option>
-    		<option>Lose Weight</option>
-			<option>Build Muscle</option>
-			<option>Build Strength</option>
-		</select>
-  </li>
-  <li>
-	<p>Choose Your Difficulty Level</p>
-  		<select id = "mySelect3" onchange= "myFilter3()">
-  			<option>Difficulty Level---</option>
-    		<option>Beginner</option>
-			<option>Intermediate</option>
-			<option>Advance</option>
-		</select>
-  </li>
-  <li>
-	<p>Choose Your Program Length</p>
-  		<select id = "mySelect4" onchange= "myFilter4()">
-  			<option>Program Length---</option>
-    		<option>1-4 weeks</option>
-			<option>5-8 weeks</option>
-			<option>9 weeks or longer</option>
-		</select>
-  </li>
-  </section>
-  {# <button onclick="">Search</button> #}
-</div>
 
-<div id="b2" class="containerTab" style="display:none;background:#006666">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-   <h2>Filter Workout Routines</h2>
-  <section class = "op1">
-  <li>
-  	<p>Choose Your Program Style</p>  
-  	 	<select id = "mySelect4" onchange= "myFilter4(); filterSelection();">
-  	 		<option>Choose Your Style---</option>
-    		<option>Bodybuilding</option>
-			<option>Powerlifting</option>
-			<option>General Fitness</option>
-		</select>	
-  </li>
-  <li>
-	<p>Choose Your Goal</p>
-  		<select id = "mySelect5" onchange= "myFilter5()">
-  			<option>Goal---</option>
-    		<option>Lose Weight</option>
-			<option>Build Muscle</option>
-			<option>Build Strength</option>
-		</select>
-  </li>
-  <li>
-	<p>Choose Your Difficulty Level</p>
-  		<select id = "mySelect6" onchange= "myFilter6()">
-  			<option>Difficulty Level---</option>
-    		<option>Beginner</option>
-			<option>Intermediate</option>
-			<option>Advance</option>
-		</select>
-  </li>
-  </section>
-</div>
+
+	<ul class="nav nav-pills mb-2" role="tablist">
+	<li class="nav-item">
+		<a class="nav-link active" id="program-tab" data-toggle="pill" href="#search-programs" role="tab" aria-controls="search-programs" aria-selected="true">Programs</a>
+	</li>
+	{# <li class="nav-item">
+		<a class="nav-link" id="routine-tab" data-toggle="pill" href="#search-routines" role="tab" aria-controls="search-routines" aria-selected="false">Routines</a>
+	</li> #}
+	</ul>
+
+	<div class="tab-content" style="background:#006666; color:white">
+		<div class="tab-pane fade show active" role="tabpanel" aria-labelledby="program-tab" id="search-programs">
+			<h2>Filter by</h2>
+			<form id="program-opt-form" method="POST">
+				<div class="form-group">
+					<label for="target">Search target</label>
+					<select class="form-control" id="target" name="target">
+						<option></option>
+						<option>Program</option>
+						<option>Routine</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="style-opt">Style</label>
+					<select class="form-control" id="style-opt" name="style">
+						<option></option>
+						<option>Bodybuilding</option>
+						<option>Powerlifting</option>
+						<option>General Fitness</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="goal-opt">Goal</label>
+					<select class="form-control" id="goal-opt" name="goal">
+						<option></option>
+						<option>Lose Weight</option>
+						<option>Build Muscle</option>
+						<option>Build Strength</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="level-opt">Style</label>
+					<select class="form-control" id="level-opt" name="level">
+						<option value="-1"></option>  			
+						<option value="0">Beginner</option>
+						<option value="1">Intermediate</option>
+						<option value="2">Advance</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="length-opt">Length</label>
+					<select class="form-control" id="length-opt" name="length">
+						<option value="-1,-1"></option>  			
+						<option value="1,4">1-4 weeks</option>
+						<option value="5,8">5-8 weeks</option>
+						<option value="9,-1">9 weeks or longer</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-primary">Filter</button>
+			</form>
+		</div>
+		{# <div class="tab-pane fade" role="tabpanel" aria-labelledby="routine-tab" id="search-routines">
+			<h2>Filter Programs (routines not yet implemented)</h2>
+			<form id="routine-opt-form" method="POST">
+				<div class="form-group">
+					<label for="style-opt">Style</label>
+					<select class="form-control" id="style-opt">
+						<option></option>
+						<option>Bodybuilding</option>
+						<option>Powerlifting</option>
+						<option>General Fitness</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="goal-opt">Goal</label>
+					<select class="form-control" id="goal-opt">
+						<option></option>
+						<option>Lose Weight</option>
+						<option>Build Muscle</option>
+						<option>Build Strength</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="level-opt">Style</label>
+					<select class="form-control" id="level-opt" name="level">
+						<option value="-1"></option>  			
+						<option value="0">Beginner</option>
+						<option value="1">Intermediate</option>
+						<option value="2">Advance</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="length-opt">Style</label>
+					<select class="form-control" id="length-opt" name="len">
+						<option value="-1,-1"></option>  			
+						<option value="1,4">1-4 weeks</option>
+						<option value="5,8">5-8 weeks</option>
+						<option value="9,-1">9 weeks or longer</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-primary">Filter</button>
+			</form>
+		</div> #}
+	</div>
+
+
 
 <!-- Create the grid -->
 <div class = "container">
 	{% for program in programs %}
 	<div class="card" style="width: 18rem;">
-		<img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
+		<img class="card-img-top" src="{{ url_for('static', filename='image/wallpaper5.jpg') }}">
 		<div class="card-body">
 			<h5 class="card-title">{{ program["name"] }}</h5>
 			<p class="card-text">{{ program["desc"] }}</p>
@@ -348,5 +269,8 @@
 
 <a href="index_export.html" class ="btn btn-export"> Export your workout program </a>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
