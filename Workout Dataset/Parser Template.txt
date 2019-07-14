@@ -1,5 +1,3 @@
-﻿@Back-End, if you don’t see RPE, Weight, or Notes given for an exercise...save it as n/a
-
 Name: n/a
 Style: n/a
 Difficulty Level: n/a
