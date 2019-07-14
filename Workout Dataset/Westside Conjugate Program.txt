@@ -1,0 +1,62 @@
+﻿Name: Westside Conjugate Program
+Style: Powerlifting
+Difficulty Level: Intermediate
+Length: 8 Weeks
+Goal: Build Strength
+General Info: This program focuses on accessories that contributes to the squat, bench, and deadlift. The RPE training method will be used throughout this program.
+--------------------
+Cycle: Number: 1 / Description: n/a / Weeks: 8
+Day: Number: 1 / Description: n/a
+Warm Up Exercise: n/a
+Exercise: Barbell Reverse Banded Back Squats / Length: 4x3 / RPE: 10 / Notes: Use 25-65lb resistance. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pause Back Squats / Length: 4x5 / RPE: 7 / Notes: Pause for 3 3 second(s). User determines weight ( __ lb) based on RPE.
+Exercise: Barbell High Bar Back Squats / Length: 3x8 / RPE: 6 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Deficit Deadlift / Length: 3x6 / RPE: 7-8 / Notes: Use 2 inch deficit. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Snatch Grip Deadlift / Length: 3x8 / RPE: 6-6.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Stiff Leg Deadlift / Length: 3x8 / RPE: 6-6.5 / Notes: User determines weight ( __ lb) based on RPE.
+
+
+Day: Number: 2 / Description: n/a
+Warm Up Exercise: n/a
+Exercise: Barbell Board Bench Press / Length: 5x4 / RPE: 9 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pause Bench Press / Length: 3x5 / RPE: 7 / Notes: Pause for 3 second(s). User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Chain Bench Press / Length: 4x6 / RPE: 7 / Notes: Use 50-60lb chains. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Shoulder Press / Length: 3x5 / RPE: 7.5-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell JM Press / Length: 3x8 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Skull Crushers / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+
+
+Day: Number: 3 / Description: Rest Day
+
+
+Day: Number: 4 / Description: n/a
+Warm Up Exercise: n/a
+Exercise: Barbell Chain Back Squats / Length: 4x6 / RPE: 7 / Notes: Use 50-60lb chains. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Front Squats / Length: 5x7 / RPE: 7 / Notes: Pause for 3 second(s). User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Incline Bench Press / Length: 4x8 / RPE: 6-7 / Notes: Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Shoulder Press / Length: 3x8 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Rows / Length: 4x8 / RPE: 4-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Rows / Length: 4x6 / RPE: 7-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Pull Ups / Length: 4x8 / Weight: Bodyweight / Notes: If final set’s RPE ( __ ) is 6, add weights accordingly for the following weeks for current cycle.
+Exercise: Dumbbell Front Raises / Length: 4x10 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Side Raises / Length: 4x10 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+
+
+Day: Number: 5 / Description: n/a
+Warm Up Exercise: n/a
+Exercise: Barbell Block Pulls / Length: 3x3 / RPE: 7.5-8 / Notes: Use 4-5 inch blocks. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pin Deadlift / Length: 3x5 / RPE: 7-8 / Notes: Set pins to at knee level. Pause at pins for 3 3 second(s) / User determines weight ( __ lb) based on RPE.
+Exercise: Machine Seated Single Leg Hamstring Curls / Length: 4x8 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Machine Lying Hamstring Curls / Length: 3x10 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Slingshot Bench Press / Length: 4x3 / RPE: 9 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Close Grip Bench Press / Length: 3x7 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+
+
+Day: Number: 6 / Description: Rest Day
+
+
+Day: Number: 7 / Description: Rest Day
+--------------------
+
+
+End
