@@ -1,6 +1,5 @@
 ﻿@Back-End, if you don’t see RPE, Weight, or Notes given for an exercise...save it as n/a
 
-
 Name: n/a
 Style: n/a
 Difficulty Level: n/a
@@ -9,29 +8,24 @@ Goal: n/a
 General Info: n/a
 --------------------
 
-
 Cycle: Number: n/a / Description: n/a / Weeks: n/a
 Day: Number: n/a / Description: n/a
 Warm Up Exercise: n/a
 Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
-
 
 Day: Number: n/a / Description: n/a
 Warm Up Exercise: n/a
 Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
 --------------------
 
-
 Cycle: Number: n/a / Description: n/a / Weeks: n/a
 Day: Number: n/a / Description: n/a
 Warm Up Exercise: n/a
 Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
 
-
 Day: Number: n/a / Description: n/a
 Warm Up Exercise: n/a
 Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
 --------------------
-
 
 End
