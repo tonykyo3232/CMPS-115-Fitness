@@ -1,11 +1,10 @@
-﻿Name: Summer Program
+Name: Summer Program
 Style: Bodybuilding
 Difficulty Level: Intermediate
 Length: 8 Weeks
 Goal: Build Muscle, Build Strength
 General Info: This is an intermediate level body building program that uses bilateral movements for strength training, and uses unilateral movements for high volume training to develop individual muscles effectively. User can choose workout weights accordingly.
 --------------------
-
 
 Cycle: Number: 1 / Description: n/a / Weeks: 8
 Day: Number: 1 / Description: Legs + Shoulders
@@ -23,9 +22,7 @@ Exercise: Dumbbell Front Raises / Length: 4x15 / Notes: 1:20 minute(s) rest inte
 Exercise: Cable Rope Crunch / Length: 4x12 / Notes: 1:20 minute(s) rest interval.
 Exercise: Cable Standing Lift / Length: 4x20 / Notes: 1 minute(s) rest interval.
 
-
 Day: Number: 2 / Description: Rest Day
-
 
 Day: Number: 3 / Description: Chest + Triceps
 Warm Up Exercise: n/a
@@ -43,9 +40,7 @@ Exercise: Dips / Length: 3x10 / Notes: Notes: 1:20 minute(s) rest interval.
 Exercise: Cable Rope Crunch / Length: 4x12 / Notes: 1:20 minute(s) rest interval.
 Exercise: Cable Standing Lift / Length: 4x20 / Notes: 1 minute(s) rest interval.
 
-
 Day: Number: 4 / Description: Rest Day
-
 
 Day: Number: 5 / Description: Back + Biceps
 Warm Up Exercise: n/a
@@ -60,12 +55,9 @@ Exercise: Cable Curls / Length: 3x15 / Notes: Use medal bar grip / 1:30 minute(s
 Exercise: Cable Rope Crunch / Length: 4x12 / Notes: 1:20 minute(s) rest interval.
 Exercise: Cable Standing Lift / Length: 4x20 / Notes: 1 minute(s) rest interval.
 
-
 Day: Number: 6 / Description: Rest Day
-
 
 Day: Number: 7 / Description: Rest Day
 --------------------
-
 
 End
