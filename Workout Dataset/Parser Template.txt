@@ -1,3 +1,6 @@
+@Matt - In Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
+        If Length or RPE or Weight or Notes are not provided, please store still store n/a
+-------------------- (Start of Parser Templaete Now)
 Name: n/a
 Style: n/a
 Difficulty Level: n/a
