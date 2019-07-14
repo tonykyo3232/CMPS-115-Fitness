@@ -1,0 +1,265 @@
+﻿Name: Combo Program
+Style: Powerlifting
+Difficulty Level: Advance
+Length: 32 Weeks
+Goal: Build Strength
+General Info: This program contains a combination of strength training methods. This allows the program to accommodate the athlete by not focussing on exact weekly numbers the athlete must be able to lift. Personal daily life routines, sickness, or any activities that might prohibits optimal performances will be factored in and will require the user to interact with this program, such as choosing workout weights accordingly, to optimize overall strength building.  
+--------------------
+
+
+Cycle: Number: 1 / Description: Volume and Hypertrophy / Weeks: 12
+Day: Number: 1 / Description: n/a
+Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
+Warm Up Exercise: Cable Face Pulls / Length: 3x12 / RPE: 6-7 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE.
+Warm Up Exercise: Cable Single Arm Tricep Pushdowns / Length: 3x10 / RPE: 7 / Notes: Use medal grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pause Back Squats / Length: 5x3 / RPE: 7-8 / Notes: Pause for 3 second(s). User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Tempo Back Squats / Length: 3x5 / RPE: 7 / Notes: 3 second(s) descent. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Spoto Bench Press / Length: 4x3 / RPE: 7.5-8 / Notes: Pause for 3 second(s) roughly one inch from chest. User determines weight ( __ lb) based on RPE.                
+Exercise: Dumbbell Incline Bench Press / Length: 3x8 / RPE: 6.5-7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pause Deadlift / Length: 3x5 / RPE: 7-8 / Notes: Pause below knees for 3 second(s). User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Deadlift / Length: 3x8 / Weight: 70% of 1RM /  Notes: If final set’s RPE ( __ ) is 6-6.5, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
+Exercise: Full Body Ab Roller / Length: 5x10 / Notes: Go onto knees if unable to do full body.
+
+
+Day: Number: 2 / Description: n/a
+Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
+Warm Up Exercise: Tricep Stretch / Notes: Stretch for as long as needed.
+Warm Up Exercise: Shoulder Stretch / Notes: Stretch for as long as needed.
+Warm Up Exercise: Cable Face Pulls / Length: 3x12 / RPE: 6-7 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE.
+Warm Up Exercise: Cable Single Arm Tricep Pushdowns / Length: 3x10 / RPE: 7 / Notes: Use medal grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Front Squats / Length: 3x5 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Back Squats / Length: 4x8 / Weight: 63% of 1RM / Notes: If final set’s RPE ( __ ) is 6-6.5, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
+Exercise: Barbell Pause Bench Press / Length: 4x3 / RPE: 7.5-8 / Notes: Pause for 3 second(s). User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Banded Bench Press / Length: 3x5 / RPE: 6.5-7 / Notes: Use 25-65lb resistance bands. User determines weight ( __ lb) based on RPE.
+Exercise: Plyometric Push Ups / Length: 3x8 / Weight: Bodyweight
+Exercise: Barbell Pendlay Rows / Length: 3x5 / RPE: 8-9 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Rows / Length: 3x5 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Pull Ups / Length: 3x8 / Weight: Bodyweight / Notes: If final set’s RPE ( __ ) is 6, increase weights accordingly for the remaining of this cycle.
+
+
+Day: Number: 3 / Description: n/a
+Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
+Exercise: Barbell Pin Back Squats / Length: 3x5 / RPE: 8 / Notes: Set pins to parallel or slightly below parallel of knee. User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Bulgarian Split Squats / Length: 3x8 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Face Pulls / Length: 3x12 / RPE: 7 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE.
+Exercise: Cable Single Arm Tricep Pushdowns / Length: 3x10 / RPE: 7-8 / Notes: Use medal grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pin Bench Press / Length: 3x5 / RPE: 7-7.5 / Notes: Set pins half an inch above chest. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Close Grip Bench Press / Length: 3x8 / Weight: 55% of 1RM / Notes: If final set’s RPE ( __ ) is 6-6.5, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
+Exercise: Dumbbell Bench Press / Length: 3x8 / RPE: 7.5-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell JM Press / Length: 3x8 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Skull Crushers / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Full Body Ab Roller / Length: 5x10 / Notes: Go onto knees if unable to do full body.
+
+
+Day: Number: 4 / Description: n/a
+Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
+Exercise: Barbell Block Pulls / Length: 3x3 / RPE: 8 / Notes: Use 4-5 inch blocks. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Negative Deadlift / Length: 3x5 / RPE: 7-7.5 / Notes: Controlled eccentric. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Stiff Leg Deadlift / Length: 3x8 / RPE: 6-6.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Reverse Hyperextensions / Length: 3x10 / RPE: 4-5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: T-Bar Rows / Length: 3x6-8 / RPE: 7-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Rows / Length: 3x8 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Lat Pulldowns / Length: 3x8 / RPE: 7 / Notes: Use medal wide grip handle. Pull down towards the back of neck. User determines weight ( __ lb) based on RPE.        
+Exercise: Cable Rows / Length: 3x6 / RPE: 8 / Notes: Use medal close grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Cable Pullovers / Length: 3x12 / RPE: 6.5-7 / Notes: Use medal wide grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Machine Seated Hamstring Curls / Length: 3x12 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Machine Seated Single Leg Hamstring Curls / Length: 3x8 / RPE: 6.5-7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Machine Lying Hamstring Curls / Length: 3x10 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+
+
+Day: Number: 5 / Description: n/a
+Warm Up Exercise: n/a
+Exercise: Barbell Shoulder Press / Length: 3x5 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Upright Row / Length: 3x8 / RPE: 7 / Notes: Grip the bar at shoulder width. Pause for 2 second(s) at the top of the movement. User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Shoulder Press / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Front Shoulder Press / Length: 3x8 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Front Raises / Length: 3x10 / RPE: 6-6.5 / Notes: Use medal wide grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Side Raises / Length: 3x15 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Shrugs / Length: 3x12 / RPE: 9-10 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Tricep Kickbacks / Length: 3x12 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Tricep Pushdowns / Length: 3x10 / RPE: 8 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE.
+Exercise: Dips / Length: 3x8 / Weight: Bodyweight / Notes: If final set’s RPE ( __ ) is 6-6.5, increase prescribed weight accordingly for the remaining of this cycle.
+Exercise: Dumbbell Incline Curls / Length: 4x8 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Spider Curls / Length: 3x12 / RPE: 6-6.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Full Body Ab Roller / Length: 5x10 / Notes: Go onto knees if unable to do full body.
+
+
+Day: Number: 6 / Description: Rest Day
+
+
+
+
+Day: Number: 7 / Description: Rest Day
+----------------------------------------------------------------- 
+
+
+Cycle: Number: 2 / Description: Heavy and Accessories / Weeks: 12
+Day: Number: 1 / Description: n/a
+Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
+Warm Up Exercise: Kettlebell Deep Squat Stretch / Length: 3x5 / RPE: 3-4 / Notes: Pause at the bottom of the movement for 10 second(s). User determines weight ( __ lb) based on RPE.
+Warm Up Exercise: Barbell 1 & 1/2 Pause Back Squats / Length: 3x5 / RPE: 2-3 / Notes: Pause for 5 second(s). User determines weight ( __ lb) based on RPE.
+Warm Up Exercise: Cable Face Pulls / Length: 3x12 / RPE: 6-7 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE.
+Warm Up Exercise: Cable Single Arm Tricep Pushdowns / Length: 3x10 / RPE: 7 / Notes: Use medal grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Back Squats / Length: 3x3 / Weight: 80% of 1RM / Notes: If final set’s RPE ( __ ) is 7-7.5, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
+Exercise: Barbell Pause Back Squats / Length: 3x5 / RPE: 7-7.5 / Notes: Pause for 3 sec. User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Bulgarian Split Squats / Length: 3x8 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Banded Bench Press / Length: 5x3 / RPE: 5.5-6 / Notes: Use 25-65lb resistance bands. Focus on speed. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Bench Press / Length: 3x3 / Weight: 80% of 1RM / Notes: If final set’s RPE ( __ ) is 7-7.5, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
+Exercise: Barbell Pause Bench Press / Length: 3x5 / RPE: 7-7.5 / Notes: Pause for 3 sec. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Shoulder Press / Length: 3x5 / RPE: 7.5-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Full Body Ab Roller / Length: 5x10 / Notes: Go onto knees if unable to do full body.
+
+
+Day: Number: 2 / Description: n/a
+Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
+Warm Up Exercise: Kettlebell Deep Squat Stretch / Length: 3x5 / RPE: 3-4 / Notes: Pause at the bottom of the movement for 10 second(s). User determines weight ( __ lb) based on RPE.
+Warm Up Exercise: Tricep Stretch / Notes: Stretch for as long as needed.
+Warm Up Exercise: Shoulder Stretch / Notes: Stretch for as long as needed.
+Exercise: Barbell Front Squats / Length: 3x3 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pin Back Squats / Length: 3x5 / RPE: 7-8 / Notes: Set pins to parallel or slightly below parallel of knee. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Banded Deadlift / Length: 4x3 / RPE: 5.5-6 / Notes: Use 25-65lb resistance bands. Focus on speed. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Deadlift / Length: 3x3 / Weight: 80% of 1RM / Notes: If final set’s RPE ( __ ) is 7, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
+Exercise: Barbell Deadlift / Length: 3x5 / RPE: 6.5-7 / Notes: User determines weight ( __ lb) based on RPE        .
+Exercise: T-Bar Rows / Length: 3x6-8 / RPE: 7-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Rows / Length: 3x8 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Lat Pulldowns / Length: 3x8 / RPE: 7 / Notes: Use medal wide grip handle. Pull down towards the back of neck. User determines weight ( __ lb) based on RPE.
+Exercise: Cable Rows / Length: 3x6 / RPE: 8 / Notes: Use medal close grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Cable Pullovers / Length: 3x12 / RPE: 6.5-7 / Notes: Use medal wide grip handle. User determines weight ( __ lb) based on RPE.
+
+
+Day: Number: 3 / Description: n/a
+Warm Up Exercise: n/a
+Exercise: Cable Face Pulls / Length: 3x12 / RPE: 7 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE.
+Exercise: Cable Single Arm Tricep Pushdowns / Length: 3x10 / RPE: 7-8 / Notes: Use medal grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Bench Press / Length: 3x5 / RPE: 7.5-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Close Grip Bench Press / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Bench Press / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Front Shoulder Press / Length: 3x8 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE. 
+Exercise: Dumbbell Front Raises / Length: 3x10 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Side Raises / Length: 3x15 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Upright Row / Length: 3x8 / RPE: 7 / Notes: Grip the bar at shoulder width. Pause for 2 second(s) at the top of the movement. User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Tricep Kickbacks / Length: 3x12 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Tricep Pushdowns / Length: 3x10 / RPE: 8 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE. 
+Exercise: Full Body Ab Roller / Length: 5x10 / Notes: Go onto knees if unable to do full body.
+
+
+Day: Number: 4 / Description: n/a
+Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
+Warm Up Exercise: Cable Face Pulls / Length: 3x12 / RPE: 6-7 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE.
+Warm Up Exercise: Cable Single Arm Tricep Pushdowns / Length: 3x10 / RPE: 7 / Notes: Use medal grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Back Squats / Length: 3x5 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Front Squats / Length: 3x5 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Spoto Bench Press / Length: 3x3 / RPE: 8 / Notes: Pause for 3 second(s) roughly one inch from chest. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pin Bench Press / Length: 3x5 / RPE: 7-7.5 / Notes: Set pins half an inch above chest. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Bench Hold / Length: 3x10 second(s) / Weight: 100% of 1RM / Notes: If final set’s RPE ( __ ) is 8, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
+Exercise: Inverted Wrist Push Up Hold / Length: 3x20 second(s) / Weight: Bodyweight / Notes: Do not do a push up, but instead hold the position at the top.
+Exercise: Barbell Pin Shoulder Press / Length: 3x5 / RPE: 8-8.5 / Notes: Set pins to about head height. User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Shoulder Press / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell JM Press / Length: 3x8 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Skull Crushers / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dips / Length: 3x8 / Weight: Bodyweight / Notes: If final set’s RPE ( __ ) is 6-6.5, increase prescribed weight accordingly for the remaining of this cycle.
+
+
+Day: Number: 5 / Description: n/a
+Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
+Exercise: Barbell Block Pulls / Length: 3x3 / RPE: 8-8.5 / Notes: Use 4-5 inch blocks. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pause Deadlift / Length: 3x5 / RPE: 7-8 / Notes: Pause below knees for 3 second(s). User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Deficit Deadlift / Length: 3x5 / RPE: 7 / Notes: Use 2 inch deficit. User determines weight ( __ lb) based on RPE.
+Exercise: Reverse Hyperextensions / Length: 3x10 / RPE: 4-5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pendlay Rows / Length: 3x5 / RPE: 8-9 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Rows / Length: 3x5 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Pull Ups / Length: 3x8 / Weight: Bodyweight / Notes: If final set’s RPE ( __ ) is 6, increase weight accordingly for the remaining of this cycle.
+Exercise: Dumbbell Shrugs / Length: 3x12 / RPE: 9-10 / Notes: User determines weight ( __ lb) based on RPE. 
+Exercise: Barbell Stiff Leg Hamstring Stretch / Length: 3x45 second(s) / Weight: Bar / Notes: If final set’s RPE ( __ ) is 6.5-7, increase prescribed weight by 5lb accordingly for the remaining of this cycle.
+Exercise: Machine Seated Single Leg Hamstring Curls / Length: 3x8 / RPE: 6.5-7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Machine Lying Hamstring Curls / Length: 3x10 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Curls / Length: 3x15 / RPE: 7 / Notes: Use medal bar grip. User determines weight ( __ lb) based on RPE.
+Exercise: Hanging Leg Raises / Length: 4x15 / Weight: Bodyweight
+
+
+Day: Number: 6 / Description: Rest Day
+
+
+Day: Number: 7 / Description: Rest Day
+-----------------------------------------------------------------
+
+
+Cycle: Number: 3 / Description: Bulgarian Method / Weeks: 8
+Day: Number: 1 / Description: n/a
+Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
+Warm Up Exercise: Alternating Bird Dog / Length: 3x16 / Weight: Bodyweight / Notes: Hold 10 second(s) each position.
+Warm Up Exercise: Cable Face Pulls / Length: 3x12 / RPE: 6-7 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE.
+Warm Up Exercise: Cable Single Arm Tricep Pushdowns / Length: 3x10 / RPE: 7 / Notes: Use medal grip handle. User determines weight ( __ lb) based on RPE.
+Warm Up Exercise: Barbell 1 & 1/2 Pause Back Squats / Length: 3x5 / RPE: 2-3 / Notes: Pause for 5 second(s). User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Back Squats / Length: 5x1 / Weight: 90% of 1RM / Notes: If final set’s RPE ( __ ) is 8, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
+Exercise: Barbell Back Squats / Length: 3x5 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Banded Bench Press / Length: 4x3 / RPE: 5.5-6 / Notes: Use 25-65lb resistance bands. Focus on speed. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Bench Press / Length: 5x1 / Weight: 90% of 1RM / Notes: If final set’s RPE ( __ ) is 8, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
+Exercise: Barbell Bench Press / Length: 3x5 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pause Deadlift / Length: 5x3 / RPE: 7-7.5 / Notes: Pause below knees for 3 second(s). User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Good Mornings / Length: 3x8 / RPE: 6 / Notes: User determines weight ( __ lb) based on RPE.
+
+
+Day: Number: 2 / Description: n/a
+Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed. 
+Warm Up Exercise: Cable Face Pulls / Length: 3x12 / RPE: 6-7 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE.
+Warm Up Exercise: Cable Single Arm Tricep Pushdowns / Length: 3x10 / RPE: 7 / Notes: Use medal grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pin Back Squats / Length: 3x3 / RPE: 8 / Notes: Set pins to parallel or slightly below parallel of knee. User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Bulgarian Split Squats / Length: 3x8 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pin Bench Press / Length: 3x3 / RPE: 8 / Notes: Set pins half an inch above chest. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Close Grip Bench Press / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pendlay Rows / Length: 3x5 / RPE: 8-9 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Rows / Length: 3x5 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Pull Ups / Length: 3x8 / Weight: Bodyweight / Notes: If final set’s RPE ( __ ) is 6, increase weights accordingly for the remaining of this cycle.
+Exercise: T-Bar Rows / Length: 3x6-8 / RPE: 7-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Pullovers / Length: 3x12 / RPE: 6.5-7 / Notes: Use medal wide grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Tricep Kickbacks / Length: 3x12 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Tricep Pushdowns / Length: 3x10 / RPE: 8 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE.
+Exercise: Plank / Length: 6x60 second(s) / Weight: Bodyweight / Notes: If final set’s RPE ( __ ) is 6, increment weight by 10lb for the following weeks for current cycle.
+
+
+Day: Number: 3 / Description: Rest Day
+
+
+Day: Number: 4 / Description: n/a
+Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
+Warm Up Exercise: Cable Face Pulls / Length: 3x12 / RPE: 6-7 / Notes: Use a rope handle / User determines weight ( __ lb) based on RPE.
+Warm Up Exercise: Cable Single Arm Tricep Pushdowns / Length: 3x10 / RPE: 7 / Notes: Use medal grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pause Back Squats / Length: 3x3 / RPE: 8-8.5 / Notes: Pause for 3 second(s). User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Front Squats / Length: 3x5 / RPE: 7-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pause Bench Press / Length: 3x3 / RPE: 8-8.5 / Notes: Pause for 3 second(s). User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Bench Press / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Shoulder Press / Length: 3x5 / RPE: 7.5-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Shoulder Press / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Upright Row / Length: 3x8 / RPE: 7 / Notes: Grip the bar at shoulder width. Pause for 2 second(s) at the top of the movement. User determines weight ( __ lb) based on RPE.
+Exercise: Cable Front Raises / Length: 3x10 / RPE: 7 / Notes: Use medal wide grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Cable Side Raises / Length: 3x15 / RPE: 8 / Notes: Use medal wide grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell JM Press / Length: 3x8 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Skull Crushers / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE. 
+Exercise: Dips / Length: 3x8 / Weight: Bodyweight / Notes: If final set’s RPE ( __ ) is 6-6.5, increase prescribed weight accordingly for the remaining of this cycle.
+
+
+Day: Number: 5 / Description: n/a
+Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
+Exercise: Barbell Banded Deadlift / Length: 4x3 / RPE: 5.5-6 / Notes: Use 25-65lb resistance bands. Focus on speed. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Deadlift / Length: 8x1 / Weight: 90% of 1RM / Notes: If final set’s RPE ( __ ) is 8, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
+Exercise: Barbell Deadlift / Length: 3x5 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Reverse Hyperextensions / Length: 3x10 / RPE: 4-5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Stiff Leg Hamstring Stretch / Length: 3x45 second(s) / Weight: Bar / Notes: If final set’s RPE ( __ ) is 6.5-7, increase prescribed weight by 5lb accordingly for the remaining of this.
+Exercise: Machine Seated Hamstring Curls / Length: 3x12 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Machine Seated Single Leg Hamstring Curls / Length: 3x8 / RPE: 6.5-7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Machine Lying Hamstring Curls / Length: 3x10 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Shrugs / Length: 3x12 / RPE: 9-10 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell 21 Curls / Length: 3x21 / RPE: 6 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Hanging Leg Raises / Length: 4x15 / Weight: Bodyweight
+Exercise: Full Body Ab Roller / Length: 5x10 / Notes: Go onto knees if unable to do full body.
+
+
+Day: Number: 6 / Description: Rest Day
+
+
+Day: Number: 7 / Description: Rest Day
+--------------------
+
+
+End
