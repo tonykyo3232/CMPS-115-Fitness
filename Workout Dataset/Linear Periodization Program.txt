@@ -1,0 +1,62 @@
+﻿Name: Linear Periodization Program
+Style: Powerlifting
+Difficulty Level: Beginner
+Length: 10 Weeks
+Goal: Build Strength
+General Info: This program is an entry level strength building program. This program assumes the athlete has not plateau in their lifting career due to their beginner entry level and will use that assumption to push the athlete to higher strength levels. The athlete must know their squat, bench, deadlift maxes prior to starting this program
+--------------------
+
+
+Cycle: Number: 1 / Description: n/a / Weeks: 10
+Day: Number: 1 / Description: n/a
+Exercise: Barbell Back Squats / Length: 3x3 / Weight: 80% of 1RM / Notes: Increment weight by 10lb every 2 weeks for the remaining of this cycle.
+Exercise: Barbell Back Squats / Length: 4x6 / Weight: 70% of 1RM / Notes: Increment weight by 10lb every 2 weeks for the remaining cycle.
+Exercise: Barbell Pause Back Squats / Length: 3x5 / Weight: 65% of 1RM / Notes: Pause for 3 second(s). If final set’s RPE ( __ ) is 6.5-7, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
+Exercise: Barbell Front Squats / Length: 3x5 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+
+
+Day: Number: 2 / Description: n/a
+Exercise: Barbell Bench Press / Length: 3x3 / Weight: 80% of 1RM / Notes: Increment weight by 10lb every 2 weeks for the remaining of this cycle.
+Exercise: Barbell Incline Bench Press / Length: 3x5 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Close Grip Bench Press / Length: 3x5 / Weight: 60% of 1RM / Notes: If final set’s RPE ( __ ) is 6-6.5, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
+Exercise: Dumbbell Bench Press / Length: 5x5 / RPE: 7.5-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Incline Bench Press / Length: 3x7 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Skull Crushers / Length: 3x10 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Skull Crushers / Length: 3x8 / RPE: 7-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Tricep Kickbacks / Length: 4x12 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Tricep Pushdowns / Length: 3x10 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+
+
+Day: Number: 3 / Description: n/a
+Exercise: Barbell Push Press / Length: 3x4 / RPE: 9 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Shoulder Press / Length: 5x5 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Upright Rows / Length: 5x8 / RPE: 7 / Notes: Use shoulder width grip placement. User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Side Raises / Length: 4x12-15 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Front Raises / Length: 4x12-15 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Face Pulls / Length: 4x12 / RPE: 6-7 / Notes: Use a rope handle / User determines weight ( __ lb) based on RPE.
+
+
+Day: Number: 4 / Description: n/a
+Exercise: Barbell Deadlift / Length: 3x3 / Weight: 80% of 1RM / Notes: Increment weight by 10lb every 2 weeks for the remaining of this cycle. 
+Exercise: Barbell Deadlift / Length: 4x5 / Weight: 70% of 1RM / Notes: If final set’s RPE ( __ ) is 6.5-7, increment weight by 10lb for the next week for current cycle.
+Exercise: Barbell Deficit Deadlift / Length: 3x5 / RPE: 7 / Notes: Use 2 inch deficit. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Stiff Leg Deadlift / Length: 3x7 / RPE: 6-6.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Machine Lying Hamstring Curls / Length: 4x15 / RPE: 7-8 / Notes: User determines weight ( __ lb) based on RPE.
+
+
+Day: Number: 5 / Description: n/a
+Exercise: Barbell Rows / Length: 4x8 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Dumbbell Rows / Length: 5x7 / RPE: 7-8 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Cable Lat Pulldowns / Length: 4x8 / RPE: 7 / Notes: Use medal wide grip handle. User determines weight ( __ lb) based on RPE        
+Exercise: Cable Rows / Length: 3x10 / RPE: 8 / Notes: Use medal close grip handle. User determines weight ( __ lb) based on RPE.
+Exercise: Cable Curls / Length: 3x20 / RPE: 6 / Notes: Use medal bar grip. User determines weight ( __ lb) based on RPE.
+
+
+Day: Number: 6 / Description: Rest Day
+
+
+Day: Number: 7 / Description: Rest Day
+--------------------
+
+
+End
