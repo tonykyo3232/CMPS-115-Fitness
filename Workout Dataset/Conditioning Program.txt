@@ -1,0 +1,67 @@
+﻿Name: Conditioning Program
+Style: General Fitness
+Difficulty Level: Intermediate
+Length: 8 Weeks
+Goal: Lose Weight
+General Info: This program contains circuits as a training method to lose weight. User can choose workout weights accordingly.
+--------------------
+
+
+Cycle: Number: 1 / Description: n/a / Weeks: 8
+Day: Number: 1 / Description: n/a
+Warm Up Exercise: n/a
+Exercise: Barbell Back Squats / Length: 10 Reps / Notes: Superset with next exercise.
+Exercise: Dumbbell Goblet Squats / Length: 20 Reps / Notes: Superset with next exercise.
+Exercise: Lunge / Length: 20 Meters / Notes: Superset with next exercise.
+Exercise: Barbell Deadlift / Length: 10 Reps / Notes: Superset with next exercise.
+Exercise: Mountain Climbers / Length: 1 Minute(s) / Notes: Repeat circuit 4 more times. 1:30-1:45 minute(s) rest interval.
+
+
+Day: Number: 2 / Description: n/a
+Warm Up Exercise: n/a
+Exercise: Barbell Bench Press / Length: 5 Reps / Notes: Superset with next exercise.
+Exercise: Dumbbell Bench Press / Length: 10 Reps / Notes: Superset with next exercise.
+Exercise: Dumbbell Incline Bench Press / Length: 10 Reps / Notes: Superset with next exercise.
+Exercise: Dumbbell Incline Flyes/ Length: 15 Reps / Notes: Superset with next exercise.
+Exercise: Push Ups / Length: 10 Reps / Notes: Repeat circuit 3 more times. 1:45-2:00 minute(s) rest interval.
+
+
+Day: Number: 3 / Description: n/a
+Warm Up Exercise: n/a
+Exercise: Barbell Rows / Length: 5 Reps / Notes: Superset with next exercise.
+Exercise: Dumbbell Rows / Length: 10 Reps / Notes: Superset with next exercise.
+Exercise: Pull Ups / Length: 10 Reps / Notes: Superset with next exercise.
+Exercise: Cable Lat Pulldowns / Length: 8 Reps / RPE: 7 / Notes: Use medal wide grip handle.        
+Exercise: Rowing Machine / Length: 40 Meters / Notes: Repeat circuit 3 more times. 2:00 minute(s) rest interval.
+
+
+Day: Number: 4 / Description: n/a
+Warm Up Exercise: n/a
+Exercise: Barbell Shoulder Press / Length: 5 Reps / Notes: Superset with next exercise.
+Exercise: Dumbbell Shoulder Press / Length: 10 Reps / Notes: Superset with next exercise.
+Exercise: Dumbbell Front Shoulder Press / Length: 8 Reps / Notes: Superset with next exercise.
+Exercise: Dumbbell Side Raises / Length: 25 Reps / Notes: Superset with next exercise.
+Exercise: Dumbbell Front Raises / Length: 25 Reps / Notes: Superset with next exercise.        
+Exercise: Sled Rows / Length: 15 Meters / Notes: Repeat circuit 3 more times. 2:00 minute(s) rest interval.
+
+
+Day: Number: 5 / Description: n/a
+Warm Up Exercise: n/a
+Exercise: Barbell Front Squats / Length: 8 Reps / Notes: Superset with next exercise.
+Exercise: Barbell Push Press / Length: 8 Reps / Notes: Superset with next exercise.
+Exercise: Burpees / Length: 10 Reps / Notes: Superset with next exercise.
+Exercise: Wall Ball / Length: 25 Reps / Notes: Superset with next exercise.
+Exercise: Ball Slams / Length: 25 Reps / Notes: Superset with next exercise.
+Exercise: Box Jumps / Length: 12 Reps / Notes: Superset with next exercise.
+Exercise: Sled Push / Length: 20 Meters / Notes: Superset with next exercise.
+Exercise: Sprint / Length: 20 Meters / Notes: Repeat circuit 3 more times. 2:00 minute(s) rest interval.
+
+
+Day: Number: 6 / Description: Rest Day
+
+
+Day: Number: 7 / Description: Rest Day
+--------------------
+
+
+End
