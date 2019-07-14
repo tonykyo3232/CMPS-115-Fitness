@@ -1,11 +1,10 @@
-﻿Name: Massive Leg Routine
+Name: Massive Leg Routine
 Style: General Fitness
 Difficulty Level: Beginner
 Length: n/a
 Goal: Build Strength, Build Muscle
 General Info: This program contains a beginner guide to building leg muscles. User can choose workout weights accordingly.         
 --------------------
-
 
 Cycle: Number: n/a / Description: n/a / Weeks: n/a
 Day: Number: 1 / Description: n/a
@@ -18,6 +17,5 @@ Exercise: Barbell Deadlift / Length: 4x8 / Notes: 1:30 minute(s) rest interval.
 Exercise: Machine Lying Hamstring Curls / Length: 4x10 / Notes: 30-45 second(s) rest interval.
 Exercise: Dumbbell Calf Raises / Length: 3x45 / Notes: 30 second(s) rest interval.
 --------------------
-
 
 End
