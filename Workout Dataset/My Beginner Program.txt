@@ -1,10 +1,11 @@
-﻿Name: My Beginner Program
+Name: My Beginner Program
 Style: General Fitness
 Difficulty Level: Beginner
 Length: 6 Weeks
 Goal: Build Muscle
 General Info: This program contains a beginner guide to general fitness. User can choose workout weights accordingly.
 --------------------
+
 Cycle: Number: 1 / Description: n/a / Weeks: 6
 Day: Number: 1 / Description: Legs + Shoulders
 Warm Up Exercise: n/a
@@ -31,9 +32,7 @@ Exercise: Machine Tricep Extensions / Length: 4x12 / Notes: 45 second(s) rest in
 Exercise: Dips / Length: 3x10 / Weight: Bodyweight / Notes: 1:20 minute(s) rest interval.
 Exercise: Machine Ab Curls / Length: 4x15 / Notes: 1:30 minute(s) rest interval.
 
-
 Day: Number: 4 / Description: Rest Day
-
 
 Day: 5 - Back + Biceps
 Warm Up Exercise: n/a
@@ -45,12 +44,9 @@ Exercise: Cable Curls / Length: 3x8 / Notes: Use rope grip / 45 second(s) rest i
 Exercise: Dumbbell Incline Curls / Length: 3x12 / Notes: 1:15 minute(s) rest interval.
 Exercise: Plank / Length: 6x45 seconds / Notes: 1:30 minute(s) rest interval.
 
-
 Day: Number: 6 / Description: Rest Day
-
 
 Day: Number: 7 / Description: Rest Day
 --------------------
-
 
 End
