@@ -8,21 +8,21 @@ General Info: n/a
 
 Cycle: Number: n/a / Description: n/a / Weeks: n/a
 Day: Number: n/a / Description: n/a
-Warm Up Exercise: n/a
+Warm Up Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
 Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
 
 Day: Number: n/a / Description: n/a
-Warm Up Exercise: n/a
+Warm Up Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
 Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
 --------------------
 
 Cycle: Number: n/a / Description: n/a / Weeks: n/a
 Day: Number: n/a / Description: n/a
-Warm Up Exercise: n/a
+Warm Up Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
 Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
 
 Day: Number: n/a / Description: n/a
-Warm Up Exercise: n/a
+Warm Up Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
 Exercise: Name / Length: n/a  / RPE: n/a / Weight: n/a / Notes: n/a
 --------------------
 
