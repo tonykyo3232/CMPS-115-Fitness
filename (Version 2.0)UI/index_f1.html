@@ -28,24 +28,32 @@
     color:white;
   }
 
+
+  /*
   .btn-success
   {
     position: fixed;
     bottom: 20px;
     right: 5px;
   }
+  */
 
 </style>
 
 <!-- JavaScript implementation -->
   <script type="text/javascript">
-    // Synchronous version using XMLHttpRequest
-    const host = "http://ec2-18-217-233-23.us-east-2.compute.amazonaws.com:8080";
+    
+    
+    function request(){
+      // Synchronous version using XMLHttpRequest
+      const host = "http://ec2-18-217-233-23.us-east-2.compute.amazonaws.com:8080";
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", host + "/api/programs", false);
-    xhr.send();
-    var programs = JSON.parse(xhr.responseText);
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", host + "/api/programs", false);
+      xhr.send();
+      var programs = JSON.parse(xhr.responseText);
+    }
+    
   </script>  
 
 <body>
@@ -80,7 +88,7 @@
   
   <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
     <option selected>Choose...</option>
-    <option value="1">All Programs</option>
+    <option value="1">All Workouts</option>
     <option value="2">Workout Programs</option>
     <option value="3">Daily Routine</option>
   </select>
@@ -105,7 +113,7 @@
   <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
     <option selected>Choose...</option>
     <option value="1">Beginner</option>
-    <option value="2">Intermidiate</option>
+    <option value="2">Intermediate</option>
     <option value="3">Advance</option>
   </select>
 
@@ -137,6 +145,9 @@
       <h5 class="card-title">My Beginner Program</h5>
       <p class="card-text">This program contains a beginner guide to general fitness</p>
       <a href="#" class="btn btn-primary">View Detail</a>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        <h6>Export</h6>
+      </button>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
@@ -145,6 +156,9 @@
       <h5 class="card-title">Summer Program</h5>
       <p class="card-text">Bilateral movements for strength training, and uses unilateral movements for high volume training to develop individual muscles effectively.</p>
       <a href="#" class="btn btn-primary">View Detail</a>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        <h6>Export</h6>
+      </button>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
@@ -153,6 +167,9 @@
       <h5 class="card-title">Combo Program</h5>
       <p class="card-text">Combination of linear progression, Bulgarian, Westside Conjugate, hypertrophy, and RPE training methods</p>
       <a href="#" class="btn btn-primary">View Detail</a>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        <h6>Export</h6>
+      </button>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
@@ -161,6 +178,9 @@
       <h5 class="card-title">Massive Leg Routine</h5>
       <p class="card-text">This program contains a beginner guide to building leg muscles.</p>
       <a href="#" class="btn btn-primary">View Detail</a>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        <h6>Export</h6>
+      </button>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
@@ -169,6 +189,9 @@
       <h5 class="card-title">Big Arm Routine</h5>
       <p class="card-text">This routine alternate betweens tricep and bicep exercises to grow the arms</p>
       <a href="#" class="btn btn-primary">View Detail</a>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        <h6>Export</h6>
+      </button>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
@@ -177,6 +200,9 @@
       <h5 class="card-title">Conditioning Program</h5>
       <p class="card-text">This program contains circuits as a training method to lose weight.</p>
       <a href="#" class="btn btn-primary">View Detail</a>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        <h6>Export</h6>
+      </button>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
@@ -185,6 +211,9 @@
       <h5 class="card-title">WestSide Conjugate Program</h5>
       <p class="card-text">This program focuses on accessories that contributes to the squat, bench, and deadlift. The RPE training method will be used throughout this program.</p>
       <a href="#" class="btn btn-primary">View Detail</a>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        <h6>Export</h6>
+      </button>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
@@ -193,6 +222,9 @@
       <h5 class="card-title">Linear Periodization Program</h5>
       <p class="card-text">Description...</p>
       <a href="#" class="btn btn-primary">View Detail</a>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        <h6>Export</h6>
+      </button>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
@@ -201,15 +233,20 @@
       <h5 class="card-title">Chest Killer Routine</h5>
       <p class="card-text">Description...</p>
       <a href="#" class="btn btn-primary">View Detail</a>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        <h6>Export</h6>
+      </button>
     </div>
   </div>
 </div>
 
 
 <!-- Exporting option -->
+<!--
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
   <H5>Export</H5>
 </button>
+-->
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -231,7 +268,6 @@
     </div>
   </div>
 </div>
-
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
