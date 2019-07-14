@@ -27,7 +27,7 @@ Warm Up Exercise: n/a
 Exercise: Dumbbell Bench Press / Length: 5x10 / Notes: 1:30 minute(s) rest interval.
 Exercise: Machine Chest Press / Length: 5x10 / Notes: 45 second(s) rest interval.
 Exercise: Machine Chest Flyes / Length: 3x10 / Notes: 45 second(s) rest interval.
-Exercise: Cable Tricep Pushdowns / Length: 5x12 / Notes: Use rope grip / 45 second(s) rest interval.
+Exercise: Cable Tricep Pushdowns / Length: 5x12 / Notes: Use rope grip. 45 second(s) rest interval.
 Exercise: Machine Tricep Extensions / Length: 4x12 / Notes: 45 second(s) rest interval.
 Exercise: Dips / Length: 3x10 / Weight: Bodyweight / Notes: 1:20 minute(s) rest interval.
 Exercise: Machine Ab Curls / Length: 4x15 / Notes: 1:30 minute(s) rest interval.
@@ -36,11 +36,11 @@ Day: Number: 4 / Description: Rest Day
 
 Day: 5 - Back + Biceps
 Warm Up Exercise: n/a
-Exercise: Cable Lat Pulldowns / Length: 5x10 / Notes: Use wide grip / 1:15 minute(s) rest interval.
-Exercise: Cable Rows / Length: 5x12 / Notes: Use close grip / 1:15 minute(s) rest interval.
+Exercise: Cable Lat Pulldowns / Length: 5x10 / Notes: Use wide grip. 1:15 minute(s) rest interval.
+Exercise: Cable Rows / Length: 5x12 / Notes: Use close grip. 1:15 minute(s) rest interval.
 Exercise: Machine Rows / Length: 4x15 / Notes: 1 minute(s) rest interval.
 Exercise: Barbell Curls / Length: 4x10 / Notes: 1:20 minute(s) rest interval.
-Exercise: Cable Curls / Length: 3x8 / Notes: Use rope grip / 45 second(s) rest interval.
+Exercise: Cable Curls / Length: 3x8 / Notes: Use rope grip. 45 second(s) rest interval.
 Exercise: Dumbbell Incline Curls / Length: 3x12 / Notes: 1:15 minute(s) rest interval.
 Exercise: Plank / Length: 6x45 seconds / Notes: 1:30 minute(s) rest interval.
 
