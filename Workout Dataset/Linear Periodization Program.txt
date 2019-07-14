@@ -1,9 +1,9 @@
-﻿Name: Linear Periodization Program
+Name: Linear Periodization Program
 Style: Powerlifting
 Difficulty Level: Beginner
 Length: 10 Weeks
 Goal: Build Strength
-General Info: This program is an entry level strength building program. This program assumes the athlete has not plateau in their lifting career due to their beginner entry level and will use that assumption to push the athlete to higher strength levels. The athlete must know their squat, bench, deadlift maxes prior to starting this program
+General Info: This program is an entry level strength building program. This program assumes the athlete has not plateau in their lifting career due to their beginner entry level and will use that assumption to push the athlete to higher strength levels. The athlete must know their squat, bench, deadlift maxes prior to starting this program.
 --------------------
 
 Cycle: Number: 1 / Description: n/a / Weeks: 10
@@ -42,7 +42,7 @@ Exercise: Machine Lying Hamstring Curls / Length: 4x15 / RPE: 7-8 / Notes: User 
 Day: Number: 5 / Description: n/a
 Exercise: Barbell Rows / Length: 4x8 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
 Exercise: Dumbbell Rows / Length: 5x7 / RPE: 7-8 / Notes: User determines weight ( __ lb) based on RPE.
-Exercise: Cable Lat Pulldowns / Length: 4x8 / RPE: 7 / Notes: Use medal wide grip handle. User determines weight ( __ lb) based on RPE        
+Exercise: Cable Lat Pulldowns / Length: 4x8 / RPE: 7 / Notes: Use medal wide grip handle. User determines weight ( __ lb) based on RPE.
 Exercise: Cable Rows / Length: 3x10 / RPE: 8 / Notes: Use medal close grip handle. User determines weight ( __ lb) based on RPE.
 Exercise: Cable Curls / Length: 3x20 / RPE: 6 / Notes: Use medal bar grip. User determines weight ( __ lb) based on RPE.
 
