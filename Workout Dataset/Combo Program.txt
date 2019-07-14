@@ -1,11 +1,10 @@
-﻿Name: Combo Program
+Name: Combo Program
 Style: Powerlifting
 Difficulty Level: Advance
 Length: 32 Weeks
 Goal: Build Strength
 General Info: This program contains a combination of strength training methods. This allows the program to accommodate the athlete by not focussing on exact weekly numbers the athlete must be able to lift. Personal daily life routines, sickness, or any activities that might prohibits optimal performances will be factored in and will require the user to interact with this program, such as choosing workout weights accordingly, to optimize overall strength building.  
 --------------------
-
 
 Cycle: Number: 1 / Description: Volume and Hypertrophy / Weeks: 12
 Day: Number: 1 / Description: n/a
@@ -19,7 +18,6 @@ Exercise: Dumbbell Incline Bench Press / Length: 3x8 / RPE: 6.5-7 / Notes: User 
 Exercise: Barbell Pause Deadlift / Length: 3x5 / RPE: 7-8 / Notes: Pause below knees for 3 second(s). User determines weight ( __ lb) based on RPE.
 Exercise: Barbell Deadlift / Length: 3x8 / Weight: 70% of 1RM /  Notes: If final set’s RPE ( __ ) is 6-6.5, increase prescribed weight by 10lb accordingly for the remaining of this cycle.
 Exercise: Full Body Ab Roller / Length: 5x10 / Notes: Go onto knees if unable to do full body.
-
 
 Day: Number: 2 / Description: n/a
 Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
@@ -50,7 +48,6 @@ Exercise: Barbell JM Press / Length: 3x8 / RPE: 7 / Notes: User determines weigh
 Exercise: Dumbbell Skull Crushers / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
 Exercise: Full Body Ab Roller / Length: 5x10 / Notes: Go onto knees if unable to do full body.
 
-
 Day: Number: 4 / Description: n/a
 Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
 Exercise: Barbell Block Pulls / Length: 3x3 / RPE: 8 / Notes: Use 4-5 inch blocks. User determines weight ( __ lb) based on RPE.
@@ -65,7 +62,6 @@ Exercise: Cable Pullovers / Length: 3x12 / RPE: 6.5-7 / Notes: Use medal wide gr
 Exercise: Machine Seated Hamstring Curls / Length: 3x12 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
 Exercise: Machine Seated Single Leg Hamstring Curls / Length: 3x8 / RPE: 6.5-7 / Notes: User determines weight ( __ lb) based on RPE.
 Exercise: Machine Lying Hamstring Curls / Length: 3x10 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
-
 
 Day: Number: 5 / Description: n/a
 Warm Up Exercise: n/a
@@ -83,15 +79,10 @@ Exercise: Dumbbell Incline Curls / Length: 4x8 / RPE: 7 / Notes: User determines
 Exercise: Barbell Spider Curls / Length: 3x12 / RPE: 6-6.5 / Notes: User determines weight ( __ lb) based on RPE.
 Exercise: Full Body Ab Roller / Length: 5x10 / Notes: Go onto knees if unable to do full body.
 
-
 Day: Number: 6 / Description: Rest Day
-
-
-
 
 Day: Number: 7 / Description: Rest Day
 ----------------------------------------------------------------- 
-
 
 Cycle: Number: 2 / Description: Heavy and Accessories / Weeks: 12
 Day: Number: 1 / Description: n/a
@@ -109,7 +100,6 @@ Exercise: Barbell Pause Bench Press / Length: 3x5 / RPE: 7-7.5 / Notes: Pause fo
 Exercise: Barbell Shoulder Press / Length: 3x5 / RPE: 7.5-8 / Notes: User determines weight ( __ lb) based on RPE.
 Exercise: Full Body Ab Roller / Length: 5x10 / Notes: Go onto knees if unable to do full body.
 
-
 Day: Number: 2 / Description: n/a
 Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
 Warm Up Exercise: Kettlebell Deep Squat Stretch / Length: 3x5 / RPE: 3-4 / Notes: Pause at the bottom of the movement for 10 second(s). User determines weight ( __ lb) based on RPE.
@@ -126,7 +116,6 @@ Exercise: Cable Lat Pulldowns / Length: 3x8 / RPE: 7 / Notes: Use medal wide gri
 Exercise: Cable Rows / Length: 3x6 / RPE: 8 / Notes: Use medal close grip handle. User determines weight ( __ lb) based on RPE.
 Exercise: Cable Pullovers / Length: 3x12 / RPE: 6.5-7 / Notes: Use medal wide grip handle. User determines weight ( __ lb) based on RPE.
 
-
 Day: Number: 3 / Description: n/a
 Warm Up Exercise: n/a
 Exercise: Cable Face Pulls / Length: 3x12 / RPE: 7 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE.
@@ -141,7 +130,6 @@ Exercise: Barbell Upright Row / Length: 3x8 / RPE: 7 / Notes: Grip the bar at sh
 Exercise: Dumbbell Tricep Kickbacks / Length: 3x12 / RPE: 7 / Notes: User determines weight ( __ lb) based on RPE.
 Exercise: Cable Tricep Pushdowns / Length: 3x10 / RPE: 8 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE. 
 Exercise: Full Body Ab Roller / Length: 5x10 / Notes: Go onto knees if unable to do full body.
-
 
 Day: Number: 4 / Description: n/a
 Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
@@ -159,7 +147,6 @@ Exercise: Barbell JM Press / Length: 3x8 / RPE: 7 / Notes: User determines weigh
 Exercise: Dumbbell Skull Crushers / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
 Exercise: Dips / Length: 3x8 / Weight: Bodyweight / Notes: If final set’s RPE ( __ ) is 6-6.5, increase prescribed weight accordingly for the remaining of this cycle.
 
-
 Day: Number: 5 / Description: n/a
 Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
 Exercise: Barbell Block Pulls / Length: 3x3 / RPE: 8-8.5 / Notes: Use 4-5 inch blocks. User determines weight ( __ lb) based on RPE.
@@ -176,13 +163,10 @@ Exercise: Machine Lying Hamstring Curls / Length: 3x10 / RPE: 7 / Notes: User de
 Exercise: Cable Curls / Length: 3x15 / RPE: 7 / Notes: Use medal bar grip. User determines weight ( __ lb) based on RPE.
 Exercise: Hanging Leg Raises / Length: 4x15 / Weight: Bodyweight
 
-
 Day: Number: 6 / Description: Rest Day
-
 
 Day: Number: 7 / Description: Rest Day
 -----------------------------------------------------------------
-
 
 Cycle: Number: 3 / Description: Bulgarian Method / Weeks: 8
 Day: Number: 1 / Description: n/a
@@ -198,7 +182,6 @@ Exercise: Barbell Bench Press / Length: 5x1 / Weight: 90% of 1RM / Notes: If fin
 Exercise: Barbell Bench Press / Length: 3x5 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE.
 Exercise: Barbell Pause Deadlift / Length: 5x3 / RPE: 7-7.5 / Notes: Pause below knees for 3 second(s). User determines weight ( __ lb) based on RPE.
 Exercise: Barbell Good Mornings / Length: 3x8 / RPE: 6 / Notes: User determines weight ( __ lb) based on RPE.
-
 
 Day: Number: 2 / Description: n/a
 Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed. 
@@ -217,9 +200,7 @@ Exercise: Dumbbell Tricep Kickbacks / Length: 3x12 / RPE: 7 / Notes: User determ
 Exercise: Cable Tricep Pushdowns / Length: 3x10 / RPE: 8 / Notes: Use a rope handle. User determines weight ( __ lb) based on RPE.
 Exercise: Plank / Length: 6x60 second(s) / Weight: Bodyweight / Notes: If final set’s RPE ( __ ) is 6, increment weight by 10lb for the following weeks for current cycle.
 
-
 Day: Number: 3 / Description: Rest Day
-
 
 Day: Number: 4 / Description: n/a
 Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
@@ -238,7 +219,6 @@ Exercise: Barbell JM Press / Length: 3x8 / RPE: 7 / Notes: User determines weigh
 Exercise: Dumbbell Skull Crushers / Length: 3x8 / RPE: 7-7.5 / Notes: User determines weight ( __ lb) based on RPE. 
 Exercise: Dips / Length: 3x8 / Weight: Bodyweight / Notes: If final set’s RPE ( __ ) is 6-6.5, increase prescribed weight accordingly for the remaining of this cycle.
 
-
 Day: Number: 5 / Description: n/a
 Warm Up Exercise: Foam Roll / Notes: Foam roll any tight muscles for as long as needed.
 Exercise: Barbell Banded Deadlift / Length: 4x3 / RPE: 5.5-6 / Notes: Use 25-65lb resistance bands. Focus on speed. User determines weight ( __ lb) based on RPE.
@@ -254,12 +234,9 @@ Exercise: Barbell 21 Curls / Length: 3x21 / RPE: 6 / Notes: User determines weig
 Exercise: Hanging Leg Raises / Length: 4x15 / Weight: Bodyweight
 Exercise: Full Body Ab Roller / Length: 5x10 / Notes: Go onto knees if unable to do full body.
 
-
 Day: Number: 6 / Description: Rest Day
-
 
 Day: Number: 7 / Description: Rest Day
 --------------------
-
 
 End
