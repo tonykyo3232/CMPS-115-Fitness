@@ -1,11 +1,10 @@
-﻿Name: Killer Chest Routine
+Name: Killer Chest Routine
 Style: Bodybuilding
 Difficulty Level: Advance
 Length: n/a
 Goal: Build Muscle
 General Info: This program is designed to put some mass on the muscles of the chest. User can choose workout weights accordingly. Note that most exercises are supersets and done until failure, so weights should be chosen carefully.
 --------------------
-
 
 Cycle: Number: n/a / Description: n/a / Weeks: n/a
 Day: Number: 1 / Description: n/a
@@ -22,6 +21,5 @@ Exercise: Isometric Push Up Hold / Length: 60 Second(s)
 Exercise: Cable Decline Flyes / Length: 3x15 / Notes: Superset with next exercise.
 Exercise: Cable Decline Press / Length: Until Failure
 --------------------
-
 
 End
