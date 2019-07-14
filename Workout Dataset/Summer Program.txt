@@ -29,12 +29,12 @@ Warm Up Exercise: n/a
 Exercise: Incline Barbell Bench Press / Length: 4x8 / Notes: 1:45 minute(s) rest interval.
 Exercise: Barbell Bench Press / Length: 4x10 / Notes: 1:30-1:45 minute(s) rest interval.
 Exercise: Dumbbell Bench Press / Length: 4x12 / Notes: 1:45 minute(s) rest interval.
-Exercise: Incline Dumbbell Close Grip Bench Press / Length: 3x15 / Notes: use neutral grip / 1:20 minute(s) rest interval.
+Exercise: Incline Dumbbell Close Grip Bench Press / Length: 3x15 / Notes: Use neutral grip. 1:20 minute(s) rest interval.
 Exercise: Incline Dumbbell Flyes / Length: 3x15 / Notes: 45-60 second(s) rest interval.
 Exercise: Machine Chest Press / Length: 4x8 / Notes: 1:15 minute(s) rest interval.
 Exercise: Dumbbell Overhead Tricep Extensions / Length: 4x15 / Notes: 2 minute(s) rest interval.
 Exercise: Barbell Skull Crushers / Length: 4x12 / Notes: 1:30 minute(s) rest interval.
-Exercise: Cable Tricep Pushdowns / Length: 5x12 / Notes: Use rope handle / 45-60 second(s) rest interval.
+Exercise: Cable Tricep Pushdowns / Length: 5x12 / Notes: Use rope handle. 45-60 second(s) rest interval.
 Exercise: Cable Single Arm Tricep Pushdowns / Length: 4x10 / Notes: 30 second(s) rest interval.
 Exercise: Dips / Length: 3x10 / Notes: Notes: 1:20 minute(s) rest interval.
 Exercise: Cable Rope Crunch / Length: 4x12 / Notes: 1:20 minute(s) rest interval.
@@ -47,11 +47,11 @@ Warm Up Exercise: n/a
 Exercise: Barbell Rows / Length: 4x8-12 / Notes: 1:45 minute(s) rest interval.
 Exercise: Dumbbell Rows / Length: 4x10 / Notes: 1:45 minute(s) rest interval.
 Exercise: Pull Ups / Length: 5x8 / Notes: 1:45 minute(s) rest interval.
-Exercise: Cable Lat Pulldowns / Length: 4x12 / Notes: Use wide grip / 2 minute(s) rest interval.
-Exercise: Cable Rows / Length: 4x10 / Notes: Use close grip / 1:45 minute(s) rest interval.
+Exercise: Cable Lat Pulldowns / Length: 4x12 / Notes: Use wide grip. 2 minute(s) rest interval.
+Exercise: Cable Rows / Length: 4x10 / Notes: Use close grip. 1:45 minute(s) rest interval.
 Exercise: Machine Rows / Length: 3x12-15 / Notes: 2 minute(s) rest interval.
 Exercise: EZ Bar Curls / Length: 4x7 / Notes: 1:30 minute(s) rest interval.
-Exercise: Cable Curls / Length: 3x15 / Notes: Use medal bar grip / 1:30 minute(s) rest interval.
+Exercise: Cable Curls / Length: 3x15 / Notes: Use medal bar grip. 1:30 minute(s) rest interval.
 Exercise: Cable Rope Crunch / Length: 4x12 / Notes: 1:20 minute(s) rest interval.
 Exercise: Cable Standing Lift / Length: 4x20 / Notes: 1 minute(s) rest interval.
 
