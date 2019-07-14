@@ -1,0 +1,56 @@
+﻿Name: My Beginner Program
+Style: General Fitness
+Difficulty Level: Beginner
+Length: 6 Weeks
+Goal: Build Muscle
+General Info: This program contains a beginner guide to general fitness. User can choose workout weights accordingly.
+--------------------
+Cycle: Number: 1 / Description: n/a / Weeks: 6
+Day: Number: 1 / Description: Legs + Shoulders
+Warm Up Exercise: n/a
+Exercise: Machine Leg Press / Length: 5x10 / Notes: 45 second(s) rest interval.
+Exercise: Machine Leg Extensions / Length: 4x12 / Notes: 45 second(s) rest interval.
+Exercise: Machine Lying Hamstring Curls / Length: 4x12 / Notes: 30 second(s) rest interval.
+Exercise: Barbell Calf Raises / Length: 4x25 / Notes: 30 second(s) rest interval.
+Exercise: Barbell Shoulder Press / Length: 4x6 / Notes: 45-60 second(s) interval.
+Exercise: Dumbbell Side Raises / Length: 4x15 / Notes: 30 second(s) interval.
+Exercise: Dumbbell Front Raises / Length: 4x15 / Notes: 30 second(s) interval.
+Exercise: Lying Leg Raises / Length: 4x20 / Notes: 45 second(s) interval.
+
+
+Day: Number: 2 / Description: Rest Day
+
+
+Day: Number: 3 / Description: Chest + Triceps
+Warm Up Exercise: n/a
+Exercise: Dumbbell Bench Press / Length: 5x10 / Notes: 1:30 minute(s) rest interval.
+Exercise: Machine Chest Press / Length: 5x10 / Notes: 45 second(s) rest interval.
+Exercise: Machine Chest Flyes / Length: 3x10 / Notes: 45 second(s) rest interval.
+Exercise: Cable Tricep Pushdowns / Length: 5x12 / Notes: Use rope grip / 45 second(s) rest interval.
+Exercise: Machine Tricep Extensions / Length: 4x12 / Notes: 45 second(s) rest interval.
+Exercise: Dips / Length: 3x10 / Weight: Bodyweight / Notes: 1:20 minute(s) rest interval.
+Exercise: Machine Ab Curls / Length: 4x15 / Notes: 1:30 minute(s) rest interval.
+
+
+Day: Number: 4 / Description: Rest Day
+
+
+Day: 5 - Back + Biceps
+Warm Up Exercise: n/a
+Exercise: Cable Lat Pulldowns / Length: 5x10 / Notes: Use wide grip / 1:15 minute(s) rest interval.
+Exercise: Cable Rows / Length: 5x12 / Notes: Use close grip / 1:15 minute(s) rest interval.
+Exercise: Machine Rows / Length: 4x15 / Notes: 1 minute(s) rest interval.
+Exercise: Barbell Curls / Length: 4x10 / Notes: 1:20 minute(s) rest interval.
+Exercise: Cable Curls / Length: 3x8 / Notes: Use rope grip / 45 second(s) rest interval.
+Exercise: Dumbbell Incline Curls / Length: 3x12 / Notes: 1:15 minute(s) rest interval.
+Exercise: Plank / Length: 6x45 seconds / Notes: 1:30 minute(s) rest interval.
+
+
+Day: Number: 6 / Description: Rest Day
+
+
+Day: Number: 7 / Description: Rest Day
+--------------------
+
+
+End
