@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<title>Details Page</title>
+	</head>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style>
+	
+	  /*background image setting*/
+  body
+  {
+    background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(image/wallpaper5.jpg);
+    background-size: 100% 100%;
+  }
+
+
+</style>	
+	<body>
+	<!-- MyFitnessProgram Website header -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index_home.html">My Fitness Distributer</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="index_home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index_about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index_login.html">Log In</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+	
+	
+<div class="tabbable boxed parentTabs p-4">
+    <ul class="nav nav-tabs">
+    {% for i in range(1, program["cycles"]|length + 1) %}
+        {% if i == 0 %}
+        <li class="active"><a href="#cycle{{i}}" class="nav-link">Cycle {{i}}</a>
+        </li>
+        {% else %}
+        <li><a href="#cycle{{i}}" class="nav-link">Cycle {{i}}</a>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+    <div class="tab-content">
+    {% for cycle_num in range(1, program["cycles"]|length + 1) %}
+        {% set cycle = program["cycles"][cycle_num - 1] %}
+        {% if cycle_num == 1 %}
+        <div class="tab-pane fade active in" id="cycle{{cycle_num}}">
+        {% else %}
+        <div class="tab-pane fade" id="cycle{{cycle_num}}">
+        {% endif %}
+            <div class="tabbable">
+                <ul class="nav nav-tabs">
+                {% for day_num in range(1, cycle["days"]|length + 1) %}
+                    {% if day_num == 1 %}
+                    <li class="active"><a href="#cycle{{cycle_num}}_day{{day_num}}" class="nav-link">Day {{day_num}}</a>
+                    </li>
+                    {% else %}
+                    <li><a href="#cycle{{cycle_num}}_day{{day_num}}" class="nav-link">Day {{day_num}}</a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+                <div class="tab-content">
+                {% for day_num in range(1, cycle["days"]|length + 1) %}
+                    {% set day = cycle["days"][day_num - 1] %}
+                    {% if day_num == 1 %}
+                    <div class="tab-pane fade active in" id="cycle{{cycle_num}}_day{{day_num}}">
+                    {% else %}
+                    <div class="tab-pane fade" id="cycle{{cycle_num}}_day{{day_num}}">
+                    {% endif %}
+						<div id="accordion_cycle{{cycle_num}}_day{{day_num}}">
+                        {% for exer_num in range(1, day["exercises"]|length + 1) %}
+                            {% set exercise = day["exercises"][exer_num - 1] %}
+							<div class="card">
+								<div class="card-header">
+                                    <a class="card-link" data-toggle="collapse" href="#exer{{exer_num}}">
+                                        Excercise {{exer_num}} {# Add exercise["name"] ? #}
+                                    </a>
+							    </div>
+                                {% if exer_num == 1 %}
+                                <div id="exer{{exer_num}}" class="collapse show" data-parent="#accordion_cycle{{cycle_num}}_day{{day_num}}">
+                                {% else %}
+                                <div id="exer{{exer_num}}" class="collapse" data-parent="#accordion_cycle{{cycle_num}}_day{{day_num}}">
+                                {% endif %}
+                                    <div class="card-body">
+                                        <table>
+                                            <tr><th>Length: {# exercise["length"] #}</th></tr>
+                                            <tr><th>Weight: {# exercise["weight"] #}</th></tr>
+                                            <tr><th>RPE: {# exercise["rpe"] #}</th></tr>
+                                            <tr><th>Notes: {{exercise["note"]}}</th></tr>
+                                        </table>
+                                    </div>
+                                </div>
+							</div>
+                        {% endfor %}
+						</div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>	
+<script>
+$("ul.nav-tabs a").click(function (e) {
+  e.preventDefault();  
+    $(this).tab('show');
+});
+</script>
+	</body>
+</html>
