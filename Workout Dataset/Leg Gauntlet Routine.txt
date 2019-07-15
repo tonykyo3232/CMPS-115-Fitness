@@ -1,0 +1,33 @@
+﻿Name: Leg Gauntlet Routine
+Style: General Fitness
+Difficulty Level: Advance
+Length: n/a
+Goal: Build Muscle, Lose Weight
+General Info: This program is an alternative to doing traditional cardio. This is an extensive squat circuit that will condition the athlete.
+--------------------
+
+
+Cycle: Number: n/a / Description: n/a / Weeks: n/a
+Day: Number: 1 / Description: n/a
+Warm Up Exercise: n/a
+Exercise: Barbell Back Squats / Length: 20 Reps / Notes: Choose a weight that will be difficult to complete on the 20th rep. No rest interval.
+Exercise: Jump Rope / Length: 1 minute(s) / Notes: No rest interval.
+Exercise: Barbell Back Squats / Length: 15 Reps / Notes: Choose an increased weight that will be difficult to complete on the 15th rep. No rest interval.
+Exercise: Double Unders / Length: 40 Reps / Notes: No rest interval.
+Exercise: Barbell Back Squats / Length: 12 Reps / Notes: Choose an increased weight that will be difficult to complete on the 12th rep. No rest interval.
+Exercise: Jump Rope / Length: 1 minute(s) / Notes: No rest interval.
+Exercise: Barbell Back Squats / Length: 5 Reps / Notes: Choose an increased weight that will be difficult to complete on the 5th rep. No rest interval.
+Exercise: Barbell Back Squats / Length: 5 Reps / Notes: Choose the same weight that was difficult to complete on the 15th rep. No rest interval.
+Exercise: Double Unders / Length: 40 Reps / Notes: No rest interval.
+Exercise: Barbell Front Squats / Length: 20 Reps / Notes: Choose a weight that will be difficult to complete on the 20th rep. No rest interval.
+Exercise: Jump Rope / Length: 1 minute(s) / Notes: No rest interval.
+Exercise: Barbell Front Squats / Length: 15 Reps / Notes: Choose an increased weight that will be difficult to complete on the 15th rep. No rest interval.
+Exercise: Double Unders / Length: 40 Reps / Notes: No rest interval.
+Exercise: Barbell Front Squats / Length: 12 Reps / Notes: Choose an increased weight that will be difficult to complete on the 12th rep. No rest interval.
+Exercise: Jump Rope / Length: 1 minute(s) / Notes: No rest interval.
+Exercise: Barbell Front Squats / Length: 5 Reps / Notes: Choose an increased weight that will be difficult to complete on the 5th rep. No rest interval.
+Exercise: Barbell Front Squats / Length: 5 Reps / Notes: Choose the same weight that was difficult to complete on the 15th rep. No rest interval.
+--------------------
+
+
+End
