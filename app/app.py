@@ -15,6 +15,10 @@ def load_routines():
         routines = pickle.load(fp)
     return routines
 
+# search program by program_id
+def search_programs():
+    pass
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -60,6 +64,13 @@ def search():
         programs = load_programs()
         return render_template("search.jinja", programs=programs)
 
+@app.route("/detail", methods=["GET"])
+def detail():
+    programs = load_programs()
+
+    # program = search_program(programs, program_id)
+    program = programs[1]
+    return render_template("detail.jinja", program=program)
 
 
 @app.route("/api/programs")
