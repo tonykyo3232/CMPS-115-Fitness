@@ -6,137 +6,66 @@
         <!-- import link of Font Awesome 5 Icons -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		
-		<!-- import CSS -->
-		<style>
-		*,html,body /* '*'' means univerisal selector */
-		{
-			margin:0;
-			padding: 0;
-		}
-		header
-		{
-			background-color:white;
-			height: 90px;
-			line-height:100px;
-		}
-		header li
-		{
-			/* let the words be in one line*/
-			display:inline-block;
-			/*place the word to the right*/
-			float: right;
-			/* putting spaces between the options */
-			padding-right: 25px; 
-			
-			/* set up the word format bold */
-			font-weight: bold;
-		}
-		header i
-		{
-			float:right;
-			margin-top: 43px;
-			margin-right: 30px;
-		}
-		
-		body
-		{
-			background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url({{ url_for('static', filename='image/wallpaper5.jpg') }});
-			background-size: 100% 100%;
-		}
-		/* The grid: Three equal columns that floats next to each other */
-		.column
-		{
-		float: left;
-		width: 33.33%;
+	<style>
+
+	/*background image setting*/
+	body
+	{
+		background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(image/wallpaper5.jpg);
+		background-size: 100% 100%;
+	}
+
+	.cards
+	{
+		display: grid;
+		grid-template-columns: auto auto auto;
+		margin-top: 20px;
+		overflow: hidden;
 		padding: 20px;
-		text-align: center;
-		font-size: 25px;
-		cursor: pointer;
-		color: white;
-		}
-		.row
-		{
-			width: 100%;
-		}
-		.row .column
-		{
-			transition: all 0.5s ease-in; /*make it smooth*/
-		}
-		.containerTab {
-		padding: 25px;
-		color: white;
-		}
-		
-		/* Clear floats after the columns */
-		
-		.row:after {
-		content: "";
-		display: table;
-		clear: both;
-		}
-		
-		/* Closable button inside the image */
-		.closebtn {
-		float: right;
-		color: white;
-		font-size: 35px;
-		cursor: pointer;
-		}
-		.op1 li, .op2 li, .op3 li
-		{
-			/* let the words be in one line*/
-			display:inline-block;
-			/* putting spaces between the options */
-			padding-right: 220px; 
-		}
-		.btn-export
-		{
-			background-color: green;
-			color:white;
-			position: fixed;
-			bottom: 20px;
-			right: 5px;
-		}
-		.container 
-		{
-			display: grid;
-			grid-template-columns: auto auto auto;
-			margin-top: 20px;
-			overflow: hidden;
-			padding: 20px;
-		}
-		.filterDiv
-		{
-			float: left;
-			background-color: #77b300;
-			color: #ffffff;
-			width: 90px;
-			line-height: 30px;
-			text-align: center;
-			margin: 2px;
-			/*display: none;*/
-		}
-		#output1, #output2, #output3
-		{
-			color:white;
-		}
-		.a:hover, .b:hover, .c:hover, .d:hover, .e:hover{
-			background-color: #ddd;
-			transition: all 0.5s ease-in;
-			text-decoration :none;
-			color:red;
-		}
-		</style>
+	}
+
+	.form-inline
+	{
+		color:white;
+	}
+
+
+	/*
+	.btn-success
+	{
+		position: fixed;
+		bottom: 20px;
+		right: 5px;
+	}
+	*/
+
+	</style>
 	</head>
 <body>
-<header>
-	<a href="index_home.html"> <img src="image/logo.jpg" width="300" height="90"></a>
-			<li><a href="index_login.html">Log in</a></li>
-			<li><a href="index_about.html">About Us</a></li>
-			<li><a href="index_home.html">Home</a></li>
-			<i class = "fas fa-bars"> </i>
-			<i class = "fas fa-search"> </i>
-</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" href="index_home.html">My Fitness Distributer</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+		<li class="nav-item active">
+			<a class="nav-link" href="index_home.html">Home <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="index_about.html">About Us</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="index_login.html">Log In</a>
+		</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+		<input class="form-control mr-sm-2" type="search" placeholder="Search">
+		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	</div>
+</nav>
 
 {# <div class="row">
   <div class="column" onclick="openTab('b1');" style="background:transparent;">Programs <i class = "fas fa-angle-double-down"></i></div>
@@ -145,129 +74,114 @@
 </div> #}
 
 
-
-	<ul class="nav nav-pills mb-2" role="tablist">
-	<li class="nav-item">
-		<a class="nav-link active" id="program-tab" data-toggle="pill" href="#search-programs" role="tab" aria-controls="search-programs" aria-selected="true">Programs</a>
-	</li>
-	{# <li class="nav-item">
-		<a class="nav-link" id="routine-tab" data-toggle="pill" href="#search-routines" role="tab" aria-controls="search-routines" aria-selected="false">Routines</a>
-	</li> #}
-	</ul>
-
-	<div class="tab-content" style="background:#006666; color:white">
-		<div class="tab-pane fade show active" role="tabpanel" aria-labelledby="program-tab" id="search-programs">
-			<h2>Filter by</h2>
-			<form id="program-opt-form" method="POST">
-				<div class="form-group">
-					<label for="target">Search target</label>
-					<select class="form-control" id="target" name="target">
-						<option>Program</option>
-						<option>Routine</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="style-opt">Style</label>
-					<select class="form-control" id="style-opt" name="style">
-						<option></option>
-						<option>Bodybuilding</option>
-						<option>Powerlifting</option>
-						<option>General Fitness</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="goal-opt">Goal</label>
-					<select class="form-control" id="goal-opt" name="goal">
-						<option></option>
-						<option>Lose Weight</option>
-						<option>Build Muscle</option>
-						<option>Build Strength</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="level-opt">Style</label>
-					<select class="form-control" id="level-opt" name="level">
-						<option value="-1"></option>  			
-						<option value="0">Beginner</option>
-						<option value="1">Intermediate</option>
-						<option value="2">Advance</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="length-opt">Length</label>
-					<select class="form-control" id="length-opt" name="length">
-						<option value="-1,-1"></option>  			
-						<option value="1,4">1-4 weeks</option>
-						<option value="5,8">5-8 weeks</option>
-						<option value="9,-1">9 weeks or longer</option>
-					</select>
-				</div>
-				<button type="submit" class="btn btn-primary">Filter</button>
-			</form>
+<div class="container rounded bg-white" style="padding: 2rem; margin-top: 2rem;">
+	<h2>Filter by</h2>
+	<form id="program-opt-form" method="POST">
+		<div class="form-check form-check-inline radio">
+			<label for="target-program">
+				<input class="form-check-input" type="radio" id="target-program" name="target" value="Program" checked>
+				Program
+			</label>
 		</div>
-		{# <div class="tab-pane fade" role="tabpanel" aria-labelledby="routine-tab" id="search-routines">
-			<h2>Filter Programs (routines not yet implemented)</h2>
-			<form id="routine-opt-form" method="POST">
-				<div class="form-group">
-					<label for="style-opt">Style</label>
-					<select class="form-control" id="style-opt">
-						<option></option>
-						<option>Bodybuilding</option>
-						<option>Powerlifting</option>
-						<option>General Fitness</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="goal-opt">Goal</label>
-					<select class="form-control" id="goal-opt">
-						<option></option>
-						<option>Lose Weight</option>
-						<option>Build Muscle</option>
-						<option>Build Strength</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="level-opt">Style</label>
-					<select class="form-control" id="level-opt" name="level">
-						<option value="-1"></option>  			
-						<option value="0">Beginner</option>
-						<option value="1">Intermediate</option>
-						<option value="2">Advance</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="length-opt">Style</label>
-					<select class="form-control" id="length-opt" name="len">
-						<option value="-1,-1"></option>  			
-						<option value="1,4">1-4 weeks</option>
-						<option value="5,8">5-8 weeks</option>
-						<option value="9,-1">9 weeks or longer</option>
-					</select>
-				</div>
-				<button type="submit" class="btn btn-primary">Filter</button>
-			</form>
+		<div class="form-check form-check-inline radio">
+			<label for="target-routine">
+				<input class="form-check-input" type="radio" id="target-routine" name="target" value="Routine">
+				Routine
+			</label>
+		</div>
+		{# <div class="form-group">
+			<label for="target">Search target</label>
+			<select class="form-control" id="target" name="target">
+				<option>Program</option>
+				<option>Routine</option>
+			</select>
 		</div> #}
-	</div>
+		<div class="form-group row">
+			<div class="col">
+				<label for="style-opt">Style</label>
+				<select class="form-control" id="style-opt" name="style">
+					<option value="">All</option>
+					<option>Bodybuilding</option>
+					<option>Powerlifting</option>
+					<option>General Fitness</option>
+				</select>
+			</div>
+			<div class="col">
+				<label for="goal-opt">Goal</label>
+				<select class="form-control" id="goal-opt" name="goal">
+					<option value="">All</option>
+					<option>Lose Weight</option>
+					<option>Build Muscle</option>
+					<option>Build Strength</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="col">
+				<label for="level-opt">Level</label>
+				<select class="form-control" id="level-opt" name="level">
+					<option value="-1">All</option>  			
+					<option value="0">Beginner</option>
+					<option value="1">Intermediate</option>
+					<option value="2">Advance</option>
+				</select>
+			</div>
+			<div class="col">
+				<label for="length-opt">Length</label>
+				<select class="form-control" id="length-opt" name="length">
+					<option value="-1,-1">All</option>  			
+					<option value="1,4">1-4 weeks</option>
+					<option value="5,8">5-8 weeks</option>
+					<option value="9,-1">9 weeks or longer</option>
+				</select>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary">Filter</button>
+	</form>
+</div>
+
 
 
 
 <!-- Create the grid -->
-<div class = "container">
+<div class = "container cards">
 	{% for program in programs %}
 	<div class="card" style="width: 18rem;">
 		<img class="card-img-top" src="{{ url_for('static', filename='image/wallpaper5.jpg') }}">
 		<div class="card-body">
 			<h5 class="card-title">{{ program["name"] }}</h5>
 			<p class="card-text">{{ program["desc"] }}</p>
-			<a href="#" class="btn btn-primary">Go somewhere</a>
+			<a href="#" class="btn btn-primary">View Detail</a>
+			<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+				<h6>Export</h6>
+			</button>
 		</div>
 	</div>
 	{% endfor %}
 </div>
-   
 
 <a href="index_export.html" class ="btn btn-export"> Export your workout program </a>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Exporting to pdf...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        We will record the selection of workout program. Please click "Proceeding to export page" to finish the progress...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary"> <a href = "index_home.html" style="color: #ffffff" >Proceeding to export page</a></button>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
