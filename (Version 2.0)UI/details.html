@@ -1,0 +1,262 @@
+<html>
+	<head>
+		<title>Details Page</title>
+	</head>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style>
+	
+	  /*background image setting*/
+  body
+  {
+    background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(image/wallpaper5.jpg);
+    background-size: 100% 100%;
+  }
+
+
+</style>	
+	<body>
+	<!-- MyFitnessProgram Website header -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index_home.html">My Fitness Distributer</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="index_home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index_about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index_login.html">Log In</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+	
+	
+<div class="tabbable boxed parentTabs p-4">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#cycle1" class="nav-link">Cycle 1</a>
+        </li>
+        <li><a href="#cycle2" class="nav-link">Cycle 2</a>
+        </li>
+        <li><a href="#cycle3" class="nav-link">Cycle 3</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="cycle1">
+            <div class="tabbable">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#cycle1_day1" class="nav-link">Day 1</a>
+                    </li>
+                    <li><a href="#cycle1_day2" class="nav-link">Day 2</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="cycle1_day1">
+						<div id="accordion_cycle1_day1">
+
+							<div class="card">
+								<div class="card-header">
+							  <a class="card-link" data-toggle="collapse" href="#collapseOne">
+								Excercise 1
+							  </a>
+							</div>
+							<div id="collapseOne" class="collapse show" data-parent="#accordion_cycle1_day1">
+							<div class="card-body">
+								<table>
+									<tr><th>Length: </th></tr>
+									<tr><th>Weight: </th></tr>
+									<tr><th>RPE: </th></tr>
+									<tr><th>Notes: </th></tr>
+								</table>
+							</div>
+							</div>
+							</div>
+	
+							<div class="card">
+								<div class="card-header">
+								<a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+									Excercise 2
+								</a>
+								</div>
+								<div id="collapseTwo" class="collapse" data-parent="#accordion_cycle1_day1">
+							<div class="card-body">
+								<table>
+									<tr><th>Length: </th></tr>
+									<tr><th>Weight: </th></tr>
+									<tr><th>RPE: </th></tr>
+									<tr><th>Notes: </th></tr>
+								</table>
+							</div>
+							</div>
+						  </div>
+
+							<div class="card">
+								<div class="card-header">
+								  <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+									Excercise 3
+								  </a>
+								</div>
+								<div id="collapseThree" class="collapse" data-parent="#accordion_cycle1_day1">
+							<div class="card-body">
+								<table>
+									<tr><th>Length: </th></tr>
+									<tr><th>Weight: </th></tr>
+									<tr><th>RPE: </th></tr>
+									<tr><th>Notes: </th></tr>
+								</table>
+							</div>
+							</div>
+							</div>
+
+						</div>
+                    </div>
+                    <div class="tab-pane fade" id="cycle1_day2">
+						<div id="accordion_cycle1_day2">
+
+							<div class="card">
+								<div class="card-header">
+							  <a class="card-link" data-toggle="collapse" href="#collapseOne">
+								Excercise 1
+							  </a>
+							</div>
+							<div id="collapseOne" class="collapse show" data-parent="#accordion_cycle1_day2">
+							<div class="card-body">
+								<table>
+									<tr><th>Length: </th></tr>
+									<tr><th>Weight: </th></tr>
+									<tr><th>RPE: </th></tr>
+									<tr><th>Notes: </th></tr>
+								</table>
+							</div>
+							</div>
+							</div>
+	
+							<div class="card">
+								<div class="card-header">
+								<a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+									Excercise 2
+								</a>
+								</div>
+								<div id="collapseTwo" class="collapse" data-parent="#accordion_cycle1_day2">
+							<div class="card-body">
+								<table>
+									<tr><th>Length: </th></tr>
+									<tr><th>Weight: </th></tr>
+									<tr><th>RPE: </th></tr>
+									<tr><th>Notes: </th></tr>
+								</table>
+							</div>
+							</div>
+						  </div>
+
+							<div class="card">
+								<div class="card-header">
+								  <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+									Excercise 3
+								  </a>
+								</div>
+								<div id="collapseThree" class="collapse" data-parent="#accordion_cycle1_day2">
+							<div class="card-body">
+								<table>
+									<tr><th>Length: </th></tr>
+									<tr><th>Weight: </th></tr>
+									<tr><th>RPE: </th></tr>
+									<tr><th>Notes: </th></tr>
+								</table>
+							</div>
+							</div>
+							</div>
+
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="cycle2">
+            <div class="tabbable">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#cycle2_day1" class="nav-link">Day 1</a>
+                    </li>
+                    <li><a href="#cycle2_day2" class="nav-link">Day 2</a>
+                    </li>
+					<li><a href="#cycle2_day3" class="nav-link">Day 3</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="cycle2_day1">
+                        <p>Cycle 2 Day 1 Excercises go here</p>
+                    </div>
+                    <div class="tab-pane fade" id="cycle2_day2">
+                        <p>Cycle 2 Day 2 Excercises go here</p>
+                    </div>
+                    <div class="tab-pane fade" id="cycle2_day3">
+                        <p>Cycle 2 Day 3 Excercises go here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="cycle3">
+            <div class="tabbable">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#cycle3_day1" class="nav-link">Day 1</a>
+                    </li>
+                    <li><a href="#cycle3_day2" class="nav-link">Day 2</a>
+                    </li>
+                    <li><a href="#cycle3_day3" class="nav-link">Day 3</a>
+                    </li>
+                    <li><a href="#cycle3_day4" class="nav-link">Day 4</a>
+                    </li>
+					<li><a href="#cycle3_day5" class="nav-link">Day 5</a>
+                    </li>
+				</ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="cycle3_day1">
+                        <p>Cycle 3 Day 1 Excercises go here</p>
+                    </div>
+                    <div class="tab-pane fade active in" id="cycle3_day2">
+                        <p>Cycle 3 Day 2 Excercises go here</p>
+                    </div>
+					<div class="tab-pane fade active in" id="cycle3_day3">
+                        <p>Cycle 3 Day 3 Excercises go here</p>
+                    </div>
+					<div class="tab-pane fade active in" id="cycle3_day4">
+                        <p>Cycle 3 Day 4 Excercises go here</p>
+                    </div>
+					<div class="tab-pane fade active in" id="cycle3_day5">
+                        <p>Cycle 3 Day 5 Excercises go here</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+<script>
+$("ul.nav-tabs a").click(function (e) {
+  e.preventDefault();  
+    $(this).tab('show');
+});
+</script>
+	</body>
+</html>
