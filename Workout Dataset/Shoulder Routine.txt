@@ -1,11 +1,10 @@
-﻿Name: Shoulder Routine
+Name: Shoulder Routine
 Style: General Fitness
 Difficulty Level: Intermediate
 Length: n/a
 Goal: Build Muscle, Build Strength
 General Info: This program has influences from bodybuilding style. It incorporates strength, hypertrophy, and speed training.
 --------------------
-
 
 Cycle: Number: n/a / Description: n/a / Weeks: n/a
 Day: Number: 1 / Description: n/a
@@ -18,6 +17,5 @@ Exercise: Barbell Upright Row / Length: 4x6  / Notes: Grip the bar at shoulder w
 Exercise: Barbell Upright Row / Length: 1 Set  / Notes: Grip the bar at shoulder width. Choose a light weight and perform as many reps as possible.
 Exercise: Dumbbell Single Arm Shoulder Press / Length: 4x15 / Notes: Choose a light weight and perform these repetitions as fast as possible.
 --------------------
-
 
 End
