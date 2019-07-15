@@ -8,6 +8,7 @@ General Info: This program consists of only free weights. The focus of this prog
 
 Cycle: Number: n/a / Description: n/a / Weeks: n/a
 Day: Number: 1 / Description: n/a
+Warm Up Exercise: n/a
 Exercise: Barbell Bench Press / Length: 2x8 / Notes: Choose a very light weight to warm up.
 Exercise: Barbell Bench Press / Length: 4x5 / Notes: Choose a weight that will be difficult to complete on the 5th rep.
 Exercise: Dumbbell Shoulder Press / Length: 1x7 / Notes: Choose a very light weight to warm up.
