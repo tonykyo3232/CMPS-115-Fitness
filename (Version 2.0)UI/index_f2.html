@@ -32,14 +32,14 @@
     color:white;
   }
 
-  /*this doesn't work*/
-  .mag
-  {
-    color:black;
+  /* Thick red border */
+  hr.white_line {
+    border: 1px solid white;
   }
 
-  /*
-  #debug, #debug-1, #debug-2, #debug-3, #debug-4, #debug-5, #debug-6, #debug-7, #debug-8, #debug-9, #debug-10, #debug-11, #debug-12
+
+  /* debug color setting
+  #debug,#debug-1,#debug-2,#debug-3,#debug-4,#debug-5,#debug-6,#debug-7,#debug-8,#debug-9,#debug-10,#debug-11,#debug-12,#debug-13,#debug-14,#debug-15,#debug-16
   {
     color:white;
   }
@@ -63,57 +63,77 @@
     return document.getElementById("name-input").value;
   }
 
+  function getStructure(){
+    //document.getElementById("debug-2").innerHTML = document.getElementById("structure-input").value // debug
+    return document.getElementById("structure-input").value;
+  }
+
   function getStyle(){
-    //document.getElementById("debug-2").innerHTML = document.getElementById("style-input").value // debug
+    //document.getElementById("debug-3").innerHTML = document.getElementById("style-input").value // debug
     return document.getElementById("style-input").value;
   }
 
   function getLevel(){
-    //document.getElementById("debug-3").innerHTML = document.getElementById("level-input").value; // debug
+    //document.getElementById("debug-4").innerHTML = document.getElementById("level-input").value; // debug
     return document.getElementById("level-input").value;
   }
 
   function getLength(){
-    //document.getElementById("debug-4").innerHTML = document.getElementById("length-input").value; // debug
+    //document.getElementById("debug-5").innerHTML = document.getElementById("length-input").value; // debug
     return document.getElementById("length-input").value;
   }
 
   function getGoal(){
-    //document.getElementById("debug-5").innerHTML = document.getElementById("goal-input").value; // debug
+    //document.getElementById("debug-6").innerHTML = document.getElementById("goal-input").value; // debug
     return document.getElementById("goal-input").value;
   }
 
   function getInfo(){
-    //document.getElementById("debug-6").innerHTML = document.getElementById("info-input").value; // debug
+    //document.getElementById("debug-7").innerHTML = document.getElementById("info-input").value; // debug
     return document.getElementById("info-input").value;
   }
 
   function getCycleName(){
-    //document.getElementById("debug-7").innerHTML = document.getElementById("cycleName-input").value; // debug
+    //document.getElementById("debug-8").innerHTML = document.getElementById("cycleName-input").value; // debug
     return document.getElementById("cycleName-input").value;
   }
 
   function getDayName(){
-    //document.getElementById("debug-8").innerHTML = document.getElementById("dayName-input").value; // debug
+    //document.getElementById("debug-9").innerHTML = document.getElementById("dayName-input").value; // debug
     return document.getElementById("dayName-input").value;
   }
   
   function getExercise(){
-    //document.getElementById("debug-9").innerHTML = document.getElementById("exerciseName-input").value; // debug
+    //document.getElementById("debug-10").innerHTML = document.getElementById("exerciseName-input").value; // debug
     return document.getElementById("exerciseName-input").value;
   }
   function getType(){
-    //document.getElementById("debug-10").innerHTML = document.getElementById("type-input").value; // debug
+    //document.getElementById("debug-11").innerHTML = document.getElementById("type-input").value; // debug
     return document.getElementById("type-input").value;
   }
 
+  function getOrder(){
+    //document.getElementById("debug-12").innerHTML = document.getElementById("order-input").value; // debug
+    return document.getElementById("order-input").value;
+  }
+
+  function getExerLength(){
+    //document.getElementById("debug-13").innerHTML = document.getElementById("exerciseLength-input").value; // debug
+    return document.getElementById("exerciseLength-input").value;
+  }
+
+  function getWeight(){
+    //document.getElementById("debug-14").innerHTML = document.getElementById("weight-input").value; // debug
+    return document.getElementById("weight-input").value;
+  }
+
   function getRPE(){
-    //document.getElementById("debug-11").innerHTML = document.getElementById("rpe-input").value; // debug
+    //document.getElementById("debug-15").innerHTML = document.getElementById("rpe-input").value; // debug
     return document.getElementById("rpe-input").value;
   }
 
   function getNote(){
-    //document.getElementById("debug-12").innerHTML = document.getElementById("note-input").value; // debug
+    //document.getElementById("debug-16").innerHTML = document.getElementById("note-input").value; // debug
    return document.getElementById("note-input").value; 
   }
 
@@ -126,6 +146,7 @@
     
     // by default
     var name = getName();
+    var structure = getStructure();
     var style;
     var level;
     var length;
@@ -134,7 +155,10 @@
     var cycleName;
     var dayName;
     var exerciseName = getExercise();
-    var type; 
+    var type;
+    var order;
+    var exerciseLength;
+    var weight;
     var rpe;
     var note;
 
@@ -147,15 +171,19 @@
     cycleName = getCycleName();
     dayName = getDayName();
     type = getType();
+    order = getOrder();
+    exerciseLength = getExerLength();
+    weight = getWeight();
     rpe = getRPE();
     note = getNote();
 
     //Debug
-    document.getElementById("debug").innerHTML = "You have enter:\n" + "Name: " + name + "]\n"+ "Style: [" + style + "]\n" + "Level: [" + level + "]\n" + "Length: [" + length + "]\n" + "Goal: [" + goal + "]\n" + "Info: ["+ info + "]\n" + "Cycle Name: [" + cycleName + "]\n" + "Day Name: [" + dayName + "]\n" + "Type: [" + type + "]\n" + "RPE: [" + rpe + "]\n" + "Note: [" + note + "]";
+    document.getElementById("debug").innerHTML = "You have entered:\n" + "Name: " + name + "]\n" + "Structure: [" + structure + "]\n" + "Style: [" + style + "]\n" + "Level: [" + level + "]\n" + "Length: [" + length + "]\n" + "Goal: [" + goal + "]\n" + "Info: ["+ info + "]\n" + "Cycle Name: [" + cycleName + "]\n" + "Day Name: [" + dayName + "]\n" + "Exercise Name: [" + exerciseName + "]\n" + "Type: [" + type + "]\n" + "Order: [" + order + "]\n" + "Exercise Length: [" + exerciseLength + "]\n" + "Weight: [" + weight + "]\n" + "RPE: [" + rpe + "]\n" + "Note: [" + note + "]";
 
     // initialize the JavaScript Object
     var CustProg = {
       Name: name,
+      Structure: structure,
       Style: style,
       Level: level,
       Length: length,
@@ -165,6 +193,9 @@
       Day_Name: dayName,
       Exercise_Name: exerciseName,
       Type: type,
+      Order: order,
+      Exercise_Length: exerciseLength,
+      Weight: weight,
       RPE: rpe,
       Note: note
     };
@@ -220,15 +251,29 @@
     </div>
   </nav>  
 
+
+<!-- Message -->
+<p style = color:white>Design Your Own Workout!!!</p>
+
 <!-- Code that collect the data and encapsulate them to a Javascript Object to server -->
 <form id="program-opt-form">
   <div class="form-group row">
     <div class = "col">
-    <label for="name-input" class="col-2 col-form-label">*Name</label>
+    <label for="name-input" class="col-2 col-form-label">*Name:</label>
     <div class="col-10">
-      <input class="form-control" type="text" value="" id="name-input">
+      <input class="form-control" type="text" placeholder="Enter Workout name..." id="name-input">
     </div>
     </div>
+    <div class="col">
+      <label for="structure-input" class="col-2 col-form-label">Structure:</label>
+      <div class="col-10">
+        <select class="form-control" id="structure-input">
+          <option>Program</option>
+          <option>Routine</option>
+        </select>
+      </div>
+    </div>
+    <!--
     <div class = "col">
     <label for="style-input" class="col-2 col-form-label">Style</label>
     <div class="col-10">
@@ -238,7 +283,11 @@
       <div class="col">
       <label for="level-input" class="col-2 col-form-label">Level</label>
       <div class="col-10">
-        <input class="form-control" type="text" value="" id="level-input">
+        <select class="form-control" id="level-input">
+          <option>Beginner</option>
+          <option>Intermediate</option>
+          <option>Advance</option>
+        </select>
       </div>
     </div>
     <div class="col">
@@ -256,31 +305,89 @@
     <div class="col">
       <label for="note-info" class="col-2 col-form-label">Info</label>
       <div class="col-10">
-        <input class="form-control" type="text" value="" id="info-input">
+        <input class="form-control" type="text" value="General Info" id="info-input">
+      </div>
+    </div>
+  -->
+  </div>
+
+
+  <p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    More Exercise General Setting
+  </a>
+</p>
+
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    <form>
+      <div class="form-row">
+        <div class="col">
+          <label for="style-input">Style:</label>
+          <input type="text" class="form-control" id="style-input" placeholder="Enter style...">
+        </div>
+        <div class="col">
+          <label for="level-input">Level:</label>
+          <select class="form-control" id="level-input">
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advance</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="length-input">Length:</label>
+          <input type="text" class="form-control" id="length-input" placeholder="Enter length...">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="goal-input">Goal:</label>
+          <input type="text" class="form-control" id="goal-input" placeholder="Enter goal...">
+        </div>
+        <!--
+        <div class="col">
+          <input type="text" class="form-control" id="info-input" placeholder="Enter info...">
+        </div>
+      -->
+      </div>
+      <br>
+      <!-- Square input field -->
+      <div class="form-group">
+        <label for="info-input">General Info:</label>
+        <textarea class="form-control" rows="5" id="info-input" placeholder="Enter info..."></textarea>
+      </div>
+    </form>
+  </div>
+</div>
+
+  <!-- Adding the white to seperate the parts -->
+  <hr class="white_line">
+
+  <div class="form-group row">
+    <div class = "col">
+    <label for="cycleName-input" class="col-2 col-form-label">Cycle:</label>
+    <div class="col-10">
+      <input class="form-control" type="text" placeholder="Enter Description..." id="cycleName-input">
+      <button onclick="" class="btn btn-info">Clear:</button>
+    </div>
+    </div>
+    <div class="col">
+      <label for="dayName-input" class="col-2 col-form-label">Day:</label>
+      <div class="col-10">
+        <input class="form-control" type="text" placeholder="Enter Description..." id="dayName-input">
+        <button onclick="" class="btn btn-info">Clear:</button>
       </div>
     </div>
   </div>
-  <div class="form-group row">
-    <div class = "col">
-    <label for="cycleName-input" class="col-2 col-form-label">Cycle name</label>
-    <div class="col-10">
-      <input class="form-control" type="text" value="" id="cycleName-input">
-    </div>
-    </div>
+  <div class = "form-group row">
     <div class="col">
-      <label for="dayName-input" class="col-2 col-form-label">Day name</label>
+      <label for="exerciseName-input" class="col-2 col-form-label">*Exercise:</label>
       <div class="col-10">
-        <input class="form-control" type="text" value="" id="dayName-input">
+        <input class="form-control" type="text" placeholder="Enter name..." id="exerciseName-input">
       </div>
     </div>
     <div class="col">
-      <label for="exerciseName-input" class="col-2 col-form-label">*Exercise Name</label>
-      <div class="col-10">
-        <input class="form-control" type="text" value="" id="exerciseName-input">
-      </div>
-    </div>
-    <div class="col">
-      <label for="type-input" class="col-2 col-form-label">Type</label>
+      <label for="type-input" class="col-2 col-form-label">Type:</label>
       <div class="col-10">
         <select class="form-control" id="type-input">
           <option>Warm Up</option>
@@ -288,21 +395,46 @@
         </select>
       </div>
     </div>
+    <div class="col">
+      <label for="order-input" class="col-2 col-form-label">Order:</label>
+      <div class="col-10">
+        <input class="form-control" type="text" placeholder="Enter number..." id="order-input">
+      </div>
+    </div>
+    <div class="col">
+      <label for="exerciseLength-input" class="col-2 col-form-label">*Length:</label>
+      <div class="col-10">
+        <input class="form-control" type="text" placeholder="Enter Data..." id="exerciseLength-input">
+      </div>
+    </div>
+    <div class="col">
+      <label for="weight-input" class="col-2 col-form-label">*Weight:</label>
+      <div class="col-10">
+        <input class="form-control" type="text" placeholder="Enter Weight..." id="weight-input">
+      </div>
+    </div>
   </div>
 <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Exercise Advance Setting
+    More Exercise Setting
   </a>
 </p>
+
+<!-- Adding the white to seperate the parts -->
+<hr class="white_line">
+
+
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
     <form>
       <div class="form-row">
         <div class="col">
-          <input type="text" class="form-control" id="rpe-input" placeholder="RPE:_____">
+          <label for="rpe-input">RPE:</label>
+          <input type="text" class="form-control" id="rpe-input" placeholder="Enter RPE Data...">
         </div>
         <div class="col">
-          <input type="text" class="form-control" id="note-input" placeholder="Notes:_____">
+          <label for="note-input">Note:</label>
+          <input type="text" class="form-control" id="note-input" placeholder="Enter Exercise note...">
         </div>
       </div>
     </form>
@@ -337,12 +469,22 @@
 </div>
 
 <!-- Newline -->
-<br><br>
+<br>
+
+
 
 <!-- button that will extend the input field -->
 <button onclick="addExercise()" class="btn btn-secondary">(+)Exercise</button>
 <button onclick="addDay()" class="btn btn-secondary">(+)Day</button>
-<button onclick="getData()" class="btn btn-secondary">(+)Cycle</button>
+
+<!-- Newline -->
+<br><br>
+
+<!-- Adding the white to seperate the parts -->
+<hr class="white_line">
+
+<button onclick="addCycle()" class="btn btn-secondary">(+)Cycle</button>
+<button onclick="getData()" class="btn btn-secondary">(+)Debug</button>
 
 <!-- debug message -->
 <!--
@@ -358,6 +500,10 @@
 <p id = "debug-10"><p>
 <p id = "debug-11"><p>
 <p id = "debug-12"></p>
+<p id = "debug-13"></p>
+<p id = "debug-14"></p>
+<p id = "debug-15"></p>
+<p id = "debug-16"></p>
 -->
 <p id = "debug"></p>
 
