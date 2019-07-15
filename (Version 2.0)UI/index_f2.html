@@ -204,7 +204,6 @@
     return CustProg;
   }
 
-
   //***************************************************
   // function for extending the input field
   // Using JavaScript function to create the code of HTML
@@ -339,6 +338,7 @@
           <input type="text" class="form-control" id="length-input" placeholder="Enter length...">
         </div>
       </div>
+      <br>
       <div class="form-row">
         <div class="col">
           <label for="goal-input">Goal:</label>
@@ -368,14 +368,14 @@
     <label for="cycleName-input" class="col-2 col-form-label">Cycle:</label>
     <div class="col-10">
       <input class="form-control" type="text" placeholder="Enter Description..." id="cycleName-input">
-      <button onclick="" class="btn btn-info">Clear:</button>
+      <button onclick="document.getElementById('cycleName-input').value = ''" class="btn btn-info">Clear:</button>
     </div>
     </div>
     <div class="col">
       <label for="dayName-input" class="col-2 col-form-label">Day:</label>
       <div class="col-10">
         <input class="form-control" type="text" placeholder="Enter Description..." id="dayName-input">
-        <button onclick="" class="btn btn-info">Clear:</button>
+        <button onclick="document.getElementById('dayName-input').value = ''" class="btn btn-info">Clear:</button>
       </div>
     </div>
   </div>
