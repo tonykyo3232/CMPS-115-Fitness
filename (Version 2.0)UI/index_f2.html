@@ -38,7 +38,14 @@
     color:black;
   }
 
-  #debug, #debug-3, #debug-2, #debug-1
+  /*
+  #debug, #debug-1, #debug-2, #debug-3, #debug-4, #debug-5, #debug-6, #debug-7, #debug-8, #debug-9, #debug-10, #debug-11, #debug-12
+  {
+    color:white;
+  }
+  */
+
+  #debug
   {
     color:white;
   }
@@ -52,71 +59,99 @@
   //get functions
   //*****************************
   function getName(){
-    document.getElementById("debug-3").innerHTML = document.getElementById("name-input").value // debug
+    //document.getElementById("debug-1").innerHTML = document.getElementById("name-input").value // debug
     return document.getElementById("name-input").value;
   }
 
   function getStyle(){
-    document.getElementById("debug-2").innerHTML = document.getElementById("style-input").value // debug
+    //document.getElementById("debug-2").innerHTML = document.getElementById("style-input").value // debug
     return document.getElementById("style-input").value;
   }
 
   function getLevel(){
-    document.getElementById("debug-1").innerHTML = document.getElementById("level-input").value; // debug
+    //document.getElementById("debug-3").innerHTML = document.getElementById("level-input").value; // debug
     return document.getElementById("level-input").value;
   }
 
   function getLength(){
+    //document.getElementById("debug-4").innerHTML = document.getElementById("length-input").value; // debug
     return document.getElementById("length-input").value;
   }
 
   function getGoal(){
+    //document.getElementById("debug-5").innerHTML = document.getElementById("goal-input").value; // debug
     return document.getElementById("goal-input").value;
   }
 
   function getInfo(){
+    //document.getElementById("debug-6").innerHTML = document.getElementById("info-input").value; // debug
     return document.getElementById("info-input").value;
   }
 
   function getCycleName(){
+    //document.getElementById("debug-7").innerHTML = document.getElementById("cycleName-input").value; // debug
     return document.getElementById("cycleName-input").value;
   }
 
   function getDayName(){
+    //document.getElementById("debug-8").innerHTML = document.getElementById("dayName-input").value; // debug
     return document.getElementById("dayName-input").value;
   }
   
+  function getExercise(){
+    //document.getElementById("debug-9").innerHTML = document.getElementById("exerciseName-input").value; // debug
+    return document.getElementById("exerciseName-input").value;
+  }
   function getType(){
+    //document.getElementById("debug-10").innerHTML = document.getElementById("type-input").value; // debug
     return document.getElementById("type-input").value;
   }
 
   function getRPE(){
+    //document.getElementById("debug-11").innerHTML = document.getElementById("rpe-input").value; // debug
     return document.getElementById("rpe-input").value;
   }
 
   function getNote(){
+    //document.getElementById("debug-12").innerHTML = document.getElementById("note-input").value; // debug
    return document.getElementById("note-input").value; 
   }
 
   // function that return the object of data
   function getData(){
+    
+    //Debug
+    //document.getElementById("debug").innerHTML = "Hello World!!!";
     // get the value that are going to put in Javascript Object
+    
+    // by default
     var name = getName();
-    var style = getStyle();
-    var level = getLevel();
-    var length = getLength();
-    var goal = getGoal();
-    var Info = getInfo();
-    var cycleName = getCycleName();
-    var dayName = getDayName();
-    var type = getType();
-    var RPE = "n/a";
-    var Note = "n/a";
-    RPE = getRPE();
-    Note = getNote();
+    var style;
+    var level;
+    var length;
+    var goal;
+    var info;
+    var cycleName;
+    var dayName;
+    var exerciseName = getExercise();
+    var type; 
+    var rpe;
+    var note;
+
+    // optional data that user can input 
+    style = getStyle();
+    level = getLevel();
+    length = getLength();
+    goal = getGoal();
+    info = getInfo();
+    cycleName = getCycleName();
+    dayName = getDayName();
+    type = getType();
+    rpe = getRPE();
+    note = getNote();
 
     //Debug
-    document.getElementById("debug").innerHTML = name + " " + style + " " + level + " " + length + " " + goal + " " + note + " " + cycleName + " " + dayName + " " + type + " ";
+    document.getElementById("debug").innerHTML = "You have enter:\n" + "Name: " + name + "]\n"+ "Style: [" + style + "]\n" + "Level: [" + level + "]\n" + "Length: [" + length + "]\n" + "Goal: [" + goal + "]\n" + "Info: ["+ info + "]\n" + "Cycle Name: [" + cycleName + "]\n" + "Day Name: [" + dayName + "]\n" + "Type: [" + type + "]\n" + "RPE: [" + rpe + "]\n" + "Note: [" + note + "]";
 
     // initialize the JavaScript Object
     var CustProg = {
@@ -125,10 +160,13 @@
       Level: level,
       Length: length,
       Goal: goal,
-      Note: note,
+      Info: info,
       Cycle_Name: cycleName,
       Day_Name: dayName,
-      Type: type
+      Exercise_Name: exerciseName,
+      Type: type,
+      RPE: rpe,
+      Note: note
     };
 
     //return JavaScript Object
@@ -198,13 +236,13 @@
     </div>
     </div>
       <div class="col">
-      <label for="level-input" class="col-2 col-form-label">*Level</label>
+      <label for="level-input" class="col-2 col-form-label">Level</label>
       <div class="col-10">
         <input class="form-control" type="text" value="" id="level-input">
       </div>
     </div>
     <div class="col">
-      <label for="length-input" class="col-2 col-form-label">*Length</label>
+      <label for="length-input" class="col-2 col-form-label">Length</label>
       <div class="col-10">
         <input class="form-control" type="text" value="" id="length-input">
       </div>
@@ -230,7 +268,7 @@
     </div>
     </div>
     <div class="col">
-      <label for="example-dayName-input" class="col-2 col-form-label">Day name</label>
+      <label for="dayName-input" class="col-2 col-form-label">Day name</label>
       <div class="col-10">
         <input class="form-control" type="text" value="" id="dayName-input">
       </div>
@@ -302,15 +340,26 @@
 <br><br>
 
 <!-- button that will extend the input field -->
-<button onclick="addExercise()" class="btn btn-secondary">(+)Exercise Name</button>
-<button onclick="addDay()" class="btn btn-secondary">(+)Day Name</button>
-<button onclick="getData()" class="btn btn-secondary">(+)Cycle Name</button>
+<button onclick="addExercise()" class="btn btn-secondary">(+)Exercise</button>
+<button onclick="addDay()" class="btn btn-secondary">(+)Day</button>
+<button onclick="getData()" class="btn btn-secondary">(+)Cycle</button>
 
 <!-- debug message -->
-<p id = "debug-3"><p>
-<p id = "debug-2"><p>
+<!--
 <p id = "debug-1"><p>
-<p id = "debug"><p>
+<p id = "debug-2"><p>
+<p id = "debug-3"><p>
+<p id = "debug-4"><p>
+<p id = "debug-5"><p>
+<p id = "debug-6"><p>
+<p id = "debug-7"><p>
+<p id = "debug-8"><p>
+<p id = "debug-9"><p>
+<p id = "debug-10"><p>
+<p id = "debug-11"><p>
+<p id = "debug-12"></p>
+-->
+<p id = "debug"></p>
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
