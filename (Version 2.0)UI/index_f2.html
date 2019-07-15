@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
+<!-- CSS implementation -->
 <style>
 
   /*background image setting*/
@@ -44,22 +45,24 @@
 
 </style>
 
+<!-- JavaScript Implementation -->
 <script type="text/javascript">
   
-  
+  //*****************************
   //get functions
+  //*****************************
   function getName(){
-    document.getElementById("debug-3").innerHTML = document.getElementById("name-input").value
+    document.getElementById("debug-3").innerHTML = document.getElementById("name-input").value // debug
     return document.getElementById("name-input").value;
   }
 
   function getStyle(){
-    document.getElementById("debug-2").innerHTML = document.getElementById("style-input").value
+    document.getElementById("debug-2").innerHTML = document.getElementById("style-input").value // debug
     return document.getElementById("style-input").value;
   }
 
   function getLevel(){
-    document.getElementById("debug-1").innerHTML = document.getElementById("level-input").value;
+    document.getElementById("debug-1").innerHTML = document.getElementById("level-input").value; // debug
     return document.getElementById("level-input").value;
   }
 
@@ -95,6 +98,7 @@
    return document.getElementById("note-input").value; 
   }
 
+  // function that return the object of data
   function getData(){
     // get the value that are going to put in Javascript Object
     var name = getName();
@@ -131,6 +135,12 @@
     return CustProg;
   }
 
+
+  //***************************************************
+  // function for extending the input field
+  // Using JavaScript function to create the code of HTML
+  //***************************************************
+
   function addExercise(){
 
   }
@@ -145,6 +155,7 @@
 
 </script>
 
+<!-- Top of the website -->
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index_home.html">My Fitness Distributer</a>
@@ -287,7 +298,10 @@
   </div>
 </div>
 
+<!-- Newline -->
 <br><br>
+
+<!-- button that will extend the input field -->
 <button onclick="addExercise()" class="btn btn-secondary">(+)Exercise Name</button>
 <button onclick="addDay()" class="btn btn-secondary">(+)Day Name</button>
 <button onclick="getData()" class="btn btn-secondary">(+)Cycle Name</button>
