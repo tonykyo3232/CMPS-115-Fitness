@@ -8,8 +8,8 @@ General Info: This program has influences from bodybuilding style. It incorporat
 
 Cycle: Number: n/a / Description: n/a / Weeks: n/a
 Day: Number: 1 / Description: n/a
-Warm Up Exercise: Arm Circles / Length: 45 second(s) / Notes: Perform mini twirls in one direction.
-Warm Up Exercise: Arm Circles / Length: 45 second(s) / Notes: Perform mini twirls in opposite direction.
+Warm Up Exercise: Arm Circles / Length: 45 Second(s) / Notes: Perform mini twirls in one direction.
+Warm Up Exercise: Arm Circles / Length: 45 Second(s) / Notes: Perform mini twirls in opposite direction.
 Warm Up Exercise: Burpees / Length: 2x10 / Weight: Bodyweight
 Exercise: Barbell Push Press / Length: 4x4 / Notes: Choose a weight that will be difficult to complete on the 4th rep.
 Exercise: Dumbbell Shoulder Press / Length: 4 Sets / Notes: User chooses moderate weight and perform as many reps as possible for each set.
