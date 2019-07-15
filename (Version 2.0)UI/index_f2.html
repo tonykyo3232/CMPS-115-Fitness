@@ -15,10 +15,10 @@
     background-size: 100% 100%;
   }
 
-  .row
+  /*.row
   {
     color:white;
-  }
+  }*/
   
   .btn-success
   {
@@ -27,10 +27,10 @@
     right: 5px;
   }
 
-  .cycle
+  /*.cycle
   {
     color:white;
-  }
+  }*/
 
   /* Thick white border */
   hr.white_line {
@@ -312,13 +312,13 @@
 
 
   <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <a class="btn btn-primary" data-toggle="collapse" href="#program-meta" role="button" aria-expanded="false" aria-controls="program-meta">
     More Exercise General Setting
   </a>
 </p>
 
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
+<div class="collapse" id="program-meta">
+  <div class="container bg-light rounded" style="padding: 2rem">
     <form>
       <div class="form-row">
         <div class="col">
@@ -362,15 +362,20 @@
 
   <!-- Adding the white to seperate the parts -->
   <hr class="white_line">
-
+<div class="container bg-light rounded text-dark" style="padding: 2rem">
   <div class="form-group row">
-    <div class = "col">
-    <label for="cycleName-input" class="col-2 col-form-label">Cycle:</label>
-    <div class="col-10">
+    <div class="col-2">
+      <label for="cycleName-input" class="col-2 col-form-label">Cycle:</label>
+    </div>
+    <div class="col-6">
       <input class="form-control" type="text" placeholder="Enter Description..." id="cycleName-input">
+    </div>
+    <div class="col-2">
       <button onclick="document.getElementById('cycleName-input').value = ''" class="btn btn-info">Clear:</button>
     </div>
-    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="form-group row">
     <div class="col">
       <label for="dayName-input" class="col-2 col-form-label">Day:</label>
       <div class="col-10">
@@ -414,17 +419,19 @@
       </div>
     </div>
   </div>
+
 <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <a class="btn btn-primary" data-toggle="collapse" href="#exercise-meta" role="button" aria-expanded="false" aria-controls="exercise-meta">
     More Exercise Setting
   </a>
 </p>
+</div>
 
 <!-- Adding the white to seperate the parts -->
 <hr class="white_line">
 
 
-<div class="collapse" id="collapseExample">
+<div class="collapse" id="exercise-meta">
   <div class="card card-body">
     <form>
       <div class="form-row">
@@ -443,12 +450,14 @@
 </form>
 
 <!-- Exporting option -->
+  <!--
   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
     <H5>Export</H5>
   </button>
+  -->
 
   <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">[]
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -517,4 +526,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
+<script>
+  
+</script>
 </html>
