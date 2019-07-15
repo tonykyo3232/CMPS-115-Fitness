@@ -14,7 +14,7 @@
     background-size: 100% 100%;
   }
 
-  .container 
+  .cards 
   {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -83,7 +83,56 @@
   </nav>
 
   <!-- Provide the option that user to choose & filter the grids-->
-  <form class="form-inline">
+  <form id="program-opt-form" method="POST">
+        <div class="form-group row" style = color:white>
+          <div class = "col">
+          <label for="target">Working Structure</label>
+          <select class="form-control" id="target" name="target">
+            <option>Program</option>
+            <option>Routine</option>
+          </select>
+          </div>
+          <div class="col" style = color:white>
+          <label for="style-opt">Style</label>
+          <select class="form-control" id="style-opt" name="style">
+            <option></option>
+            <option>Bodybuilding</option>
+            <option>Powerlifting</option>
+            <option>General Fitness</option>
+          </select>
+          </div>
+          <div class="col" style = color:white>
+            <label for="goal-opt">Goal</label>
+            <select class="form-control" id="goal-opt" name="goal">
+              <option></option>
+              <option>Lose Weight</option>
+              <option>Build Muscle</option>
+              <option>Build Strength</option>
+              <option>Conditioning</option>
+            </select>
+          </div>        
+          <div class="col" style = color:white>
+          <label for="level-opt">Level</label>
+          <select class="form-control" id="level-opt" name="level">
+            <option value="-1"></option>        
+            <option value="0">Beginner</option>
+            <option value="1">Intermediate</option>
+            <option value="2">Advance</option>
+          </select>
+          </div>
+        <div class="col" style = color:white>
+          <label for="length-opt">Length</label>
+          <select class="form-control" id="length-opt" name="length">
+            <option value="-1,-1"></option>       
+            <option value="1,4">1-4 weeks</option>
+            <option value="5,8">5-8 weeks</option>
+            <option value="9,-1">9 weeks or longer</option>
+          </select>
+        </div>
+      </div>
+        <button type="submit" class="btn btn-primary">Filter</button>
+      </form>
+  <!-- <form class="form-inline" method="POST">
   <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
   
   <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
@@ -103,7 +152,7 @@
 
   <label class="mr-sm-2" for="inlineFormCustomSelect">Style</label>
   <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-    <option selected>Choose...</option>
+    <option selected>all</option>
     <option value="1">General Fitness</option>
     <option value="2">Powerlifting</option>
     <option value="3">Bodybuilding</option>
@@ -120,8 +169,8 @@
   <label class="mr-sm-2" for="inlineFormCustomSelect">Length</label>
   <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
     <option selected>Choose...</option>
-    <option value="1"> 1 day</option>
-    <option value="2">1-4 weeks</option>
+    <option value=""> 1 day</option>
+    <option value="1,4">1-4 weeks</option>
     <option value="3">5-8 weeks</option>
     <option value="4">9 weeks above</option>
 
@@ -134,17 +183,17 @@
   </label>
 
   <button type="submit" class="btn btn-primary">Filter</button>
-</form>
+</form> -->
 
 
   <!-- Create the grid -->
-<div class = "container">
+<div class = "container cards">
   <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">My Beginner Program</h5>
       <p class="card-text">This program contains a beginner guide to general fitness</p>
-      <a href="#" class="btn btn-primary">View Detail</a>
+      <a href="detail.html" class="btn btn-primary">View Detail</a>
       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
         <h6>Export</h6>
       </button>
@@ -231,7 +280,7 @@
     <img class="card-img-top" src="image/wallpaper5.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Chest Killer Routine</h5>
-      <p class="card-text">Description...</p>
+      <p class="card-text">This program is designed to put some mass on the muscles of the chest. User can choose workout weights accordingly. Note that most exercises are supersets and done until failure, so weights should be chosen carefully.</p>
       <a href="#" class="btn btn-primary">View Detail</a>
       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
         <h6>Export</h6>
