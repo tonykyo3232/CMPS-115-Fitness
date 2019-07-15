@@ -30,15 +30,32 @@
 	}
 
 
-	/*
-	.btn-success
-	{
-		position: fixed;
-		bottom: 20px;
-		right: 5px;
+	.content {
+	max-height: 6em;
+	overflow: hidden;
+	position: relative;
+	display: block;
+	line-height: 1.5em;
+	outline: solid 1px red;
+	background-color: white;
 	}
-	*/
 
+	.content::before {
+		background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%);
+	content: '\200C';
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 4.5em;
+	width: 25%;
+	text-align: center;
+	}
+
+	.inner {
+	padding: 0;
+	margin: 0;
+	}
+	
 	</style>
 	</head>
 <body>
@@ -75,92 +92,105 @@
 
 
 <div class="container rounded bg-white" style="padding: 2rem; margin-top: 2rem;">
-	<h2>Filter by</h2>
-	<form id="program-opt-form" method="POST">
-		<div class="form-check form-check-inline radio">
-			<label for="target-program">
-				<input class="form-check-input" type="radio" id="target-program" name="target" value="Program" checked>
-				Program
-			</label>
-		</div>
-		<div class="form-check form-check-inline radio">
-			<label for="target-routine">
-				<input class="form-check-input" type="radio" id="target-routine" name="target" value="Routine">
-				Routine
-			</label>
-		</div>
-		{# <div class="form-group">
-			<label for="target">Search target</label>
-			<select class="form-control" id="target" name="target">
-				<option>Program</option>
-				<option>Routine</option>
-			</select>
-		</div> #}
-		<div class="form-group row">
-			<div class="col">
-				<label for="style-opt">Style</label>
-				<select class="form-control" id="style-opt" name="style">
-					<option value="">All</option>
-					<option>Bodybuilding</option>
-					<option>Powerlifting</option>
-					<option>General Fitness</option>
-				</select>
+	<div class="row"><div class="col">
+		<h2>Filter by ...</h2>
+		<form id="program-opt-form" method="POST">
+			<div class="form-check form-check-inline radio">
+				<label for="target-program">
+					<input class="form-check-input" type="radio" id="target-program" name="target" value="Program" checked>
+					Program
+				</label>
 			</div>
-			<div class="col">
-				<label for="goal-opt">Goal</label>
-				<select class="form-control" id="goal-opt" name="goal">
-					<option value="">All</option>
-					<option>Lose Weight</option>
-					<option>Build Muscle</option>
-					<option>Build Strength</option>
-				</select>
+			<div class="form-check form-check-inline radio">
+				<label for="target-routine">
+					<input class="form-check-input" type="radio" id="target-routine" name="target" value="Routine">
+					Routine
+				</label>
 			</div>
-		</div>
-		<div class="form-group row">
-			<div class="col">
-				<label for="level-opt">Level</label>
-				<select class="form-control" id="level-opt" name="level">
-					<option value="-1">All</option>  			
-					<option value="0">Beginner</option>
-					<option value="1">Intermediate</option>
-					<option value="2">Advance</option>
-				</select>
+			<div class="form-group row">
+				<div class="col">
+					<label for="style-opt">Style</label>
+					<select class="form-control" id="style-opt" name="style">
+						<option value="">All</option>
+						<option>Bodybuilding</option>
+						<option>Powerlifting</option>
+						<option>General Fitness</option>
+					</select>
+				</div>
+				<div class="col">
+					<label for="goal-opt">Goal</label>
+					<select class="form-control" id="goal-opt" name="goal">
+						<option value="">All</option>
+						<option>Lose Weight</option>
+						<option>Build Muscle</option>
+						<option>Build Strength</option>
+					</select>
+				</div>
+				<div class="col">
+					<label for="level-opt">Level</label>
+					<select class="form-control" id="level-opt" name="level">
+						<option value="-1">All</option>  			
+						<option value="0">Beginner</option>
+						<option value="1">Intermediate</option>
+						<option value="2">Advance</option>
+					</select>
+				</div>
+				<div class="col">
+					<label for="length-opt">Length</label>
+					<select class="form-control" id="length-opt" name="length">
+						<option value="-1,-1">All</option>  			
+						<option value="1,4">1-4 weeks</option>
+						<option value="5,8">5-8 weeks</option>
+						<option value="9,-1">9 weeks or longer</option>
+					</select>
+				</div>
 			</div>
-			<div class="col">
-				<label for="length-opt">Length</label>
-				<select class="form-control" id="length-opt" name="length">
-					<option value="-1,-1">All</option>  			
-					<option value="1,4">1-4 weeks</option>
-					<option value="5,8">5-8 weeks</option>
-					<option value="9,-1">9 weeks or longer</option>
-				</select>
-			</div>
-		</div>
-		<button type="submit" class="btn btn-primary">Filter</button>
-	</form>
+			{# <div class="form-group row">
+				<div class="col">
+					<label for="level-opt">Level</label>
+					<select class="form-control" id="level-opt" name="level">
+						<option value="-1">All</option>  			
+						<option value="0">Beginner</option>
+						<option value="1">Intermediate</option>
+						<option value="2">Advance</option>
+					</select>
+				</div>
+				<div class="col">
+					<label for="length-opt">Length</label>
+					<select class="form-control" id="length-opt" name="length">
+						<option value="-1,-1">All</option>  			
+						<option value="1,4">1-4 weeks</option>
+						<option value="5,8">5-8 weeks</option>
+						<option value="9,-1">9 weeks or longer</option>
+					</select>
+				</div>
+			</div> #}
+			<button type="submit" class="btn btn-primary float-right">Filter</button>
+		</form>
+	</div></div>
 </div>
 
 
-
-
 <!-- Create the grid -->
-<div class = "container cards">
+<div class="container">
+<div class="card-deck cards">
 	{% for program in programs %}
 	<div class="card" style="width: 18rem;">
 		<img class="card-img-top" src="{{ url_for('static', filename='image/wallpaper5.jpg') }}">
 		<div class="card-body">
 			<h5 class="card-title">{{ program["name"] }}</h5>
-			<p class="card-text">{{ program["desc"] }}</p>
+			<p class="card-text text-truncate">{{ program["desc"] }}</p> <!-- Maybe modified by javascript-->
+		</div>
+		<div class="card-footer">
 			<a href="#" class="btn btn-primary">View Detail</a>
 			<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-				<h6>Export</h6>
+				Export
 			</button>
 		</div>
 	</div>
 	{% endfor %}
 </div>
-
-<a href="index_export.html" class ="btn btn-export"> Export your workout program </a>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
