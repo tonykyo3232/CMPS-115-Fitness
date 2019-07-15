@@ -1,11 +1,10 @@
-﻿Name: Chest + Shoulder Routine
+Name: Chest + Shoulder Routine
 Style: General Fitness
 Difficulty Level: Intermediate
 Length: n/a
 Goal: Build Muscle, Build Strength
 General Info: This program consists of only free weights. The focus of this program is strength and explosive training. 
 --------------------
-
 
 Cycle: Number: n/a / Description: n/a / Weeks: n/a
 Day: Number: 1 / Description: n/a
@@ -17,6 +16,5 @@ Exercise: Dumbbell Bench Press / Length: 4x8 / Notes: Choose a weight that will 
 Exercise: Barbell Shoulder Press / Length: 4x8-12 / Notes: Choose a weight that will start to be difficult to complete on the 8th rep.
 Exercise: Plyometric Push Ups / Length: 4x10 / Weight: Bodyweight
 --------------------
-
 
 End
