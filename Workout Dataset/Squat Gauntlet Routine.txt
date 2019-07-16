@@ -1,4 +1,4 @@
-Name: Leg Gauntlet Routine
+Name: Squat Gauntlet Routine
 Style: General Fitness
 Difficulty Level: Advance
 Length: n/a
