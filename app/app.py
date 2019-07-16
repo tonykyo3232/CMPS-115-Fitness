@@ -77,11 +77,13 @@ def detail():
     return render_template("detail.jinja", program=program)
 
 
-@app.route("/program/detail/<program_id>", methods=["GET"])
+@app.route("/program/detail/<int:program_id>", methods=["GET"])
 def program_detail(program_id):
     programs = load_programs()
 
     program = search_program(programs, program_id)
+    if program == None:
+        return "Such program doesn't exist."
     return render_template("detail.jinja", program=program)
 
 
