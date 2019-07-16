@@ -258,13 +258,13 @@
 <form id="program-opt-form">
   <div class="form-group row">
     <div class = "col">
-    <label for="name-input" class="col-2 col-form-label">*Name:</label>
+    <label for="name-input" class="col-2 col-form-label" style = "color:white">*Name:</label>
     <div class="col-10">
       <input class="form-control" type="text" placeholder="Enter Workout name..." id="name-input">
     </div>
     </div>
     <div class="col">
-      <label for="structure-input" class="col-2 col-form-label">Structure:</label>
+      <label for="structure-input" class="col-2 col-form-label" style="color:white">Structure:</label>
       <div class="col-10">
         <select class="form-control" id="structure-input">
           <option>Program</option>
@@ -357,80 +357,115 @@
         <textarea class="form-control" rows="5" id="info-input" placeholder="Enter info..."></textarea>
       </div>
     </form>
-  </div>
-</div>
-
-  <!-- Adding the white to seperate the parts -->
-  <hr class="white_line">
-<div class="container bg-light rounded text-dark" style="padding: 2rem">
-  <div class="form-group row">
-    <div class="col-2">
-      <label for="cycleName-input" class="col-2 col-form-label">Cycle:</label>
-    </div>
-    <div class="col-6">
-      <input class="form-control" type="text" placeholder="Enter Description..." id="cycleName-input">
-    </div>
-    <div class="col-2">
-      <button onclick="document.getElementById('cycleName-input').value = ''" class="btn btn-info">Clear:</button>
-    </div>
-    <div class="col-2"></div>
-  </div>
-  <div class="form-group row">
-    <div class="col">
-      <label for="dayName-input" class="col-2 col-form-label">Day:</label>
-      <div class="col-10">
-        <input class="form-control" type="text" placeholder="Enter Description..." id="dayName-input">
-        <button onclick="document.getElementById('dayName-input').value = ''" class="btn btn-info">Clear:</button>
-      </div>
-    </div>
-  </div>
-  <div class = "form-group row">
-    <div class="col">
-      <label for="exerciseName-input" class="col-2 col-form-label">*Exercise:</label>
-      <div class="col-10">
-        <input class="form-control" type="text" placeholder="Enter name..." id="exerciseName-input">
-      </div>
-    </div>
-    <div class="col">
-      <label for="type-input" class="col-2 col-form-label">Type:</label>
-      <div class="col-10">
-        <select class="form-control" id="type-input">
-          <option>Warm Up</option>
-          <option>Main</option>
-        </select>
-      </div>
-    </div>
-    <div class="col">
-      <label for="order-input" class="col-2 col-form-label">Order:</label>
-      <div class="col-10">
-        <input class="form-control" type="text" placeholder="Enter number..." id="order-input">
-      </div>
-    </div>
-    <div class="col">
-      <label for="exerciseLength-input" class="col-2 col-form-label">*Length:</label>
-      <div class="col-10">
-        <input class="form-control" type="text" placeholder="Enter Data..." id="exerciseLength-input">
-      </div>
-    </div>
-    <div class="col">
-      <label for="weight-input" class="col-2 col-form-label">*Weight:</label>
-      <div class="col-10">
-        <input class="form-control" type="text" placeholder="Enter Weight..." id="weight-input">
-      </div>
-    </div>
-  </div>
-
-<p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#exercise-meta" role="button" aria-expanded="false" aria-controls="exercise-meta">
-    More Exercise Setting
-  </a>
-</p>
+    <!-- add starts -->
+  </div> <!-- container ends-->
 </div>
 
 <!-- Adding the white to seperate the parts -->
-<hr class="white_line">
+  <hr class="white_line">
+<div class="container bg-light rounded text-dark" style="padding: 2rem">
+  <div class="form-group row">
+    <div class="col-1">
+      <label for="cycleName-input" class="col-4 col-form-label">Cycle:</label>
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Enter Description..." id="cycleName-input">
+    </div>
+    <div class="col-3">
+      <button onclick="document.getElementById('cycleName-input').value = ''" class="btn btn-info">Clear:</button>
+    </div>
+    <!--<div class="col-2"></div> -->
+  </div>
+  <div class="form-group row">
+    <div class = "col-1"></div>
+    <div class="col-1">
+      <label for="dayName-input" class="col-2 col-form-label">Day:</label>
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Enter Description..." id="dayName-input">
+    </div>
+    <div class = "col-3">
+      <button onclick="document.getElementById('dayName-input').value = ''" class="btn btn-info">Clear:</button>
+    </div>
+  </div>
+
+  <div class = "form-group row">
+    <div class = "col-2"></div>
+    <div class = "col-1">
+      <label for="exerciseName-input" class="col-form-label">*Exercise:</label>
+    </div>
+    <div class="col-4">
+      <input class="form-control" type="text" placeholder="Enter name..." id="exerciseName-input">
+    </div>
+    <button onclick="document.getElementById('exerciseName-input').value = ''" class="btn btn-info">Clear:</button>
+  </div>    
+  <div class="form-group row">
+    <div class = "col-3"></div>
+    <div class="col-1">
+      <label for="order-input" class="col-form-label" style= "text-indent:1em">Order:</label>
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Enter number..." id="order-input">
+    </div>
+    <div class = "col-1">
+      <label for="type-input" class="col-2 col-form-label">Type:</label>
+    </div>
+    <div class="col-2">
+      <select class="form-control" id="type-input">
+        <option>Warm Up</option>
+        <option>Main</option>
+      </select>
+    </div>
+  </div>
+
+  <div class = "form-group row">
+    <div class = "col-3"></div>
+    <div class="col-1">
+      <label for="exerciseLength-input" class="col-2 col-form-label">*Length:</label>
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Enter Data..." id="exerciseLength-input">
+    </div>
+    <div class="col-1">
+      <label for="weight-input" class="col-2 col-form-label">*Weight:</label>
+    </div>
+    <div class="col-2">
+      <input class="form-control" type="text" placeholder="Enter Weight..." id="weight-input">
+    </div>
+  </div>
+  <div class = "form-group row">
+    <div class = "col-3"></div>
+    <div class = "col">
+    <p>
+      <a class="btn btn-primary" data-toggle="collapse" href="#exercise-meta" role="button" aria-expanded="false" aria-controls="exercise-meta">
+        More Exercise Setting
+      </a>
+    </p>
+    </div>
+  </div>
+  <div class="collapse" id="exercise-meta">
+    <div class="card card-body">
+        <div class="form-row">
+          <div class="col">
+            <label for="rpe-input">RPE:</label>
+            <input type="text" class="form-control" id="rpe-input" placeholder="Enter RPE Data...">
+          </div>
+          <div class="col">
+            <label for="note-input">Note:</label>
+            <input type="text" class="form-control" id="note-input" placeholder="Enter Exercise note...">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
 
+
+<!-- Adding the white to seperate the parts -->
+<!-- <hr class="white_line"> -->
+
+<!--
 <div class="collapse" id="exercise-meta">
   <div class="card card-body">
     <form>
@@ -448,7 +483,7 @@
   </div>
 </div>
 </form>
-
+-->
 <!-- Exporting option -->
   <!--
   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
@@ -480,11 +515,18 @@
 <!-- Newline -->
 <br>
 
-
-
 <!-- button that will extend the input field -->
 <button onclick="addExercise()" class="btn btn-secondary">(+)Exercise</button>
-<button onclick="addDay()" class="btn btn-secondary">(+)Day</button>
+
+<!-- Newline -->
+<br><br>
+
+<div class = "form group">
+  <div class = "col-1"></div>
+    <div class = "col">
+      <button onclick="addDay()" class="btn btn-secondary">(+)Day</button>
+    </div>
+</div>
 
 <!-- Newline -->
 <br><br>
@@ -493,6 +535,8 @@
 <hr class="white_line">
 
 <button onclick="addCycle()" class="btn btn-secondary">(+)Cycle</button>
+
+<!-- Debug button, can delete later -->
 <button onclick="getData()" class="btn btn-secondary">(+)Debug</button>
 
 <!-- debug message -->
