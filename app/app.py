@@ -16,7 +16,7 @@ def load_routines():
     return routines
 
 # search program by program_id
-def search_programs(programs, program_id):
+def search_program(programs, program_id):
     for program in programs:
         if program_id == program["program_id"]:
             return program
