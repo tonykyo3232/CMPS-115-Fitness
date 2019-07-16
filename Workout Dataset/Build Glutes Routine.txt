@@ -1,11 +1,10 @@
-﻿Name: Glute Routine
+Name: Glute Routine
 Style: General Fitness
 Difficulty Level: Intermediate
 Length: n/a
 Goal: Build Muscle
 General Info: An intermediate’s guide to building glute muscles catered to female lifters. Male lifters are welcomed to give this routine a try as well. Lifters chooses weights and rest times accordingly.
 --------------------
-
 
 Cycle: Number: n/a / Description: n/a / Weeks: n/a
 Day: Number: 1 / Description: n/a
@@ -19,6 +18,5 @@ Exercise: Dumbbell Single Leg Step Ups / Length: 4x12
 Exercise: Cable Side Step Squats / Length: 3x12
 Exercise: Barbell Good Mornings / Length: 4x10
 --------------------
-
 
 End
