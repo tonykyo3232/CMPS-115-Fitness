@@ -1,11 +1,10 @@
-﻿Name: Glute Routine
+Name: Glute Routine
 Style: General Fitness
 Difficulty Level: Beginner
 Length: n/a
 Goal: Build Muscle
 General Info: A beginner's guide to building glute muscles catered to female lifters. Male lifters are welcomed to give this routine a try as well.
 --------------------
-
 
 Cycle: Number: n/a / Description: n/a / Weeks: n/a
 Day: Number: 1 / Description: n/a
@@ -15,6 +14,5 @@ Exercise: Smith Machine Sumo Deadlift / Length: 4x10 / Notes: Stand on aerobic p
 Exercise: Cable Stiff Leg Deadlift / Length: 4x10 / Notes: Use medal straight bar. Choose a heavy weight that will be challenging for 10 reps.
 Exercise: Cable One-Legged Kickbacks / Length: 4x20 / Notes: Choose a weight that will be challenging for 20 reps.
 --------------------
-
 
 End
