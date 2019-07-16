@@ -15,22 +15,12 @@
     background-size: 100% 100%;
   }
 
-  /*.row
-  {
-    color:white;
-  }*/
-  
   .btn-success
   {
     position: fixed;
     bottom: 20px;
     right: 5px;
   }
-
-  /*.cycle
-  {
-    color:white;
-  }*/
 
   /* Thick white border */
   hr.white_line {
@@ -227,11 +217,11 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index_home.html">My Fitness Distributer</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <div class="collapse navbar-collapse" id="navbarToggler">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
           <a class="nav-link" href="index_home.html">Home<span class="sr-only">(current)</span></a>
@@ -258,13 +248,13 @@
 <form id="program-opt-form">
   <div class="form-group row">
     <div class = "col">
-    <label for="name-input" class="col-2 col-form-label" style = "color:white">*Name:</label>
-    <div class="col-10">
-      <input class="form-control" type="text" placeholder="Enter Workout name..." id="name-input">
-    </div>
+      <label for="name-input" class="col-2 col-form-label" style = "color:white">*Name:</label>
+      <div class="col-10">
+        <input class="form-control" type="text" placeholder="Enter Workout name..." id="name-input">
+      </div>
     </div>
     <div class="col">
-      <label for="structure-input" class="col-2 col-form-label" style="color:white">Structure:</label>
+        <label for="structure-input" class="col-2 col-form-label" style="color:white">Structure:</label>
       <div class="col-10">
         <select class="form-control" id="structure-input">
           <option>Program</option>
@@ -272,54 +262,16 @@
         </select>
       </div>
     </div>
-    <!--
-    <div class = "col">
-    <label for="style-input" class="col-2 col-form-label">Style</label>
-    <div class="col-10">
-      <input class="form-control" type="text" value="" id="style-input">
-    </div>
-    </div>
-      <div class="col">
-      <label for="level-input" class="col-2 col-form-label">Level</label>
-      <div class="col-10">
-        <select class="form-control" id="level-input">
-          <option>Beginner</option>
-          <option>Intermediate</option>
-          <option>Advance</option>
-        </select>
-      </div>
-    </div>
-    <div class="col">
-      <label for="length-input" class="col-2 col-form-label">Length</label>
-      <div class="col-10">
-        <input class="form-control" type="text" value="" id="length-input">
-      </div>
-    </div>
-    <div class="col">
-      <label for="goal-input" class="col-2 col-form-label">Goal</label>
-      <div class="col-10">
-        <input class="form-control" type="text" value="" id="goal-input">
-      </div>
-    </div>
-    <div class="col">
-      <label for="note-info" class="col-2 col-form-label">Info</label>
-      <div class="col-10">
-        <input class="form-control" type="text" value="General Info" id="info-input">
-      </div>
-    </div>
-  -->
   </div>
 
-
   <p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#program-meta" role="button" aria-expanded="false" aria-controls="program-meta">
-    More Exercise General Setting
-  </a>
-</p>
+    <a class="btn btn-primary" data-toggle="collapse" href="#program-meta" role="button" aria-expanded="false" aria-controls="program-meta">
+      More Exercise General Setting
+    </a>
+  </p>
 
 <div class="collapse" id="program-meta">
   <div class="container bg-light rounded" style="padding: 2rem">
-    <form>
       <div class="form-row">
         <div class="col">
           <label for="style-input">Style:</label>
@@ -344,11 +296,6 @@
           <label for="goal-input">Goal:</label>
           <input type="text" class="form-control" id="goal-input" placeholder="Enter goal...">
         </div>
-        <!--
-        <div class="col">
-          <input type="text" class="form-control" id="info-input" placeholder="Enter info...">
-        </div>
-      -->
       </div>
       <br>
       <!-- Square input field -->
@@ -356,32 +303,30 @@
         <label for="info-input">General Info:</label>
         <textarea class="form-control" rows="5" id="info-input" placeholder="Enter info..."></textarea>
       </div>
-    </form>
-    <!-- add starts -->
-  </div> <!-- container ends-->
+  </div> 
 </div>
 
 <!-- Adding the white to seperate the parts -->
-  <hr class="white_line">
+<hr class="white_line">
+
 <div class="container bg-light rounded text-dark" style="padding: 2rem">
   <div class="form-group row">
     <div class="col-1">
       <label for="cycleName-input" class="col-4 col-form-label">Cycle:</label>
     </div>
-    <div class="col-2">
+    <div class="col-3"> <!-- change #1: 2->3 -->
       <input class="form-control" type="text" placeholder="Enter Description..." id="cycleName-input">
     </div>
     <div class="col-3">
       <button onclick="document.getElementById('cycleName-input').value = ''" class="btn btn-info">Clear:</button>
     </div>
-    <!--<div class="col-2"></div> -->
   </div>
   <div class="form-group row">
     <div class = "col-1"></div>
     <div class="col-1">
       <label for="dayName-input" class="col-2 col-form-label">Day:</label>
     </div>
-    <div class="col-2">
+    <div class="col-3"> <!-- change #1: 2->3 -->
       <input class="form-control" type="text" placeholder="Enter Description..." id="dayName-input">
     </div>
     <div class = "col-3">
@@ -404,13 +349,13 @@
     <div class="col-1">
       <label for="order-input" class="col-form-label" style= "text-indent:1em">Order:</label>
     </div>
-    <div class="col-2">
+    <div class="col-3"> <!-- change #1: 2->3 -->
       <input class="form-control" type="text" placeholder="Enter number..." id="order-input">
     </div>
     <div class = "col-1">
       <label for="type-input" class="col-2 col-form-label">Type:</label>
     </div>
-    <div class="col-2">
+    <div class="col-3"> <!-- change #1: 2->3 -->
       <select class="form-control" id="type-input">
         <option>Warm Up</option>
         <option>Main</option>
@@ -423,80 +368,49 @@
     <div class="col-1">
       <label for="exerciseLength-input" class="col-2 col-form-label">*Length:</label>
     </div>
-    <div class="col-2">
+    <div class="col-3"> <!-- change #1: 2->3 -->
       <input class="form-control" type="text" placeholder="Enter Data..." id="exerciseLength-input">
     </div>
     <div class="col-1">
       <label for="weight-input" class="col-2 col-form-label">*Weight:</label>
     </div>
-    <div class="col-2">
+    <div class="col-3"> <!-- change #1: 2->3 -->
       <input class="form-control" type="text" placeholder="Enter Weight..." id="weight-input">
     </div>
   </div>
   <div class = "form-group row">
     <div class = "col-3"></div>
     <div class = "col">
-    <p>
-      <a class="btn btn-primary" data-toggle="collapse" href="#exercise-meta" role="button" aria-expanded="false" aria-controls="exercise-meta">
-        More Exercise Setting
-      </a>
-    </p>
-    </div>
-  </div>
-  <div class="collapse" id="exercise-meta">
-    <div class="card card-body">
-        <div class="form-row">
-          <div class="col">
-            <label for="rpe-input">RPE:</label>
-            <input type="text" class="form-control" id="rpe-input" placeholder="Enter RPE Data...">
-          </div>
-          <div class="col">
-            <label for="note-input">Note:</label>
-            <input type="text" class="form-control" id="note-input" placeholder="Enter Exercise note...">
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- Adding the white to seperate the parts -->
-<!-- <hr class="white_line"> -->
-
-<!--
-<div class="collapse" id="exercise-meta">
-  <div class="card card-body">
-    <form>
-      <div class="form-row">
-        <div class="col">
-          <label for="rpe-input">RPE:</label>
-          <input type="text" class="form-control" id="rpe-input" placeholder="Enter RPE Data...">
-        </div>
-        <div class="col">
-          <label for="note-input">Note:</label>
-          <input type="text" class="form-control" id="note-input" placeholder="Enter Exercise note...">
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#exercise-meta" role="button" aria-expanded="false" aria-controls="exercise-meta">
+          More Exercise Setting
+        </a>
+      </p>
+      <div class="collapse" id="exercise-meta">
+        <div class="card card-body">
+            <div class="form-row">
+              <div class="col">
+                <label for="rpe-input">RPE:</label>
+                <input type="text" class="form-control" id="rpe-input" placeholder="Enter RPE Data...">
+              </div>
+              <div class="col">
+                <label for="note-input">Note:</label>
+                <input type="text" class="form-control" id="note-input" placeholder="Enter Exercise note...">
+              </div>
+            </div>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 </div>
 </form>
--->
-<!-- Exporting option -->
-  <!--
-  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-    <H5>Export</H5>
-  </button>
-  -->
 
-  <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">[]
+<!-- Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Exporting to pdf...</h5>
+        <h5 class="modal-title" id="ModalLabel">Exporting to pdf...</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
