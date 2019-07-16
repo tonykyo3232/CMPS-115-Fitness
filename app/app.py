@@ -16,8 +16,11 @@ def load_routines():
     return routines
 
 # search program by program_id
-def search_programs():
-    pass
+def search_programs(programs, program_id):
+    for program in programs:
+        if program_id == program["program_id"]:
+            return program
+    return None
 
 app = Flask(__name__)
 
@@ -64,12 +67,21 @@ def search():
         programs = load_programs()
         return render_template("search.jinja", programs=programs)
 
+
 @app.route("/detail", methods=["GET"])
 def detail():
     programs = load_programs()
 
     # program = search_program(programs, program_id)
     program = programs[1]
+    return render_template("detail.jinja", program=program)
+
+
+@app.route("/program/detail/<program_id>", methods=["GET"])
+def program_detail(program_id):
+    programs = load_programs()
+
+    program = search_program(programs, program_id)
     return render_template("detail.jinja", program=program)
 
 

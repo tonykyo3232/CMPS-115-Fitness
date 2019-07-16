@@ -385,6 +385,7 @@ def parse_prog(lines):
 
 import os
 
+program_counter = 0
 programs = []
 directory = "programs"
 for filename in os.listdir(directory):
@@ -392,6 +393,9 @@ for filename in os.listdir(directory):
         with open(os.path.join(directory, filename), "r") as fp:
             lines = fp.readlines()
         prog_dict, lines = parse_prog(lines)
+        prog_dict["program_id"] = program_counter
+        program_counter += 1
+
         print(prog_dict)
 
         print("----------")
@@ -411,6 +415,7 @@ routines = [
         "styles": ["General Fitness"],
         "level": 0,
         "goals": ["Build Strength", "Build Muscle"],
+        "routine_id": 0,
         "desc": "This program contains a beginner guide to building leg muscles. User can choose workout weights accordingly.",
         "warmup": [],
         "exercises": [
