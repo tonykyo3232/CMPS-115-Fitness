@@ -153,8 +153,8 @@
       <div class="col-3"> <!-- change #1: 2->3 -->
         <input class="form-control" type="text" placeholder="Enter Description..." id="cycleName-input">
       </div>
+      <button onclick="document.getElementById('cycleName-input').value=''" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <div class="col-3">
-        <button onclick="document.getElementById('cycleName-input').value=''" class="btn btn-info">Clear:</button>
       </div>
     </div>
     <div class="day-container">
@@ -166,8 +166,8 @@
         <div class="col-3"> <!-- change #1: 2->3 -->
           <input class="form-control" type="text" placeholder="Enter Description..." id="dayName-input">
         </div>
+        <button onclick="document.getElementById('dayName-input').value=''" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="col-3">
-          <button onclick="document.getElementById('dayName-input').value=''" class="btn btn-info">Clear:</button>
         </div>
       </div>
       <div class="exercise-container">
@@ -179,7 +179,9 @@
           <div class="col-4">
             <input class="form-control" type="text" placeholder="Enter name..." id="exerciseName-input">
           </div>
-          <button onclick="document.getElementById('exerciseName-input').value=''" class="btn btn-info">Clear:</button>
+          <button onclick="document.getElementById('exerciseName-input').value=''" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <div class="col-3">
+          </div>
         </div>    
         <div class="form-group row">
           <div class="col-3"></div>
