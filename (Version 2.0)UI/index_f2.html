@@ -199,16 +199,293 @@
   // Using JavaScript function to create the code of HTML
   //***************************************************
 
-  function addExercise(){
+  function addExercise(event){
 
+    var button = (event.target || event.srcElement);
+
+    /* Create div to contain all the attributes
+      <div class = "exercise">
+         ...
+      </div>
+    */
+    var exerciseBody = document.createElement("div");
+    exerciseBody.setAttribute("class","exerciseBody");
+
+    // assign the entire content inside the div tag
+    exerciseBody.innerHTML = 
+    `<div class = "form-group row">
+    <div class = "col-2"></div>
+    <div class = "col-1">
+      <label for="exerciseName-input" class="col-form-label">*Exercise:</label>
+    </div>
+    <div class="col-4">
+      <input class="form-control" type="text" placeholder="Enter name..." id="exerciseName-input">
+    </div>
+    <button onclick="document.getElementById('exerciseName-input').value = ''" class="btn btn-info">Clear:</button>
+  </div>    
+
+  <div class="form-group row">
+    <div class = "col-3"></div>
+    <div class="col-1">
+      <label for="order-input" class="col-form-label" style= "text-indent:1em">Order:</label>
+    </div>
+    <div class="col-3"> <!-- change #1: 2->3 -->
+      <input class="form-control" type="text" placeholder="Enter number..." id="order-input">
+    </div>
+    <div class = "col-1">
+      <label for="type-input" class="col-2 col-form-label">Type:</label>
+    </div>
+    <div class="col-3"> <!-- change #1: 2->3 -->
+      <select class="form-control" id="type-input">
+        <option>Choose type---</option>
+        <option>Warm Up</option>
+        <option>Workout Set</option>
+      </select>
+    </div>
+  </div>
+
+  <div class = "form-group row">
+    <div class = "col-3"></div>
+    <div class="col-1">
+      <label for="exerciseLength-input" class="col-2 col-form-label">*Length:</label>
+    </div>
+    <div class="col-3"> <!-- change #1: 2->3 -->
+      <input class="form-control" type="text" placeholder="Enter Data..." id="exerciseLength-input">
+    </div>
+    <div class="col-1">
+      <label for="weight-input" class="col-2 col-form-label">*Weight:</label>
+    </div>
+    <div class="col-3"> <!-- change #1: 2->3 -->
+      <input class="form-control" type="text" placeholder="Enter Weight..." id="weight-input">
+    </div>
+  </div>
+  
+  <div class = "form-group row">
+    <div class = "col-3"></div>
+    <div class = "col">
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#exercise-meta" role="button" aria-expanded="false" aria-controls="exercise-meta">
+          More Exercise Setting
+        </a>
+      </p>
+      <div class="collapse" id="exercise-meta">
+        <div class="card card-body">
+            <div class="form-row">
+              <div class="col">
+                <label for="rpe-input">RPE:</label>
+                <input type="text" class="form-control" id="rpe-input" placeholder="Enter RPE Data...">
+              </div>
+              <div class="col">
+                <label for="note-input">Note:</label>
+                <input type="text" class="form-control" id="note-input" placeholder="Enter Exercise note...">
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    `;
+
+    var parent = button.parent;
+    parent.insertBefore(body,button);
+    alert(666); //Debug
   }
 
   function addDay(){
 
+    var exerciseDay = document.createElement("div");
+    exerciseDay.setAttribute("class","exerciseDay");
+
+    // assign the entire content inside the div tag
+    exerciseDay.innerHTML = `
+    <div class="form-group row">
+    <div class = "col-1"></div>
+    <div class="col-1">
+      <label for="dayName-input" class="col-2 col-form-label">Day:</label>
+    </div>
+    <div class="col-3"> <!-- change #1: 2->3 -->
+      <input class="form-control" type="text" placeholder="Enter Description..." id="dayName-input">
+    </div>
+    <div class = "col-3">
+      <button onclick="document.getElementById('dayName-input').value = ''" class="btn btn-info">Clear:</button>
+    </div>
+  </div>
+  <div class = "form-group row">
+    <div class = "col-2"></div>
+    <div class = "col-1">
+      <label for="exerciseName-input" class="col-form-label">*Exercise:</label>
+    </div>
+    <div class="col-4">
+      <input class="form-control" type="text" placeholder="Enter name..." id="exerciseName-input">
+    </div>
+    <button onclick="document.getElementById('exerciseName-input').value = ''" class="btn btn-info">Clear:</button>
+  </div>    
+
+  <div class="form-group row">
+    <div class = "col-3"></div>
+    <div class="col-1">
+      <label for="order-input" class="col-form-label" style= "text-indent:1em">Order:</label>
+    </div>
+    <div class="col-3"> <!-- change #1: 2->3 -->
+      <input class="form-control" type="text" placeholder="Enter number..." id="order-input">
+    </div>
+    <div class = "col-1">
+      <label for="type-input" class="col-2 col-form-label">Type:</label>
+    </div>
+    <div class="col-3"> <!-- change #1: 2->3 -->
+      <select class="form-control" id="type-input">
+        <option>Choose type---</option>
+        <option>Warm Up</option>
+        <option>Workout Set</option>
+      </select>
+    </div>
+  </div>
+
+  <div class = "form-group row">
+    <div class = "col-3"></div>
+    <div class="col-1">
+      <label for="exerciseLength-input" class="col-2 col-form-label">*Length:</label>
+    </div>
+    <div class="col-3"> <!-- change #1: 2->3 -->
+      <input class="form-control" type="text" placeholder="Enter Data..." id="exerciseLength-input">
+    </div>
+    <div class="col-1">
+      <label for="weight-input" class="col-2 col-form-label">*Weight:</label>
+    </div>
+    <div class="col-3"> <!-- change #1: 2->3 -->
+      <input class="form-control" type="text" placeholder="Enter Weight..." id="weight-input">
+    </div>
+  </div>
+  
+  <div class = "form-group row">
+    <div class = "col-3"></div>
+    <div class = "col">
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#exercise-meta" role="button" aria-expanded="false" aria-controls="exercise-meta">
+          More Exercise Setting
+        </a>
+      </p>
+      <div class="collapse" id="exercise-meta">
+        <div class="card card-body">
+            <div class="form-row">
+              <div class="col">
+                <label for="rpe-input">RPE:</label>
+                <input type="text" class="form-control" id="rpe-input" placeholder="Enter RPE Data...">
+              </div>
+              <div class="col">
+                <label for="note-input">Note:</label>
+                <input type="text" class="form-control" id="note-input" placeholder="Enter Exercise note...">
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
   }
 
   function addCycle(){
 
+    var exerciseDay = document.createElement("div");
+    exerciseDay.setAttribute("class","exerciseDay");
+
+    // assign the entire content inside the div tag
+    exerciseDay.innerHTML = `
+    <div class="form-group row">
+      <div class="col-1">
+        <label for="cycleName-input" class="col-4 col-form-label">Cycle:</label>
+      </div>
+      <div class="col-3"> <!-- change #1: 2->3 -->
+        <input class="form-control" type="text" placeholder="Enter Description..." id="cycleName-input">
+      </div>
+      <div class="col-3">
+        <button onclick="document.getElementById('cycleName-input').value = ''" class="btn btn-info">Clear:</button>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class = "col-1"></div>
+      <div class="col-1">
+        <label for="dayName-input" class="col-2 col-form-label">Day:</label>
+      </div>
+      <div class="col-3"> <!-- change #1: 2->3 -->
+        <input class="form-control" type="text" placeholder="Enter Description..." id="dayName-input">
+      </div>
+      <div class = "col-3">
+        <button onclick="document.getElementById('dayName-input').value = ''" class="btn btn-info">Clear:</button>
+      </div>
+    </div>
+    <div class = "form-group row">
+      <div class = "col-2"></div>
+      <div class = "col-1">
+        <label for="exerciseName-input" class="col-form-label">*Exercise:</label>
+      </div>
+      <div class="col-4">
+        <input class="form-control" type="text" placeholder="Enter name..." id="exerciseName-input">
+      </div>
+      <button onclick="document.getElementById('exerciseName-input').value = ''" class="btn btn-info">Clear:</button>
+    </div>    
+
+    <div class="form-group row">
+      <div class = "col-3"></div>
+      <div class="col-1">
+        <label for="order-input" class="col-form-label" style= "text-indent:1em">Order:</label>
+      </div>
+      <div class="col-3"> <!-- change #1: 2->3 -->
+        <input class="form-control" type="text" placeholder="Enter number..." id="order-input">
+      </div>
+      <div class = "col-1">
+        <label for="type-input" class="col-2 col-form-label">Type:</label>
+      </div>
+      <div class="col-3"> <!-- change #1: 2->3 -->
+        <select class="form-control" id="type-input">
+          <option>Choose type---</option>
+          <option>Warm Up</option>
+          <option>Workout Set</option>
+        </select>
+      </div>
+    </div>
+
+    <div class = "form-group row">
+      <div class = "col-3"></div>
+      <div class="col-1">
+        <label for="exerciseLength-input" class="col-2 col-form-label">*Length:</label>
+      </div>
+      <div class="col-3"> <!-- change #1: 2->3 -->
+        <input class="form-control" type="text" placeholder="Enter Data..." id="exerciseLength-input">
+      </div>
+      <div class="col-1">
+        <label for="weight-input" class="col-2 col-form-label">*Weight:</label>
+      </div>
+      <div class="col-3"> <!-- change #1: 2->3 -->
+        <input class="form-control" type="text" placeholder="Enter Weight..." id="weight-input">
+      </div>
+    </div>
+  
+    <div class = "form-group row">
+      <div class = "col-3"></div>
+      <div class = "col">
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#exercise-meta" role="button" aria-expanded="false" aria-controls="exercise-meta">
+            More Exercise Setting
+          </a>
+        </p>
+        <div class="collapse" id="exercise-meta">
+          <div class="card card-body">
+              <div class="form-row">
+                <div class="col">
+                  <label for="rpe-input">RPE:</label>
+                  <input type="text" class="form-control" id="rpe-input" placeholder="Enter RPE Data...">
+                </div>
+                <div class="col">
+                  <label for="note-input">Note:</label>
+                  <input type="text" class="form-control" id="note-input" placeholder="Enter Exercise note...">
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
   }
 
 </script>
@@ -257,6 +534,7 @@
         <label for="structure-input" class="col-2 col-form-label" style="color:white">Structure:</label>
       <div class="col-10">
         <select class="form-control" id="structure-input">
+          <option>Choose Structure---</option>
           <option>Program</option>
           <option>Routine</option>
         </select>
@@ -264,11 +542,16 @@
     </div>
   </div>
 
-  <p>
-    <a class="btn btn-primary" data-toggle="collapse" href="#program-meta" role="button" aria-expanded="false" aria-controls="program-meta">
-      More Exercise General Setting
-    </a>
-  </p>
+  <div class = "form-group row">
+    <div class = "col-1"></div> 
+    <div class = "col">
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#program-meta" role="button" aria-expanded="false" aria-controls="program-meta">
+          More Exercise General Setting
+        </a>
+      </p>
+    </div>
+  </div>
 
 <div class="collapse" id="program-meta">
   <div class="container bg-light rounded" style="padding: 2rem">
@@ -357,8 +640,9 @@
     </div>
     <div class="col-3"> <!-- change #1: 2->3 -->
       <select class="form-control" id="type-input">
+        <option>Choose type---</option>
         <option>Warm Up</option>
-        <option>Main</option>
+        <option>Workout Set</option>
       </select>
     </div>
   </div>
@@ -402,8 +686,30 @@
       </div>
     </div>
   </div>
+  <div class = "form-group row">
+    <div class = "col-2"></div>
+    <div class = "col">
+      <button onclick="addExercise(this)" class="btn btn-secondary">(+)Exercise</button>
+    </div>
+  </div>
+  <div class = "form-group row">
+    <div class = "col-1"></div>
+    <div class = "col">
+      <button onclick="addDay()" class="btn btn-secondary">(+)Day</button>
+    </div>
+  </div>
+  <div class = "form-group row">
+    <div class = "col">
+      <button onclick="addCycle()" class="btn btn-secondary">(+)Cycle</button>
+    </div>
+  </div>
 </div>
 </form>
+
+<!-- Exporting option -->
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal">
+  <H5>Export</H5>
+</button>
 
 <!-- Modal -->
 <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
@@ -425,54 +731,6 @@
     </div>
   </div>
 </div>
-
-<!-- Newline -->
-<br>
-
-<!-- button that will extend the input field -->
-<button onclick="addExercise()" class="btn btn-secondary">(+)Exercise</button>
-
-<!-- Newline -->
-<br><br>
-
-<div class = "form group">
-  <div class = "col-1"></div>
-    <div class = "col">
-      <button onclick="addDay()" class="btn btn-secondary">(+)Day</button>
-    </div>
-</div>
-
-<!-- Newline -->
-<br><br>
-
-<!-- Adding the white to seperate the parts -->
-<hr class="white_line">
-
-<button onclick="addCycle()" class="btn btn-secondary">(+)Cycle</button>
-
-<!-- Debug button, can delete later -->
-<button onclick="getData()" class="btn btn-secondary">(+)Debug</button>
-
-<!-- debug message -->
-<!--
-<p id = "debug-1"><p>
-<p id = "debug-2"><p>
-<p id = "debug-3"><p>
-<p id = "debug-4"><p>
-<p id = "debug-5"><p>
-<p id = "debug-6"><p>
-<p id = "debug-7"><p>
-<p id = "debug-8"><p>
-<p id = "debug-9"><p>
-<p id = "debug-10"><p>
-<p id = "debug-11"><p>
-<p id = "debug-12"></p>
-<p id = "debug-13"></p>
-<p id = "debug-14"></p>
-<p id = "debug-15"></p>
-<p id = "debug-16"></p>
--->
-<p id = "debug"></p>
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
