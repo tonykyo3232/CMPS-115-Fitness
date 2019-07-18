@@ -75,11 +75,11 @@ function collect_workout() {
 }
 
 function send_workout(workout) {
-  //const host = "http://ec2-18-217-233-23.us-east-2.compute.amazonaws.com:8080";
-  const host = "localhost";
+  const host = "http://ec2-18-217-233-23.us-east-2.compute.amazonaws.com:8080";
+  //const host = "localhost";
 
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", host + "/program/upload", false);
+  xhr.open("POST", host + "/customize", false);
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.send(JSON.stringify(workout));
 }
