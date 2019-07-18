@@ -1,26 +1,6 @@
 from flask import Flask, render_template, request, jsonify
-from utils import filter_programs, filter_routines
+from utils import filter_programs, filter_routines, load_programs, load_routines, search_program
 import pickle
-
-programs_file = "programs.pickle"
-routines_file = "routines.pickle"
-
-def load_programs():
-    with open(programs_file, "rb") as fp:
-        programs = pickle.load(fp)
-    return programs
-
-def load_routines():
-    with open(routines_file, "rb") as fp:
-        routines = pickle.load(fp)
-    return routines
-
-# search program by program_id
-def search_program(programs, program_id):
-    for program in programs:
-        if program_id == program["program_id"]:
-            return program
-    return None
 
 app = Flask(__name__)
 
@@ -28,11 +8,13 @@ app = Flask(__name__)
 def index():
     return render_template("index_home.html")
 
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     if request.method == "POST":
         print(request.form)
 
+        '''
         test_opt = {
             "style": "Bodybuilding", #"General Fitness",
             "level": -1,
@@ -40,6 +22,7 @@ def search():
             "len_max": -1,#8,
             "goal": "" #"Build Muscle"
         }
+        '''
         
         form = request.form
         length_opt = form.get("length", "-1,-1")
@@ -76,11 +59,12 @@ def detail():
     program = programs[1]
     return render_template("detail.jinja", program=program)
 
+
 @app.route("/customize", methods=["GET", "POST"])
 def customize():
     if request.method == "POST":
-        print(request.get_json())
-        return "asdf"
+        workout = request.get_json()
+        return "Not implemented"
     else:
         return render_template("customize.html")
 
@@ -94,10 +78,6 @@ def program_detail(program_id):
         return "Such program doesn't exist."
     return render_template("detail.jinja", program=program)
 
-@app.route("/program/upload", methods=["POST"])
-def program_upload():
-    print(request.get_json())
-    return "asdf"
 
 @app.route("/api/programs")
 def program_api():
@@ -109,6 +89,7 @@ def program_api():
         return jsonify([prog_dict])
     else:
         return "Not implemented"
+
 
 if __name__ == "__main__":
     from sys import argv

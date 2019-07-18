@@ -259,17 +259,6 @@
   </div>
 </div>
 
-
-<button type="button" class="btn btn-success" onclick="collect_workout()">
-  Collect workout data!
-</button>
-<br>
-
-<button type="button" class="btn btn-success" onclick="send_workout(collect_workout())">
-  Send workout data!
-</button>
-<br>
-
 <!-- Exporting option -->
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal">
   Export
@@ -280,7 +269,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="ModalLabel">Exporting to pdf...</h5>
+        <h5 class="modal-title" id="ModalLabel">Exporting to server...</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -290,7 +279,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary"> <a href="#" style="color: #ffffff" >Proceeding to export page</a></button>
+        <button type="button" class="btn btn-primary" onclick="send_workout(collect_workout())">Export to server!</button>
       </div>
     </div>
   </div>

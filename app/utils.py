@@ -1,4 +1,28 @@
-# ----- [START] Helper Functions for Filtering -----
+# ----- [START] Helper Functions for Programs/Routines Data management -----
+programs_file = "programs.pickle"
+routines_file = "routines.pickle"
+
+def load_programs():
+    with open(programs_file, "rb") as fp:
+        programs = pickle.load(fp)
+    return programs
+
+def load_routines():
+    with open(routines_file, "rb") as fp:
+        routines = pickle.load(fp)
+    return routines
+
+# search program by program_id
+def search_program(programs, program_id):
+    for program in programs:
+        if program_id == program["program_id"]:
+            return program
+    return None
+
+# ----- [END] Helper Functions for Programs/Routines storing -----
+
+
+# ----- [START] Helper Functions for Programs/Routines Filtering -----
 
 def filter_styles(prog_styles, style_opt):
     if style_opt == "":
@@ -142,4 +166,4 @@ def filter_routines(routs, opt):
     return sat_routs
 
 
-# ----- [END] Helper Functions for Filtering -----
+# ----- [END] Helper Functions for Programs/Routines Filtering -----
