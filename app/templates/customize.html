@@ -3,6 +3,8 @@
   <title>Design program</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://www.jqueryscript.net/css/jquerysctipttop.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tagsinput.css') }}" >
 </head>
 
 <!-- CSS implementation -->
@@ -109,9 +111,12 @@
   <div class="container bg-light rounded" style="padding: 2rem">
       <div class="form-row">
         <div class="col">
-          <label for="style-input">Style:</label>
-          <input type="text" class="form-control workout-styles" id="style-input" placeholder="Enter style...">
+          <label for="style-input">Styles:</label>
+          <input type="text" class="form-control workout-styles"  data-role="tagsinput" id="style-input" value="Bodybuilding,General Fitness,Powerlifting">
         </div>
+      </div>
+      <br>
+      <div class="form-row">
         <div class="col">
           <label for="level-input">Level:</label>
           <select class="form-control workout-level" id="level-input">
@@ -128,8 +133,8 @@
       <br>
       <div class="form-row">
         <div class="col">
-          <label for="goal-input">Goal:</label>
-          <input type="text" class="form-control workout-goals" id="goal-input" placeholder="Enter goal...">
+          <label for="goal-input">Goals:</label>
+          <input type="text" class="form-control workout-goals" data-role="tagsinput" id="goal-input" value="Build Strength, Build Muscle, Lose Weight, Conditioning">
         </div>
       </div>
       <br>
@@ -181,35 +186,27 @@
         </div>    
         <div class="form-group row">
           <div class="col-3"></div>
-          <div class="col-1">
-            <label for="order-input" class="col-form-label" style= "text-indent:1em">Order:</label>
+          <div class="col-4">
+            <label for="equipment-input" class="col-form-label">Equipments:</label>
+            <input class="form-control exercise-equipment"  type="text" data-role="tagsinput" value="Barbell,Dumbbell,Cable" id="equipment-input">
           </div>
-          <div class="col-3">
-            <input class="form-control exercise-order" type="text" placeholder="Enter number..." id="order-input">
-          </div>
-          <div class="col-1">
-            <label for="type-input" class="col-2 col-form-label">Type:</label>
-          </div>
-          <div class="col-3">
+          <div class="col-4">
+            <label for="type-input" class="col-form-label">Type:</label>
             <select class="form-control exercise-type" id="type-input">
-              <option value="Normal">Choose type---</option>
-              <option value="Warmup">Warm Up</option>
-              <option value="Normal">Workout Set</option>
-            </select>
+                <option value="Normal">Choose type---</option>
+                <option value="Warmup">Warm Up</option>
+                <option value="Normal">Workout Set</option>
+              </select>
           </div>
         </div>
         <div class="form-group row">
           <div class="col-3"></div>
-          <div class="col-1">
-            <label for="exerciseLength-input" class="col-2 col-form-label">*Length:</label>
-          </div>
-          <div class="col-3">
+          <div class="col-4">
+            <label for="exerciseLength-input" class="col-form-label">*Length:</label>
             <input class="form-control exercise-length" type="text" placeholder="Enter Data..." id="exerciseLength-input">
           </div>
-          <div class="col-1">
-            <label for="weight-input" class="col-2 col-form-label">*Weight:</label>
-          </div>
-          <div class="col-3">
+          <div class="col-4">
+            <label for="weight-input" class="col-form-label">*Weight:</label>
             <input class="form-control exercise-weight" type="text" placeholder="Enter Weight..." id="weight-input">
           </div>
         </div>
@@ -241,20 +238,20 @@
       <div class="form-group row">
         <div class="col-2"></div>
         <div class="col">
-          <button onclick="addExercise(this)" class="btn btn-secondary">(+)Exercise</button>
+          <button onclick="addExercise(this);reload_tagsinput()" class="btn btn-secondary">(+)Exercise</button>
         </div>
       </div>
     </div>
     <div class="form-group row">
       <div class="col-1"></div>
       <div class="col">
-        <button onclick="addDay(this)" class="btn btn-secondary">(+)Day</button>
+        <button onclick="addDay(this);reload_tagsinput()" class="btn btn-secondary">(+)Day</button>
       </div>
     </div>
   </div>
   <div class="form-group row">
     <div class="col">
-      <button onclick="addCycle(this)" class="btn btn-secondary">(+)Cycle</button>
+      <button onclick="addCycle(this);reload_tagsinput()" class="btn btn-secondary">(+)Cycle</button>
     </div>
   </div>
 </div>
@@ -298,8 +295,7 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+  <!-- bootstrap 4 tag input plugin -->
+  <script src="{{ url_for('static', filename='js/tagsinput.js') }}"></script>
 </body>
-<script>
-  
-</script>
 </html>
