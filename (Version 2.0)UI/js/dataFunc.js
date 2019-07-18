@@ -11,9 +11,9 @@ function collect_exercise_meta(exercise_elem) {
     }
 
     return exercise;
-  }
+}
   
-  function collect_day_meta(day_elem) {
+function collect_day_meta(day_elem) {
     // collect all day meta data from the given day element (which will highly be div element)
     
     // collect meta data
@@ -30,9 +30,9 @@ function collect_exercise_meta(exercise_elem) {
     }
     day["exercises"] = exercises;
     return day;
-  }
+}
   
-  function collect_cycle_meta(cycle_elem) {
+function collect_cycle_meta(cycle_elem) {
     // collect all cycle meta data from the given cycle element (which will highly be div element)
     
     // collect meta data
@@ -49,7 +49,7 @@ function collect_exercise_meta(exercise_elem) {
     }
     cycle["days"] = days;
     return cycle;
-  }
+}
   
   function collect_workout() {
     var workout = {
@@ -71,3 +71,7 @@ function collect_exercise_meta(exercise_elem) {
 
     return workout;
   }
+
+  // function nested_clear(elem) {
+  //   elem.querySelectorAll("input")
+  // }
