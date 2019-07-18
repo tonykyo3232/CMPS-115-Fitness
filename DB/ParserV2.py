@@ -1,3 +1,7 @@
+import pickle
+import os
+import argparse
+
 # Helper functions
 
 # gets the program name from a formatted line
@@ -151,23 +155,21 @@ def parse_exercise(program,line):
             parse_exercise_desc(exercise,attribute)
     program["cycle"][-1]["days"][-1]["exercises"].append(exercise)
     return program["cycle"][-1]["days"][-1]["exercises"]
+
 ### MAIN FUNCTION
-import pickle
-from os import path
-import re
-file_name = "combo.txt" 
-if (path.exists(file_name) == True):
+def parse_file(file_path):
+    
     program = {
-    	"title" : "n/a",
-    	"style" : [],
-    	"level" : "n/a",
-    	"length" : "n/a",
-    	"goal" : [],
-    	"notes" : "n/a",
-    	"cycle" : [] 
+        "title" : "n/a",
+        "style" : [],
+        "level" : "n/a",
+        "length" : "n/a",
+        "goal" : [],
+        "notes" : "n/a",
+        "cycle" : [] 
     }
     # reads file
-    with open(file_name) as opened_file:
+    with open(file_path) as opened_file:
         for line in opened_file:
             if (line.startswith("Name: ")):
                 parse_name(program,line)
@@ -189,8 +191,46 @@ if (path.exists(file_name) == True):
                 parse_warmup_execise(program,line)
             if (line.startswith("Exercise: ")):
                 parse_exercise(program,line)
-        with open('filename.pickle', 'wb') as handle:
-            pickle.dump(program, handle, protocol=pickle.HIGHEST_PROTOCOL)
-    print(program)
-else:
-    print("NO FILE")
+    return program
+
+def main():
+    usage = '''
+        python3 this_script.py --filename="Workout Dataset/programs/Combo Program.txt"
+        python3 this_script.py --filename="Combo Program.txt" --dirname="Workout Dataset/programs/"
+        python3 this_script.py --filename="*" --dirname="Workout Dataset/programs/"
+        # python3 this_script.py --filename="*" --dirname="Workout Dataset/routines/"
+    '''
+    parser = argparse.ArgumentParser(description=usage)
+
+    parser.add_argument('--filename', required=True)
+    parser.add_argument('--dirname', required=False, default='./')
+
+    args = parser.parse_args()
+
+    #file_name = "Workout Dataset/routines/Big Arm Routine.txt" 
+    file_name_input = args.filename
+    dir_name_input = args.dirname
+    
+    if not os.path.exists(dir_name_input):
+        print("Wrong directory")
+        return
+
+    programs = []
+    if file_name_input == "*":
+        for file_name in os.listdir(dir_name_input):
+            programs.append(parse_file(os.path.join(dir_name_input, file_name)))
+    else:
+        file_path = os.path.join(dir_name_input, file_name_input)
+        if not os.path.exists(file_path):
+            print("Wrong file path: %s" % (file_path))
+            return
+        programs.append(parse_file(file_path))
+    
+    with open("programs.pickle", "wb") as fp:
+        pickle.dump(programs, fp)
+
+if __name__ == "__main__":
+    main()
+
+
+
