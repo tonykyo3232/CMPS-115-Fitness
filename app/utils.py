@@ -1,4 +1,6 @@
 # ----- [START] Helper Functions for Programs/Routines Data management -----
+import pickle
+
 programs_file = "programs.pickle"
 routines_file = "routines.pickle"
 
