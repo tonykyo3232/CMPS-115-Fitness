@@ -13,9 +13,19 @@ pip install -r requirements.txt
 # Default: Run server on port 8080 (http://localhost:8080)
 python app.py
 
-# You can specify port
-python app.py 9999 # Run server on port 9999
+# You can specify port (please choose port number 10000 ~ 20000 for debugging)
+python app.py 12345 # Run server on port 12345
 
 # If your python is not linked with python3
 python3 app.py
+
+# Run server in background
+./run.sh
+./restart.sh
+
+# You can stop background server by ./stop.sh
 ```
+
+# Recommendation when running server
+* For debug purpose, use `python app.py [port number between 10000 ~ 20000]`
+* Otherwise, use `./run.sh` or `./restart.sh`
