@@ -76,6 +76,14 @@ def detail():
     program = programs[1]
     return render_template("detail.jinja", program=program)
 
+@app.route("/customize", methods=["GET", "POST"])
+def customize():
+    if request.method == "POST":
+        print(request.get_json())
+        return "asdf"
+    else:
+        return render_template("customize.html")
+
 
 @app.route("/program/detail/<int:program_id>", methods=["GET"])
 def program_detail(program_id):
