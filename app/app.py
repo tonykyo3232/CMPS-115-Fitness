@@ -86,6 +86,10 @@ def program_detail(program_id):
         return "Such program doesn't exist."
     return render_template("detail.jinja", program=program)
 
+@app.route("/program/upload", methods=["POST"])
+def program_upload():
+    print(request.get_json())
+    return "asdf"
 
 @app.route("/api/programs")
 def program_api():
