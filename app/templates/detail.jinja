@@ -91,10 +91,10 @@
                 <ul class="nav nav-tabs navbar-dark bg-dark">
                 {% for day_num in range(1, cycle["days"]|length + 1) %}
                     {% if day_num == 1 %}
-                    <li class="active"><a href="#cycle{{cycle_num}}_day{{day_num}}" class="nav-link"><b>Day {{day_num}}</b></a>
+                    <li class="active"><a href="#cycle{{cycle_num}}_day{{day_num}}" class="nav-link" style="font-size:110%"><b>Day {{day_num}}</b></a>
                     </li>
                     {% else %}
-                    <li><a href="#cycle{{cycle_num}}_day{{day_num}}" class="nav-link"><b>Day {{day_num}}</b></a>
+                    <li><a href="#cycle{{cycle_num}}_day{{day_num}}" class="nav-link" style="font-size:110%"><b>Day {{day_num}}</b></a>
                     </li>
                     {% endif %}
                 {% endfor %}
@@ -107,7 +107,7 @@
                     {% else %}
                     <div class="tab-pane fade" id="cycle{{cycle_num}}_day{{day_num}}">
                     {% endif %}
-                        <h4 class="text-center text-white">{{ day["desc"] }}</h4>
+                    <div class="card card-header text-center text-black" style="font-size:150%">{{ day["desc"] }}</div>	
 						<div id="accordion_cycle{{cycle_num}}_day{{day_num}}">
                         {% for exer_num in range(1, day["exercises"]|length + 1) %}
                             {% set exercise = day["exercises"][exer_num - 1] %}
