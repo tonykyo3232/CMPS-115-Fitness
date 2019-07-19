@@ -51,28 +51,30 @@
       </form>
     </div>
 </nav>
-	
-<div class="container">
-    <h2 class="text-center text-white"> {{ program["name"] }} Details</h2>
-    <div class="card">
-        <div class="card-body">
-            <p class="card-text">Style: {{ ', '.join(program["styles"]) }} </p>
-            <p class="card-text">Level: {{ program["level"] }}</p>
-            <p class="card-text">Length: {{ program["length"] }}</p>
-            <p class="card-text">Goal: {{ ', '.join(program["goals"]) }}</p>
-            <p class="card-text">Notes: {{ program["desc"] }}</p>
-        </div>
-    </div>
+<div class="sticky-top">	
+	<div class="container">
+		<div class="card">
+			<h2 class="card-header text-center text-white">{{ program["name"] }}</h2>
+				<div class="card-body">
+					<ul class="list-group">
+						<li class="list-group-item">Style: {{ ', '.join(program["styles"]) }} </li>
+						<li class="list-group-item">Level: {{ program["level"] }}</li>
+						<li class="list-group-item">Length: {{ program["length"] }}</li>
+						<li class="list-group-item">Goal: {{ ', '.join(program["goals"]) }}</li>
+						<li class="list-group-item">Notes: {{ program["desc"] }}</li>
+					</ul>
+				</div>
+		</div>
+	</div>
 </div>
-
 <div class="tabbable boxed parentTabs p-4">
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs navbar-dark bg-dark">
     {% for i in range(1, program["cycles"]|length + 1) %}
         {% if i == 0 %}
-        <li class="active"><a href="#cycle{{i}}" class="nav-link">Cycle {{i}}</a>
+        <li class="active"><a href="#cycle{{i}}" class="nav-link" style="font-size:110%"><b>Cycle {{i}}</b></a>
         </li>
         {% else %}
-        <li><a href="#cycle{{i}}" class="nav-link">Cycle {{i}}</a>
+        <li><a href="#cycle{{i}}" class="nav-link" style="font-size:110%"><b>Cycle {{i}}</b></a>
         </li>
         {% endif %}
     {% endfor %}
@@ -86,13 +88,13 @@
         <div class="tab-pane fade" id="cycle{{cycle_num}}">
         {% endif %}
             <div class="tabbable">
-                <ul class="nav nav-tabs">
+                <ul class="nav nav-tabs navbar-dark bg-dark">
                 {% for day_num in range(1, cycle["days"]|length + 1) %}
                     {% if day_num == 1 %}
-                    <li class="active"><a href="#cycle{{cycle_num}}_day{{day_num}}" class="nav-link">Day {{day_num}}</a>
+                    <li class="active"><a href="#cycle{{cycle_num}}_day{{day_num}}" class="nav-link"><b>Day {{day_num}}</b></a>
                     </li>
                     {% else %}
-                    <li><a href="#cycle{{cycle_num}}_day{{day_num}}" class="nav-link">Day {{day_num}}</a>
+                    <li><a href="#cycle{{cycle_num}}_day{{day_num}}" class="nav-link"><b>Day {{day_num}}</b></a>
                     </li>
                     {% endif %}
                 {% endfor %}
