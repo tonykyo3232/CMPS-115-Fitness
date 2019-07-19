@@ -51,22 +51,22 @@
       </form>
     </div>
 </nav>
-<div class="sticky-top">	
-	<div class="container">
-		<div class="card">
-			<h2 class="card-header text-center text-white">{{ program["name"] }}</h2>
-				<div class="card-body">
-					<ul class="list-group">
-						<li class="list-group-item">Style: {{ ', '.join(program["styles"]) }} </li>
-						<li class="list-group-item">Level: {{ program["level"] }}</li>
-						<li class="list-group-item">Length: {{ program["length"] }}</li>
-						<li class="list-group-item">Goal: {{ ', '.join(program["goals"]) }}</li>
-						<li class="list-group-item">Notes: {{ program["desc"] }}</li>
-					</ul>
-				</div>
-		</div>
+	
+<div class="container">
+	<div class="card">
+		<h2 class="card-header text-center text-black">{{ program["name"] }}</h2>
+			<div class="card-body">
+				<ul class="list-group">
+					<li class="list-group-item"><b>Style:</b> {{ ', '.join(program["styles"]) }} </li>
+					<li class="list-group-item"><b>Level:</b> {{ program["level"] }}</li>
+					<li class="list-group-item"><b>Length:</b> {{ program["length"] }}</li>
+					<li class="list-group-item"><b>Goal:</b> {{ ', '.join(program["goals"]) }}</li>
+					<li class="list-group-item"><b>Notes:</b> {{ program["desc"] }}</li>
+				</ul>
+			</div>
 	</div>
 </div>
+
 <div class="tabbable boxed parentTabs p-4">
     <ul class="nav nav-tabs navbar-dark bg-dark">
     {% for i in range(1, program["cycles"]|length + 1) %}
@@ -123,13 +123,13 @@
                                 <div id="exer{{exer_num}}" class="collapse">
                                 {% endif %}
                                     <div class="card-body">
-                                        <table>
-                                            <tr><th>Length: {# exercise["length"] #}</th></tr>
-                                            <tr><th>Weight: {# exercise["weight"] #}</th></tr>
-                                            <tr><th>RPE: {# exercise["rpe"] #}</th></tr>
-                                            <tr><th>Meta: {{exercise["desc"]}}</th></tr>
-                                            <tr><th>Notes: {{exercise["note"]}}</th></tr>
-                                        </table>
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><b>Length:</b> {# exercise["length"] #}</li>
+                                            <li class="list-group-item"><b>Weight:</b> {# exercise["weight"] #}</li>
+                                            <li class="list-group-item"><b>RPE:</b> {# exercise["rpe"] #}</li>
+                                            <li class="list-group-item"><b>Meta:</b> {{exercise["desc"]}}</li>
+                                            <li class="list-group-item"><b>Notes:</b> {{exercise["note"]}}</li>
+                                        </ul>
                                     </div>
                                 </div>
 							</div>
