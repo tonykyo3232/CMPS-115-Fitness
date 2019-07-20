@@ -32,7 +32,7 @@ Exercise: Machine Ab Curls / Length: 4x15 / Notes: 1:30 minute(s) rest interval.
 
 Day: Number: 4 / Description: Rest Day
 
-Day: 5 - Back + Biceps
+Day: Number: 5 / Description: Back + Biceps
 Warm Up Exercise: n/a
 Exercise: Cable Lat Pulldowns / Length: 5x10 / Notes: Use wide grip. 1:15 minute(s) rest interval.
 Exercise: Cable Rows / Length: 5x12 / Notes: Use close grip. 1:15 minute(s) rest interval.
