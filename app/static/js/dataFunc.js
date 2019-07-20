@@ -58,6 +58,7 @@ function collect_workout() {
   // collect meta data
   var workout = {
     type: document.querySelector(".workout-type").value,
+    name: document.querySelector(".workout-name").value,
     styles: document.querySelector(".workout-styles").value.split(',').map(style => style.trim()),
     level: parseInt(document.querySelector(".workout-level").value),
     length: document.querySelector(".workout-length").value,
