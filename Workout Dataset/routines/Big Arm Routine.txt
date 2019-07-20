@@ -15,7 +15,7 @@ Exercise: Barbell Curls / Length: 3x8 / Notes: Superset with next exercise.
 Exercise: Close Grip Push Ups / Length: 3x10 / Notes: 45 second(s) rest interval.
 Exercise: Dumbbell Overhead Tricep Extensions / Length: 3x10 / Notes: 45 second(s) rest interval.
 Exercise: EZ Bar Curls / Length: 4x7 / Notes: 45 second(s) rest interval.
-Exercise: Cable Tricep Pushdowns / Length: 4x12 / Notes: Use rope handle. 30-45 second(s) rest interval.
+Exercise: Cable Tricep Pushdowns / Length: 4x12 / Notes: Use a rope handle. 30-45 second(s) rest interval.
 Exercise: Cable Curls / Length: 3x15 / Notes: Use medal bar grip. 30-45 second(s) rest interval.
 --------------------
 
