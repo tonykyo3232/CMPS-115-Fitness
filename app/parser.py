@@ -91,7 +91,7 @@ def parse_cycle(program,line):
             parse_cycle_desc(cycle,attribute)
         if (attribute.startswith("Weeks: ")):
             parse_cycle_length(cycle,attribute)
-        program["cycles"].append(cycle)
+    program["cycles"].append(cycle)
     return program["cycles"]
     
 # parses the description for days
@@ -126,7 +126,7 @@ def parse_day(program,line):
                 day["is_rest"] = True
             elif is_invalid_token(day["desc"]):
                 day["desc"] = ""
-            program["cycles"][-1]["days"].append(day)
+    program["cycles"][-1]["days"].append(day)
     return program["cycles"][-1]["days"]
 
 def parse_exercise_length(exercise,line):
