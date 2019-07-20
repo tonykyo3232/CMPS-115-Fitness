@@ -68,6 +68,14 @@ def customize():
     else:
         return render_template("customize.html")
 
+@app.route("/overview", methods=["GET", "POST"])
+def overview():
+    if request.method == "POST":
+        workout = request.get_json()
+        return "Not implemented"
+    else:
+        return render_template("overview.jinja")		
+		
 
 @app.route("/program/detail/<int:program_id>", methods=["GET"])
 def program_detail(program_id):
