@@ -1,14 +1,15 @@
 // collect all exercise meta data from the given exercise element (which will highly be div element)
 function collect_exercise_meta(exercise_elem) {
   
+  // collect meta data
   var exercise = {
-    name: exercise_elem.querySelector(".exercise-name").value, // TODO: acquire value from the element
+    name: exercise_elem.querySelector(".exercise-name").value,
     type: exercise_elem.querySelector(".exercise-type").value,
-    order: exercise_elem.querySelector(".exercise-order").value,
+    equipment: exercise_elem.querySelector(".exercise-equipment").value.split(',').map(equip => equip.trim()),
     length: exercise_elem.querySelector(".exercise-length").value,
     weight: exercise_elem.querySelector(".exercise-weight").value,
     rpe: exercise_elem.querySelector(".exercise-rpe").value,
-    note: exercise_elem.querySelector(".exercise-note").value
+    notes: [exercise_elem.querySelector(".exercise-note").value]
   }
 
   return exercise;
@@ -53,15 +54,20 @@ function collect_cycle_meta(cycle_elem) {
 }
 
 function collect_workout() {
+
+  // collect meta data
   var workout = {
-    type: document.querySelector(".workout-type").value, // TODO: acquire value from the element
-    styles: document.querySelector(".workout-styles").value,
-    level: document.querySelector(".workout-level").value,
+    type: document.querySelector(".workout-type").value,
+    styles: document.querySelector(".workout-styles").value.split(',').map(style => style.trim()),
+    level: parseInt(document.querySelector(".workout-level").value),
     length: document.querySelector(".workout-length").value,
-    goals: document.querySelector(".workout-goals").value,
+    goals: document.querySelector(".workout-goals").value.split(',').map(goal => goal.trim()),
     desc: document.querySelector(".workout-desc").value
   };
 
+  workout["length"] = workout["length"] === "" ? -1 : parseInt(workout["length"]);
+
+  // iterate each cycle and store it in workout.cycles
   var cycles = [];
   var cycle_elems = document.querySelectorAll(".cycle-container");
   for (let cycle_idx = 0; cycle_idx < cycle_elems.length; cycle_idx++) {

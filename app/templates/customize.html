@@ -79,13 +79,13 @@
 
 <div class="form-group row">
   <div class="col">
-    <label for="name-input" class="col-2 col-form-label" style="color:white">*Name:</label>
+    <label for="name-input" class="col-2 col-form-label" style="color:white">*Name</label>
     <div class="col-10">
       <input class="form-control workout-name" type="text" placeholder="Enter Workout name..." id="name-input">
     </div>
   </div>
   <div class="col">
-      <label for="structure-input" class="col-2 col-form-label" style="color:white">Structure:</label>
+      <label for="structure-input" class="col-2 col-form-label" style="color:white">Structure</label>
     <div class="col-10">
       <select class="form-control workout-type" id="structure-input">
         <option value="Program">Choose Structure---</option>
@@ -108,45 +108,45 @@
 </div>
 
 <div class="collapse" id="program-meta">
-  <div class="container bg-light rounded" style="padding: 2rem">
+  <div class="container bg-light rounded" style="padding: 2rem; margin-bottom: 2rem;">
       <div class="form-row">
         <div class="col">
-          <label for="style-input">Styles:</label>
+          <label for="style-input">Styles</label>
           <input type="text" class="form-control workout-styles"  data-role="tagsinput" id="style-input" value="Bodybuilding,General Fitness,Powerlifting">
         </div>
       </div>
       <br>
       <div class="form-row">
         <div class="col">
-          <label for="level-input">Level:</label>
+          <label for="level-input">Level</label>
           <select class="form-control workout-level" id="level-input">
-            <option>Beginner</option>
-            <option>Intermediate</option>
-            <option>Advance</option>
+            <option value="0" selected>Beginner</option>
+            <option value="1">Intermediate</option>
+            <option value="2">Advance</option>
           </select>
         </div>
         <div class="col">
-          <label for="length-input">Length:</label>
-          <input type="text" class="form-control workout-length" id="length-input" placeholder="Enter length...">
+          <label for="length-input">Length (in weeks)</label>
+          <input type="number" class="form-control workout-length" style="display: inline-block" id="length-input" placeholder="4">
         </div>
       </div>
       <br>
       <div class="form-row">
         <div class="col">
-          <label for="goal-input">Goals:</label>
+          <label for="goal-input">Goals</label>
           <input type="text" class="form-control workout-goals" data-role="tagsinput" id="goal-input" value="Build Strength, Build Muscle, Lose Weight, Conditioning">
         </div>
       </div>
       <br>
       <div class="form-group">
-        <label for="info-input">General Info:</label>
+        <label for="info-input">General Information</label>
         <textarea class="form-control workout-desc" rows="5" id="info-input" placeholder="Enter info..."></textarea>
       </div>
   </div> 
 </div>
 
 <div class="container bg-light rounded text-dark" style="padding: 2rem">
-  <div class="cycle-container">
+  <div class="cycle-container" style="padding: 1rem; margin-bottom: 1rem">
     <div class="form-group row">
       <div class="col-1">
         <label for="cycleName-input" class="col-4 col-form-label">Cycle:</label>
@@ -158,7 +158,7 @@
       <div class="col-3">
       </div>
     </div>
-    <div class="day-container">
+    <div class="day-container" style="padding: 1rem; margin-bottom: 1rem">
       <div class="form-group row">
         <div class="col-1"></div>
         <div class="col-1">
@@ -171,7 +171,7 @@
         <div class="col-3">
         </div>
       </div>
-      <div class="exercise-container">
+      <div class="exercise-container" style="padding: 1rem; margin-bottom: 1rem">
         <div class="form-group row">
           <div class="col-2"></div>
           <div class="col-1">
@@ -187,11 +187,11 @@
         <div class="form-group row">
           <div class="col-3"></div>
           <div class="col-4">
-            <label for="equipment-input" class="col-form-label">Equipments:</label>
+            <label for="equipment-input" class="col-form-label">Equipment</label>
             <input class="form-control exercise-equipment"  type="text" data-role="tagsinput" value="Barbell,Dumbbell,Cable" id="equipment-input">
           </div>
           <div class="col-4">
-            <label for="type-input" class="col-form-label">Type:</label>
+            <label for="type-input" class="col-form-label">Type</label>
             <select class="form-control exercise-type" id="type-input">
                 <option value="Normal">Choose type---</option>
                 <option value="Warmup">Warm Up</option>
@@ -202,11 +202,11 @@
         <div class="form-group row">
           <div class="col-3"></div>
           <div class="col-4">
-            <label for="exerciseLength-input" class="col-form-label">*Length:</label>
+            <label for="exerciseLength-input" class="col-form-label">*Length</label>
             <input class="form-control exercise-length" type="text" placeholder="Enter Data..." id="exerciseLength-input">
           </div>
           <div class="col-4">
-            <label for="weight-input" class="col-form-label">*Weight:</label>
+            <label for="weight-input" class="col-form-label">*Weight</label>
             <input class="form-control exercise-weight" type="text" placeholder="Enter Weight..." id="weight-input">
           </div>
         </div>
@@ -284,15 +284,7 @@
   </div>
 </div>
 
-<script>
 
-$('.openBtn').on('click',function(){
-    $('.modal-body').load('customize.html',function(){
-        $('#myModal').modal({show:true});
-    });
-});
-
-</script>
   <!-- JavaScript Implementation -->
   <script type="text/javascript" src="{{ url_for('static', filename='js/addFunc.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='js/dataFunc.js') }}"></script>
@@ -309,4 +301,11 @@ $('.openBtn').on('click',function(){
   <!-- bootstrap 4 tag input plugin -->
   <script src="{{ url_for('static', filename='js/tagsinput.js') }}"></script>
 </body>
+<script>
+  $('.openBtn').on('click',function(){
+      $('.modal-body').load('customize.html',function(){
+          $('#myModal').modal({show:true});
+      });
+  });
+</script>
 </html>
