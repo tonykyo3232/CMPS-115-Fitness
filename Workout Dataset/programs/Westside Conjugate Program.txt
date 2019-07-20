@@ -1,4 +1,4 @@
-﻿Name: Westside Conjugate Program
+Name: Westside Conjugate Program
 Style: Powerlifting
 Difficulty Level: Intermediate
 Length: 8 Weeks
