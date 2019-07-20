@@ -260,7 +260,7 @@
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal">
   Export
 </button>
-
+		<button type="button" class="btn btn-succes openBtn">Open Modal</button>
 <!-- Modal -->
 <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -277,11 +277,22 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-primary" onclick="send_workout(collect_workout())">Export to server!</button>
+		<button type="button" class="btn btn-primary" onclick="show_workout(collect_workout())">Review Your Workout!</button>
+		
       </div>
     </div>
   </div>
 </div>
 
+<script>
+
+$('.openBtn').on('click',function(){
+    $('.modal-body').load('customize.html',function(){
+        $('#myModal').modal({show:true});
+    });
+});
+
+</script>
   <!-- JavaScript Implementation -->
   <script type="text/javascript" src="{{ url_for('static', filename='js/addFunc.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='js/dataFunc.js') }}"></script>

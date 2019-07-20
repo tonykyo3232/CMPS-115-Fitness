@@ -74,12 +74,28 @@ function collect_workout() {
   return workout;
 }
 
+function get_cycle(workout){
+	var cycle1 = workout.cycle[1];
+	return cycle1;
+}
+
+
 function send_workout(workout) {
   const host = "http://ec2-18-217-233-23.us-east-2.compute.amazonaws.com:8080";
   //const host = "localhost";
 
   var xhr = new XMLHttpRequest();
   xhr.open("POST", host + "/customize", false);
+  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  xhr.send(JSON.stringify(workout));
+}
+
+function show_workout(workout) {
+  const host = "http://ec2-18-217-233-23.us-east-2.compute.amazonaws.com:15151";
+  //const host = "localhost";
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", host + "/overview", false);
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.send(JSON.stringify(workout));
 }
