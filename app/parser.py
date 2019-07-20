@@ -249,10 +249,9 @@ def parse_file(file_path):
                 parse_warmup_execise(program,line)
             if (line.startswith("Exercise: ")):
                 parse_exercise(program,line)
-    print(program)
     return program
 
-def parse(file_name, dir_name="./", pickle_name="", next_id=0):
+def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0):
     if not os.path.exists(dir_name):
         print("Wrong directory")
         return
@@ -265,6 +264,13 @@ def parse(file_name, dir_name="./", pickle_name="", next_id=0):
             program = parse_file(os.path.join(dir_name, file_name))
             program["_id"] = next_id
             next_id += 1
+            if is_routine == None:
+                # If program's type (program / routine) is not specified by argument,
+                # check the type from file name
+                program["is_routine"] = "routine.txt" in file_name.lower()
+            else:
+                program["is_routine"] = is_routine
+            print(program)
             programs.append(program)
     else:
         # parse a single file
@@ -275,6 +281,13 @@ def parse(file_name, dir_name="./", pickle_name="", next_id=0):
         program = parse_file(file_path)
         program["_id"] = next_id
         next_id += 1
+        if is_routine == None:
+            # If program's type (program / routine) is not specified by argument,
+            # check the type from file name
+            program["is_routine"] = "routine.txt" in file_name.lower()
+        else:
+            program["is_routine"] = is_routine
+        print(program)
         programs.append(program)
     
     if pickle_name != "":
