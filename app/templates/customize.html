@@ -160,7 +160,7 @@
       <div class="col">
         <label for="cycleName-input" class="col-form-label">Weeks</label>
       </div>
-      <button onclick="document.getElementById('cycleName-input').value=''" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <button onclick="removeContainer(this)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <div class="col-3">
       </div>
     </div>
@@ -173,7 +173,7 @@
         <div class="col-3">
           <input class="form-control day-name" type="text" placeholder="Enter Description..." id="dayName-input">
         </div>
-        <button onclick="document.getElementById('dayName-input').value=''" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button onclick="removeContainer(this)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="col-3">
         </div>
       </div>
@@ -186,7 +186,7 @@
           <div class="col-4">
             <input class="form-control exercise-name" type="text" placeholder="Enter name..." id="exerciseName-input">
           </div>
-          <button onclick="document.getElementById('exerciseName-input').value=''" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button onclick="removeContainer(this)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="col-3">
           </div>
         </div>    
@@ -263,10 +263,10 @@
 </div>
 
 <!-- Exporting option -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal">
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal" style="margin-right: 1rem;">
   Export
 </button>
-		<button type="button" class="btn btn-succes openBtn">Open Modal</button>
+
 <!-- Modal -->
 <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

@@ -47,3 +47,14 @@ function addCycle(button){
     var parent = addCycleRow.parentNode;
     parent.insertBefore(cycleBody, addCycleRow);
 }
+
+function removeContainer(button) {
+    var container = button.parentNode.parentNode;
+    var parent = container.parentNode;
+    if (parent.querySelectorAll(".exercise-container").length === 1) {
+        alert("There should be at least one cycle/day/exercise!");
+    }
+    else {
+        container.parentNode.removeChild(container);
+    }
+}
