@@ -15,7 +15,8 @@
     /*Start of BACKGROUND IMAGE*/
     body
     {
-      background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(image/wallpaper7.jpg);
+      background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(image/wallpaper10.jpg);
+      /*background-color: #a3a3c2;*/
       background-size: 100% 100%;
     }
     /*End of BACKGROUND IMAGE*/
@@ -56,37 +57,100 @@
     </nav>  
     <!-- End of NAVBAR Section -->
 
-    <h1 style = "color:white">How-To/Tutorials</h1>
+    <h2 style = "color:white">How-To/Tutorials</h2>
+
 
     <!-- Start of CAROUSEL Section -->
     <div class = "form-group row">
-      <div class = "col-3"></div>
       <div class = "col">
-        <div id="carouselExampleControls" class="carousel slide w-50" data-ride="carousel">
+        <div id="carouselControl" class="carousel slide" data-ride="carousel" data-interval="5000">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="image/Squat Pic.jpg" alt="First slide" style="height:315px">
+              <img class="d-block w-100" src="image/Squats.jpg" alt="First slide">
+              <center> <p class style = "color:white">Squats</p> </center>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="image/Bench Press Pic.jpg" alt="Second slide">
+              <img class="d-block w-100" src="image/Bench-Press.jpg" alt="Second slide">
+              <center> <p class style = "color:white">Bench Press</p> </center>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="image/deadlift.jpg" alt="Third slide">
+              <img class="d-block w-100" src="image/Con-Deadlift.jpg" alt="Third slide">
+              <center><p class style = "color:white">Conventional Deadlift</p> </center>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <a class="carousel-control-prev" href="#carouselControl" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#carouselControl" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div> <!-- End of CAROUSEL Section -->
+      </div>
+      <!-- 2 start-->
+       <div class = "col">
+        <div id="carouselControls2" class="carousel slide" data-ride="carousel" data-interval="5000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="image/Power-Clean.jpg" alt="First slide">
+              <center><p class style = "color:white">Power Clean</p></center>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="image/Snatch.jpg" alt="Second slide">
+              <center><p class style = "color:white">Snatch</p></center>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="image/Front-Squat.jpg" alt="Third slide">
+              <center><p class style = "color:white">Front Squat</p></center>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselControls2" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselControls2" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
         </div>
         <!-- End of CAROUSEL Section -->
       </div>
+      <!-- 2  ends-->
+
+      <!-- 3 start-->
+      <div class = "col">
+        <div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="5000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="image/Skull-Crushers.jpg" alt="First slide">
+              <center><p class style = "color:white">Skull Crushers</p> </center>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="image/Sumo_Deadlifts.jpg" alt="Second slide">
+              <center><p class style = "color:white">Sumo Deadlifts</p> </center>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="image/Sumo_Deadlifts2.jpg" alt="Third slide" style="max-width: 900px">
+              <center><p class style = "color:white">Sumo Deadlifts</p> </center>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <!-- End of CAROUSEL Section -->
+      </div>
+      <!-- 3  ends-->
     </div>
     
+    <!-- <h2 style = "color:white">How-To/Tutorials</h2> -->
+
     <label for="structure-input" class="col-form-label" style="color:white">Equipment:</label>
     <select class="form-control" id="structure-input">
       <option>Choose equipment---</option>
@@ -100,22 +164,32 @@
       <thead>
         <tr>
           <th scope="col">Exercise Name</th>
+          <th scope="col">Equipment</th>
           <th scope="col">Detail</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">Close Grip Bench Press</th>
-          <td><a href = "index_htResult.html">View Detail</a></td>
-        </tr>
-        <tr>
-          <th scope="row">Skull Crushers</th>
-          <td><a href = "index_htResult.html">View Detail</a></td>
-        </tr>
-        <tr>
-          <th scope="row">ccc</th>
+          <th scope="row">Curls</th>
           <!--<td colspan="2"></td> -->
-          <td><a href = "index_htResult.html">View Detail</a></td>
+          <th scope="row">Barbell</th>
+          <td><a href = "index_htResult1.html" target="_blank">View Detail</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Close Grip Bench Press</th>
+          <th scope="row">Barbell</th>
+          <td><a href = "index_htResult2.html" target="_blank">View Detail</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Close Grip Push Ups</th>
+          <!--<td colspan="2"></td> -->
+          <th scope="row">n/a</th>
+          <td><a href = "index_htResult3.html" target="_blank">View Detail</a></td>
+        </tr>
+         <tr>
+          <th scope="row">Skull Crushers</th>
+          <th scope="row">Barbell</th>
+          <td><a href = "index_htResult4.html" target="_blank">View Detail</a></td>
         </tr>
       </tbody>
     </table>
