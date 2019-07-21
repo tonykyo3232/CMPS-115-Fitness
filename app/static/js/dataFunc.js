@@ -39,7 +39,8 @@ function collect_cycle_meta(cycle_elem) {
   
   // collect meta data
   var cycle = {
-    name: cycle_elem.querySelector(".cycle-name").value
+    name: cycle_elem.querySelector(".cycle-name").value,
+    length: parseInt(cycle_elem.querySelector(".cycle-length").value)
   };
 
   // iterate each day and store it in cycle_elem.days
