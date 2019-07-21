@@ -129,6 +129,10 @@ def get_all_routines():
 def how_to():
     return render_template("index_how_to.html")
 
+@app.route("/index_htResult")
+def how_to_result():
+    return render_template("index_htResult.html")
+
 if __name__ == "__main__":
     from sys import argv
     if len(argv) > 1:
