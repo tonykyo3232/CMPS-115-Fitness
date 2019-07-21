@@ -8,7 +8,16 @@ pip install -r requirements.txt
 #pip3 install -r requirements.txt
 ```
 
-# How to run server
+# 1. Set up data
+```
+# Parse program/routine description in ../Workout Dataset/ and Save it in ./pickles/
+python data_update.py
+
+# If your python is not linked with python3
+python3 data_update.py
+```
+
+# 2. Run server
 ```bash
 # Default: Run server on port 8080 (http://localhost:8080)
 python app.py
