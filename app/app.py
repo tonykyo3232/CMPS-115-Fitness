@@ -11,8 +11,14 @@ sdm = SimpleDataManager()
 
 @app.route("/")
 def index():
-    return render_template("index_home.html")
+    return render_template("index_home.jinja")
 
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        pass
+    else:
+        return render_template("index_login.jinja")
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -52,12 +58,6 @@ def search():
         return render_template("search.jinja", programs=sdm.programs)
 
 
-@app.route("/detail", methods=["GET"])
-def detail():
-    # program = search_program(programs, program_id)
-    program = sdm.programs[1]
-    return render_template("detail.jinja", program=program)
-
 @app.route("/customize", methods=["GET", "POST"])
 def customize():
     if request.method == "POST":
@@ -87,7 +87,7 @@ def customize():
         #except:
         #    return jsonify({"code": 500, "message": "Wrong workout input"})
     else:
-        return render_template("customize.html")
+        return render_template("customize.jinja")
 
 @app.route("/overview", methods=["GET", "POST"])
 def overview():
