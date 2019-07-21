@@ -158,7 +158,7 @@
 <div class="card-deck cards">
 	{% for program in programs %}
 	{% if program["is_default"] %}
-	<div class="card" style="width: 18rem; margin: 1rem">
+	<div class="card workout-default" style="width: 18rem; margin: 1rem">
 		<img class="card-img-top" src="{{ url_for('static', filename='image/wallpaper5.jpg') }}">
 		<div class="card-body">
 			<h5 class="card-title">{{ program["name"] }}</h5>
@@ -175,7 +175,27 @@
 			</button>
 		</div>
 	</div>
+	{% else %}
+	<div class="card workout-customized" style="width: 18rem; margin: 1rem;"> {# Add display: none? #}
+		<img class="card-img-top" src="{{ url_for('static', filename='image/custom.jpg') }}">
+		<div class="card-body">
+			<h5 class="card-title">{{ program["name"] }}</h5>
+			<p class="card-text text-truncate">{{ program["desc"] }}</p> <!-- Maybe modified by javascript-->
+		</div>
+		<div class="card-footer">
+			{% if program["is_routine"] %}
+			<a href="/routine/detail/{{ program["_id"] }}" class="btn btn-primary">View Detail</a>
+			{% else %}
+			<a href="/program/detail/{{ program["_id"] }}" class="btn btn-primary">View Detail</a>
+			{% endif %}
+			<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+				Export
+			</button>
+		</div>
+	</div>
 	{% endif %}
+	
+	
 	{% endfor %}
 </div>
 </div>
