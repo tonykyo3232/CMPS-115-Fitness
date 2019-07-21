@@ -88,11 +88,8 @@ function get_cycle(workout){
 
 
 function send_workout(workout) {
-  const host = "http://ec2-18-217-233-23.us-east-2.compute.amazonaws.com:8080";
-  //const host = "http://0.0.0.0:8080";
-
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", host + "/customize", false);
+  xhr.open("POST", "/customize", false);
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.send(JSON.stringify(workout));
   var result = JSON.parse(xhr.responseText);
@@ -105,11 +102,8 @@ function send_workout(workout) {
 }
 
 function show_workout(workout) {
-  const host = "http://ec2-18-217-233-23.us-east-2.compute.amazonaws.com:15151";
-  //const host = "http://0.0.0.0:8080";
-
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", host + "/overview", false);
+  xhr.open("POST", "/overview", false);
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.send(JSON.stringify(workout));
 }
