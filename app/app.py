@@ -127,7 +127,7 @@ def get_all_routines():
 
 @app.route("/index_how_to")
 def how_to():
-    return "index_how_to.html"
+    return render_template("index_how_to.html")
 
 if __name__ == "__main__":
     from sys import argv
