@@ -2,7 +2,7 @@ Name: Massive Leg Routine
 Style: General Fitness
 Difficulty Level: Beginner
 Length: n/a
-Goal: Build Strength, Build Muscle
+Goal: Build Strength / Build Muscle
 General Info: This program contains a beginner guide to building leg muscles. User can choose workout weights accordingly.         
 --------------------
 
