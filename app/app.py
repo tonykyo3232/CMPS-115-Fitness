@@ -1,8 +1,13 @@
 from flask import Flask, render_template, request, jsonify
-from utils import filter_programs, filter_routines, load_programs, load_routines, search_program
+#from flask_pymongo import PyMongo
+from utils import filter_programs, filter_routines, SimpleDataManager
 import pickle
 
 app = Flask(__name__)
+#app.config["MONGO_URI"] = "mongodb://localhost:27017/fitness"
+#mongo = PyMongo(app)
+sdm = SimpleDataManager()
+
 
 @app.route("/")
 def index():
@@ -38,33 +43,49 @@ def search():
         
         target = form.get("target", "").lower()
         if target == "program":
-            programs = load_programs()
-            return render_template("search.jinja", programs=filter_programs(programs, opt))
+            return render_template("search.jinja", programs=filter_programs(sdm.programs, opt))
         elif target == "routine":
-            routines = load_routines()
-            return render_template("search.jinja", programs=filter_routines(routines, opt))
+            return render_template("search.jinja", programs=filter_routines(sdm.routines, opt))
         else:
-            programs = load_programs()
-            return render_template("search.jinja", programs=programs)
+            return render_template("search.jinja", programs=sdm.programs)
     else:
-        programs = load_programs()
-        return render_template("search.jinja", programs=programs)
+        return render_template("search.jinja", programs=sdm.programs)
 
 
 @app.route("/detail", methods=["GET"])
 def detail():
-    programs = load_programs()
-
     # program = search_program(programs, program_id)
-    program = programs[1]
+    program = sdm.programs[1]
     return render_template("detail.jinja", program=program)
-
 
 @app.route("/customize", methods=["GET", "POST"])
 def customize():
     if request.method == "POST":
-        workout = request.get_json()
-        return "Not implemented"
+        workout_input = request.get_json()
+        
+        # check input
+        #try:
+        is_routine = False if workout_input["type"] == "Program" else True
+        item = {
+            "name": workout_input["name"],
+            "styles": workout_input["styles"],
+            "level": workout_input["level"],
+            "length": workout_input["length"],
+            "goals": workout_input["goals"],
+            "desc": workout_input["desc"],
+            "cycles": workout_input["cycles"],
+            "is_routine": is_routine
+        }
+        # TODO: validate cycles - days - exercises recursively
+        # TODO: validate whether routine contains only 1 cycle - 1 day
+        
+        if is_routine:
+            sdm.insert_custom_routine(item)
+        else:
+            sdm.insert_custom_program(item)
+        return jsonify({"code": 200, "message": "Successfully inserted"})
+        #except:
+        #    return jsonify({"code": 500, "message": "Wrong workout input"})
     else:
         return render_template("customize.html")
 
@@ -76,28 +97,33 @@ def overview():
     else:
         return render_template("overview.jinja")		
 		
-
 @app.route("/program/detail/<int:program_id>", methods=["GET"])
 def program_detail(program_id):
-    programs = load_programs()
-
-    program = search_program(programs, program_id)
+    program = sdm.search_item(is_routine=False, _id=program_id)
     if program == None:
         return "Such program doesn't exist."
     return render_template("detail.jinja", program=program)
 
-
 @app.route("/api/programs")
-def program_api():
+def get_all_programs():
     if request.method == "GET":
-        with open("program_dict.pickle", "rb") as fp:
-            prog_dict = pickle.load(fp)
-        
-        # prog_dict should be replaced with acceptable dictionary example for workout programs...
-        return jsonify([prog_dict])
+        return jsonify(sdm.programs)
     else:
         return "Not implemented"
 
+@app.route("/routine/detail/<int:routine_id>", methods=["GET"])
+def routine_detail(routine_id):
+    routine = sdm.search_item(is_routine=True, _id=routine_id)
+    if routine == None:
+        return "Such routine doesn't exist."
+    return render_template("detail.jinja", program=routine)
+
+@app.route("/api/routines")
+def get_all_routines():
+    if request.method == "GET":
+        return jsonify(sdm.routines)
+    else:
+        return "Not implemented"
 
 if __name__ == "__main__":
     from sys import argv

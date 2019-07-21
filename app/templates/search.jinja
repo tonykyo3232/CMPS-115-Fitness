@@ -59,30 +59,31 @@
 	</style>
 	</head>
 <body>
+<!-- MyFitnessProgram Website header -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a class="navbar-brand" href="index_home.html">My Fitness Distributer</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
+  <a class="navbar-brand" href="/">My Fitness Distributer</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-	<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-		<li class="nav-item active">
-			<a class="nav-link" href="index_home.html">Home <span class="sr-only">(current)</span></a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="index_about.html">About Us</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="index_login.html">Log In</a>
-		</li>
-		</ul>
-		<form class="form-inline my-2 my-lg-0">
-		<input class="form-control mr-sm-2" type="search" placeholder="Search">
-		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-		</form>
-	</div>
-</nav>
+  <div class="collapse navbar-collapse" id="navbarToggler">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index_about.html">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index_login.html">Log In</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>  
 
 {# <div class="row">
   <div class="column" onclick="openTab('b1');" style="background:transparent;">Programs <i class = "fas fa-angle-double-down"></i></div>
@@ -124,6 +125,7 @@
 						<option>Lose Weight</option>
 						<option>Build Muscle</option>
 						<option>Build Strength</option>
+						<option>Conditioning</option>
 					</select>
 				</div>
 				<div class="col">
@@ -145,26 +147,6 @@
 					</select>
 				</div>
 			</div>
-			{# <div class="form-group row">
-				<div class="col">
-					<label for="level-opt">Level</label>
-					<select class="form-control" id="level-opt" name="level">
-						<option value="-1">All</option>  			
-						<option value="0">Beginner</option>
-						<option value="1">Intermediate</option>
-						<option value="2">Advance</option>
-					</select>
-				</div>
-				<div class="col">
-					<label for="length-opt">Length</label>
-					<select class="form-control" id="length-opt" name="length">
-						<option value="-1,-1">All</option>  			
-						<option value="1,4">1-4 weeks</option>
-						<option value="5,8">5-8 weeks</option>
-						<option value="9,-1">9 weeks or longer</option>
-					</select>
-				</div>
-			</div> #}
 			<button type="submit" class="btn btn-primary float-right">Filter</button>
 		</form>
 	</div></div>
@@ -175,19 +157,25 @@
 <div class="container">
 <div class="card-deck cards">
 	{% for program in programs %}
-	<div class="card" style="width: 18rem;">
+	{% if program["is_default"] %}
+	<div class="card" style="width: 18rem; margin: 1rem">
 		<img class="card-img-top" src="{{ url_for('static', filename='image/wallpaper5.jpg') }}">
 		<div class="card-body">
 			<h5 class="card-title">{{ program["name"] }}</h5>
 			<p class="card-text text-truncate">{{ program["desc"] }}</p> <!-- Maybe modified by javascript-->
 		</div>
 		<div class="card-footer">
-			<a href="/program/detail/{{ program["program_id"] }}" class="btn btn-primary">View Detail</a>
+			{% if program["is_routine"] %}
+			<a href="/routine/detail/{{ program["_id"] }}" class="btn btn-primary">View Detail</a>
+			{% else %}
+			<a href="/program/detail/{{ program["_id"] }}" class="btn btn-primary">View Detail</a>
+			{% endif %}
 			<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
 				Export
 			</button>
 		</div>
 	</div>
+	{% endif %}
 	{% endfor %}
 </div>
 </div>
