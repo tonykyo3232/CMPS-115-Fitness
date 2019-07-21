@@ -92,22 +92,21 @@ def customize():
 @app.route("/overview", methods=["GET", "POST"])
 def overview():
 	if request.method == "POST":
-        workout_input = request.get_json()
-        # check input
-        #try:
-        is_routine = False if workout_input["type"] == "Program" else True
-        item = {
-            "name": workout_input["name"],
-            "styles": workout_input["styles"],
-            "level": workout_input["level"],
-            "length": workout_input["length"],
-            "goals": workout_input["goals"],
-            "desc": workout_input["desc"],
-            "cycles": workout_input["cycles"],
-            "is_routine": is_routine
-        }
-	return render_template("overview.jinja", program=item)		
+		workout_input = request.get_json()
 		
+		is_routine = False if workout_input["type"] == "Program" else True
+		item = {
+		"name": workout_input["name"],
+		"styles": workout_input["styles"],
+		"level": workout_input["level"],
+		"length": workout_input["length"],
+		"goals": workout_input["goals"],
+		"desc": workout_input["goals"],
+		"cycles": workout_input["cycles"].
+		"is_routine": is_routine
+		}
+	else:
+		return render_template("overview.jinja", workout=sdm.programs)
 @app.route("/program/detail/<int:program_id>", methods=["GET"])
 def program_detail(program_id):
     program = sdm.search_item(is_routine=False, _id=program_id)
