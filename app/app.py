@@ -125,6 +125,10 @@ def get_all_routines():
     else:
         return "Not implemented"
 
+@app.route("/index_how_to")
+def how_to():
+    return render_template("index_how_to.html")
+
 if __name__ == "__main__":
     from sys import argv
     if len(argv) > 1:
