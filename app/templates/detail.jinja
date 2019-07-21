@@ -60,14 +60,14 @@ img.rest{
   </div>
 </nav>  
 	
-<div class="container">
+<div class="container" style="margin-top: 2rem">
 	<div class="card">
 		<h2 class="card-header text-center text-black">{{ program["name"] }}</h2>
 			<div class="card-body">
 				<ul class="list-group">
 					<li class="list-group-item"><b>Style:</b> {{ ', '.join(program["styles"]) }} </li>
 					<li class="list-group-item"><b>Level:</b> {{ program["level"] }}</li>
-					<li class="list-group-item"><b>Length:</b> {{ program["length"] }}</li>
+					<li class="list-group-item"><b>Length:</b> {{ program["length"] }} weeks</li>
 					<li class="list-group-item"><b>Goal:</b> {{ ', '.join(program["goals"]) }}</li>
 					<li class="list-group-item"><b>Notes:</b> {{ program["desc"] }}</li>
 					<li class="list-group-item"><a href="index_how_to.html" class="btn btn-primary">Exercises How-To</a></li>
@@ -78,12 +78,17 @@ img.rest{
 
 <div class="tabbable boxed parentTabs p-4">
     <ul class="nav nav-tabs navbar-dark bg-dark">
-    {% for i in range(1, program["cycles"]|length + 1) %}
-        {% if i == 0 %}
-        <li class="active"><a href="#cycle{{i}}" class="nav-link" style="font-size:110%"><b>Cycle {{i}}</b></a>
+    {% for cycle_num in range(1, program["cycles"]|length + 1) %}
+        {% set cycle = program["cycles"][cycle_num - 1] %}
+        {% if cycle_num == 0 %}
+        <li class="active">
+            <a href="#cycle{{cycle_num}}" class="nav-link" style="font-size:110%">
+            <b>Cycle {{cycle_num}} {% if cycle["length"] > 0 %} ({{cycle["length"]}} weeks){% endif %}</b></a>
         </li>
         {% else %}
-        <li><a href="#cycle{{i}}" class="nav-link" style="font-size:110%"><b>Cycle {{i}}</b></a>
+        <li>
+            <a href="#cycle{{cycle_num}}" class="nav-link" style="font-size:110%">
+            <b>Cycle {{cycle_num}} {% if cycle["length"] > 0 %} ({{cycle["length"]}} weeks){% endif %}</b></a>
         </li>
         {% endif %}
     {% endfor %}
@@ -117,8 +122,10 @@ img.rest{
                     <div class="tab-pane fade" id="cycle{{cycle_num}}_day{{day_num}}">
                     {% endif %}
 					<div class="card">
+                        {% if day["desc"].strip() != "" %}
 						<div class="card-header text-center text-black" style="font-size:150%">{{ day["desc"] }}</div>
-						{% if day["desc"] == "Rest Day" %}
+                        {% endif %}
+						{% if day["is_rest"] %}
 						<img class="rest card-img-bottom" src="/static/image/snorlax.png" alt="Card image cap">
 						{% endif %}
 					</div>
@@ -138,11 +145,24 @@ img.rest{
                                 {% endif %}
                                     <div class="card-body">
                                         <ul class="list-group">
-                                            <li class="list-group-item"><b>Length:</b> {# exercise["length"] #}</li>
-                                            <li class="list-group-item"><b>Weight:</b> {# exercise["weight"] #}</li>
-                                            <li class="list-group-item"><b>RPE:</b> {# exercise["rpe"] #}</li>
-                                            <li class="list-group-item"><b>Meta:</b> {{exercise["desc"]}}</li>
-                                            <li class="list-group-item"><b>Notes:</b> {{exercise["note"]}}</li>
+                                            {% if exercise["equipment"]|length > 0 %}
+                                            <li class="list-group-item"><b>Equipment:</b> {{", ".join(exercise["equipment"])}}</li>
+                                            {% endif %}
+                                            {% if exercise["length"] != "" %}
+                                            <li class="list-group-item"><b>Length:</b> {{ exercise["length"] }}</li>
+                                            {% endif %}
+                                            {% if exercise["weight"] != "" %}
+                                            <li class="list-group-item"><b>Weight:</b> {{ exercise["weight"] }}</li>
+                                            {% endif %}
+                                            {% if exercise["rpe"] != "" %}
+                                            <li class="list-group-item"><b>RPE:</b> {{ exercise["rpe"] }}</li>
+                                            {% endif %}
+                                            {% if exercise["notes"]|length > 0 %}
+                                            <li class="list-group-item"><b>Notes:</b><br>{{"\n".join(exercise["notes"])}}</li>
+                                            {% endif %}
+                                            {% if exercise["url"] != "" %}
+                                            {# <li class="list-group-item"><b>Link:</b> {{ exercise["url"] }}</li> #}
+                                            {% endif %}
                                         </ul>
                                     </div>
                                 </div>
