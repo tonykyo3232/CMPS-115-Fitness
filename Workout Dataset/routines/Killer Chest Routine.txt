@@ -13,9 +13,9 @@ Exercise: Barbell Incline Bench Press / Length: 5x8 / Notes: Perform 1 drop set 
 Exercise: Dumbbell Incline Bench Press / Length: 4x12 / Notes: Perform 1 drop set by any chosen weight on 2nd set. Perform 2 drop sets by any chosen weights on 3rd set. Perform 3 drop sets by any chosen weight on final set.
 Exercise: Dumbbell Bench Press / Length: 3x12
 Exercise: Dumbbell Single Arm Bench Press / Length: Pyramid down from 8 Reps
-Exercise: Barbell Close Grip Landmine Press / Length: 4x12 / Notes: Superset with next exercise.
+Exercise: Barbell Landmine Press / Length: 4x12 / Notes: Superset with next exercise.
 Exercise: Dumbbell Incline Flyes / Length: 12 Reps
-Exercise: Cable Flyes / Length: 4x15 / Notes: Place cable at shoulder height. Superset with next exercise.
+Exercise: Cable Flyes / Length: 4x15 / Notes: Superset with next exercise.
 Exercise: Push Ups / Length: Until Failure / Notes: Superset with next exercise.
 Exercise: Isometric Push Up Hold / Length: 60 Second(s)
 Exercise: Cable Decline Flyes / Length: 3x15 / Notes: Superset with next exercise.
