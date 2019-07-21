@@ -2,7 +2,7 @@ Name: Shoulder Routine
 Style: General Fitness
 Difficulty Level: Intermediate
 Length: n/a
-Goal: Build Muscle, Build Strength
+Goal: Build Muscle / Build Strength
 General Info: This program has influences from bodybuilding style. It incorporates strength, hypertrophy, and speed training.
 --------------------
 
@@ -13,8 +13,8 @@ Warm Up Exercise: Arm Circles / Length: 45 Second(s) / Notes: Perform mini twirl
 Warm Up Exercise: Burpees / Length: 2x10 / Weight: Bodyweight
 Exercise: Barbell Push Press / Length: 4x4 / Notes: Choose a weight that will be difficult to complete on the 4th rep.
 Exercise: Dumbbell Shoulder Press / Length: 4 Sets / Notes: User chooses moderate weight and perform as many reps as possible for each set.
-Exercise: Barbell Upright Row / Length: 4x6  / Notes: Grip the bar at shoulder width. Choose a weight that will be difficult to complete on the 6th rep.
-Exercise: Barbell Upright Row / Length: 1 Set  / Notes: Grip the bar at shoulder width. Choose a light weight and perform as many reps as possible.
+Exercise: Barbell Upright Row / Length: 4x6  / Notes: Choose a weight that will be difficult to complete on the 6th rep.
+Exercise: Barbell Upright Row / Length: 1 Set  / Notes: Choose a light weight and perform as many reps as possible.
 Exercise: Dumbbell Single Arm Shoulder Press / Length: 4x15 / Notes: Choose a light weight and perform these repetitions as fast as possible.
 --------------------
 
