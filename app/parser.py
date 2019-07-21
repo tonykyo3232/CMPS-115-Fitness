@@ -262,6 +262,7 @@ def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0):
         # parse all files in the directory
         for file_name in os.listdir(dir_name):
             program = parse_file(os.path.join(dir_name, file_name))
+            program["is_default"] = True
             program["_id"] = next_id
             next_id += 1
             if is_routine == None:
@@ -279,6 +280,7 @@ def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0):
             print("Wrong file path: %s" % (file_path))
             return
         program = parse_file(file_path)
+        program["is_default"] = True
         program["_id"] = next_id
         next_id += 1
         if is_routine == None:
