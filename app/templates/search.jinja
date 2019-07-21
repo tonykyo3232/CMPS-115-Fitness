@@ -162,7 +162,7 @@
 		<img class="card-img-top" src="{{ url_for('static', filename='image/wallpaper5.jpg') }}">
 		<div class="card-body">
 			<h5 class="card-title">{{ program["name"] }}</h5>
-			<p class="card-text text-truncate">{{ program["desc"] }}</p> <!-- Maybe modified by javascript-->
+			<p class="card-text text-truncate">{{ program["desc"] }}</p>
 		</div>
 		<div class="card-footer">
 			{% if program["is_routine"] %}
@@ -177,10 +177,10 @@
 	</div>
 	{% else %}
 	<div class="card workout-customized" style="width: 18rem; margin: 1rem;"> {# Add display: none? #}
-		<img class="card-img-top" src="{{ url_for('static', filename='image/custom.jpg') }}">
+		<img class="card-img-top" src="{{ url_for('static', filename='image/wallpaper5.jpg') }}">
 		<div class="card-body">
 			<h5 class="card-title">(Custom) {{ program["name"] }}</h5>
-			<p class="card-text text-truncate">{{ program["desc"] }}</p> <!-- Maybe modified by javascript-->
+			<p class="card-text text-truncate">{{ program["desc"] }}</p> 
 		</div>
 		<div class="card-footer">
 			{% if program["is_routine"] %}
