@@ -12,7 +12,7 @@ Warm Up Exercise: Treadmill / Length: 5 Minute(s) / Notes: Perform a steady jog.
 Exercise: Jump Squats / Length: 4x15 / Weight: Bodyweight
 Exercise: Machine Leg Press / Length: 4x12
 Exercise: Reverse Hack Squats / Length: 4x10
-Exercise: Barbell Romanian Deadlift / Length: 3x12 
+Exercise: Barbell Romanian Conventional Deadlift / Length: 3x12 
 Exercise: Kettlebell Swings / Length: 4x90 Second(s)
 Exercise: Dumbbell Single Leg Step Ups / Length: 4x12
 Exercise: Cable Side Step Squats / Length: 3x12
