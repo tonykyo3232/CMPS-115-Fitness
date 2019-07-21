@@ -88,13 +88,20 @@ function get_cycle(workout){
 
 
 function send_workout(workout) {
-  const host = "http://ec2-18-217-233-23.us-east-2.compute.amazonaws.com:8080";
-  //const host = "http://0.0.0.0:8080";
+  //const host = "http://ec2-18-217-233-23.us-east-2.compute.amazonaws.com:8080";
+  const host = "http://0.0.0.0:8080";
 
   var xhr = new XMLHttpRequest();
   xhr.open("POST", host + "/customize", false);
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.send(JSON.stringify(workout));
+  var result = JSON.parse(xhr.responseText);
+  if (result["code"] === 200) {
+    alert(result["message"]);
+    document.location.reload();
+  } else {
+    alert(result["message"]);
+  }
 }
 
 function show_workout(workout) {
@@ -106,9 +113,3 @@ function show_workout(workout) {
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.send(JSON.stringify(workout));
 }
-
-
-
-// function nested_clear(elem) {
-//   elem.querySelectorAll("input")
-// }
