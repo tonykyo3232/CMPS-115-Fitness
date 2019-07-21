@@ -91,9 +91,23 @@ def customize():
 
 @app.route("/overview", methods=["GET", "POST"])
 def overview():
-    if request.method == "GET":
-        workout = request.get_json()
-    return render_template("overview.jinja")		
+	if request.method == "POST":
+        workout_input = request.get_json()
+        
+        # check input
+        #try:
+        is_routine = False if workout_input["type"] == "Program" else True
+        item = {
+            "name": workout_input["name"],
+            "styles": workout_input["styles"],
+            "level": workout_input["level"],
+            "length": workout_input["length"],
+            "goals": workout_input["goals"],
+            "desc": workout_input["desc"],
+            "cycles": workout_input["cycles"],
+            "is_routine": is_routine
+        }
+	return render_template("overview.jinja", workout=item)		
 		
 @app.route("/program/detail/<int:program_id>", methods=["GET"])
 def program_detail(program_id):
