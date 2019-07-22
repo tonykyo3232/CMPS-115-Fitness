@@ -107,7 +107,7 @@ def overview():
 		}
 		return render_template("overview.jinja", program=workout_input)
 	else:
-		return render_template("overview.jinja", program=workout_input)
+		return render_template("overview.jinja", program=sdm.programs)
 
 @app.route("/program/detail/<int:program_id>", methods=["GET"])
 def program_detail(program_id):
