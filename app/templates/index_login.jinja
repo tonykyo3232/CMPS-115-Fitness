@@ -6,53 +6,29 @@
 
 body
 {
-  background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url({{ url_for("static", filename="image/wallpaper1.jpg") }});
+  background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url({{ url_for("static", filename="image/wallpaper3.jpg") }});
   background-size: 100% 100%;
 }
 
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
-.form-inline {  
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-
-.form-inline label {
-  margin: 5px 10px 5px 0;
-}
-
-.form-inline input {
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
-
-.form-inline button {
-  padding: 10px 20px;
-  background-color: dodgerblue;
-  border: 1px solid #ddd;
-  color: white;
-  cursor: pointer;
-}
-
-.form-inline button:hover {
-  background-color: royalblue;
-}
-
-@media (max-width: 800px) {
-  .form-inline input {
-    margin: 10px 0;
+.form_bg {
+      background-color:#eee;
+      color:#666;
+      padding:20px;
+      border-radius:20px;
+      position: absolute;
+      border:1px solid #fff;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 320px;
+      height: 350px;
+  }
+  .align-center {
+      text-align:center;
   }
   
-  .form-inline {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
 </style>
 </head>
 <body>
@@ -82,20 +58,33 @@ body {font-family: Arial, Helvetica, sans-serif;}
   </div>
 </nav>  
 
-<h2>Log In</h2>
-<p>We have created an inline form that will stay horizontal until the screen width of the browser window is less than 850 pixels: then the form is displayed vertically instead of horizontally.</p>
-<p>Resize the browser window to see the effect.</p>
-
-<form class="form-inline" action="/action_page.php">
-  <label for="email">Email:</label>
-  <input type="email" id="email" placeholder="Enter email" name="email">
-  <label for="pwd">Password:</label>
-  <input type="password" id="pwd" placeholder="Enter password" name="pswd">
-  <label>
-    <input type="checkbox" name="remember"> Remember me
-  </label>
-  <button type="submit">Submit</button>
-</form>
+<div class="container">
+    <div class="row">
+        <div class="form_bg">
+            <form>
+                 <h2 class="text-center">Sign in</h2>
+                <br/>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="userid" placeholder="User id">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="Password">
+                </div>
+                <br/>
+                <div class="align-center">
+                    <button type="submit" class="btn btn-default" id="login" style = "background-color: green; color:white">
+                    <a href = "#" style="color:white">Login</a>
+                  </button>
+                </div>
+                <br>
+                <div class="align-center">
+                    <button type="submit" class="btn btn-default" id="registerstyle" style = "background-color:#1a75ff; color:white"><a href = "index_register.html" style="color:white">Register</a>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
 
 </body>
 </html>
