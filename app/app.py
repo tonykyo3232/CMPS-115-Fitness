@@ -102,7 +102,7 @@ def overview():
 			"length": workout_input["length"],
 			"goals": workout_input["goals"],
 			"desc": workout_input["goals"],
-			"cycles": workout_input["cycles"].
+			"cycles": workout_input["cycles"],
 			"is_routine": is_routine
 		}
 	else:	
