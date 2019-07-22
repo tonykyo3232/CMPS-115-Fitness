@@ -108,8 +108,6 @@ def overview():
 		return render_template("overview.jinja", program=workout_input)
 	else:
 		workout_input = request.get_json()
-		
-		is_routine = False if workout_input["type"] == "Program" else True
 		item = {
 			"name": workout_input["name"],
 			"styles": workout_input["styles"],
