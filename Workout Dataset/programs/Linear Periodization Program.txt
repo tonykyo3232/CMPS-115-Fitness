@@ -37,10 +37,10 @@ Exercise: Cable Face Pulls / Length: 4x12 / RPE: 6-7 / Notes: Use a rope handle 
 
 Day: Number: 4 / Description: n/a
 Warm Up Exercise: n/a
-Exercise: Barbell Deadlift / Length: 3x3 / Weight: 80% of 1RM / Notes: Increment weight by 10lb every 2 weeks for the remaining of this cycle. 
-Exercise: Barbell Deadlift / Length: 4x5 / Weight: 70% of 1RM / Notes: If final set’s RPE ( __ ) is 6.5-7, increment weight by 10lb for the next week for current cycle.
-Exercise: Barbell Deficit Deadlift / Length: 3x5 / RPE: 7 / Notes: Use 2 inch deficit. User determines weight ( __ lb) based on RPE.
-Exercise: Barbell Stiff Leg Deadlift / Length: 3x7 / RPE: 6-6.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Conventional Deadlift / Length: 3x3 / Weight: 80% of 1RM / Notes: Increment weight by 10lb every 2 weeks for the remaining of this cycle. 
+Exercise: Barbell Conventional Deadlift / Length: 4x5 / Weight: 70% of 1RM / Notes: If final set’s RPE ( __ ) is 6.5-7, increment weight by 10lb for the next week for current cycle.
+Exercise: Barbell Deficit Conventional Deadlift / Length: 3x5 / RPE: 7 / Notes: Use 2 inch deficit. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Stiff Leg Conventional Deadlift / Length: 3x7 / RPE: 6-6.5 / Notes: User determines weight ( __ lb) based on RPE.
 Exercise: Machine Lying Hamstring Curls / Length: 4x15 / RPE: 7-8 / Notes: User determines weight ( __ lb) based on RPE.
 
 Day: Number: 5 / Description: n/a
