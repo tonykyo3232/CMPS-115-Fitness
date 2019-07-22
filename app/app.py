@@ -12,13 +12,21 @@ sdm = SimpleDataManager()
 @app.route("/")
 def index():
     return render_template("index_home.jinja")
-
+'''
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         pass
     else:
         return render_template("index_login.jinja")
+'''
+#debug, can delete later and keep jinja above
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        pass
+    else:
+        return render_template("index_login.html")
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
