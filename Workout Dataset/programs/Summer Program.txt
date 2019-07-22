@@ -2,14 +2,14 @@ Name: Summer Program
 Style: Bodybuilding
 Difficulty Level: Intermediate
 Length: 8 Weeks
-Goal: Build Muscle, Build Strength
+Goal: Build Muscle / Build Strength
 General Info: This is an intermediate level body building program that uses bilateral movements for strength training, and uses unilateral movements for high volume training to develop individual muscles effectively. User can choose workout weights accordingly.
 --------------------
 
 Cycle: Number: 1 / Description: n/a / Weeks: 8
 Day: Number: 1 / Description: Legs + Shoulders
 Warm Up Exercise: n/a
-Exercise: Back Squats / Length: 4x10 / Notes: 1:30 minute(s) rest interval.
+Exercise: Barbell Back Squats / Length: 4x10 / Notes: 1:30 minute(s) rest interval.
 Exercise: Machine Leg Press / Length: 5x10 / Notes: 1 minute(s) rest interval.
 Exercise: Machine Leg Extensions / Length: 4x25 / Notes: 1-1:15 minute(s) rest interval.
 Exercise: Machine Seated Hamstring Curls / Length: 4x25 / Notes: 1:15 minute(s) rest interval.
