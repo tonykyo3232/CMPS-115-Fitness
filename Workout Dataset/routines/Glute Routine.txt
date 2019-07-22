@@ -11,7 +11,7 @@ Day: Number: 1 / Description: n/a
 Warm Up Exercise: Machine Stairmaster / Length: 10 Minute(s) / Weight: Any Resistance Band / Notes: Perform kickbacks every other minute for the 10 minute(s) duration.
 Exercise: Machine Hip Abductor / Length: 4x10 / Notes: Sit close to the edge of the seat. Choose a heavy weight that will be challenging for 10 reps.
 Exercise: Smith Machine Sumo Deadlift / Length: 4x10 / Notes: Stand on aerobic platform while performing this exercise for a deeper stretch.
-Exercise: Cable Stiff Leg Deadlift / Length: 4x10 / Notes: Use medal straight bar. Choose a heavy weight that will be challenging for 10 reps.
+Exercise: Cable Stiff Leg Conventional Deadlift / Length: 4x10 / Notes: Use medal straight bar. Choose a heavy weight that will be challenging for 10 reps.
 Exercise: Cable One-Legged Kickbacks / Length: 4x20 / Notes: Choose a weight that will be challenging for 20 reps.
 --------------------
 
