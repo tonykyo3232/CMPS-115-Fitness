@@ -10,11 +10,11 @@ Cycle: Number: 1 / Description: n/a / Weeks: 8
 Day: Number: 1 / Description: n/a
 Warm Up Exercise: n/a
 Exercise: Barbell Reverse Banded Back Squats / Length: 4x3 / RPE: 10 / Notes: Use 25-65lb resistance. User determines weight ( __ lb) based on RPE.
-Exercise: Barbell Pause Back Squats / Length: 4x5 / RPE: 7 / Notes: Pause for 3 3 second(s). User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pause Back Squats / Length: 4x5 / RPE: 7 / Notes: Pause for 3 second(s). User determines weight ( __ lb) based on RPE.
 Exercise: Barbell High Bar Back Squats / Length: 3x8 / RPE: 6 / Notes: User determines weight ( __ lb) based on RPE.
-Exercise: Barbell Deficit Deadlift / Length: 3x6 / RPE: 7-8 / Notes: Use 2 inch deficit. User determines weight ( __ lb) based on RPE.
-Exercise: Barbell Snatch Grip Deadlift / Length: 3x8 / RPE: 6-6.5 / Notes: User determines weight ( __ lb) based on RPE.
-Exercise: Barbell Stiff Leg Deadlift / Length: 3x8 / RPE: 6-6.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Deficit Conventional Deadlift / Length: 3x6 / RPE: 7-8 / Notes: Use 2 inch deficit. User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Snatch Grip Conventional Deadlift / Length: 3x8 / RPE: 6-6.5 / Notes: User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Stiff Leg Convenitonal Deadlift / Length: 3x8 / RPE: 6-6.5 / Notes: User determines weight ( __ lb) based on RPE.
 
 Day: Number: 2 / Description: n/a
 Warm Up Exercise: n/a
@@ -42,7 +42,7 @@ Exercise: Cable Side Raises / Length: 4x10 / RPE: 8 / Notes: User determines wei
 Day: Number: 5 / Description: n/a
 Warm Up Exercise: n/a
 Exercise: Barbell Block Pulls / Length: 3x3 / RPE: 7.5-8 / Notes: Use 4-5 inch blocks. User determines weight ( __ lb) based on RPE.
-Exercise: Barbell Pin Deadlift / Length: 3x5 / RPE: 7-8 / Notes: Set pins to at knee level. Pause at pins for 3 3 second(s) / User determines weight ( __ lb) based on RPE.
+Exercise: Barbell Pin Conventional Deadlift / Length: 3x5 / RPE: 7-8 / Notes: Set pins to at knee level. Pause at pins for 3 3 second(s) / User determines weight ( __ lb) based on RPE.
 Exercise: Machine Seated Single Leg Hamstring Curls / Length: 4x8 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
 Exercise: Machine Lying Hamstring Curls / Length: 3x10 / RPE: 8 / Notes: User determines weight ( __ lb) based on RPE.
 Exercise: Barbell Slingshot Bench Press / Length: 4x3 / RPE: 9 / Notes: User determines weight ( __ lb) based on RPE.
