@@ -1,63 +1,44 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Fitness Scheduler</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
 <style>
 
-body
-{
-  background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(image/wallpaper1.jpg);
-  background-size: 100% 100%;
-}
-
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
-.form-inline {  
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-
-.form-inline label {
-  margin: 5px 10px 5px 0;
-}
-
-.form-inline input {
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
-
-.form-inline button {
-  padding: 10px 20px;
-  background-color: dodgerblue;
-  border: 1px solid #ddd;
-  color: white;
-  cursor: pointer;
-}
-
-.form-inline button:hover {
-  background-color: royalblue;
-}
-
-@media (max-width: 800px) {
-  .form-inline input {
-    margin: 10px 0;
+  /*background image setting*/
+  
+  body
+  {
+    background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(image/wallpaper3.jpg);
+    background-size: 100% 100%;
   }
   
-  .form-inline {
-    flex-direction: column;
-    align-items: stretch;
+  .form_bg {
+      background-color:#eee;
+      color:#666;
+      padding:20px;
+      border-radius:20px;
+      position: absolute;
+      border:1px solid #fff;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 320px;
+      height: 350px;
   }
-}
-</style>
-</head>
-<body>
+  .align-center {
+      text-align:center;
+  }
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index_home.html">My Fitness Distributer</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -66,36 +47,55 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" href="index_home.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index_home.html">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index_about.html">About Us</a>
+          <a class="nav-link" href="index_how_to.html">How To</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index_login.html">Log In</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
   </nav>  
 
-<h2>Log In</h2>
-<p>We have created an inline form that will stay horizontal until the screen width of the browser window is less than 850 pixels: then the form is displayed vertically instead of horizontally.</p>
-<p>Resize the browser window to see the effect.</p>
 
-<form class="form-inline" action="/action_page.php">
-  <label for="email">Email:</label>
-  <input type="email" id="email" placeholder="Enter email" name="email">
-  <label for="pwd">Password:</label>
-  <input type="password" id="pwd" placeholder="Enter password" name="pswd">
-  <label>
-    <input type="checkbox" name="remember"> Remember me
-  </label>
-  <button type="submit">Submit</button>
-</form>
+  <div class="container">
+    <div class="row">
+        <div class="form_bg">
+            <form>
+                 <h2 class="text-center">Sign in</h2>
+                <br/>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="userid" placeholder="User id">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="Password">
+                </div>
+                <br/>
+                <div class="align-center">
+                    <button type="submit" class="btn btn-default" id="login" style = "background-color: green; color:white">
+                    <a href = "#" style="color:white">Login</a>
+                  </button>
+                </div>
+                <br>
+                <div class="align-center">
+                    <button type="submit" class="btn btn-default" id="registerstyle" style = "background-color:#1a75ff; color:white"><a href = "index_register.html" style="color:white">Register</a>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>
