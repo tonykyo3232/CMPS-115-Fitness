@@ -145,6 +145,10 @@ def how_to():
 def how_to_result():
     return render_template("index_htResult.html")
 
+@app.route("/register")
+def how_to_result():
+    return render_template("index_register.html")
+
 if __name__ == "__main__":
     from sys import argv
     if len(argv) > 1:
