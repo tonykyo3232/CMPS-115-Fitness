@@ -2,7 +2,7 @@ Name: Conditioning Program
 Style: General Fitness
 Difficulty Level: Intermediate
 Length: 8 Weeks
-Goal: Lose Weight, Conditioning
+Goal: Lose Weight / Conditioning
 General Info: This program contains circuits as a training method to lose weight. Lifters chooses weights and rest times accordingly. Minimize rest time as much as possible.
 --------------------
 
@@ -12,7 +12,7 @@ Warm Up Exercise: n/a
 Exercise: Barbell Back Squats / Length: 10 Reps / Notes: Superset with next exercise.
 Exercise: Dumbbell Goblet Squats / Length: 20 Reps / Notes: Superset with next exercise.
 Exercise: Lunge / Length: 20 Meters / Notes: Superset with next exercise.
-Exercise: Barbell Deadlift / Length: 10 Reps / Notes: Superset with next exercise.
+Exercise: Barbell Conventional Deadlift / Length: 10 Reps / Notes: Superset with next exercise.
 Exercise: Mountain Climbers / Length: 1 Minute(s) / Notes: Repeat circuit 4 more times. Take a rest period if needed.
 
 Day: Number: 2 / Description: n/a
@@ -45,8 +45,8 @@ Warm Up Exercise: n/a
 Exercise: Barbell Front Squats / Length: 8 Reps / Notes: Superset with next exercise.
 Exercise: Barbell Push Press / Length: 8 Reps / Notes: Superset with next exercise.
 Exercise: Burpees / Length: 10 Reps / Notes: Superset with next exercise.
-Exercise: Wall Ball / Length: 25 Reps / Notes: Superset with next exercise.
-Exercise: Ball Slams / Length: 25 Reps / Notes: Superset with next exercise.
+Exercise: Wall Ball / Length: 15 Reps / Notes: Superset with next exercise.
+Exercise: Ball Slams / Length: 15 Reps / Notes: Superset with next exercise.
 Exercise: Box Jumps / Length: 12 Reps / Notes: Superset with next exercise.
 Exercise: Sled Push / Length: 20 Meters / Notes: Superset with next exercise.
 Exercise: Sprint / Length: 20 Meters / Notes: Repeat circuit 3 more times. Take a rest period if needed.
