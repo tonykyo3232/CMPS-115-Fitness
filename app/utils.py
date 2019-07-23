@@ -1,4 +1,15 @@
 # ----- [START] Helper Functions for Programs/Routines Filtering -----
+def level_to_string(level):
+    level_map = {
+        0: "Beginner",
+        1: "Intermediate",
+        2: "Advance"
+    }
+    if not level in level_map.keys():
+        return "n/a"
+    else:
+        return level_map[level]
+    
 
 def filter_styles(program_styles, style_opt):
     if style_opt == "":

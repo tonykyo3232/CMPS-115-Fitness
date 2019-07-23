@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request, jsonify, url_for, redirect, session
+from flask import Flask, render_template, request, jsonify, url_for, redirect, session, flash
 from flask_pymongo import PyMongo
 from bson import ObjectId
-from utils import filter_programs, filter_routines
+from utils import filter_programs, filter_routines, level_to_string
 import json
 import bcrypt
 
@@ -69,6 +69,9 @@ def search():
 
 @app.route("/customize", methods=["GET", "POST"])
 def customize():
+    if not "user" in session:
+        flash("Login to customize your workout!")
+        return redirect(url_for("login"))
     if request.method == "POST":
         workout_input = request.get_json()
         
@@ -79,11 +82,15 @@ def customize():
             "name": workout_input["name"],
             "styles": workout_input["styles"],
             "level": workout_input["level"],
-            "length": workout_input["length"],
+            "length": workout_input["length"] if not workout_input["length"] else -1,
             "goals": workout_input["goals"],
             "desc": workout_input["desc"],
             "cycles": workout_input["cycles"],
-            "is_routine": is_routine
+            "is_routine": is_routine,
+            "is_default": False,
+            
+            # If user information can be changed, OWNER should be represented as user's _id
+            "owner": session["user"] 
         }
         # TODO: validate cycles - days - exercises recursively
         # TODO: validate whether routine contains only 1 cycle - 1 day
@@ -118,12 +125,12 @@ def get_overview():
 	}
 	return render_template("overview.jinja", program=item)
 		
-@app.route("/detail/<program_id>", methods=["GET"])
-def program_detail(program_id):
-    program = mongo.db.workouts.find_one({"_id": ObjectId(program_id)})
-    if program == None:
+@app.route("/detail/<workout_id>", methods=["GET"])
+def detail(workout_id):
+    workout = mongo.db.workouts.find_one({"_id": ObjectId(workout_id)})
+    if workout == None:
         return "Such program doesn't exist."
-    return render_template("detail.jinja", program=program)
+    return render_template("detail.jinja", workout=workout, level_to_string=level_to_string)
 
 @app.route("/api/programs")
 def get_all_programs():
@@ -155,6 +162,11 @@ def how_to_result():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        if type(username) != str or type(password) != str:
+            flash('Wrong format of input')
+            return redirect(url_for('login'))
         users = mongo.db.users
         login_user = users.find_one({'username' : request.form['username']})
         print(login_user)
@@ -165,12 +177,16 @@ def login():
                     'nickname': login_user['nickname']
                 }
                 return redirect(url_for('index'))
-        return 'Invalid username/password combination'
+        flash('Wrong username or password')
+        return redirect(url_for('login'))
     else:
         return render_template("login.jinja")
 
 @app.route('/logout', methods=['GET'])
 def logout():
+    if not "user" in session:
+        flash("Login first")
+        return redirect(url_for('login'))
     session.pop('user')
     return redirect(url_for('index'))
 
@@ -180,10 +196,14 @@ def register():
         users = mongo.db.users
         username = request.form['username']
         nickname = request.form['nickname']
+        password = request.form['password']
+        if type(username) != str or type(nickname) != str or type(password) != str:
+            flash('Wrong format of input')
+            return redirect(url_for('register'))
         existing_user = users.find_one({'username' : username})
 
         if existing_user is None:
-            hashpass = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt())
+            hashpass = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
             users.insert({
                 'username' : username,
                 'password' : hashpass,
@@ -195,10 +215,20 @@ def register():
             }
             return redirect(url_for('index'))
         
-        return 'That username already exists! Please try other username'
+        flash('That username already exists! Please try other username')
+        return redirect(url_for('register'))
 
     return render_template('register.jinja')
 
+@app.route("/mypage", methods=['GET'])
+def mypage():
+    if not "user" in session:
+        flash("Login first")
+        return redirect(url_for('login'))
+    workouts = mongo.db.workouts.find({'owner': session['user']})
+    for workout in workouts:
+        print(workout)
+    return render_template("mypage.html", workouts=list(workouts), level_to_string=level_to_string)
 
 if __name__ == "__main__":
     import random, string
