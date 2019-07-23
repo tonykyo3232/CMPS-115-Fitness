@@ -282,24 +282,22 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="workoutname">Review Your Workout</h5>
+        <h5 class="modal-title">Review Your Workout</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-		<p id="workoutname"></p>
 		<div class="container" style="margin-top: 2rem">
 			<div class="card">
-				<h2 class="card-header text-center text-black" id="workoutname"></h2>
+				<h2 class="card-header text-center text-black" id="workoutName"></h2>
 			<div class="card-body">
 				<ul class="list-group">
 					<li class="list-group-item"><b>Style:</b><p id="workoutStyles"></p></li>
-					<li id="workoutLevel" class="list-group-item"><b>Level:</b></li>
-					<li id="workoutLength" class="list-group-item"><b>Length:</b> weeks</li>
-					<li id="workoutGoals" class="list-group-item"><b>Goal:</b></li>
-					<li id="workoutDesc" class="list-group-item"><b>Notes:</b></li>
-					<li class="list-group-item"><a href="index_how_to.html" class="btn btn-primary">Exercises How-To</a></li>
+					<li class="list-group-item"><b>Level:</b><p id="workoutLevel"></p></li>
+					<li class="list-group-item"><b>Length:</b><p id="workoutLength"></p> weeks</li>
+					<li class="list-group-item"><b>Goal:</b><p id="workoutGoals"></p></li>
+					<li class="list-group-item"><b>Notes:</b><p id="workoutDesc"></p></li>
 				</ul>
 			</div>
 			</div>
@@ -371,7 +369,7 @@
   
   function get_workout(workout){
 	//Workout Meta Data
-	document.getElementById('workoutname').innerHTML=workout["name"];
+	document.getElementById('workoutName').innerHTML=workout["name"];
 	document.getElementById('workoutStyles').innerHTML=workout["styles"];
 	document.getElementById('workoutLevel').innerHTML=workout["level"];
 	document.getElementById('workoutLength').innerHTML=workout["length"];
