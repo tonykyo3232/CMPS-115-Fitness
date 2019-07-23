@@ -104,7 +104,7 @@ def overview(workout):
 		
 		
 @app.route("/overview", methods=["POST"])
-def overview():
+def get_overview():
 	workout_input = request.get_json()
 	
 	is_routine = False if workout_input["type"] == "Program" else True
