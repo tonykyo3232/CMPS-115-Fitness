@@ -148,9 +148,14 @@ def get_all_routines():
     else:
         return "Not implemented"
 
+'''
 @app.route("/index_how_to")
 def how_to():
     return render_template("index_how_to.jinja")
+'''
+@app.route("/index_how_to")
+def how_to():
+    return render_template("index_how_to.html")
 
 @app.route("/index_htResult")
 def how_to_result():
