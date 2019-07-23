@@ -291,7 +291,7 @@
     
 		<div class="container" style="margin-top: 2rem">
 			<div class="card">
-				<h2 id="workoutName" class="card-header text-center text-black"></h2>
+				<h2 class="card-header text-center text-black"><p id="workoutName"></p></h2>
 			<div class="card-body">
 				<ul class="list-group">
 					<li id="workoutStyles" class="list-group-item"><b>Style:</b></li>
@@ -299,7 +299,6 @@
 					<li id="workoutLength" class="list-group-item"><b>Length:</b> weeks</li>
 					<li id="workoutGoals" class="list-group-item"><b>Goal:</b></li>
 					<li id="workoutDesc" class="list-group-item"><b>Notes:</b></li>
-					<li class="list-group-item"><a href="index_how_to.html" class="btn btn-primary">Exercises How-To</a></li>
 				</ul>
 			</div>
 			</div>
@@ -334,7 +333,6 @@
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-primary" onclick="send_workout(collect_workout())">Upload your workout</button>
 		<button type="button" class="btn btn-primary" onclick="review()">Review Workout</button>
-		<a href="/overview" class="btn btn-primary" onclick="show_workout(collect_workout())">Review Your Workout!</a>	
       </div>
     </div>
   </div>
