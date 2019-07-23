@@ -99,7 +99,7 @@ def customize():
 
 @app.route("/overview", methods=["GET", "POST"])
 def overview():
-	if request.method == "POST":
+	if request.method == "GET":
 		workout_input = request.get_json()
 		
 		is_routine = False if workout_input["type"] == "Program" else True

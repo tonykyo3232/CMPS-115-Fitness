@@ -104,7 +104,7 @@ function send_workout(workout) {
 
 function show_workout(workout) {
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "/overview", false);
+  xhr.open("GET", "/overview", false);
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.send(JSON.stringify(workout));
 }
