@@ -156,10 +156,15 @@ def how_to():
 @app.route("/index_how_to")
 def how_to():
     return render_template("index_how_to.html")
-
+'''
 @app.route("/index_htResult")
 def how_to_result():
     return render_template("index_htResult.jinja")
+'''
+
+@app.route("/index_htResult")
+def how_to_result():
+    return render_template("index_htResult.html")
 
 
 # ----- Account routers -----
