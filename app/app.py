@@ -1,32 +1,29 @@
-from flask import Flask, render_template, request, jsonify
-#from flask_pymongo import PyMongo
+from flask import Flask, render_template, request, jsonify, url_for, redirect, session
+from flask_pymongo import PyMongo
+from bson import ObjectId
 from utils import filter_programs, filter_routines, SimpleDataManager
-import pickle
+import json
+import bcrypt
+
+
+class JSONEncoder(json.JSONEncoder):                           
+    ''' extend json-encoder class'''
+    def default(self, o):                               
+        if isinstance(o, ObjectId):
+            return str(o)                               
+        if isinstance(o, datetime.datetime):
+            return str(o)
+        return json.JSONEncoder.default(self, o)
 
 app = Flask(__name__)
-#app.config["MONGO_URI"] = "mongodb://localhost:27017/fitness"
-#mongo = PyMongo(app)
-sdm = SimpleDataManager()
+app.config["MONGO_URI"] = "mongodb://localhost:27017/fitness"
+mongo = PyMongo(app)
+app.json_encoder = JSONEncoder
 
 
 @app.route("/")
 def index():
     return render_template("index_home.jinja")
-'''
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        pass
-    else:
-        return render_template("index_login.jinja")
-'''
-#debug, can delete later and keep jinja above
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        pass
-    else:
-        return render_template("index_login.html")
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -57,13 +54,17 @@ def search():
         
         target = form.get("target", "").lower()
         if target == "program":
-            return render_template("search.jinja", programs=filter_programs(sdm.programs, opt))
+            programs = mongo.db.workouts.find({"is_routine": False})
+            return render_template("search.jinja", programs=filter_programs(programs, opt))
         elif target == "routine":
-            return render_template("search.jinja", programs=filter_routines(sdm.routines, opt))
+            routines = mongo.db.workouts.find({"is_routine": True})
+            return render_template("search.jinja", programs=filter_routines(routines, opt))
         else:
-            return render_template("search.jinja", programs=sdm.programs)
+            programs = mongo.db.workouts.find({"is_routine": False})
+            return render_template("search.jinja", programs=programs)
     else:
-        return render_template("search.jinja", programs=sdm.programs)
+        programs = mongo.db.workouts.find({"is_routine": False})
+        return render_template("search.jinja", programs=list(programs))
 
 
 @app.route("/customize", methods=["GET", "POST"])
@@ -86,11 +87,8 @@ def customize():
         }
         # TODO: validate cycles - days - exercises recursively
         # TODO: validate whether routine contains only 1 cycle - 1 day
-        
-        if is_routine:
-            sdm.insert_custom_routine(item)
-        else:
-            sdm.insert_custom_program(item)
+
+        mongo.db.workouts.insert_one(item)
         return jsonify({"code": 200, "message": "Successfully inserted"})
         #except:
         #    return jsonify({"code": 500, "message": "Wrong workout input"})
@@ -114,15 +112,16 @@ def get_overview():
 		"level": workout_input["level"],
 		"length": workout_input["length"],
 		"goals": workout_input["goals"],
-		"desc": workout_input["goals"],
+		"desc": workout_input["desc"],
 		"cycles": workout_input["cycles"],
 		"is_routine": is_routine
 	}
 	return render_template("overview.jinja", program=item)
 		
-@app.route("/program/detail/<int:program_id>", methods=["GET"])
+@app.route("/detail/<program_id>", methods=["GET"])
 def program_detail(program_id):
-    program = sdm.search_item(is_routine=False, _id=program_id)
+    #program = sdm.search_item(is_routine=False, _id=program_id)
+    program = mongo.db.workouts.find_one({"_id": ObjectId(program_id)})
     if program == None:
         return "Such program doesn't exist."
     return render_template("detail.jinja", program=program)
@@ -130,7 +129,8 @@ def program_detail(program_id):
 @app.route("/api/programs")
 def get_all_programs():
     if request.method == "GET":
-        return jsonify(sdm.programs)
+        programs = mongo.db.workouts.find({"is_routine": False})
+        return jsonify(programs)
     else:
         return "Not implemented"
 
@@ -144,7 +144,8 @@ def routine_detail(routine_id):
 @app.route("/api/routines")
 def get_all_routines():
     if request.method == "GET":
-        return jsonify(sdm.routines)
+        routines = mongo.db.workouts.find({"is_routine": True})
+        return jsonify(routines)
     else:
         return "Not implemented"
 
@@ -156,14 +157,63 @@ def how_to():
 def how_to_result():
     return render_template("index_htResult.html")
 
-@app.route("/register")
+
+# ----- Account routers -----
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        users = mongo.db.users
+        login_user = users.find_one({'username' : request.form['username']})
+        print(login_user)
+        if login_user:
+            if bcrypt.hashpw(request.form['password'].encode('utf-8'), login_user['password']) == login_user['password']:
+                session['user'] = {
+                    'username': login_user['username'],
+                    'nickname': login_user['nickname']
+                }
+                return redirect(url_for('index'))
+        return 'Invalid username/password combination'
+    else:
+        return render_template("login.jinja")
+
+@app.route('/logout', methods=['GET'])
+def logout():
+    session.pop('user')
+    return redirect(url_for('index'))
+
+@app.route('/register', methods=['GET', 'POST'])
 def register():
-    return render_template("index_register.html")
+    if request.method == 'POST':
+        users = mongo.db.users
+        username = request.form['username']
+        nickname = request.form['nickname']
+        existing_user = users.find_one({'username' : username})
+
+        if existing_user is None:
+            hashpass = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt())
+            users.insert({
+                'username' : username,
+                'password' : hashpass,
+                'nickname' : nickname
+            })
+            session['user'] = {
+                'username': username,
+                'nickname': nickname
+            }
+            return redirect(url_for('index'))
+        
+        return 'That username already exists! Please try other username'
+
+    return render_template('register.jinja')
+
 
 if __name__ == "__main__":
+    import random, string
     from sys import argv
     if len(argv) > 1:
         port = int(argv[1])
     else:
         port = 8080
+    app.secret_key = ''.join(random.choice(string.ascii_lowercase) for i in range(32))
     app.run(debug=False, host="0.0.0.0", port=port)

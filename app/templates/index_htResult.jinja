@@ -36,18 +36,25 @@
 
     <div class="collapse navbar-collapse" id="navbarToggler">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/index_how_to">How To</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">Log In</a>
-        </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/index_how_to">How To</a>
+      </li>
+      <li>
+        {% if not session["user"] %}
+        <a class="nav-link" href="/login">Log In</a>
+        {% else %}
+        <a class="nav-link" href = "/logout">Log Out</a>
+        {% endif %}
+      </li>
       </ul>
-    </div>
-  </nav>  
+      {% if session["user"] %}
+      <span class="navbar-text" style = "color:white">Welcome, {{ session["user"]["nickname"] }}!</span>
+      {% endif %}
+    </div> 
+  </nav>   
 
   <!-- need jinja -->
   <h1 class = "title">Exercise: Curls</h1>
