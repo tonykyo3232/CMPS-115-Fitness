@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block css %}
+/*background image setting*/
+body
+{
+    background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(/static/image/wallpaper5.jpg);
+    background-size: 100% 100%;
+}
+{% endblock %}
+{% block content %}
+<div class="container text-light" style="margin-top: 2rem">
+    {{ workouts|length }}
+    {% for workout in workouts %}
+    <div class="card">
+        <h2 class="card-header text-center text-black">{{ workout["name"] }}</h2>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item"><b>Style:</b> {{ ', '.join(workout["styles"]) }} </li>
+                {#<li class="list-group-item"><b>Level:</b> {{ level_to_string(workout["level"]) }}</li>#}
+                <li class="list-group-item"><b>Length:</b> {% if workout["length"] > 0 %} {{ workout["length"] }} weeks {% else %} n/a {% endif %}</li>
+                <li class="list-group-item"><b>Goal:</b> {{ ', '.join(workout["goals"]) }}</li>
+                <li class="list-group-item"><b>Notes:</b> {{ workout["desc"] }}</li>
+                <li class="list-group-item"><a href="/detail/{{ workout['_id'] }}" class="btn btn-primary">Go to detail</a></li>
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

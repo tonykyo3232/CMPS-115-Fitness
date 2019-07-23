@@ -233,7 +233,7 @@ def mypage():
     workouts = mongo.db.workouts.find({'owner': session['user']})
     for workout in workouts:
         print(workout)
-    return render_template("mypage.html", workouts=list(workouts), level_to_string=level_to_string)
+    return render_template("mypage.jinja", workouts=list(workouts), level_to_string=level_to_string)
 
 if __name__ == "__main__":
     import random, string
