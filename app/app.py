@@ -143,7 +143,7 @@ def get_all_routines():
 
 @app.route("/index_how_to")
 def how_to():
-    return render_template("index_how_to.html")
+    return render_template("index_how_to.jinja")
 
 @app.route("/index_htResult")
 def how_to_result():
