@@ -80,7 +80,7 @@
 <!-- Code that collect the data and encapsulate them to a Javascript Object to server -->
 
 <div class="form-group row">
-  <div class = "col-1"></div>
+  <div class = "col-2"></div>
   <div class="col">
     <label for="name-input" class="col-2 col-form-label" style="color:white">*Name</label>
     <div class="col-10">
@@ -182,10 +182,10 @@
       <div class="form-group row">
         <div class="col-1"></div>
         <div class="col-1">
-          <label for="dayDesc-input" class="col-2 col-form-label">Day:</label>
+          <label for="dayName-input" class="col-2 col-form-label">Day:</label>
         </div>
         <div class="col-3">
-          <input class="form-control day-desc" type="text" placeholder="Enter Description..." id="dayDesc-input">
+          <input class="form-control day-name" type="text" placeholder="Enter name or number" id="dayName-input">
         </div>
         <button onclick="removeContainer(this)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="col-3">
@@ -277,7 +277,7 @@
 </div>
 
 <!-- Exporting option -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal" style="margin-right: 20rem;">
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal" style="margin-right: 1rem;">
   Done!
 </button>
 
@@ -310,6 +310,7 @@
 					<li class="list-group-item"><b>Length:</b><p id="workoutLength"></p> weeks</li>
 					<li class="list-group-item"><b>Goal:</b><p id="workoutGoals"></p></li>
 					<li class="list-group-item"><b>Notes:</b><p id="workoutDesc"></p></li>
+					<li class="list-group-item"><b>Testing:</b><p>{{workout["name"]}}</p></li>
 				</ul>
 			</div>
 			</div>
@@ -341,10 +342,10 @@
         We will record the selection of workout program. Please click "Upload your workout" to finish the progress...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" onclick="send_workout(collect_workout())">Upload your workout</button>
-        <button type="button" class="btn btn-primary" onclick="review()">Review Workout</button>
-        {# <a href="/overview" class="btn btn-primary" onclick="show_workout(collect_workout())">Review Your Workout!</a>	 #}
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="send_workout(collect_workout())">Upload your workout</button>
+		<button type="button" class="btn btn-primary" onclick="review()">Review Workout</button>
+		<a href="/overview" class="btn btn-primary" onclick="show_workout(collect_workout())">Review Your Workout!</a>	
       </div>
     </div>
   </div>
