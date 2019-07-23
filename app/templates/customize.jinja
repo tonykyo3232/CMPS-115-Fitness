@@ -283,7 +283,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-primary" onclick="send_workout(collect_workout())">Upload your workout</button>
-		<button type="button" class="btn btn-primary" onclick="show_workout(collect_workout())">Review Workout</button>
+		<button type="button" class="btn btn-primary" onclick="review()">Review Workout</button>
 		<a href="/overview" class="btn btn-primary" onclick="show_workout(collect_workout())">Review Your Workout!</a>	
       </div>
     </div>
@@ -313,5 +313,11 @@
           $('#myModal').modal({show:true});
       });
   });
+  
+  function review(){
+	show_workout(collect_workout);
+	window.open("/overview");
+  }
+  
 </script>
 </html>
