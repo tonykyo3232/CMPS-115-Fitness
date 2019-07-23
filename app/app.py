@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify, url_for, redirect, session
 from flask_pymongo import PyMongo
 from bson import ObjectId
-from utils import filter_programs, filter_routines, SimpleDataManager
+from utils import filter_programs, filter_routines
 import json
 import bcrypt
 
@@ -120,7 +120,6 @@ def get_overview():
 		
 @app.route("/detail/<program_id>", methods=["GET"])
 def program_detail(program_id):
-    #program = sdm.search_item(is_routine=False, _id=program_id)
     program = mongo.db.workouts.find_one({"_id": ObjectId(program_id)})
     if program == None:
         return "Such program doesn't exist."
@@ -133,13 +132,6 @@ def get_all_programs():
         return jsonify(programs)
     else:
         return "Not implemented"
-
-@app.route("/routine/detail/<int:routine_id>", methods=["GET"])
-def routine_detail(routine_id):
-    routine = sdm.search_item(is_routine=True, _id=routine_id)
-    if routine == None:
-        return "Such routine doesn't exist."
-    return render_template("detail.jinja", program=routine)
 
 @app.route("/api/routines")
 def get_all_routines():

@@ -251,7 +251,7 @@ def parse_file(file_path):
                 parse_exercise(program,line)
     return program
 
-def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0, remove_custom=True):
+def parse(file_name, dir_name="./", is_routine=None, remove_custom=True):
     if not os.path.exists(dir_name):
         print("Wrong directory")
         return
@@ -263,8 +263,6 @@ def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0, 
         for file_name in os.listdir(dir_name):
             program = parse_file(os.path.join(dir_name, file_name))
             program["is_default"] = True
-            #program["_id"] = next_id
-            #next_id += 1
             if is_routine == None:
                 # If program's type (program / routine) is not specified by argument,
                 # check the type from file name
@@ -281,8 +279,6 @@ def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0, 
             return
         program = parse_file(file_path)
         program["is_default"] = True
-        #program["_id"] = next_id
-        #next_id += 1
         if is_routine == None:
             # If program's type (program / routine) is not specified by argument,
             # check the type from file name
@@ -291,19 +287,12 @@ def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0, 
             program["is_routine"] = is_routine
         print(program)
         programs.append(program)
-    
-    '''
-    if pickle_name != "":
-        with open(pickle_name, "wb") as fp:
-            pickle.dump(programs, fp)
-    '''
 
     return programs
 
 if __name__ == "__main__":
     usage = '''
         python3 this_script.py --filename="Workout Dataset/programs/Combo Program.txt"
-        python3 this_script.py --filename="Workout Dataset/programs/Combo Program.txt" --picklename="programs_pickle"
         python3 this_script.py --filename="Combo Program.txt" --dirname="Workout Dataset/programs/"
         python3 this_script.py --filename="*" --dirname="Workout Dataset/programs/"
         # python3 this_script.py --filename="*" --dirname="Workout Dataset/routines/"
@@ -312,8 +301,7 @@ if __name__ == "__main__":
 
     parser.add_argument('--filename', required=True)
     parser.add_argument('--dirname', required=False, default='./')
-    parser.add_argument('--picklename', required=False, default='programs_pickle')
 
     args = parser.parse_args()
 
-    programs = parse(args.filename, args.dirname, args.picklename)
+    programs = parse(args.filename, args.dirname)

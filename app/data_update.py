@@ -6,13 +6,14 @@ import pymongo
 
 REMOVE_DEFAULT = 1
 REMOVE_CUSTOM = 1
+WORKOUT_DIR = "../Workout Dataset/"
+PROGRAMS_DIR = WORKOUT_DIR + "programs/"
+ROUTINES_DIR = WORKOUT_DIR + "routines/"
 
 mongoclient = pymongo.MongoClient("mongodb://localhost:27017/")
 fitness_db = mongoclient["fitness"]
 workouts_col = fitness_db["workouts"]
 
-if not os.path.exists(SimpleDataManager.pickle_dir):
-    os.makedirs(SimpleDataManager.pickle_dir)
 
 
 # clear entire DB if needed
@@ -22,15 +23,9 @@ if REMOVE_CUSTOM:
     workouts_col.delete_many({"is_default": True})
 
 # parse default programs and insert them into MongoDB
-default_programs = parse("*", SimpleDataManager.programs_dir, SimpleDataManager.default_programs_pickle)
+default_programs = parse("*", PROGRAMS_DIR)
 workouts_col.insert_many(default_programs)
 
 # parse default routines and insert them into MongoDB
-default_routines = parse("*", SimpleDataManager.routines_dir, SimpleDataManager.default_routines_pickle)
+default_routines = parse("*", ROUTINES_DIR)
 workouts_col.insert_many(default_routines)
-
-with open(SimpleDataManager.custom_programs_pickle, "wb") as fp:
-    pickle.dump([], fp)
-
-with open(SimpleDataManager.custom_routines_pickle, "wb") as fp:
-    pickle.dump([], fp)
