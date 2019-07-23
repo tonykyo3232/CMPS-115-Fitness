@@ -113,9 +113,9 @@ def overview():
 			"cycles": workout_input["cycles"],
 			"is_routine": is_routine
 		}
-		return render_template("overview.jinja", program=sdm.programs)
+		return render_template("overview.jinja", program=item)
 	else:
-		return render_template("overview.jinja", program=sdm.programs)
+		return render_template("overview.jinja", program=item)
 		
 @app.route("/program/detail/<int:program_id>", methods=["GET"])
 def program_detail(program_id):
