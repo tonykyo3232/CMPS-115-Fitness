@@ -83,14 +83,14 @@
   <div class="col">
     <label for="name-input" class="col-2 col-form-label" style="color:white">*Name</label>
     <div class="col-10">
-      <input class="form-control workout-name" type="text" placeholder="Enter Workout name..." id="name-input">
+      <input class="form-control workout-name" type="text" placeholder="Enter workout name" id="name-input">
     </div>
   </div>
   <div class="col">
       <label for="structure-input" class="col-2 col-form-label" style="color:white">Structure</label>
     <div class="col-10">
       <select class="form-control workout-type" id="structure-input">
-        <option value="Program">Choose Structure---</option>
+        <option value="Program">Choose Structure</option>
         <option>Program</option>
         <option>Routine</option>
       </select>
@@ -154,10 +154,10 @@
         <label for="cycleName-input" class="col-4 col-form-label">Cycle:</label>
       </div>
       <div class="col-3">
-        <input class="form-control cycle-name" type="text" placeholder="Enter Description..." id="cycleName-input">
+        <input class="form-control cycle-name" type="text" placeholder="Enter name or number" id="cycleName-input">
       </div>
       <div class="col-2">
-        <input class="form-control cycle-length" type="number" placeholder="Enter number..." id="cycleLength-input">
+        <input class="form-control cycle-length" type="number" placeholder="Enter duration" id="cycleLength-input">
       </div>
       <div class="col-1">
         <label for="cycleName-input" class="col-form-label">Weeks</label>
@@ -173,7 +173,7 @@
           <label for="dayName-input" class="col-2 col-form-label">Day:</label>
         </div>
         <div class="col-3">
-          <input class="form-control day-name" type="text" placeholder="Enter Description..." id="dayName-input">
+          <input class="form-control day-name" type="text" placeholder="Enter name or number" id="dayName-input">
         </div>
         <button onclick="removeContainer(this)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="col-3">
@@ -186,7 +186,7 @@
             <label for="exerciseName-input" class="col-form-label">*Exercise:</label>
           </div>
           <div class="col-4">
-            <input class="form-control exercise-name" type="text" placeholder="Enter name..." id="exerciseName-input">
+            <input class="form-control exercise-name" type="text" placeholder="Enter name" id="exerciseName-input">
           </div>
           <button onclick="removeContainer(this)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="col-3">
@@ -201,7 +201,7 @@
           <div class="col-4">
             <label for="type-input" class="col-form-label">Type</label>
             <select class="form-control exercise-type" id="type-input">
-                <option value="Normal">Choose type---</option>
+                <option value="Normal">Choose type</option>
                 <option value="Warmup">Warm Up</option>
                 <option value="Normal">Workout Set</option>
               </select>
@@ -211,11 +211,11 @@
           <div class="col-3"></div>
           <div class="col-4">
             <label for="exerciseLength-input" class="col-form-label">*Length</label>
-            <input class="form-control exercise-length" type="text" placeholder="Enter Data..." id="exerciseLength-input">
+            <input class="form-control exercise-length" type="text" placeholder="Enter duration" id="exerciseLength-input">
           </div>
           <div class="col-4">
             <label for="weight-input" class="col-form-label">*Weight</label>
-            <input class="form-control exercise-weight" type="text" placeholder="Enter Weight..." id="weight-input">
+            <input class="form-control exercise-weight" type="text" placeholder="Enter amount" id="weight-input">
           </div>
         </div>
         <div class="form-group row">
@@ -231,11 +231,11 @@
                   <div class="form-row">
                     <div class="col">
                       <label for="rpe-input">RPE:</label>
-                      <input type="text" class="form-control exercise-rpe" id="rpe-input" placeholder="Enter RPE Data...">
+                      <input type="text" class="form-control exercise-rpe" id="rpe-input" placeholder="Enter RPE number">
                     </div>
                     <div class="col">
                       <label for="note-input">Note:</label>
-                      <input type="text" class="form-control exercise-note" id="note-input" placeholder="Enter Exercise note...">
+                      <input type="text" class="form-control exercise-note" id="note-input" placeholder="Enter description">
                     </div>
                   </div>
               </div>
