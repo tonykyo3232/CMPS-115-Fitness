@@ -233,7 +233,7 @@ def parse_file(file_path):
                 parse_name(program,line)
             if (line.startswith("Style: ")):
                 parse_style(program,line)
-            if (line.startswith("Level: ")):
+            if (line.startswith("Difficulty Level: ")):
                 parse_level(program,line)
             if (line.startswith("Length: ")):
                 parse_length(program,line)
