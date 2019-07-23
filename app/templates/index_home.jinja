@@ -95,34 +95,37 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/">My Fitness Distributer</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+	<a class="navbar-brand" href="/">My Fitness Distributer</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
 
-  <div class="collapse navbar-collapse" id="navbarToggler">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/index_how_to">How To</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/login">Log In</a>
-      </li>
-    </ul>
-    {# <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> #}
-  </div>
-</nav>  
-	<section class = "info">
-		<h2> Welcome to My Fitness Program Distributor </h2>
-		<br> <h4> Let's find your fitness program!</h4>
-		<br> <a href="/search" class="btn btn-left"> Choose your style</a>
-		<a href="/customize" class="btn btn-right">Design your own</a>
-	</section>
+	<div class="collapse navbar-collapse" id="navbarToggler">
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+		<li class="nav-item active">
+			<a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/index_how_to">How To</a>
+		</li>
+		<li>
+			{% if not session["user"] %}
+			<a class="nav-link" href="/login">Log In</a>
+			{% else %}
+			<a class="nav-link" href = "/logout">Log Out</a>
+			{% endif %}
+		</li>
+		</ul>
+		{% if session["user"] %}
+		<span class="navbar-text" style = "color:white">Welcome, {{ session["user"]["nickname"] }}!</span>
+		{% endif %}
+	</div> 
+</nav>   
+<section class = "info">
+	<h2> Welcome to My Fitness Program Distributor </h2>
+	<br> <h4> Let's find your fitness program!</h4>
+	<br> <a href="/search" class="btn btn-left"> Choose your style</a>
+	<a href="/customize" class="btn btn-right">Design your own</a>
+</section>
 </body>
 </html>

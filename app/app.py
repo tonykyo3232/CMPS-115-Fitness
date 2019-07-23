@@ -13,21 +13,6 @@ sdm = SimpleDataManager()
 @app.route("/")
 def index():
     return render_template("index_home.jinja")
-'''
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        pass
-    else:
-        return render_template("index_login.jinja")
-'''
-#debug, can delete later and keep jinja above
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        pass
-    else:
-        return render_template("index_login.html")
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -98,25 +83,23 @@ def customize():
     else:
         return render_template("customize.jinja")
 
-@app.route("/overview", methods=["GET", "POST"])
+@app.route("/overview", methods=["POST"])
 def overview():
-	if request.method == "GET":
-		workout_input = request.get_json()
-		
-		is_routine = False if workout_input["type"] == "Program" else True
-		item = {
-			"name": workout_input["name"],
-			"styles": workout_input["styles"],
-			"level": workout_input["level"],
-			"length": workout_input["length"],
-			"goals": workout_input["goals"],
-			"desc": workout_input["goals"],
-			"cycles": workout_input["cycles"],
-			"is_routine": is_routine
-		}
-		return render_template("overview.jinja", program=sdm.programs)
-	else:
-		return render_template("overview.jinja", program=sdm.programs)
+    workout_input = request.get_json()
+
+    is_routine = False if workout_input["type"] == "Program" else True
+    item = {
+        "name": workout_input["name"],
+        "styles": workout_input["styles"],
+        "level": workout_input["level"],
+        "length": workout_input["length"],
+        "goals": workout_input["goals"],
+        "desc": workout_input["desc"],
+        "cycles": workout_input["cycles"],
+        "is_routine": is_routine
+    }
+    return render_template("overview.jinja", workout=item)		
+
 		
 @app.route("/program/detail/<int:program_id>", methods=["GET"])
 def program_detail(program_id):
