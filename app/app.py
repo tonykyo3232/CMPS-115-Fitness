@@ -97,25 +97,28 @@ def customize():
     else:
         return render_template("customize.jinja")
 
-@app.route("/overview", methods=["GET", "POST"])
-def overview():
-	if request.method == "POST":
-		workout_input = request.get_json()
 		
-		is_routine = False if workout_input["type"] == "Program" else True
-		item = {
-			"name": workout_input["name"],
-			"styles": workout_input["styles"],
-			"level": workout_input["level"],
-			"length": workout_input["length"],
-			"goals": workout_input["goals"],
-			"desc": workout_input["goals"],
-			"cycles": workout_input["cycles"],
-			"is_routine": is_routine
-		}
-		return render_template("overview.jinja", program=item)
-	else:
-		return render_template("overview.jinja", program=sdm.programs)
+@app.route("/overview/<workout>", methods=["GET"])
+def overview(workout):
+	return render_template("overview.jinja", program=workout)
+		
+		
+@app.route("/overview", methods=["POST"])
+def overview():
+	workout_input = request.get_json()
+	
+	is_routine = False if workout_input["type"] == "Program" else True
+	item = {
+		"name": workout_input["name"],
+		"styles": workout_input["styles"],
+		"level": workout_input["level"],
+		"length": workout_input["length"],
+		"goals": workout_input["goals"],
+		"desc": workout_input["goals"],
+		"cycles": workout_input["cycles"],
+		"is_routine": is_routine
+	}
+	return render_template("overview.jinja", program=item)
 		
 @app.route("/program/detail/<int:program_id>", methods=["GET"])
 def program_detail(program_id):
