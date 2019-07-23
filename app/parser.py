@@ -140,7 +140,17 @@ def parse_exercise_rpe(exercise,line):
     if is_invalid_token(exercise["rpe"]):
         exercise["rpe"] = ""
     return exercise["rpe"]
-    
+
+def parse_exercise_weight(exercise,line):
+    tokens = line.split(":")
+    if len(tokens) > 2:
+        tokens = [tokens[0], ':'.join(tokens[1:])]
+    weight = tokens[1].strip()
+    exercise["weight"] = weight
+    if is_invalid_token(weight):
+        exercise["weight"] = ""
+    return exercise["weight"]
+
 def parse_exercise_desc(exercise,line):
     # skips "notes: "
     tokens = line.split(":")
@@ -173,6 +183,8 @@ def parse_warmup_execise(program,line):
             exercise["name"] = attribute[18:]
         elif(attribute.startswith("Length: ")):
             parse_exercise_length(warmup_exercise,attribute)
+        elif(attribute.startswith("Weight: ")):
+            parse_exercise_weight(warmup_exercise,attribute)
         elif(attribute.startswith("RPE: ")):
             parse_exercise_rpe(warmup_exercise,attribute)
         elif(attribute.startswith("Notes: ")):
@@ -202,6 +214,8 @@ def parse_exercise(program,line):
             exercise["name"] = attribute[10:]
         elif(attribute.startswith("Length: ")):
             parse_exercise_length(exercise,attribute)
+        elif(attribute.startswith("Weight: ")):
+            parse_exercise_weight(exercise,attribute)
         elif(attribute.startswith("RPE: ")):
             parse_exercise_rpe(exercise,attribute)
         elif(attribute.startswith("Notes: ")):
