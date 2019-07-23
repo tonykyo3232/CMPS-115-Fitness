@@ -20,7 +20,7 @@ function collect_day_meta(day_elem) {
   
   // collect meta data
   var day = {
-    name: day_elem.querySelector(".day-name").value
+    desc: day_elem.querySelector(".day-desc").value
   }
 
   // iterate each exercise and store it in day_elem.exercises
@@ -42,6 +42,10 @@ function collect_cycle_meta(cycle_elem) {
     name: cycle_elem.querySelector(".cycle-name").value,
     length: parseInt(cycle_elem.querySelector(".cycle-length").value)
   };
+  console.log(cycle);
+  if (isNaN(cycle["length"])) {
+    cycle["length"] = -1;
+  }
 
   // iterate each day and store it in cycle_elem.days
   var days = [];
