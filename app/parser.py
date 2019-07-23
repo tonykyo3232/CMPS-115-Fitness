@@ -1,10 +1,6 @@
 import pickle
 import os
 import argparse
-import pymongo
-
-mongoclient = pymongo.MongoClient("mongodb://localhost:27017/")
-fitness_db = mongoclient["fitness"]
 
 # Helper functions
 
@@ -267,8 +263,8 @@ def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0, 
         for file_name in os.listdir(dir_name):
             program = parse_file(os.path.join(dir_name, file_name))
             program["is_default"] = True
-            program["_id"] = next_id
-            next_id += 1
+            #program["_id"] = next_id
+            #next_id += 1
             if is_routine == None:
                 # If program's type (program / routine) is not specified by argument,
                 # check the type from file name
@@ -285,8 +281,8 @@ def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0, 
             return
         program = parse_file(file_path)
         program["is_default"] = True
-        program["_id"] = next_id
-        next_id += 1
+        #program["_id"] = next_id
+        #next_id += 1
         if is_routine == None:
             # If program's type (program / routine) is not specified by argument,
             # check the type from file name
@@ -301,17 +297,6 @@ def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0, 
         with open(pickle_name, "wb") as fp:
             pickle.dump(programs, fp)
     '''
-
-    workouts_col = fitness_db["workouts"]
-
-    # clear entire DB if needed
-    if remove_custom:
-        workouts_col.delete_many({})
-    else:
-        workouts_col.delete_many({"is_default": True})
-    
-    # insert all newly parsed programs into DB
-    workouts_col.insert_many(programs)
 
     return programs
 
