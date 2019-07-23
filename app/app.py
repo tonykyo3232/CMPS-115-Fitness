@@ -147,7 +147,7 @@ def how_to():
 
 @app.route("/index_htResult")
 def how_to_result():
-    return render_template("index_htResult.html")
+    return render_template("index_htResult.jinja")
 
 
 # ----- Account routers -----
