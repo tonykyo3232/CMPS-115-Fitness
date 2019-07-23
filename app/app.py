@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, jsonify, url_for, redirect, session
 from flask_pymongo import PyMongo
+from bson import ObjectId
 from utils import filter_programs, filter_routines, SimpleDataManager
-import pickle
+import json
 import bcrypt
 
 
@@ -18,8 +19,6 @@ app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/fitness"
 mongo = PyMongo(app)
 app.json_encoder = JSONEncoder
-
-sdm = SimpleDataManager()
 
 
 @app.route("/")
@@ -55,13 +54,17 @@ def search():
         
         target = form.get("target", "").lower()
         if target == "program":
-            return render_template("search.jinja", programs=filter_programs(sdm.programs, opt))
+            programs = mongo.db.workouts.find({"is_routine": False})
+            return render_template("search.jinja", programs=filter_programs(programs, opt))
         elif target == "routine":
-            return render_template("search.jinja", programs=filter_routines(sdm.routines, opt))
+            routines = mongo.db.workouts.find({"is_routine": True})
+            return render_template("search.jinja", programs=filter_routines(routines, opt))
         else:
-            return render_template("search.jinja", programs=sdm.programs)
+            programs = mongo.db.workouts.find({"is_routine": False})
+            return render_template("search.jinja", programs=programs)
     else:
-        return render_template("search.jinja", programs=sdm.programs)
+        programs = mongo.db.workouts.find({"is_routine": False})
+        return render_template("search.jinja", programs=list(programs))
 
 
 @app.route("/customize", methods=["GET", "POST"])
@@ -84,11 +87,8 @@ def customize():
         }
         # TODO: validate cycles - days - exercises recursively
         # TODO: validate whether routine contains only 1 cycle - 1 day
-        
-        if is_routine:
-            sdm.insert_custom_routine(item)
-        else:
-            sdm.insert_custom_program(item)
+
+        mongo.db.workouts.insert_one(item)
         return jsonify({"code": 200, "message": "Successfully inserted"})
         #except:
         #    return jsonify({"code": 500, "message": "Wrong workout input"})
@@ -113,9 +113,10 @@ def overview():
     return render_template("overview.jinja", workout=item)		
 
 		
-@app.route("/program/detail/<int:program_id>", methods=["GET"])
+@app.route("/detail/<program_id>", methods=["GET"])
 def program_detail(program_id):
-    program = sdm.search_item(is_routine=False, _id=program_id)
+    #program = sdm.search_item(is_routine=False, _id=program_id)
+    program = mongo.db.workouts.find_one({"_id": ObjectId(program_id)})
     if program == None:
         return "Such program doesn't exist."
     return render_template("detail.jinja", program=program)
@@ -123,7 +124,8 @@ def program_detail(program_id):
 @app.route("/api/programs")
 def get_all_programs():
     if request.method == "GET":
-        return jsonify(sdm.programs)
+        programs = mongo.db.workouts.find({"is_routine": False})
+        return jsonify(programs)
     else:
         return "Not implemented"
 
@@ -137,7 +139,8 @@ def routine_detail(routine_id):
 @app.route("/api/routines")
 def get_all_routines():
     if request.method == "GET":
-        return jsonify(sdm.routines)
+        routines = mongo.db.workouts.find({"is_routine": True})
+        return jsonify(routines)
     else:
         return "Not implemented"
 

@@ -168,11 +168,7 @@
 			<p class="card-text text-truncate">{{ program["desc"] }}</p>
 		</div>
 		<div class="card-footer">
-			{% if program["is_routine"] %}
-			<a href="/routine/detail/{{ program["_id"] }}" class="btn btn-primary">View Detail</a>
-			{% else %}
-			<a href="/program/detail/{{ program["_id"] }}" class="btn btn-primary">View Detail</a>
-			{% endif %}
+			<a href="/detail/{{ program["_id"]|string }}" class="btn btn-primary">View Detail</a>
 			{# <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
 				Export
 			</button> #}
@@ -186,11 +182,7 @@
 			<p class="card-text text-truncate">{{ program["desc"] }}</p> 
 		</div>
 		<div class="card-footer">
-			{% if program["is_routine"] %}
-			<a href="/routine/detail/{{ program["_id"] }}" class="btn btn-primary">View Detail</a>
-			{% else %}
-			<a href="/program/detail/{{ program["_id"] }}" class="btn btn-primary">View Detail</a>
-			{% endif %}
+			<a href="/detail/{{ program["_id"]|string }}" class="btn btn-primary">View Detail</a>
 			{# <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
 				Export
 			</button> #}
