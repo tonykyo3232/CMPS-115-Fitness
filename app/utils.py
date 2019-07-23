@@ -1,6 +1,5 @@
 # ----- [START] Helper Functions for Programs/Routines Data management -----
 import pickle
-import parser
 import os
 
 class SimpleDataManager():

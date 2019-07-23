@@ -4,9 +4,21 @@ from utils import filter_programs, filter_routines, SimpleDataManager
 import pickle
 import bcrypt
 
+
+class JSONEncoder(json.JSONEncoder):                           
+    ''' extend json-encoder class'''
+    def default(self, o):                               
+        if isinstance(o, ObjectId):
+            return str(o)                               
+        if isinstance(o, datetime.datetime):
+            return str(o)
+        return json.JSONEncoder.default(self, o)
+
 app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/fitness"
 mongo = PyMongo(app)
+app.json_encoder = JSONEncoder
+
 sdm = SimpleDataManager()
 
 
