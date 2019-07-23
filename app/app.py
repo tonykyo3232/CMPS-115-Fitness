@@ -1,11 +1,12 @@
-from flask import Flask, render_template, request, jsonify
-#from flask_pymongo import PyMongo
+from flask import Flask, render_template, request, jsonify, url_for, redirect, session
+from flask_pymongo import PyMongo
 from utils import filter_programs, filter_routines, SimpleDataManager
 import pickle
+import bcrypt
 
 app = Flask(__name__)
-#app.config["MONGO_URI"] = "mongodb://localhost:27017/fitness"
-#mongo = PyMongo(app)
+app.config["MONGO_URI"] = "mongodb://localhost:27017/fitness"
+mongo = PyMongo(app)
 sdm = SimpleDataManager()
 
 
@@ -153,14 +154,63 @@ def how_to():
 def how_to_result():
     return render_template("index_htResult.html")
 
-@app.route("/register")
+
+# ----- Account routers -----
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        users = mongo.db.users
+        login_user = users.find_one({'username' : request.form['username']})
+        print(login_user)
+        if login_user:
+            if bcrypt.hashpw(request.form['password'].encode('utf-8'), login_user['password']) == login_user['password']:
+                session['user'] = {
+                    'username': login_user['username'],
+                    'nickname': login_user['nickname']
+                }
+                return redirect(url_for('index'))
+        return 'Invalid username/password combination'
+    else:
+        return render_template("login.jinja")
+
+@app.route('/logout', methods=['GET'])
+def logout():
+    session.pop('user')
+    return redirect(url_for('index'))
+
+@app.route('/register', methods=['GET', 'POST'])
 def register():
-    return render_template("index_register.html")
+    if request.method == 'POST':
+        users = mongo.db.users
+        username = request.form['username']
+        nickname = request.form['nickname']
+        existing_user = users.find_one({'username' : username})
+
+        if existing_user is None:
+            hashpass = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt())
+            users.insert({
+                'username' : username,
+                'password' : hashpass,
+                'nickname' : nickname
+            })
+            session['user'] = {
+                'username': username,
+                'nickname': nickname
+            }
+            return redirect(url_for('index'))
+        
+        return 'That username already exists! Please try other username'
+
+    return render_template('register.jinja')
+
 
 if __name__ == "__main__":
+    import random, string
     from sys import argv
     if len(argv) > 1:
         port = int(argv[1])
     else:
         port = 8080
+    app.secret_key = ''.join(random.choice(string.ascii_lowercase) for i in range(32))
     app.run(debug=False, host="0.0.0.0", port=port)
