@@ -1,6 +1,10 @@
 import pickle
 import os
 import argparse
+import pymongo
+
+mongoclient = pymongo.MongoClient("mongodb://localhost:27017/")
+fitness_db = mongoclient["fitness"]
 
 # Helper functions
 
@@ -251,7 +255,7 @@ def parse_file(file_path):
                 parse_exercise(program,line)
     return program
 
-def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0):
+def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0, remove_custom=True):
     if not os.path.exists(dir_name):
         print("Wrong directory")
         return
@@ -292,9 +296,23 @@ def parse(file_name, dir_name="./", pickle_name="", is_routine=None, next_id=0):
         print(program)
         programs.append(program)
     
+    '''
     if pickle_name != "":
         with open(pickle_name, "wb") as fp:
             pickle.dump(programs, fp)
+    '''
+
+    workouts_col = fitness_db["workouts"]
+
+    # clear entire DB if needed
+    if remove_custom:
+        workouts_col.delete_many({})
+    else:
+        workouts_col.delete_many({"is_default": True})
+    
+    # insert all newly parsed programs into DB
+    workouts_col.insert_many(programs)
+
     return programs
 
 if __name__ == "__main__":
