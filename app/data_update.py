@@ -1,5 +1,4 @@
 from parser import parse
-from utils import SimpleDataManager
 import os
 import pickle
 import pymongo

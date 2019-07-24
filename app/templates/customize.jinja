@@ -75,29 +75,43 @@
 </nav>
 
 <!-- Message -->
-<p style=color:white>Design Your Own Workout!!!</p>
+<br><center><h2 style=color:white>Customized Your Own Workout</h2></center>
 
 <!-- Code that collect the data and encapsulate them to a Javascript Object to server -->
 
 <div class="form-group row">
+  <div class = "col-2"></div>
   <div class="col">
-    <label for="name-input" class="col-2 col-form-label" style="color:white">*Name</label>
+    <label for="name-input" class="col-2 col-form-label" style="color:white">Name</label>
     <div class="col-10">
-      <input class="form-control workout-name" type="text" placeholder="Enter Workout name..." id="name-input">
+      <input class="form-control workout-name w-75" type="text" placeholder="Enter workout name" id="name-input" required>
     </div>
   </div>
   <div class="col">
       <label for="structure-input" class="col-2 col-form-label" style="color:white">Structure</label>
     <div class="col-10">
-      <select class="form-control workout-type" id="structure-input">
-        <option value="Program">Choose Structure---</option>
+      <select class="form-control workout-type w-75" id="structure-input">
+        <option value="Program">Choose Structure</option>
         <option>Program</option>
         <option>Routine</option>
       </select>
     </div>
   </div>
+  <!-- start -->
+  <div class="col">
+  	<p style = "color: transparent">Advance setting</p>
+    	<div class = "col-10">
+	   <p>
+	      <a class="btn btn-primary" data-toggle="collapse" href="#program-meta" role="button" aria-expanded="false" aria-controls="program-meta">
+	         Extra Setting
+	      </a>
+	   </p>
+    	</div>
+  </div>
+   <!-- end -->
 </div>
 
+<!--
 <div class="form-group row">
   <div class="col-1"></div> 
   <div class="col">
@@ -108,6 +122,7 @@
     </p>
   </div>
 </div>
+-->
 
 <div class="collapse" id="program-meta">
   <div class="container bg-light rounded" style="padding: 2rem; margin-bottom: 2rem;">
@@ -154,10 +169,10 @@
         <label for="cycleName-input" class="col-4 col-form-label">Cycle:</label>
       </div>
       <div class="col-3">
-        <input class="form-control cycle-name" type="text" placeholder="Enter Description..." id="cycleName-input">
+        <input class="form-control cycle-name" type="text" placeholder="Enter name" id="cycleName-input">
       </div>
       <div class="col-2">
-        <input class="form-control cycle-length" type="number" placeholder="Enter number..." id="cycleLength-input">
+        <input class="form-control cycle-length" type="number" placeholder="Enter duration" id="cycleLength-input">
       </div>
       <div class="col-1">
         <label for="cycleName-input" class="col-form-label">Weeks</label>
@@ -173,7 +188,7 @@
           <label for="dayName-input" class="col-2 col-form-label">Day:</label>
         </div>
         <div class="col-3">
-          <input class="form-control day-name" type="text" placeholder="Enter Description..." id="dayName-input">
+          <input class="form-control day-desc" type="text" placeholder="Enter name" id="dayDesc-input">
         </div>
         <button onclick="removeContainer(this)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="col-3">
@@ -183,10 +198,10 @@
         <div class="form-group row">
           <div class="col-2"></div>
           <div class="col-1">
-            <label for="exerciseName-input" class="col-form-label">*Exercise:</label>
+            <label for="exerciseName-input" class="col-form-label">Exercise:</label>
           </div>
           <div class="col-4">
-            <input class="form-control exercise-name" type="text" placeholder="Enter name..." id="exerciseName-input">
+            <input class="form-control exercise-name" type="text" placeholder="Enter name" id="exerciseName-input" required>
           </div>
           <button onclick="removeContainer(this)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="col-3">
@@ -201,7 +216,7 @@
           <div class="col-4">
             <label for="type-input" class="col-form-label">Type</label>
             <select class="form-control exercise-type" id="type-input">
-                <option value="Normal">Choose type---</option>
+                <option value="Normal">Choose type</option>
                 <option value="Warmup">Warm Up</option>
                 <option value="Normal">Workout Set</option>
               </select>
@@ -210,12 +225,12 @@
         <div class="form-group row">
           <div class="col-3"></div>
           <div class="col-4">
-            <label for="exerciseLength-input" class="col-form-label">*Length</label>
-            <input class="form-control exercise-length" type="text" placeholder="Enter Data..." id="exerciseLength-input">
+            <label for="exerciseLength-input" class="col-form-label">Length</label>
+            <input class="form-control exercise-length" type="text" placeholder="Enter duration" id="exerciseLength-input" required>
           </div>
           <div class="col-4">
-            <label for="weight-input" class="col-form-label">*Weight</label>
-            <input class="form-control exercise-weight" type="text" placeholder="Enter Weight..." id="weight-input">
+            <label for="weight-input" class="col-form-label">Weight</label>
+            <input class="form-control exercise-weight" type="text" placeholder="Enter amount" id="weight-input" required>
           </div>
         </div>
         <div class="form-group row">
@@ -223,7 +238,7 @@
           <div class="col">
             <p>
               <a class="btn btn-primary" data-toggle="collapse" href="#exercise-meta" role="button" aria-expanded="false" aria-controls="exercise-meta">
-                More Exercise Setting
+                Exercise Setting
               </a>
             </p>
             <div class="collapse" id="exercise-meta">
@@ -231,11 +246,11 @@
                   <div class="form-row">
                     <div class="col">
                       <label for="rpe-input">RPE:</label>
-                      <input type="text" class="form-control exercise-rpe" id="rpe-input" placeholder="Enter RPE Data...">
+                      <input type="text" class="form-control exercise-rpe" id="rpe-input" placeholder="Enter estimated number">
                     </div>
                     <div class="col">
                       <label for="note-input">Note:</label>
-                      <input type="text" class="form-control exercise-note" id="note-input" placeholder="Enter Exercise note...">
+                      <input type="text" class="form-control exercise-note" id="note-input" placeholder="Enter description">
                     </div>
                   </div>
               </div>
@@ -265,7 +280,7 @@
 </div>
 
 <!-- Exporting option -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal" style="margin-right: 1rem;">
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal" style="margin-right: 15rem;">
   Done!
 </button>
 
@@ -273,8 +288,7 @@
 
 
 
-
-<button type="button" class="btn btn-success" onclick="get_Name(collect_workout())" data-toggle="modal" data-target="#Overview" style="margin-right: 1rem;">
+<button type="button" class="btn btn-success" onclick="get_workout(collect_workout())" data-toggle="modal" data-target="#Overview" style="margin-right: 2rem;">
   Review!
 </button>
 
@@ -282,15 +296,28 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="ModalLabel">Review Your Workout</h5>
+        <h5 class="modal-title">Review Your Workout</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-    
-		<p id="workoutname"></p>
-	
+	  
+		<div class="container" style="margin-top: 2rem">
+			<div class="card">
+				<h2 class="card-header text-center text-black" id="workoutName"></h2>
+				<div class="card-body">
+					<ul class="list-group">
+						<li class="list-group-item"><b>Style:</b><p id="workoutStyles"></p></li>
+						<li class="list-group-item"><b>Level:</b><p id="workoutLevel"></p></li>
+						<li class="list-group-item"><b>Length:</b><p id="workoutLength"></p> weeks</li>
+						<li class="list-group-item"><b>Goal:</b><p id="workoutGoals"></p></li>
+						<li class="list-group-item"><b>Notes:</b><p id="workoutDesc"></p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
       </div>
       <div class="modal-footer">
 
@@ -298,8 +325,6 @@
     </div>
   </div>
 </div>
-
-
 
 
 
@@ -319,8 +344,6 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-primary" onclick="send_workout(collect_workout())">Upload your workout</button>
-		<button type="button" class="btn btn-primary" onclick="review()">Review Workout</button>
-		<a href="/overview" class="btn btn-primary" onclick="show_workout(collect_workout())">Review Your Workout!</a>	
       </div>
     </div>
   </div>
@@ -344,6 +367,7 @@
   <script src="{{ url_for('static', filename='js/tagsinput.js') }}"></script>
 </body>
 <script>
+
   $('.openBtn').on('click',function(){
       $('.modal-body').load('customize.html',function(){
           $('#myModal').modal({show:true});
@@ -355,8 +379,26 @@
 	window.location = "/overview/${workout}";
   }
   
-  function get_Name(workout){
-	document.getElementById('workoutname').innerHTML=workout["name"];
+  function get_workout(workout){
+	//Workout Meta Data
+	document.getElementById('workoutName').innerHTML=workout["name"];
+	document.getElementById('workoutStyles').innerHTML=workout["styles"];
+	document.getElementById('workoutLevel').innerHTML=workout["level"];
+	document.getElementById('workoutLength').innerHTML=workout["length"];
+	document.getElementById('workoutGoals').innerHTML=workout["goals"];
+	document.getElementById('workoutDesc').innerHTML=workout["desc"];
+
+	var i;
+	for (i = 0; i < workout["cycles"].length; i++){
+		var ul = document.createElement("ul");
+		var li = document.createElement("li");
+		ul.className = 'nav nav-tabs navbar-dark bg-dark';
+		li.className = 'list-group-item';
+		li.textContent = "Cycle: " + i;
+		ul.appendChild(li);
+	
+	}
+	
   }
   
 </script>
