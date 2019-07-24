@@ -398,15 +398,7 @@
 	document.getElementById('workoutLength').innerHTML=workout["length"];
 	document.getElementById('workoutGoals').innerHTML=workout["goals"];
 	document.getElementById('workoutDesc').innerHTML=workout["desc"];
-	
-	var i;
-	for (i = 0; i < workout["cycles"].length; i++){
-		var li = document.createElement("li");
-		li.classList.add("list-group-item");
-		li.appendChild(document.createTextNode("Testing dynamic modal" + i));
-		ul.appendChild(li);
-	}
-	
+
   }
   
 </script>
