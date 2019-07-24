@@ -1,27 +1,10 @@
-<html>
-	<head>
-		<title>Details Page</title>
-	</head>
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<style>
-	
-	  /*background image setting*/
-  body
-  {
+{% extends "layout.html" %}
+{% block css %}
+/*background image setting*/
+body {
     background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url({{ url_for('static', filename='image/wallpaper5.jpg')}});
     background-size: 100% 100%;
-  }
+}
 
 img{
 	display: block;
@@ -31,50 +14,20 @@ img{
 img.rest{
 	height: 25%;
 	width: 25%;
-}
-</style>	
-
-<body>
-<!-- MyFitnessProgram Website header -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a class="navbar-brand" href="/">My Fitness Distributer</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-
-	<div class="collapse navbar-collapse" id="navbarToggler">
-		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-		<li class="nav-item active">
-			<a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="/index_how_to">How To</a>
-		</li>
-		<li>
-			{% if not session["user"] %}
-			<a class="nav-link" href="/login">Log In</a>
-			{% else %}
-			<a class="nav-link" href = "/logout">Log Out</a>
-			{% endif %}
-		</li>
-		</ul>
-		{% if session["user"] %}
-		<span class="navbar-text" style = "color:white">Welcome, {{ session["user"]["nickname"] }}!</span>
-		{% endif %}
-	</div> 
-</nav>     
-	
+}	
+{% endblock %}
+{% block content %}
 <div class="container" style="margin-top: 2rem">
 	<div class="card">
-		<h2 class="card-header text-center text-black">{{ workout["name"] }}</h2>
+		<h2 class="card-header text-center text-black">{{ workout["name"] }} {% if not workout["is_default"] %} (made by "{{ workout["owner"]["nickname"] }}") {% endif %}</h2>
 			<div class="card-body">
 				<ul class="list-group">
 					<li class="list-group-item"><b>Style:</b> {{ ', '.join(workout["styles"]) }} </li>
 					<li class="list-group-item"><b>Level:</b> {{ level_to_string(workout["level"]) }}</li>
 					<li class="list-group-item"><b>Length:</b> {% if workout["length"] > 0 %} {{ workout["length"] }} weeks {% else %} n/a {% endif %}</li>
 					<li class="list-group-item"><b>Goal:</b> {{ ', '.join(workout["goals"]) }}</li>
-					<li class="list-group-item"><b>Notes:</b> {{ workout["desc"] }}</li>
-					<li class="list-group-item"><a href="index_how_to.html" class="btn btn-primary">Exercises How-To</a></li>
+					<li class="list-group-item"><b>General Info:</b> {% if workout["desc"].strip() != "" %} {{ workout["desc"] }} {% else %} n/a {% endif %}</li>
+					<li class="list-group-item"><a href="/howto" class="btn btn-primary">Exercises How-To</a></li>
 				</ul>
 			</div>
 	</div>
@@ -180,12 +133,11 @@ img.rest{
         </div>
     {% endfor %}
     </div>
-</div>	
-<script>
+</div>
+{% endblock %}
+{% block script %}
 $("ul.nav-tabs a").click(function (e) {
   e.preventDefault();  
     $(this).tab('show');
 });
-</script>
-	</body>
-</html>
+{% endblock %}
