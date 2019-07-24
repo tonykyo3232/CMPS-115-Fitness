@@ -400,10 +400,10 @@
 	document.getElementById('workoutDesc').innerHTML=workout["desc"];
 
 	var i;
-	var ul = document.querySelector("ul");
 	for (i = 0; i < workout["cycles"].length; i++){
-	
+		var ul = document.createElement("ul");
 		var li = document.createElement("li");
+		ul.className = 'nav nav-tabs navbar-dark bg-dark';
 		li.className = 'list-group-item';
 		li.textContent = "Cycle: " + i;
 		ul.appendChild(li);
