@@ -331,9 +331,10 @@
 <!-- Dynamically add program data based on user input-->
 		<div class="tabbable boxed parentTabs p-4">
 			<ul class="nav nav-tabs navbar-dark bg-dark">
-			{% for cycle_num in range(1, workout["cycles"]|length + 1) %}
+			<!--{% for cycle_num in range(1, workout["cycles"]|length + 1) %}
 			{% set cycle = workout["cycles"][cycle_num - 1] %}
 			{% if cycle_num == 0 %}
+			
 			<li class="active">
 				<a href="#cycle{{cycle_num}}" class="nav-link" style="font-size:110%">
 				<b>Cycle {{cycle_num}} {% if cycle["length"] > 0 %} ({{cycle["length"]}} weeks){% endif %}</b></a>
@@ -430,7 +431,7 @@
     {% endfor %}
     </div>
 </div>	
-		
+	-->	
       </div>
       <div class="modal-footer">
 
