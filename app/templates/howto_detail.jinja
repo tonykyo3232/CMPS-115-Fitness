@@ -1,93 +1,45 @@
-<html>
-<head>
-  <title> Fitness Scheduler</title>
+{% extends "layout.html" %}
+{% block css %}
+/*background image setting*/
+body
+{
+  background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(/static/image/wallpaper9.jpg);
+  background-size: 100% 100%;
+}
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
+.title
+{
+  color:white;
+  text-align:center
+}
 
-<style>
+.video
+{
+  text-align: center;
+}
+{% endblock %}
+{% block content %}
+<h1 class = "title">Exercise: {{ exercise["name"] }}</h1>
+<h3 class = "title">Equipment: {{ ', '.join(exercise["equipment"]) }}</h3>
 
-  /*background image setting*/
-  body
-  {
-    background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.2) ),url(/static/image/wallpaper9.jpg);
-    background-size: 100% 100%;
-  }
+<div class = form-group>
+  <div class = "col">
+    <iframe width="550" height="400" src="{{ exercise['url'].replace('/watch?v=', '/embed/') }}" align="left"></iframe>
+  </div>
 
-  .title
-  {
-    color:white;
-    text-align:center
-  }
-
-  .video
-  {
-    text-align: center;
-  }
-
-</style>
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">My Fitness Distributer</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/index_how_to">How To</a>
-      </li>
-      <li>
-        {% if not session["user"] %}
-        <a class="nav-link" href="/login">Log In</a>
-        {% else %}
-        <a class="nav-link" href = "/logout">Log Out</a>
-        {% endif %}
-      </li>
-      </ul>
-      {% if session["user"] %}
-      <span class="navbar-text" style = "color:white">Welcome, {{ session["user"]["nickname"] }}!</span>
-      {% endif %}
-    </div> 
-  </nav>   
-
-  <h1 class = "title">Exercise: {{ exercise["name"] }}</h1>
-  <h3 class = "title">Equipment: {{ ', '.join(exercise["equipment"]) }}</h3>
-  
-  <div class = form-group>
-    <div class = "col">
-      <iframe width="550" height="400" src="{{ exercise['url'].replace('/watch?v=', '/embed/') }}" align="left"></iframe>
-    </div>
-
-    <div class = "col">
-      <div class = "container bg-light rounded" style="max-width: 600px; float:right; padding: 1rem">
-        <div class = "form-group">
-          <h1 style = "text-align: center">Description:</h1>
-        </div>
-        <div class = "form-group">
-          <ol>
-              {% for note in exercise["notes"] %}
-              <li>{{ note }}</li> 
-              {% endfor %}
-          </ol>    
-        </div>
+  <div class = "col">
+    <div class = "container bg-light rounded" style="max-width: 600px; float:right; padding: 1rem">
+      <div class = "form-group">
+        <h1 style = "text-align: center">Description:</h1>
       </div>
-    </div> <!-- end middle div -->
-  </div> <!-- end big div -->
-
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-</body>
-</html>
+      <div class = "form-group">
+        <ol>
+            {% for note in exercise["notes"] %}
+            <li>{{ note }}</li> 
+            {% endfor %}
+        </ol>    
+      </div>
+    </div>
+  </div> <!-- end middle div -->
+</div> <!-- end big div -->
+{% endblock %}
