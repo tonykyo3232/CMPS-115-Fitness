@@ -23,7 +23,6 @@ app.json_encoder = JSONEncoder
 
 metadata = parse_howto_file()
 howto_exercises = metadata["exercises"]
-print(howto_exercises)
 
 @app.route("/")
 def index():
@@ -152,27 +151,15 @@ def get_all_routines():
     else:
         return "Not implemented"
 
-'''
-@app.route("/index_how_to")
-def how_to():
-    return render_template("index_how_to.jinja")
-'''
-
 @app.route("/howto")
 def howto():
-    return render_template("index_how_to.jinja", exercises=howto_exercises)
-
+    return render_template("howto.jinja", exercises=howto_exercises)
 
 @app.route("/howto/<int:exercise_id>")
 def howto_detail(exercise_id):
     exercise = search_item_by_id(howto_exercises, exercise_id)
-    return render_template("index_htResult.jinja", exercise=exercise)
+    return render_template("howto_detail.jinja", exercise=exercise)
 
-'''
-@app.route("/index_htResult")
-def how_to_result():
-    return render_template("index_htResult.html")
-'''
 
 # ----- Account routers -----
 
