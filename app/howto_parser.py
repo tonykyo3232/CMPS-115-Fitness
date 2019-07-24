@@ -32,12 +32,12 @@ def parse_exercise(metadata,line):
         "url" : ""
     }
     exercise["name"] = line[10:].strip()
+    exercise["_id"] = len(metadata["exercises"])
     metadata["exercises"].append(exercise)
     return metadata
 
 ### MAIN FUNCTION
-def parse_file():
-    file_path = "howto"
+def parse_howto_file(file_path="../Workout Dataset/How-To's Template.txt"):
     # creates an array of exercises
     metadata = {
         "exercises" : [],
@@ -57,4 +57,4 @@ def parse_file():
     return metadata
     
 if __name__ == "__main__":
-    parse_file()
+    parse_howto_file()

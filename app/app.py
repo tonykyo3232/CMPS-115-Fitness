@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, jsonify, url_for, redirect, session, flash
 from flask_pymongo import PyMongo
 from bson import ObjectId
-from utils import filter_programs, filter_routines, level_to_string
+from utils import filter_programs, filter_routines, level_to_string, search_item_by_id
 import json
 import bcrypt
+from howto_parser import parse_howto_file
 
 
 class JSONEncoder(json.JSONEncoder):                           
@@ -20,6 +21,9 @@ app.config["MONGO_URI"] = "mongodb://localhost:27017/fitness"
 mongo = PyMongo(app)
 app.json_encoder = JSONEncoder
 
+metadata = parse_howto_file()
+howto_exercises = metadata["exercises"]
+print(howto_exercises)
 
 @app.route("/")
 def index():
@@ -153,19 +157,22 @@ def get_all_routines():
 def how_to():
     return render_template("index_how_to.jinja")
 '''
-@app.route("/index_how_to")
-def how_to():
-    return render_template("index_how_to.html")
-'''
-@app.route("/index_htResult")
-def how_to_result():
-    return render_template("index_htResult.jinja")
-'''
 
+@app.route("/howto")
+def howto():
+    return render_template("index_how_to.jinja", exercises=howto_exercises)
+
+
+@app.route("/howto/<int:exercise_id>")
+def howto_detail(exercise_id):
+    exercise = search_item_by_id(howto_exercises, exercise_id)
+    return render_template("index_htResult.jinja", exercise=exercise)
+
+'''
 @app.route("/index_htResult")
 def how_to_result():
     return render_template("index_htResult.html")
-
+'''
 
 # ----- Account routers -----
 

@@ -56,15 +56,12 @@
     </div> 
   </nav>   
 
-  <!-- need jinja -->
-  <h1 class = "title">Exercise: Curls</h1>
-  <h3 class = "title">Equipment: Barbell</h3>
-  
+  <h1 class = "title">Exercise: {{ exercise["name"] }}</h1>
+  <h3 class = "title">Equipment: {{ ', '.join(exercise["equipment"]) }}</h3>
   
   <div class = form-group>
     <div class = "col">
-      <!-- (need jinja) Insert the video -->
-      <iframe width="550" height="400" src="" align="left"></iframe>
+      <iframe width="550" height="400" src="{{ exercise['url'].replace('/watch?v=', '/embed/') }}" align="left"></iframe>
     </div>
 
     <div class = "col">
@@ -74,8 +71,9 @@
         </div>
         <div class = "form-group">
           <ol>
-              <!-- (need jinja)for loop-->
-             <li></li> 
+              {% for note in notes %}
+              <li>{{ note }}</li> 
+              {% endfor %}
           </ol>    
         </div>
       </div>
