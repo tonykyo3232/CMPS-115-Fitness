@@ -328,110 +328,7 @@
 				</div>
 			</div>
 		</div>
-<!-- Dynamically add program data based on user input-->
-		<div class="tabbable boxed parentTabs p-4">
-			<ul class="nav nav-tabs navbar-dark bg-dark">
-			<!--{% for cycle_num in range(1, workout["cycles"]|length + 1) %}
-			{% set cycle = workout["cycles"][cycle_num - 1] %}
-			{% if cycle_num == 0 %}
-			
-			<li class="active">
-				<a href="#cycle{{cycle_num}}" class="nav-link" style="font-size:110%">
-				<b>Cycle {{cycle_num}} {% if cycle["length"] > 0 %} ({{cycle["length"]}} weeks){% endif %}</b></a>
-			</li>
-			{% else %}
-			<li>
-				<a href="#cycle{{cycle_num}}" class="nav-link" style="font-size:110%">
-				<b>Cycle {{cycle_num}} {% if cycle["length"] > 0 %} ({{cycle["length"]}} weeks){% endif %}</b></a>
-			</li>
-			{% endif %}
-			{% endfor %}
-			</ul>
-		<div class="tab-content">
-			{% for cycle_num in range(1, workout["cycles"]|length + 1) %}
-			{% set cycle = workout["cycles"][cycle_num - 1] %}
-			{% if cycle_num == 1 %}
-				<div class="tab-pane fade active in" id="cycle{{cycle_num}}">
-			{% else %}
-				<div class="tab-pane fade" id="cycle{{cycle_num}}">
-			{% endif %}
-		<div class="tabbable">
-			<ul class="nav nav-tabs navbar-dark bg-dark">
-			{% for day_num in range(1, cycle["days"]|length + 1) %}
-            {% if day_num == 1 %}
-				<li class="active"><a href="#cycle{{cycle_num}}_day{{day_num}}" class="nav-link" style="font-size:110%"><b>Day {{day_num}}</b></a>
-				</li>
-            {% else %}
-				<li><a href="#cycle{{cycle_num}}_day{{day_num}}" class="nav-link" style="font-size:110%"><b>Day {{day_num}}</b></a>
-				</li>
-            {% endif %}
-			{% endfor %}
-			</ul>
-            <div class="tab-content">
-            {% for day_num in range(1, cycle["days"]|length + 1) %}
-            {% set day = cycle["days"][day_num - 1] %}
-            {% if day_num == 1 %}
-                <div class="tab-pane fade active in" id="cycle{{cycle_num}}_day{{day_num}}">
-            {% else %}
-                <div class="tab-pane fade" id="cycle{{cycle_num}}_day{{day_num}}">
-            {% endif %}
-				<div class="card">
-                {% if day["desc"].strip() != "" %}
-					<div class="card-header text-center text-black" style="font-size:150%">{{ day["desc"] }}</div>
-                    {% endif %}
-					{% if day["is_rest"] %}
-						<img class="rest card-img-bottom" src="/static/image/snorlax.png" alt="Card image cap">
-					{% endif %}
-					</div>
-						<div id="accordion_cycle{{cycle_num}}_day{{day_num}}">
-                        {% for exer_num in range(1, day["exercises"]|length + 1) %}
-                        {% set exercise = day["exercises"][exer_num - 1] %}
-							<div class="card">
-								<div class="card-header">
-                                    <a class="card-link" data-toggle="collapse" href="#exer{{exer_num}}">
-                                        Excercise {{exer_num}} {% if exercise["name"] != "" %} : {{ exercise["name"] }} {% endif %}
-                                    </a>
-							    </div>
-                                {% if exer_num == 1 %}
-                                <div id="exer{{exer_num}}" class="collapse show">
-                                {% else %}
-                                <div id="exer{{exer_num}}" class="collapse">
-                                {% endif %}
-                                    <div class="card-body">
-                                        <ul class="list-group">
-                                            {% if exercise["equipment"]|length > 0 %}
-                                            <li class="list-group-item"><b>Equipment:</b> {{", ".join(exercise["equipment"])}}</li>
-                                            {% endif %}
-                                            {% if exercise["length"] != "" %}
-                                            <li class="list-group-item"><b>Length:</b> {{ exercise["length"] }}</li>
-                                            {% endif %}
-                                            {% if exercise["weight"] != "" %}
-                                            <li class="list-group-item"><b>Weight:</b> {{ exercise["weight"] }}</li>
-                                            {% endif %}
-                                            {% if exercise["rpe"] != "" %}
-                                            <li class="list-group-item"><b>RPE:</b> {{ exercise["rpe"] }}</li>
-                                            {% endif %}
-                                            {% if exercise["notes"]|length > 0 %}
-                                            <li class="list-group-item"><b>Notes:</b><br>{{"\n".join(exercise["notes"])}}</li>
-                                            {% endif %}
-                                            {% if exercise["url"] != "" %}
-                                            {# <li class="list-group-item"><b>Link:</b> {{ exercise["url"] }}</li> #}
-                                            {% endif %}
-                                        </ul>
-                                    </div>
-                                </div>
-							</div>
-                        {% endfor %}
-						</div>
-                    </div>
-                {% endfor %}
-                </div>
-            </div>
-        </div>
-    {% endfor %}
-    </div>
-</div>	
-	-->	
+
       </div>
       <div class="modal-footer">
 
@@ -505,11 +402,10 @@
 	document.getElementById('workoutDesc').innerHTML=workout["desc"];
 	
 	var i;
-	workout_cycles = workout["cycles"];
 	for (i = 0; i < workout["cycles"].length; i++){
 		var li = document.createElement("li");
-		li.classList.add("nav nav-tabs navbar-dark bg-dark");
-		li.appendChild(document.createTextNode("Testing dynamic modal"));
+		li.classList.add("list-group-item");
+		li.appendChild(document.createTextNode("Testing dynamic modal" + i));
 		ul.appendChild(li);
 	}
 	
