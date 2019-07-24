@@ -23,6 +23,7 @@ app.json_encoder = JSONEncoder
 
 metadata = parse_howto_file()
 howto_exercises = metadata["exercises"]
+howto_exercises.sort(key=lambda exercise: exercise["name"].lower())
 
 @app.route("/")
 def index():
