@@ -29,50 +29,48 @@
     border: 1px solid white;
   }
 
-
-  /* debug color setting
-  #debug,#debug-1,#debug-2,#debug-3,#debug-4,#debug-5,#debug-6,#debug-7,#debug-8,#debug-9,#debug-10,#debug-11,#debug-12,#debug-13,#debug-14,#debug-15,#debug-16
-  {
-    color:white;
-  }
-  */
-
-  #debug
-  {
-    color:white;
-  }
-
 </style>
 
 <!-- Top of the website -->
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a class="navbar-brand" href="/">My Fitness Distributer</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
+    <a class="navbar-brand" href="/">My Fitness Distributer</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-	<div class="collapse navbar-collapse" id="navbarToggler">
-		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-		<li class="nav-item active">
-			<a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="/howto">How To</a>
-		</li>
-		<li>
-			{% if not session["user"] %}
-			<a class="nav-link" href="/login">Log In</a>
-			{% else %}
-			<a class="nav-link" href = "/logout">Log Out</a>
-			{% endif %}
-		</li>
-		</ul>
-		{% if session["user"] %}
-		<span class="navbar-text" style = "color:white">Welcome, {{ session["user"]["nickname"] }}!</span>
-		{% endif %}
-	</div> 
-</nav>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/search">Search</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/customize">Customize</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/howto">How To</a>
+        </li>
+        {% if not session["user"] %}
+        <li>
+            <a class="nav-link" href="/login">Log In</a>
+        </li>
+        {% else %}
+        <li>
+            <a class="nav-link" href = "/mypage">Mypage</a>
+        </li>
+        <li>
+            <a class="nav-link" href = "/logout">Log Out</a>
+        </li>
+        {% endif %}
+        </ul>
+        {% if session["user"] %}
+        <span class="navbar-text" style = "color:white">Welcome, {{ session["user"]["nickname"] }}!</span>
+        {% endif %}
+    </div> 
+</nav>  
 
 <!-- Message -->
 <br><center><h2 style=color:white>Customized Your Own Workout</h2></center>

@@ -18,7 +18,7 @@ body
                 <li class="list-group-item"><b>Level:</b> {{ level_to_string(workout["level"]) }}</li>
                 <li class="list-group-item"><b>Length:</b> {% if workout["length"] > 0 %} {{ workout["length"] }} weeks {% else %} n/a {% endif %}</li>
                 <li class="list-group-item"><b>Goal:</b> {{ ', '.join(workout["goals"]) }}</li>
-                <li class="list-group-item"><b>General Info:</b> {{ workout["desc"] }}</li>
+                <li class="list-group-item"><b>General Info:</b> {% if workout["desc"].strip() != "" %} {{ workout["desc"] }} {% else %} n/a {% endif %}</li>
                 <li class="list-group-item"><a href="/detail/{{ workout['_id'] }}" class="btn btn-primary">Go to detail</a></li>
             </ul>
         </div>
