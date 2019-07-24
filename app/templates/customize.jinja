@@ -399,6 +399,16 @@
 	document.getElementById('workoutGoals').innerHTML=workout["goals"];
 	document.getElementById('workoutDesc').innerHTML=workout["desc"];
 
+	var i;
+	for (i = 0; i < workout["cycles"].length){
+	
+		var li = document.createElement("li");
+		li.className = 'list-group-item';
+		li.textContent = "Cycle: " + i;
+		ul.appendChild(li);
+	
+	}
+	
   }
   
 </script>
