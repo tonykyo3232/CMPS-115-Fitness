@@ -23,6 +23,8 @@ app.json_encoder = JSONEncoder
 
 metadata = parse_howto_file()
 howto_exercises = metadata["exercises"]
+
+# sort howto exercises with lexicographic order
 howto_exercises.sort(key=lambda exercise: exercise["name"].lower())
 
 @app.route("/")
@@ -32,18 +34,6 @@ def index():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     if request.method == "POST":
-        print(request.form)
-
-        '''
-        test_opt = {
-            "style": "Bodybuilding", #"General Fitness",
-            "level": -1,
-            "len_min": -1, #4,
-            "len_max": -1,#8,
-            "goal": "" #"Build Muscle"
-        }
-        '''
-        
         form = request.form
         length_opt = form.get("length", "-1,-1")
         len_min = int(length_opt.split(",")[0])
@@ -68,7 +58,7 @@ def search():
             return render_template("search.jinja", programs=programs)
     else:
         programs = mongo.db.workouts.find({"is_routine": False})
-        return render_template("search.jinja", programs=list(programs))
+        return render_template("search.jinja", programs=programs)
 
 
 @app.route("/customize", methods=["GET", "POST"])
@@ -230,10 +220,8 @@ def mypage():
     if not "user" in session:
         flash("Login first")
         return redirect(url_for('login'))
-    workouts = mongo.db.workouts.find({'owner': session['user']})
-    for workout in workouts:
-        print(workout)
-    return render_template("mypage.jinja", workouts=list(workouts), level_to_string=level_to_string)
+    workouts = list(mongo.db.workouts.find({'owner': session['user']}))
+    return render_template("mypage.jinja", workouts=workouts, level_to_string=level_to_string)
 
 if __name__ == "__main__":
     import random, string
