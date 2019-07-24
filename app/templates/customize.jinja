@@ -299,7 +299,7 @@
 
 
 
-<button type="button" class="btn btn-success" onclick="get_workout()" data-toggle="modal" data-target="#Overview" style="margin-right: 2rem;">
+<button type="button" class="btn btn-success" onclick="get_workout(collect_workout())" data-toggle="modal" data-target="#Overview" style="margin-right: 2rem;">
   Review!
 </button>
 
@@ -378,7 +378,7 @@
   <script src="{{ url_for('static', filename='js/tagsinput.js') }}"></script>
 </body>
 <script>
-<script>
+
   $('.openBtn').on('click',function(){
       $('.modal-body').load('customize.html',function(){
           $('#myModal').modal({show:true});
@@ -390,16 +390,22 @@
 	window.location = "/overview/${workout}";
   }
   
-  function get_workout(){
+  function get_workout(workout){
 	//Workout Meta Data
-	var workout = collect_workout();
 	document.getElementById('workoutName').innerHTML=workout["name"];
 	document.getElementById('workoutStyles').innerHTML=workout["styles"];
 	document.getElementById('workoutLevel').innerHTML=workout["level"];
 	document.getElementById('workoutLength').innerHTML=workout["length"];
 	document.getElementById('workoutGoals').innerHTML=workout["goals"];
 	document.getElementById('workoutDesc').innerHTML=workout["desc"];
-
+	
+	var i;
+	for (i = 0; i < workout["cycles"].length; i++){
+		var li = document.createElement("li");
+		li.classList.add("list-group-item");
+		li.appendChild(document.createTextNode("Testing dynamic modal" + i));
+		ul.appendChild(li);
+	}
 	
   }
   
