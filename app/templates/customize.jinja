@@ -299,7 +299,7 @@
 
 
 
-<button type="button" class="btn btn-success" onclick="get_workout(collect_workout())" data-toggle="modal" data-target="#Overview" style="margin-right: 2rem;">
+<button type="button" class="btn btn-success" onclick="get_workout()" data-toggle="modal" data-target="#Overview" style="margin-right: 2rem;">
   Review!
 </button>
 
@@ -390,8 +390,9 @@
 	window.location = "/overview/${workout}";
   }
   
-  function get_workout(workout){
+  function get_workout(){
 	//Workout Meta Data
+	var workout = collect_workout();
 	document.getElementById('workoutName').innerHTML=workout["name"];
 	document.getElementById('workoutStyles').innerHTML=workout["styles"];
 	document.getElementById('workoutLevel').innerHTML=workout["level"];
