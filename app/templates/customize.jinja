@@ -82,15 +82,15 @@
 <div class="form-group row">
   <div class = "col-2"></div>
   <div class="col">
-    <label for="name-input" class="col-2 col-form-label" style="color:white">*Name</label>
+    <label for="name-input" class="col-2 col-form-label" style="color:white">Name</label>
     <div class="col-10">
-      <input class="form-control workout-name w-75" type="text" placeholder="Enter workout name" id="name-input">
+      <input class="form-control workout-name w-75" type="text" placeholder="Enter workout name" id="name-input" required>
     </div>
     <!-- start-->
     <div class="col">
       <p>
         <a class="btn btn-primary" data-toggle="collapse" href="#program-meta" role="button" aria-expanded="false" aria-controls="program-meta">
-          More Exercise General Setting
+          Extra Setting
         </a>
       </p>
     </div>
@@ -166,7 +166,7 @@
         <label for="cycleName-input" class="col-4 col-form-label">Cycle:</label>
       </div>
       <div class="col-3">
-        <input class="form-control cycle-name" type="text" placeholder="Enter name or number" id="cycleName-input">
+        <input class="form-control cycle-name" type="text" placeholder="Enter name" id="cycleName-input">
       </div>
       <div class="col-2">
         <input class="form-control cycle-length" type="number" placeholder="Enter duration" id="cycleLength-input">
@@ -185,7 +185,7 @@
           <label for="dayName-input" class="col-2 col-form-label">Day:</label>
         </div>
         <div class="col-3">
-          <input class="form-control day-desc" type="text" placeholder="Enter name or number" id="dayDesc-input">
+          <input class="form-control day-desc" type="text" placeholder="Enter name" id="dayDesc-input">
         </div>
         <button onclick="removeContainer(this)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="col-3">
@@ -195,10 +195,10 @@
         <div class="form-group row">
           <div class="col-2"></div>
           <div class="col-1">
-            <label for="exerciseName-input" class="col-form-label">*Exercise:</label>
+            <label for="exerciseName-input" class="col-form-label">Exercise:</label>
           </div>
           <div class="col-4">
-            <input class="form-control exercise-name" type="text" placeholder="Enter name" id="exerciseName-input">
+            <input class="form-control exercise-name" type="text" placeholder="Enter name" id="exerciseName-input" required>
           </div>
           <button onclick="removeContainer(this)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="col-3">
@@ -222,12 +222,12 @@
         <div class="form-group row">
           <div class="col-3"></div>
           <div class="col-4">
-            <label for="exerciseLength-input" class="col-form-label">*Length</label>
-            <input class="form-control exercise-length" type="text" placeholder="Enter duration" id="exerciseLength-input">
+            <label for="exerciseLength-input" class="col-form-label">Length</label>
+            <input class="form-control exercise-length" type="text" placeholder="Enter duration" id="exerciseLength-input" required>
           </div>
           <div class="col-4">
-            <label for="weight-input" class="col-form-label">*Weight</label>
-            <input class="form-control exercise-weight" type="text" placeholder="Enter amount" id="weight-input">
+            <label for="weight-input" class="col-form-label">Weight</label>
+            <input class="form-control exercise-weight" type="text" placeholder="Enter amount" id="weight-input" required>
           </div>
         </div>
         <div class="form-group row">
@@ -235,7 +235,7 @@
           <div class="col">
             <p>
               <a class="btn btn-primary" data-toggle="collapse" href="#exercise-meta" role="button" aria-expanded="false" aria-controls="exercise-meta">
-                More Exercise Setting
+                Exercise Setting
               </a>
             </p>
             <div class="collapse" id="exercise-meta">
@@ -243,7 +243,7 @@
                   <div class="form-row">
                     <div class="col">
                       <label for="rpe-input">RPE:</label>
-                      <input type="text" class="form-control exercise-rpe" id="rpe-input" placeholder="Enter RPE number">
+                      <input type="text" class="form-control exercise-rpe" id="rpe-input" placeholder="Enter estimated number">
                     </div>
                     <div class="col">
                       <label for="note-input">Note:</label>
