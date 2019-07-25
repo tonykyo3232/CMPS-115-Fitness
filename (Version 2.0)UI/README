@@ -1,0 +1,5 @@
+README
+
+This is the folder that store the .html files that implement the UI of the website.
+We need to modify .html to .jinja for the reason that develops the advance feature of the html
+The actual UI implementation will be located in CMPS-115-Fitness/app/templetes
