@@ -49,7 +49,7 @@ function collect_cycle_meta(cycle_elem) {
 
   // iterate each day and store it in cycle_elem.days
   var days = [];
-  var day_elems = document.querySelectorAll(".day-container");
+  var day_elems = cycle_elem.querySelectorAll(".day-container");
   for (let day_idx = 0; day_idx < day_elems.length; day_idx++) {
     let day = collect_day_meta(day_elems[day_idx]);
     days.push(day);
