@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 # 1. Set up data
 ```
-# Parse program/routine description in ../Workout Dataset/ and Save it in ./pickles/
+# Parse program/routine description in ../Workout Dataset/ and Save it to MongoDB
 python data_update.py
 
 # If your python is not linked with python3
@@ -28,7 +28,7 @@ python app.py 12345 # Run server on port 12345
 # If your python is not linked with python3
 python3 app.py
 
-# Run server in background
+# Run server in background (Currently not working due to issues with gunicorn & MongoDB)
 ./run.sh
 ./restart.sh
 
