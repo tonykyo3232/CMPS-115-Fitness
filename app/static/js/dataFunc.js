@@ -25,7 +25,7 @@ function collect_day_meta(day_elem) {
 
   // iterate each exercise and store it in day_elem.exercises
   var exercises = [];
-  var exercise_elems = document.querySelectorAll(".exercise-container");
+  var exercise_elems = day_elem.querySelectorAll(".exercise-container");
   for (let exercise_idx = 0; exercise_idx < exercise_elems.length; exercise_idx++) {
     let exercise = collect_exercise_meta(exercise_elems[exercise_idx]);
     exercises.push(exercise);
